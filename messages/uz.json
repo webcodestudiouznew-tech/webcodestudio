@@ -48,5 +48,37 @@
       "title": "HERO illustratsiyasi",
       "description": "Bu yerga keyinroq qo'l va kartalar rasmi joylashtiriladi, hozircha kompozitsiya saqlanib turadi."
     }
+  },
+  "Audience": {
+    "eyebrow": "Kimlar uchun",
+    "title": "WebCode'dan tayyor sayt kimlar uchun mos",
+    "description": "<brand>WebCode</brand> ortiqcha murakkabliksiz tayyor sayt kerak bo'lgan bizneslar uchun. Biz butun jarayonni o'z zimmamizga olamiz: struktura, matn, taqdimot, dizayn va ishga tushirishda yordam beramiz, natijada siz shunchaki sayt emas, balki mijozlarni jalb qiladigan aniq va sotuvga ishlaydigan vositaga ega bo'lasiz.",
+    "cta": "Bu mening kategoriyam",
+    "items": {
+      "service": {
+        "title": "Servis biznesi",
+        "description": "Ta'mirlash, qurilish, klining, yetkazib berish, o'rnatish, maishiy va chiqib boriladigan xizmatlar."
+      },
+      "medical": {
+        "title": "Tibbiyot va xizmatlar",
+        "description": "Klinikalar, stomatologiyalar, xususiy mutaxassislar, konsalting va ta'lim."
+      },
+      "beauty": {
+        "title": "Beauty va wellness",
+        "description": "Go'zallik salonlari, barbershoplar, kosmetologiya, studiyalar va mutaxassislarning shaxsiy brendlari."
+      },
+      "auto": {
+        "title": "Avto va servis",
+        "description": "Avtoservislar, detailing, kimyoviy tozalash, ustaxonalar va boshqa lokal kompaniyalar."
+      },
+      "food": {
+        "title": "Kafe va restoranlar",
+        "description": "O'zini, menyusini, xizmatlari va aksiyalarini chiroyli ko'rsatishi va mijozning bron yoki murojaatgacha bo'lgan yo'lini soddalashtirishi muhim bo'lgan maskanlar."
+      },
+      "business": {
+        "title": "Kichik va o'rta biznes",
+        "description": "O'sish, ishonch va yangi murojaatlar uchun sayt kerak bo'lgan tadbirkorlar va kompaniyalar."
+      }
+    }
   }
 }

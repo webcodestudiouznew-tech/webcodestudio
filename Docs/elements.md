@@ -50,6 +50,22 @@ HeroSection
          ├─ HeroStatsValue
          ├─ HeroUserStack
          └─ HeroStatsLabel
+AudienceSection
+├─ AudienceBackground
+│  ├─ AudienceTopLine
+│  ├─ AudienceGlowLeft
+│  └─ AudienceGlowRight
+├─ AudienceIntro
+│  ├─ AudienceEyebrow
+│  ├─ AudienceTitle
+│  └─ AudienceDescription
+└─ AudienceGrid
+   ├─ AudienceCard
+   ├─ AudienceCard
+   ├─ AudienceCard
+   ├─ AudienceCard
+   ├─ AudienceCard
+   └─ AudienceCard
 ```
 
 ## Header
@@ -194,6 +210,48 @@ HeroSection
 - `uz`: `mamnun foydalanuvchilar`
 - `en`: `happy users`
 - UZ version must stay on one line
+
+## AudienceSection
+
+### Purpose
+- Follows HERO directly
+- Explains which offline businesses benefit from the WebCode offer
+- Uses the same dark warm background language as HERO, but calmer and more structural
+
+### Structure
+- Top intro block:
+  - eyebrow
+  - section title
+  - description
+- Bottom:
+  - responsive grid of 6 business-category cards
+
+### Typography
+- Eyebrow: compact capsule label, `12px`
+- Title:
+  - `38px`
+- Description:
+  - `16px` mobile
+  - `18px` desktop
+- Card title: `20px`
+- Card description: `14px - 15px`
+
+### Card behavior
+- All business categories are separate cards
+- Grid uses `2` columns on medium screens and `3` on desktop
+- Cards use soft border, blur and warm translucent fill
+- Each card has:
+  - icon
+  - ordinal number
+  - title
+  - description
+  - CTA button with icon
+
+### Content rules
+- Must stay honest and targeted at offline local business
+- No fake case studies or invented helper copy
+- Section remains fully localized for `RU / UZ / EN`
+- Brand name `WebCode` in description stays accent-colored
 
 ## Motion
 

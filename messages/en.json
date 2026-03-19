@@ -48,5 +48,37 @@
       "title": "HERO artwork",
       "description": "The hand-with-cards visual will be placed here later while keeping the current section composition intact."
     }
+  },
+  "Audience": {
+    "eyebrow": "Who it's for",
+    "title": "Who a turnkey website from WebCode is for",
+    "description": "<brand>WebCode</brand> is for businesses that need a turnkey website without extra complexity. We handle the entire process: structure, copy, positioning, design and launch, so that in the end you get not just a website, but a clear and sales-focused tool for attracting customers.",
+    "cta": "This is my category",
+    "items": {
+      "service": {
+        "title": "Service businesses",
+        "description": "Repairs, construction, cleaning, delivery, installation, home services and field services."
+      },
+      "medical": {
+        "title": "Healthcare and services",
+        "description": "Clinics, dentists, private specialists, consulting and education."
+      },
+      "beauty": {
+        "title": "Beauty and wellness",
+        "description": "Beauty salons, barbershops, cosmetology, studios and personal specialist brands."
+      },
+      "auto": {
+        "title": "Auto and service",
+        "description": "Car services, detailing, dry cleaners, workshops and other local companies."
+      },
+      "food": {
+        "title": "Cafes and restaurants",
+        "description": "Venues that need to present themselves, their menu, services and offers beautifully and make the path to booking or inquiry easier."
+      },
+      "business": {
+        "title": "Small and medium-sized businesses",
+        "description": "Entrepreneurs and companies that need a website for growth, trust and new leads."
+      }
+    }
   }
 }
