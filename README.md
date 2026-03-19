@@ -1,36 +1,103 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# WebCode
 
-## Getting Started
+WebCode is a multilingual landing page for a web studio focused on offline local businesses in Uzbekistan.
 
-First, run the development server:
+Current status:
+- Next.js 16 project scaffold is ready
+- `next-intl` is configured for `ru / uz / en`
+- HERO section is implemented and approved as the design reference for the rest of the landing
 
+## Stack
+- Next.js 16
+- React 19
+- TypeScript
+- Tailwind CSS v4
+- next-intl
+- react-hook-form
+- zod
+- ESLint
+
+## Scripts
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run build
+npm run start
+npm run lint
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Local Development
+1. Install dependencies:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+2. Start the dev server:
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+3. Open:
+```text
+http://localhost:3000
+```
 
-## Learn More
+Localized routes:
+- `/ru`
+- `/uz`
+- `/en`
 
-To learn more about Next.js, take a look at the following resources:
+## Project Structure
+```text
+app/                App Router pages and layouts
+components/         UI and landing sections
+Docs/               Project docs and workflow docs
+i18n/               next-intl routing and navigation config
+lib/                Shared project utilities
+messages/           Locale messages for ru / uz / en
+public/             Static assets
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Key Files
+- [`Docs/AGENTS.md`](./Docs/AGENTS.md): project rules and working conventions
+- [`Docs/Roadmap.md`](./Docs/Roadmap.md): roadmap and current stage
+- [`Docs/design_direction.md`](./Docs/design_direction.md): design code for the project
+- [`Docs/elements.md`](./Docs/elements.md): approved element structure and HERO spec
+- [`Docs/done_criteria.md`](./Docs/done_criteria.md): definition of done
+- [`Docs/webcode_content_only.md`](./Docs/webcode_content_only.md): content source
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Current UI Status
+The current design system is based on the approved HERO section.
 
-## Deploy on Vercel
+What is already established:
+- dark premium product-style background
+- gold accent system
+- `Manrope + Inter`
+- desktop and mobile HERO layouts
+- locale switcher
+- motion and hover behavior
+- localized content for `ru / uz / en`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+All next sections should follow:
+- [`Docs/design_direction.md`](./Docs/design_direction.md)
+- [`Docs/elements.md`](./Docs/elements.md)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## i18n
+The project uses localized routes and locale message files:
+- [`messages/ru.json`](./messages/ru.json)
+- [`messages/uz.json`](./messages/uz.json)
+- [`messages/en.json`](./messages/en.json)
+
+Routing config:
+- [`i18n/routing.ts`](./i18n/routing.ts)
+- [`i18n/navigation.ts`](./i18n/navigation.ts)
+
+## Quality
+Before shipping changes:
+```bash
+npm run lint
+npm run build
+```
+
+## Repository
+GitHub:
+- `git@github.com:Baytukalov/webcodestudio.git`
