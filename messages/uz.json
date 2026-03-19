@@ -6,7 +6,7 @@
   "Hero": {
     "brandTagline": "murojaatlarni yo'qotmaydigan saytlar",
     "badge": "CRM, Telegram/WhatsApp integratsiyasi, domen va hosting - sovg'a",
-    "badgeMobile": "CRM, Telegram/WhatsApp integratsiyasi, domen va hosting - sovg'a",
+    "badgeMobile": "CRM, Telegram, domen va hosting - sovg'a",
     "nav": {
       "services": "Xizmatlar",
       "audience": "Kimlar uchun",
@@ -18,14 +18,16 @@
       "lead": "Ariza qoldirish"
     },
     "locale": {
-      "label": "Tilni tanlash"
+      "label": "Tilni tanlash",
+      "openMenu": "Menyuni ochish",
+      "closeMenu": "Menyuni yopish"
     },
     "title": {
       "line1": "Biznesingiz",
       "line2": "uchun",
       "line3": "tayyor sayt"
     },
-    "description": "WebCode O'zbekistondagi oflayn biznes uchun zamonaviy adaptiv saytlar yaratadi. Siz faqat sayt ishlab chiqish uchun to'laysiz va CRM, messenjer integratsiyasi, domen hamda hostingni sovg'a sifatida olasiz.",
+    "description": "<brand>WebCode</brand> O'zbekistondagi oflayn biznes uchun zamonaviy adaptiv saytlar yaratadi. Siz faqat sayt ishlab chiqish uchun to'laysiz va CRM, messenjer integratsiyasi, domen hamda hostingni sovg'a sifatida olasiz.",
     "cta": {
       "primary": "Ariza qoldirish",
       "secondary": "Telegramda konsultatsiya"

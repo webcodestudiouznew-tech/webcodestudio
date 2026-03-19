@@ -5,6 +5,8 @@ import { useEffect, useState, useTransition } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { usePathname, useRouter } from "@/i18n/navigation";
 
+const LOGO_SRC = "/logo_new_2.png?v=20260319";
+
 function FeatureIcon({ type }: { type: "adaptive" | "language" }) {
   if (type === "adaptive") {
     return (
@@ -92,7 +94,7 @@ function OrbitBadge({ label }: { label: string }) {
       <div className="flex h-[68px] w-[68px] items-center justify-center rounded-full bg-[linear-gradient(135deg,#f1cc6b_0%,#d4af4a_100%)] shadow-[0_18px_38px_rgba(212,175,74,0.35)]">
         <div className="flex h-12 w-12 items-center justify-center rounded-full border border-[#907334]/35 bg-[#2f2d29]">
           <Image
-            src="/logo_new_2.png"
+            src={LOGO_SRC}
             alt=""
             width={28}
             height={28}
@@ -180,6 +182,7 @@ function LocaleSwitcher({
 
 export function HeroSection() {
   const t = useTranslations("Hero");
+  const locale = useLocale();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [hasEntered, setHasEntered] = useState(false);
   const navLinkClass =
@@ -220,12 +223,41 @@ export function HeroSection() {
       description: t("features.system.description"),
     },
   ];
+  const mobileMenuLabel =
+    locale === "ru"
+      ? { open: "Открыть меню", close: "Закрыть меню" }
+      : locale === "uz"
+        ? { open: "Menyuni ochish", close: "Menyuni yopish" }
+        : { open: "Open menu", close: "Close menu" };
 
   useEffect(() => {
     const frameId = requestAnimationFrame(() => setHasEntered(true));
 
     return () => cancelAnimationFrame(frameId);
   }, []);
+
+  useEffect(() => {
+    if (!isMobileMenuOpen) {
+      return;
+    }
+
+    const { overflow } = document.body.style;
+
+    document.body.style.overflow = "hidden";
+
+    function handleKeyDown(event: KeyboardEvent) {
+      if (event.key === "Escape") {
+        setIsMobileMenuOpen(false);
+      }
+    }
+
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.body.style.overflow = overflow;
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [isMobileMenuOpen]);
 
   return (
     <section className="hero-reference relative min-h-screen w-full overflow-visible text-white lg:h-[100svh] lg:overflow-hidden">
@@ -237,7 +269,7 @@ export function HeroSection() {
         <div className="mx-auto flex w-full max-w-[1280px] items-center justify-between gap-6">
           <div className="flex items-center self-center gap-2.5">
             <Image
-              src="/logo_new_2.png"
+              src={LOGO_SRC}
               alt="WebCode studio"
               width={42}
               height={42}
@@ -277,7 +309,7 @@ export function HeroSection() {
               type="button"
               onClick={() => setIsMobileMenuOpen(true)}
               className={`flex h-12 w-12 items-center justify-center rounded-[14px] bg-[#2b2924]/72 text-[#f2e7b4] ${buttonHoverClass}`}
-              aria-label="Open menu"
+              aria-label={mobileMenuLabel.open}
             >
               <svg
                 viewBox="0 0 24 24"
@@ -294,73 +326,79 @@ export function HeroSection() {
             </button>
           </div>
 
-          {isMobileMenuOpen ? (
-            <div className="fixed inset-0 z-50 bg-[#25231f] px-5 py-4 text-white sm:px-6 lg:hidden">
-              <div className="mx-auto flex w-full max-w-[420px] items-center justify-between gap-4">
-                <div className="flex items-center self-center gap-2.5">
-                  <Image
-                    src="/logo_new_2.png"
-                    alt="WebCode studio"
-                    width={42}
-                    height={42}
-                    className="h-10 w-10 object-contain"
-                  />
-                  <div className="flex flex-col">
-                    <span className="font-[var(--font-manrope)] text-[18px] font-semibold tracking-[-0.04em] text-white">
-                      WebCode studio
-                    </span>
-                    <span className="text-[12px] leading-none text-white/56">
-                      {t("brandTagline")}
-                    </span>
-                  </div>
-                </div>
-
-                <button
-                  type="button"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className={`flex h-12 w-12 items-center justify-center rounded-[14px] text-[#f2e7b4] ${buttonHoverClass}`}
-                  aria-label="Close menu"
-                >
-                  <svg
-                    viewBox="0 0 24 24"
-                    className="h-6 w-6"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1.8"
-                    strokeLinecap="round"
-                  >
-                    <path d="M6 6l12 12" />
-                    <path d="M18 6 6 18" />
-                  </svg>
-                </button>
-              </div>
-
-              <nav className="mx-auto mt-10 flex w-full max-w-[320px] flex-col items-center gap-2 text-center text-[22px] font-semibold tracking-[-0.03em] text-white">
-                {navItems.map((item) => (
-                  <a
-                    key={item.href}
-                    href={item.href}
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    className={`w-full py-3 ${navLinkClass}`}
-                  >
-                    {item.label}
-                  </a>
-                ))}
-              </nav>
-
-              <div className="mx-auto mt-10 flex w-full max-w-[320px] flex-col gap-3">
-                <button
-                  type="button"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className={`w-full rounded-[12px] bg-[linear-gradient(180deg,#efcb65_0%,#d7b24c_100%)] px-4 py-3 text-[15px] font-semibold text-[#30260d] ${buttonHoverClass}`}
-                >
-                  {t("nav.lead")}
-                </button>
-              </div>
-            </div>
-          ) : null}
         </div>
       </header>
+
+      {isMobileMenuOpen ? (
+        <div
+          className="fixed inset-0 z-[120] overflow-y-auto bg-[radial-gradient(circle_at_top,rgba(212,175,74,0.16),transparent_32%),linear-gradient(180deg,rgba(37,35,31,0.98)_0%,rgba(29,27,24,0.98)_100%)] px-5 py-4 text-white backdrop-blur-xl sm:px-6 lg:hidden"
+          role="dialog"
+          aria-modal="true"
+          aria-label={mobileMenuLabel.open}
+        >
+          <div className="mx-auto flex w-full max-w-[420px] items-center justify-between gap-4">
+            <div className="flex items-center self-center gap-2.5">
+              <Image
+                src={LOGO_SRC}
+                alt="WebCode studio"
+                width={42}
+                height={42}
+                className="h-10 w-10 object-contain"
+              />
+              <div className="flex flex-col">
+                <span className="font-[var(--font-manrope)] text-[18px] font-semibold tracking-[-0.04em] text-white">
+                  WebCode studio
+                </span>
+                <span className="text-[12px] leading-none text-white/56">
+                  {t("brandTagline")}
+                </span>
+              </div>
+            </div>
+
+            <button
+              type="button"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className={`flex h-12 w-12 items-center justify-center rounded-[14px] text-[#f2e7b4] ${buttonHoverClass}`}
+              aria-label={mobileMenuLabel.close}
+            >
+              <svg
+                viewBox="0 0 24 24"
+                className="h-6 w-6"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.8"
+                strokeLinecap="round"
+              >
+                <path d="M6 6l12 12" />
+                <path d="M18 6 6 18" />
+              </svg>
+            </button>
+          </div>
+
+          <nav className="mx-auto mt-10 flex w-full max-w-[320px] flex-col items-center gap-2 text-center text-[22px] font-semibold tracking-[-0.03em] text-white">
+            {navItems.map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                onClick={() => setIsMobileMenuOpen(false)}
+                className={`w-full py-3 ${navLinkClass}`}
+              >
+                {item.label}
+              </a>
+            ))}
+          </nav>
+
+          <div className="mx-auto mt-10 flex w-full max-w-[320px] flex-col gap-3">
+            <button
+              type="button"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className={`w-full rounded-[12px] bg-[linear-gradient(180deg,#efcb65_0%,#d7b24c_100%)] px-4 py-3 text-[15px] font-semibold text-[#30260d] ${buttonHoverClass}`}
+            >
+              {t("nav.lead")}
+            </button>
+          </div>
+        </div>
+      ) : null}
 
       <div className="relative z-10 mx-auto flex w-full max-w-[1280px] flex-col px-4 pb-10 pt-5 sm:px-6 sm:pb-12 lg:h-[calc(100svh-92px)] lg:px-0 lg:pb-8 lg:pt-6">
         <div className="grid min-h-0 flex-1 items-start gap-7 lg:items-center lg:gap-14 lg:grid-cols-[540px_minmax(0,1fr)]">
@@ -402,7 +440,11 @@ export function HeroSection() {
             </div>
 
             <p className={`${revealClass} hero-delay-4 mx-auto mt-10 max-w-[345px] text-center text-[16px] leading-[1.58] text-white/72 sm:mt-8 sm:max-w-[500px] sm:text-[16px] sm:leading-[1.68] lg:mx-0 lg:mt-4 lg:text-left lg:text-[18px]`}>
-              {t("description")}
+              {t.rich("description", {
+                brand: (chunks) => (
+                  <span className="text-[#d4af4a]">{chunks}</span>
+                ),
+              })}
             </p>
 
             <div className={`${revealClass} hero-delay-5 mt-6 flex flex-col gap-3 sm:mt-7 sm:flex-row sm:gap-4`}>
