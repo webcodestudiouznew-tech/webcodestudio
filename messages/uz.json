@@ -1,0 +1,50 @@
+{
+  "Metadata": {
+    "title": "WebCode | Biznes uchun tayyor sayt",
+    "description": "WebCode O'zbekistondagi oflayn biznes uchun zamonaviy saytlar yaratadi: sayt, CRM, Telegram/WhatsApp, domen va hosting bitta yechimda."
+  },
+  "Hero": {
+    "brandTagline": "murojaatlarni yo'qotmaydigan saytlar",
+    "badge": "CRM, Telegram/WhatsApp integratsiyasi, domen va hosting - sovg'a",
+    "badgeMobile": "CRM, Telegram/WhatsApp integratsiyasi, domen va hosting - sovg'a",
+    "nav": {
+      "services": "Xizmatlar",
+      "audience": "Kimlar uchun",
+      "process": "Qanday ishlaydi",
+      "pricing": "Tariflar",
+      "cases": "Keyslar",
+      "faq": "FAQ",
+      "contacts": "Kontaktlar",
+      "lead": "Ariza qoldirish"
+    },
+    "locale": {
+      "label": "Tilni tanlash"
+    },
+    "title": {
+      "line1": "Biznesingiz",
+      "line2": "uchun",
+      "line3": "tayyor sayt"
+    },
+    "description": "WebCode O'zbekistondagi oflayn biznes uchun zamonaviy adaptiv saytlar yaratadi. Siz faqat sayt ishlab chiqish uchun to'laysiz va CRM, messenjer integratsiyasi, domen hamda hostingni sovg'a sifatida olasiz.",
+    "cta": {
+      "primary": "Ariza qoldirish",
+      "secondary": "Telegramda konsultatsiya"
+    },
+    "features": {
+      "transaction": {
+        "title": "Adaptiv dizayn",
+        "description": "Saytlar telefon va kompyuterda birdek qulay ishlaydi."
+      },
+      "system": {
+        "title": "Ko'p tilli interfeys",
+        "description": "Sayt uch tilda ishga tushadi: rus, o'zbek va ingliz."
+      }
+    },
+    "activeUsers": "mamnun foydalanuvchilar",
+    "orbit": "O'zbekistondagi lokal bizneslar uchun",
+    "placeholder": {
+      "title": "HERO illustratsiyasi",
+      "description": "Bu yerga keyinroq qo'l va kartalar rasmi joylashtiriladi, hozircha kompozitsiya saqlanib turadi."
+    }
+  }
+}

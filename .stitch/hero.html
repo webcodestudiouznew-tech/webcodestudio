@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Dilocash | Premium Fintech Experience</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;600;800&amp;family=Inter:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+          tailwind.config = {
+            darkMode: "class",
+            theme: {
+              extend: {
+                colors: {
+                  "surface-container-low": "#1c1b1b",
+                  "surface-container-highest": "#353534",
+                  "surface-container-lowest": "#0e0e0e",
+                  "on-tertiary-fixed-variant": "#27438a",
+                  "on-background": "#e5e2e1",
+                  "on-primary-fixed-variant": "#584400",
+                  "primary-container": "#d3af4a",
+                  "on-secondary-container": "#b7b5b4",
+                  "secondary": "#c8c6c5",
+                  "on-error-container": "#ffdad6",
+                  "primary-fixed": "#ffe08f",
+                  "secondary-fixed-dim": "#c8c6c5",
+                  "on-primary": "#3d2e00",
+                  "inverse-surface": "#e5e2e1",
+                  "background": "#131313",
+                  "on-surface": "#e5e2e1",
+                  "outline": "#99907c",
+                  "tertiary-container": "#97b0ff",
+                  "surface": "#131313",
+                  "on-tertiary-container": "#254188",
+                  "secondary-container": "#474746",
+                  "on-secondary": "#313030",
+                  "error": "#ffb4ab",
+                  "tertiary": "#bfcdff",
+                  "on-secondary-fixed": "#1c1b1b",
+                  "tertiary-fixed": "#dbe1ff",
+                  "surface-container": "#201f1f",
+                  "surface-container-high": "#2a2a2a",
+                  "on-tertiary": "#082b72",
+                  "error-container": "#93000a",
+                  "on-primary-fixed": "#241a00",
+                  "tertiary-fixed-dim": "#b4c5ff",
+                  "secondary-fixed": "#e5e2e1",
+                  "inverse-primary": "#755b00",
+                  "on-primary-container": "#564200",
+                  "outline-variant": "#4d4635",
+                  "on-tertiary-fixed": "#00174b",
+                  "surface-variant": "#353534",
+                  "primary-fixed-dim": "#e8c35b",
+                  "surface-bright": "#3a3939",
+                  "inverse-on-surface": "#313030",
+                  "surface-tint": "#e8c35b",
+                  "on-error": "#690005",
+                  "primary": "#f0ca62",
+                  "on-surface-variant": "#d0c5af",
+                  "on-secondary-fixed-variant": "#474746",
+                  "surface-dim": "#131313"
+                },
+                fontFamily: {
+                  "headline": ["Manrope"],
+                  "body": ["Inter"],
+                  "label": ["Inter"]
+                },
+                borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+              },
+            },
+          }
+    </script>
+<style>
+        .tonal-transition {
+            background: linear-gradient(180deg, rgba(19, 19, 19, 0.8) 0%, rgba(19, 19, 19, 0) 100%);
+        }
+        .glass-card {
+            background: rgba(53, 53, 52, 0.4);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(77, 70, 53, 0.15);
+        }
+        .hero-glow {
+            background: radial-gradient(circle at 50% 50%, rgba(240, 202, 98, 0.08) 0%, rgba(19, 19, 19, 0) 70%);
+        }
+        .gradient-button {
+            background: linear-gradient(135deg, #f0ca62 0%, #d3af4a 100%);
+        }
+        .text-glow {
+            text-shadow: 0 0 30px rgba(240, 202, 98, 0.3);
+        }
+        
+        /* Mobile Menu State */
+        #mobile-menu.hidden {
+            display: none;
+        }
+        #mobile-menu:not(.hidden) {
+            display: flex;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary selection:text-on-primary">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/40 backdrop-blur-xl no-line tonal-transition px-4 md:px-8 py-4 md:py-6">
+<div class="flex justify-between items-center max-w-[1440px] mx-auto px-4 md:px-12 w-full">
+<div class="text-xl md:text-2xl font-black tracking-tighter text-[#f0ca62]">Dilocash</div>
+<!-- Desktop Menu -->
+<div class="hidden lg:flex items-center gap-10 font-['Manrope'] tracking-tighter text-sm uppercase font-semibold">
+<a class="text-[#f0ca62] font-bold border-b-2 border-[#f0ca62] pb-1" href="#">Service</a>
+<a class="text-[#e5e2e1] opacity-80 hover:opacity-100 transition-opacity hover:text-[#f0ca62]" href="#">How It Work</a>
+<a class="text-[#e5e2e1] opacity-80 hover:opacity-100 transition-opacity hover:text-[#f0ca62]" href="#">Benefits</a>
+<a class="text-[#e5e2e1] opacity-80 hover:opacity-100 transition-opacity hover:text-[#f0ca62]" href="#">Pricing</a>
+</div>
+<div class="flex items-center gap-4 md:gap-6 font-['Manrope'] tracking-tighter text-sm uppercase font-semibold">
+<div class="hidden sm:flex items-center gap-4 md:gap-6">
+<button class="text-[#e5e2e1] opacity-80 hover:opacity-100 transition-opacity hover:text-[#f0ca62] scale-95 active:scale-90 transition-transform">Log In</button>
+<button class="gradient-button text-on-primary px-4 md:px-6 py-2 md:py-2.5 rounded-lg font-bold scale-95 active:scale-90 transition-transform shadow-lg shadow-primary/10">Sign Up</button>
+</div>
+<!-- Mobile Hamburger Toggle -->
+<button class="lg:hidden text-on-surface p-1" id="menu-toggle">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</div>
+<!-- Mobile Dropdown Menu -->
+<div class="hidden absolute top-full left-0 w-full bg-surface-container-high border-t border-outline-variant/10 flex-col p-6 gap-6 lg:hidden animate-in slide-in-from-top duration-300" id="mobile-menu">
+<a class="text-primary font-bold text-lg" href="#">Service</a>
+<a class="text-on-surface/80 text-lg" href="#">How It Work</a>
+<a class="text-on-surface/80 text-lg" href="#">Benefits</a>
+<a class="text-on-surface/80 text-lg" href="#">Pricing</a>
+<hr class="border-outline-variant/10"/>
+<div class="flex flex-col gap-4 sm:hidden">
+<button class="text-on-surface/80 text-lg text-left">Log In</button>
+<button class="gradient-button text-on-primary w-full py-4 rounded-xl font-bold">Sign Up</button>
+</div>
+</div>
+</nav>
+<!-- Hero Canvas -->
+<main class="relative min-h-screen pt-24 md:pt-32 pb-16 md:pb-20 overflow-hidden">
+<!-- Atmospheric Elements -->
+<div class="absolute top-0 left-0 w-full h-full hero-glow pointer-events-none"></div>
+<div class="absolute top-1/4 right-0 w-64 md:w-96 h-64 md:h-96 bg-primary/5 blur-[80px] md:blur-[120px] rounded-full pointer-events-none"></div>
+<div class="absolute bottom-1/4 left-0 md:left-10 w-48 md:w-64 h-48 md:h-64 bg-primary/5 blur-[70px] md:blur-[100px] rounded-full pointer-events-none"></div>
+<div class="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-12 items-center relative z-10">
+<!-- Left Column: Content -->
+<div class="lg:col-span-6 space-y-8 md:space-y-10 text-center lg:text-left">
+<div class="space-y-4">
+<span class="text-primary font-headline font-bold text-[10px] md:text-xs uppercase tracking-[0.2em] opacity-80">Next-Gen Digital Finance</span>
+<h1 class="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-headline font-extrabold tracking-tighter leading-[1.1] lg:leading-[0.9] text-on-surface">Сайт для вашего бизнеса под ключ</h1>
+</div>
+<div class="text-on-surface-variant text-base md:text-lg leading-relaxed max-w-xl mx-auto lg:mx-0 font-light opacity-90 space-y-2">
+<p>WebCode создаёт современные адаптивные сайты для офлайн-бизнеса в Узбекистане.</p>
+<p>Сайты одинаково удобно работают на телефоне и компьютере.</p>
+<p>Каждый сайт сразу запускается на трёх языках: русском, узбекском и английском.</p>
+</div>
+<div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 md:gap-6 pt-4">
+<button class="w-full sm:w-auto gradient-button text-on-primary px-8 md:px-10 py-4 md:py-5 rounded-xl font-headline font-bold text-base md:text-lg flex items-center justify-center gap-3 hover:scale-105 active:scale-95 transition-all shadow-xl shadow-primary/20">
+                        Get It Now
+                        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">arrow_right_alt</span>
+</button>
+<button class="w-full sm:w-auto bg-surface-container-high hover:bg-surface-bright text-on-surface px-8 md:px-10 py-4 md:py-5 rounded-xl font-headline font-bold text-base md:text-lg border border-outline-variant/20 transition-all">
+                        Download App
+                    </button>
+</div>
+<!-- Features/Stats Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-10 md:pt-12 border-t border-outline-variant/10 text-left">
+<div class="space-y-3">
+<div class="flex items-baseline gap-2">
+<span class="text-primary font-headline font-bold text-xl md:text-2xl">01</span>
+<h3 class="font-headline font-bold text-xs md:text-sm uppercase tracking-wider text-on-surface">Financial Transaction</h3>
+</div>
+<p class="text-xs text-on-surface-variant leading-relaxed opacity-70">Manage everything from the letter app or website with surgical precision.</p>
+</div>
+<div class="space-y-3">
+<div class="flex items-baseline gap-2">
+<span class="text-primary font-headline font-bold text-xl md:text-2xl">02</span>
+<h3 class="font-headline font-bold text-xs md:text-sm uppercase tracking-wider text-on-surface">Easy To Use System</h3>
+</div>
+<p class="text-xs text-on-surface-variant leading-relaxed opacity-70">Each card can have its own unique card holder name balance for total control.</p>
+</div>
+</div>
+</div>
+<!-- Right Column: Visual Composition -->
+<div class="lg:col-span-6 relative flex justify-center lg:justify-end mt-8 lg:mt-0">
+<div class="relative w-full max-w-[500px] lg:max-w-[700px]">
+<!-- Updated Hero Image -->
+<img alt="Dilocash Devices Mockup" class="w-full h-auto object-contain drop-shadow-2xl" src="https://lh3.googleusercontent.com/aida/ADBb0uiMlNTl9Xcib8wTccGBMH3cE7ThFFcPLk_Y9JeTxhsLIRZOypeDsh6TFfM-5xcbXeBicpwkB3xUJqUM4flzo5IjJEdk1YU6GMAaRGqdzyu6_SIWLQPzTfpAqhn1sPqs60QdLt7pTF4FTspiZhtlcqkPBY917suiRUJMrgmISFjsadgc1YdX7Jsxd_ZWDJEkAktPgwrM8H_Wfvji5ooaAkXFctqs-FriDoodDkHTOSHjAItPEwhNlUJm4N5HWPWUt3ZLoNGawkOTaCA"/>
+<!-- World Active User Badge -->
+<div class="absolute -bottom-6 right-0 sm:right-4 md:bottom-1/4 glass-card p-3 md:p-4 rounded-xl md:rounded-2xl shadow-2xl border border-primary/20 backdrop-blur-3xl z-20">
+<div class="flex flex-col gap-2 md:gap-3">
+<span class="text-[8px] md:text-[10px] font-bold uppercase tracking-widest text-primary">World Active User</span>
+<div class="flex items-center">
+<div class="flex -space-x-2 md:-space-x-3">
+<div class="w-6 h-6 md:w-8 md:h-8 rounded-full border-2 border-surface bg-surface-container-high overflow-hidden">
+<img alt="user1" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXrXZFrspxZ0Wlsx7CaSjRQql124hWGfWa-iqmeaW7_C7ch6fd__wA5Nehq6TTmjHid33HUDN9dNkwNW4Lfa_kIta9ciSuq-x7EwLieOTOvQ91Vu2XIlBA4qnFs1mlFMoCDNvwW7-_YzJ7ZLbHqjvYu5l2hmPGjUZRDtN9DLD0xEVKsStMpRrzQRO6cp6GhiPbUzwETPssGHaa4r2aFHNZ0jhN1YTuSQxujmSGPheCbRxYEIF5x4--2eNBAA8CMSezwqB4AA7_D7a7"/>
+</div>
+<div class="w-6 h-6 md:w-8 md:h-8 rounded-full border-2 border-surface bg-surface-container-high overflow-hidden">
+<img alt="user2" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzvlF8lD2OSEZWImOIWE9ko4L6iVow10ehxdyZTDX8HgmKMNZJqEEj4t7ZE_X6onThdwnVZW_88k-DaIpbDKfnPF1PxrKrnHoVgqvIrm53NyAfBTAc6a4_fp956vgVh73ApiWPklPrIQSlYTA8UIW7b8B5S4HbehN4_1Ujnnky1PpWRD-aWJhqOTQKL1uPCfMJii1WVnuvMSr93BG1OoKhlT8m_1m1zz1UrkJehIJd6Mj6FyvCXx5e1fh4mSYJwnTCl_2PGl5dKOwj"/>
+</div>
+<div class="w-6 h-6 md:w-8 md:h-8 rounded-full border-2 border-surface bg-primary flex items-center justify-center text-[8px] md:text-[10px] font-bold text-on-primary">
+                                        +
+                                    </div>
+</div>
+<div class="ml-3 md:ml-4">
+<div class="text-lg md:text-xl font-headline font-black text-on-surface">1.24M</div>
+<div class="text-[7px] md:text-[8px] uppercase tracking-tighter text-on-surface-variant">Trusted Worldwide</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer Shell -->
+<footer class="w-full border-t border-[#e5e2e1]/10 bg-[#131313] tonal-layering mt-12 md:mt-20">
+<div class="flex flex-col lg:flex-row justify-between items-center py-10 md:py-12 px-6 md:px-12 max-w-[1440px] mx-auto w-full gap-8 lg:gap-0">
+<div class="text-xl font-bold text-[#f0ca62] opacity-50">Dilocash</div>
+<div class="flex flex-wrap justify-center gap-6 md:gap-8 font-['Inter'] text-[10px] md:text-xs tracking-wide text-[#e5e2e1]/60">
+<a class="text-[#e5e2e1]/40 hover:text-[#e5e2e1] hover:underline transition-all" href="#">Privacy Policy</a>
+<a class="text-[#e5e2e1]/40 hover:text-[#e5e2e1] hover:underline transition-all" href="#">Terms of Service</a>
+<a class="text-[#e5e2e1]/40 hover:text-[#e5e2e1] hover:underline transition-all" href="#">Contact Us</a>
+<a class="text-[#e5e2e1]/40 hover:text-[#e5e2e1] hover:underline transition-all" href="#">Help Center</a>
+</div>
+<div class="font-['Inter'] text-[10px] md:text-xs tracking-wide text-[#e5e2e1]/60 opacity-80 text-center lg:text-right">
+                © 2024 Dilocash. The Luminous Monolith Fintech Experience.
+            </div>
+</div>
+</footer>
+<script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = menuToggle.querySelector('.material-symbols-outlined');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const isOpened = !mobileMenu.classList.contains('hidden');
+            menuIcon.textContent = isOpened ? 'close' : 'menu';
+        });
+
+        // Close menu on resize if above breakpoint
+        window.addEventListener('resize', () => {
+            if (window.innerWidth >= 1024) {
+                mobileMenu.classList.add('hidden');
+                menuIcon.textContent = 'menu';
+            }
+        });
+    </script>
+</body></html>

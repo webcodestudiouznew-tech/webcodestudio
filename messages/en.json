@@ -1,0 +1,50 @@
+{
+  "Metadata": {
+    "title": "WebCode | Turnkey website for local business",
+    "description": "WebCode builds modern websites for offline businesses in Uzbekistan: website, CRM, Telegram/WhatsApp, domain and hosting in one launch-ready solution."
+  },
+  "Hero": {
+    "brandTagline": "websites that never lose leads",
+    "badge": "CRM, Telegram/WhatsApp integration, domain and hosting - included",
+    "badgeMobile": "CRM, Telegram/WhatsApp integration, domain and hosting - included",
+    "nav": {
+      "services": "Services",
+      "audience": "Who it's for",
+      "process": "How it works",
+      "pricing": "Pricing",
+      "cases": "Cases",
+      "faq": "FAQ",
+      "contacts": "Contacts",
+      "lead": "Leave a request"
+    },
+    "locale": {
+      "label": "Select language"
+    },
+    "title": {
+      "line1": "Turnkey website",
+      "line2": "for your",
+      "line3": "business"
+    },
+    "description": "WebCode builds modern responsive websites for offline businesses in Uzbekistan. You only pay for the website itself and get CRM, messenger integrations, domain and hosting included.",
+    "cta": {
+      "primary": "Leave a request",
+      "secondary": "Telegram consultation"
+    },
+    "features": {
+      "transaction": {
+        "title": "Responsive design",
+        "description": "Websites work equally well on mobile phones and desktops."
+      },
+      "system": {
+        "title": "Multilingual interface",
+        "description": "The website launches in three languages: Russian, Uzbek and English."
+      }
+    },
+    "activeUsers": "happy users",
+    "orbit": "Service for local businesses in Uzbekistan",
+    "placeholder": {
+      "title": "HERO artwork",
+      "description": "The hand-with-cards visual will be placed here later while keeping the current section composition intact."
+    }
+  }
+}

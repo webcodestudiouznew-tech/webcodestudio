@@ -1,0 +1,173 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f4efe7;
+  --foreground: #111111;
+  --surface: rgba(255, 255, 255, 0.8);
+  --surface-strong: #fffdf9;
+  --line: rgba(17, 17, 17, 0.09);
+  --accent: #ff6a3d;
+  --accent-strong: #d44f26;
+  --accent-soft: rgba(255, 106, 61, 0.16);
+  --muted: #5f5a54;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-inter);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background:
+    radial-gradient(circle at top left, rgba(255, 106, 61, 0.16), transparent 32%),
+    radial-gradient(circle at top right, rgba(255, 255, 255, 0.8), transparent 38%),
+    linear-gradient(180deg, #f8f4ee 0%, #f4efe7 52%, #efe7dc 100%);
+  color: var(--foreground);
+  font-family: var(--font-inter), sans-serif;
+  text-rendering: optimizeLegibility;
+  min-width: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+main {
+  width: 100%;
+}
+
+::selection {
+  background: var(--accent);
+  color: #fff;
+}
+
+.page-shell {
+  position: relative;
+  isolation: isolate;
+}
+
+.page-shell::before {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image:
+    linear-gradient(rgba(17, 17, 17, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(17, 17, 17, 0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+  content: "";
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.65), transparent 82%);
+  pointer-events: none;
+}
+
+.section-container {
+  margin-inline: auto;
+  width: min(1180px, calc(100% - 32px));
+}
+
+.surface-card {
+  background: var(--surface);
+  backdrop-filter: blur(18px);
+  border: 1px solid var(--line);
+  box-shadow: 0 24px 80px rgba(17, 17, 17, 0.08);
+}
+
+.hero-reference {
+  background:
+    radial-gradient(circle at 72% 51%, rgba(212, 175, 74, 0.28), transparent 0, transparent 18%, rgba(35, 34, 31, 0.9) 42%, rgba(35, 34, 31, 1) 66%),
+    linear-gradient(180deg, #2d2b28 0%, #252421 100%);
+  width: 100%;
+}
+
+.hero-enter {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform, opacity;
+}
+
+.hero-enter-scale {
+  opacity: 0;
+  transform: translateY(18px) scale(0.97);
+  transition:
+    opacity 1s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 1s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform, opacity;
+}
+
+.hero-enter-glow {
+  opacity: 0;
+  transition: opacity 1.4s ease-out;
+}
+
+.hero-enter-active {
+  opacity: 1;
+  transform: none;
+}
+
+.hero-delay-1 {
+  transition-delay: 0.08s;
+}
+
+.hero-delay-2 {
+  transition-delay: 0.16s;
+}
+
+.hero-delay-3 {
+  transition-delay: 0.24s;
+}
+
+.hero-delay-4 {
+  transition-delay: 0.32s;
+}
+
+.hero-delay-5 {
+  transition-delay: 0.4s;
+}
+
+.hero-delay-6 {
+  transition-delay: 0.48s;
+}
+
+.hero-star {
+  animation: hero-star-pulse 2.8s ease-in-out infinite;
+  transform-origin: center;
+  will-change: transform, opacity, filter;
+}
+
+@keyframes hero-star-pulse {
+  0%,
+  100% {
+    opacity: 0.72;
+    transform: scale(0.94);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-enter,
+  .hero-enter-scale,
+  .hero-enter-glow,
+  .hero-star {
+    animation: none !important;
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
