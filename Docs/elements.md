@@ -5,27 +5,27 @@
 
 ### Дерево вложенности
 ```text
+SiteHeader
+├─ HeaderBrand
+│  ├─ HeaderBrandLogo
+│  ├─ HeaderBrandTitle
+│  └─ HeaderBrandTagline
+├─ HeaderNav
+├─ HeaderActions
+│  ├─ LocaleSwitcher
+│  └─ HeaderLeadButton
+├─ HeaderMobileActions
+│  ├─ LocaleSwitcher
+│  └─ HeaderMenuTrigger
+└─ HeaderMobileMenu
+   ├─ HeaderMobileMenuHeader
+   ├─ HeaderMobileMenuNav
+   └─ HeaderMobileMenuLeadButton
 HeroSection
 ├─ HeroBackground
 │  ├─ HeroBaseGradient
 │  ├─ HeroGlowTop
 │  └─ HeroGlowBottom
-├─ HeroHeader
-│  ├─ HeroBrand
-│  │  ├─ HeroBrandLogo
-│  │  ├─ HeroBrandTitle
-│  │  └─ HeroBrandTagline
-│  ├─ HeroNav
-│  └─ HeroHeaderActions
-│     ├─ LocaleSwitcher
-│     └─ HeroHeaderLeadButton
-├─ HeroMobileActions
-│  ├─ LocaleSwitcher
-│  └─ HeroMenuTrigger
-├─ HeroMobileMenu
-│  ├─ HeroMobileMenuHeader
-│  ├─ HeroMobileMenuNav
-│  └─ HeroMobileMenuLeadButton
 ├─ HeroMain
 │  ├─ HeroContent
 │  │  ├─ HeroBadge
@@ -70,6 +70,12 @@ AudienceSection
 
 ## Header
 
+### Structural status
+- Header is no longer embedded inside `HeroSection`
+- Current implementation lives in standalone `SiteHeader`
+- Page order is: `SiteHeader` -> `HeroSection` -> `AudienceSection`
+- Header keeps visual continuity with HERO through shared top background treatment
+
 ### Brand block
 - Logo image height: `40px`
 - Brand title: `18px` mobile, `20px` desktop
@@ -84,6 +90,7 @@ AudienceSection
 - Desktop nav uses a flat inline row
 - Header CTA button font-size: `14px`
 - Header includes locale switcher before CTA button
+- Header outer content width matches the first-screen content width: `max-w-[1280px]`
 
 ### LocaleSwitcher
 - Exists on both desktop and mobile
@@ -100,6 +107,12 @@ AudienceSection
 - Close button in top-right corner
 - Menu items centered
 - Same safe paddings as mobile layout
+
+### Scroll behavior
+- Header is visually transparent in default state
+- Background and shadow appear only after scroll begins
+- Mobile header uses dedicated safe-area-aware shell height
+- Header and top spacer must stay synchronized through shared CSS variables
 
 ## HeroContent
 
@@ -252,6 +265,7 @@ AudienceSection
 - No fake case studies or invented helper copy
 - Section remains fully localized for `RU / UZ / EN`
 - Brand name `WebCode` in description stays accent-colored
+- Current implementation includes exactly `6` category cards without extra proof/stat blocks
 
 ## Motion
 
