@@ -5,8 +5,8 @@
   },
   "Hero": {
     "brandTagline": "websites that never lose leads",
-    "badge": "CRM, Telegram/WhatsApp integration, domain and hosting - included",
-    "badgeMobile": "CRM, Telegram, domain and hosting - included",
+    "eyebrow": "For service and expert businesses in Uzbekistan",
+    "eyebrowMobile": "For businesses in Uzbekistan",
     "nav": {
       "whyWebcode": "Why WebCode",
       "audience": "Who it's for",
@@ -23,26 +23,25 @@
     },
     "title": {
       "line1": "Turnkey website",
-      "line2": "for your",
-      "line3": "business"
+      "line2": "and CRM so",
+      "line3": "you keep leads"
     },
-    "description": "<brand>WebCode</brand> builds modern responsive websites for offline businesses in Uzbekistan. You only pay for the website itself and get CRM, messenger integrations, domain and hosting included.",
+    "subtitle": "We launch a modern website in <locales></locales>, connect Telegram/WhatsApp, domain, hosting and a simple CRM for incoming leads.",
+    "description": "You get one complete solution instead of a set of disconnected services.",
+    "supportText": "We help with structure, rewrite raw text, build the website and launch everything turnkey without unnecessary complexity on your side.",
     "cta": {
-      "primary": "Leave a request",
-      "secondary": "Telegram consultation"
+      "primary": "Get a proposal",
+      "secondary": "Message on Telegram"
     },
-    "features": {
-      "transaction": {
-        "title": "Responsive design",
-        "description": "Websites work equally well on mobile phones and desktops."
-      },
-      "system": {
-        "title": "Multilingual interface",
-        "description": "The website launches in three languages: Russian, Uzbek and English."
-      }
+    "microcopy": "We reply within one business day. We will help you choose the right format and estimate the cost for your business.",
+    "chips": {
+      "languages": "RU / UZ / EN",
+      "adaptive": "Responsive website",
+      "crm": "CRM for leads",
+      "messaging": "Telegram / WhatsApp",
+      "launch": "Turnkey launch"
     },
-    "activeUsers": "happy users",
-    "orbit": "Service for local businesses in Uzbekistan",
+    "orbit": "Website, CRM, Telegram and turnkey launch for businesses in Uzbekistan",
     "placeholder": {
       "title": "HERO artwork",
       "description": "The hand-with-cards visual will be placed here later while keeping the current section composition intact."

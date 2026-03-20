@@ -5,8 +5,8 @@
   },
   "Hero": {
     "brandTagline": "murojaatlarni yo'qotmaydigan saytlar",
-    "badge": "CRM, Telegram/WhatsApp integratsiyasi, domen va hosting - sovg'a",
-    "badgeMobile": "CRM, Telegram, domen va hosting - sovg'a",
+    "eyebrow": "O'zbekistondagi servis va ekspert biznes uchun",
+    "eyebrowMobile": "O'zbekistondagi biznes uchun",
     "nav": {
       "whyWebcode": "Nega WebCode",
       "audience": "Kimlar uchun",
@@ -22,27 +22,26 @@
       "closeMenu": "Menyuni yopish"
     },
     "title": {
-      "line1": "Biznesingiz",
-      "line2": "uchun",
-      "line3": "tayyor sayt"
+      "line1": "Sayt va CRM",
+      "line2": "tayyor, toki",
+      "line3": "murojaatlar yo'qolmasin"
     },
-    "description": "<brand>WebCode</brand> O'zbekistondagi oflayn biznes uchun zamonaviy adaptiv saytlar yaratadi. Siz faqat sayt ishlab chiqish uchun to'laysiz va CRM, messenjer integratsiyasi, domen hamda hostingni sovg'a sifatida olasiz.",
+    "subtitle": "Zamonaviy saytni <locales></locales> formatida ishga tushiramiz, Telegram/WhatsApp, domen, hosting va murojaatlar uchun sodda CRM'ni ulaymiz.",
+    "description": "Siz tarqoq servislar to'plamini emas, balki tayyor yechimni olasiz.",
+    "supportText": "Struktura bilan yordam beramiz, xom matnni qayta ishlaymiz, saytni yig'amiz va hammasini siz uchun ortiqcha murakkabliksiz ishga tushiramiz.",
     "cta": {
-      "primary": "Ariza qoldirish",
-      "secondary": "Telegramda konsultatsiya"
+      "primary": "Taklif olish",
+      "secondary": "Telegramga yozish"
     },
-    "features": {
-      "transaction": {
-        "title": "Adaptiv dizayn",
-        "description": "Saytlar telefon va kompyuterda birdek qulay ishlaydi."
-      },
-      "system": {
-        "title": "Ko'p tilli interfeys",
-        "description": "Sayt uch tilda ishga tushadi: rus, o'zbek va ingliz."
-      }
+    "microcopy": "Ish kuni davomida javob beramiz. Biznesingizga mos sayt formatini tanlash va narxni hisoblashda yordam beramiz.",
+    "chips": {
+      "languages": "RU / UZ / EN",
+      "adaptive": "Adaptiv sayt",
+      "crm": "Murojaatlar uchun CRM",
+      "messaging": "Telegram / WhatsApp",
+      "launch": "Tayyor ishga tushirish"
     },
-    "activeUsers": "mamnun foydalanuvchilar",
-    "orbit": "O'zbekistondagi lokal bizneslar uchun",
+    "orbit": "O'zbekistondagi biznes uchun sayt, CRM, Telegram va tayyor ishga tushirish",
     "placeholder": {
       "title": "HERO illustratsiyasi",
       "description": "Bu yerga keyinroq qo'l va kartalar rasmi joylashtiriladi, hozircha kompozitsiya saqlanib turadi."
