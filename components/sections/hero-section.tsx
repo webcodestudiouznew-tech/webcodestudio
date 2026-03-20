@@ -66,7 +66,9 @@ function OrbitBadge({ label }: { label: string }) {
 
 function HeroChip({ label }: { label: string }) {
   return (
-    <li className="rounded-full border border-[#7f6930] bg-[#342f25]/52 px-4 py-2 text-[13px] font-medium tracking-[-0.01em] text-[#f1d67e] shadow-[inset_0_1px_0_rgba(255,255,255,0.05)]">
+    <li className="group relative overflow-hidden rounded-full border border-[#7f6930] bg-[#342f25]/52 px-4 py-2 text-[13px] font-medium tracking-[-0.01em] text-[#f1d67e] shadow-[inset_0_1px_0_rgba(255,255,255,0.05)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-[#a5873d] hover:bg-[#3a3327]/72 hover:text-[#f6dd8b] hover:shadow-[0_12px_24px_rgba(0,0,0,0.18),0_0_0_1px_rgba(212,175,74,0.08),inset_0_1px_0_rgba(255,255,255,0.06)]">
+      <span className="pointer-events-none absolute inset-x-3 top-0 h-px bg-[linear-gradient(90deg,transparent,rgba(212,175,74,0.14),transparent)] transition-all duration-300 ease-out group-hover:bg-[linear-gradient(90deg,transparent,rgba(212,175,74,0.48),transparent)]" />
+      <span className="pointer-events-none absolute right-[-18%] top-1/2 h-8 w-8 -translate-y-1/2 rounded-full bg-[#d4af4a]/0 blur-xl transition-all duration-300 ease-out group-hover:bg-[#d4af4a]/16" />
       {label}
     </li>
   );

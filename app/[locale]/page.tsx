@@ -9,7 +9,7 @@ type LocaleHomePageProps = {
 };
 
 export default async function LocaleHomePage({ params }: LocaleHomePageProps) {
-  const { locale } = await params;
+  await params;
 
   return (
     <main className="flex min-h-screen w-full flex-1 flex-col">
@@ -17,7 +17,7 @@ export default async function LocaleHomePage({ params }: LocaleHomePageProps) {
         <SiteHeader />
         <HeroSection />
       </div>
-      <AudienceSection locale={locale} />
+      <AudienceSection />
     </main>
   );
 }
