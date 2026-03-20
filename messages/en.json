@@ -8,11 +8,10 @@
     "badge": "CRM, Telegram/WhatsApp integration, domain and hosting - included",
     "badgeMobile": "CRM, Telegram, domain and hosting - included",
     "nav": {
-      "services": "Services",
+      "whyWebcode": "Why WebCode",
       "audience": "Who it's for",
-      "process": "How it works",
-      "pricing": "Pricing",
       "cases": "Cases",
+      "pricing": "Pricing",
       "faq": "FAQ",
       "contacts": "Contacts",
       "lead": "Leave a request"

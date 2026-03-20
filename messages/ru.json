@@ -8,11 +8,10 @@
     "badge": "CRM, Telegram/WhatsApp интеграция, домен и хостинг - в подарок",
     "badgeMobile": "CRM, Telegram, домен и хостинг - в подарок",
     "nav": {
-      "services": "Услуги",
+      "whyWebcode": "Почему WebCode",
       "audience": "Для кого",
-      "process": "Как это работает",
-      "pricing": "Тарифы",
       "cases": "Кейсы",
+      "pricing": "Тарифы",
       "faq": "FAQ",
       "contacts": "Контакты",
       "lead": "Оставить заявку"

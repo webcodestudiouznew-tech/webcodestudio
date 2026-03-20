@@ -89,11 +89,10 @@ export function SiteHeader() {
   const buttonHoverClass =
     "transition-all duration-200 ease-out hover:-translate-y-0.5 hover:brightness-110";
   const navItems = [
-    { href: "#services", label: t("nav.services") },
+    { href: "#why-webcode", label: t("nav.whyWebcode") },
     { href: "#audience", label: t("nav.audience") },
-    { href: "#process", label: t("nav.process") },
-    { href: "#pricing", label: t("nav.pricing") },
     { href: "#cases", label: t("nav.cases") },
+    { href: "#pricing", label: t("nav.pricing") },
     { href: "#faq", label: t("nav.faq") },
     { href: "#contacts", label: t("nav.contacts") },
   ];
@@ -154,11 +153,12 @@ export function SiteHeader() {
 
           <div className="hidden items-center gap-3 lg:flex">
             <LocaleSwitcher buttonHoverClass={buttonHoverClass} />
-            <button
+            <a
+              href="#lead"
               className={`rounded-[8px] border border-[#8c7636] bg-[#3b372d]/35 px-5 py-2.5 text-[14px] font-semibold text-[#f2e7b4] shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] ${buttonHoverClass}`}
             >
               {t("nav.lead")}
-            </button>
+            </a>
           </div>
 
           <div className="flex items-center gap-2 lg:hidden">
@@ -246,13 +246,13 @@ export function SiteHeader() {
           </nav>
 
           <div className="mx-auto mt-10 flex w-full max-w-[320px] flex-col gap-3">
-            <button
-              type="button"
+            <a
+              href="#lead"
               onClick={() => setIsMobileMenuOpen(false)}
-              className={`w-full rounded-[12px] bg-[linear-gradient(180deg,#efcb65_0%,#d7b24c_100%)] px-4 py-3 text-[15px] font-semibold text-[#30260d] ${buttonHoverClass}`}
+              className={`w-full rounded-[12px] bg-[linear-gradient(180deg,#efcb65_0%,#d7b24c_100%)] px-4 py-3 text-center text-[15px] font-semibold text-[#30260d] ${buttonHoverClass}`}
             >
               {t("nav.lead")}
-            </button>
+            </a>
           </div>
         </div>
       ) : null}

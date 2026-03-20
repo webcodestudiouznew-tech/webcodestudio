@@ -8,11 +8,10 @@
     "badge": "CRM, Telegram/WhatsApp integratsiyasi, domen va hosting - sovg'a",
     "badgeMobile": "CRM, Telegram, domen va hosting - sovg'a",
     "nav": {
-      "services": "Xizmatlar",
+      "whyWebcode": "Nega WebCode",
       "audience": "Kimlar uchun",
-      "process": "Qanday ishlaydi",
-      "pricing": "Tariflar",
       "cases": "Keyslar",
+      "pricing": "Tariflar",
       "faq": "FAQ",
       "contacts": "Kontaktlar",
       "lead": "Ariza qoldirish"
