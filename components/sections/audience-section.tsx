@@ -1,7 +1,5 @@
-"use client";
-
-import { useEffect, useRef, useState } from "react";
-import { useTranslations } from "next-intl";
+import type { CSSProperties } from "react";
+import { getTranslations } from "next-intl/server";
 
 type AudienceKey =
   | "service"
@@ -92,126 +90,45 @@ function AudienceIcon({ type }: { type: AudienceKey }) {
   );
 }
 
-export function AudienceSection() {
-  const t = useTranslations("Audience");
-  const sectionRef = useRef<HTMLElement | null>(null);
-  const introRef = useRef<HTMLDivElement | null>(null);
-  const progressRef = useRef(0);
-  const targetProgressRef = useRef(0);
-  const animationFrameRef = useRef(0);
-  const [scrollProgress, setScrollProgress] = useState(() => {
-    if (typeof window === "undefined") {
-      return 0;
-    }
-
-    return window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 1 : 0;
-  });
-
-  useEffect(() => {
-    const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
-    if (mediaQuery.matches) {
-      return;
-    }
-
-    const sectionNode = sectionRef.current;
-    const introNode = introRef.current;
-    if (!sectionNode || !introNode) {
-      return;
-    }
-
-    const animateProgress = () => {
-      const current = progressRef.current;
-      const target = targetProgressRef.current;
-      const next = current + (target - current) * 0.07;
-
-      progressRef.current = next;
-      setScrollProgress(next);
-
-      if (Math.abs(target - next) < 0.0015) {
-        progressRef.current = target;
-        setScrollProgress(target);
-        animationFrameRef.current = 0;
-        return;
-      }
-
-      animationFrameRef.current = window.requestAnimationFrame(animateProgress);
-    };
-
-    const updateProgress = () => {
-      const introRect = introNode.getBoundingClientRect();
-      const sectionRect = sectionNode.getBoundingClientRect();
-      const viewportHeight = window.innerHeight;
-      const start = viewportHeight * 0.92;
-      const sectionSpan = sectionRect.bottom - introRect.top;
-      const endIntroTop = viewportHeight - sectionSpan;
-      const totalDistance = Math.max(1, start - endIntroTop);
-      const traveledDistance = start - introRect.top;
-      const rawProgress = traveledDistance / totalDistance;
-      const nextProgress = Math.max(0, Math.min(1, rawProgress));
-
-      targetProgressRef.current = nextProgress;
-
-      if (animationFrameRef.current === 0) {
-        animationFrameRef.current = window.requestAnimationFrame(animateProgress);
-      }
-    };
-
-    updateProgress();
-    window.addEventListener("scroll", updateProgress, { passive: true });
-    window.addEventListener("resize", updateProgress);
-
-    return () => {
-      if (animationFrameRef.current !== 0) {
-        window.cancelAnimationFrame(animationFrameRef.current);
-      }
-
-      window.removeEventListener("scroll", updateProgress);
-      window.removeEventListener("resize", updateProgress);
-    };
-  }, []);
-
-  const easeOutCubic = (value: number) => 1 - Math.pow(1 - value, 3);
-
-  const getRevealStyle = (delay: number, distance: number, range = 0.72) => {
-    const rawProgress = Math.max(0, Math.min(1, (scrollProgress - delay) / range));
-    const progress = easeOutCubic(rawProgress);
-
-    return {
-      opacity: progress,
-      transform: `translateY(${(1 - progress) * distance}px)`,
-    };
-  };
-
-  const getGlowStyle = (delay: number) => {
-    const rawProgress = Math.max(0, Math.min(1, (scrollProgress - delay) / 0.42));
-    const progress = easeOutCubic(rawProgress);
-
-    return {
-      opacity: progress * 0.72,
-    };
-  };
-
+export async function AudienceSection({ locale }: { locale: string }) {
+  const t = await getTranslations({ locale, namespace: "Audience" });
   return (
     <section
       id="audience"
-      ref={sectionRef}
-      className="relative w-full overflow-hidden bg-[linear-gradient(180deg,#23211e_0%,#1f1d1a_100%)] py-16 text-white sm:py-20 lg:py-24"
+      className="scroll-reveal-section relative w-full overflow-hidden bg-[linear-gradient(180deg,#23211e_0%,#1f1d1a_100%)] py-16 text-white sm:py-20 lg:py-24"
     >
       <div className="absolute inset-x-0 top-0 h-px bg-[linear-gradient(90deg,transparent,rgba(212,175,74,0.5),transparent)]" />
       <div
-        className="absolute left-[-6%] top-[8%] h-[280px] w-[280px] rounded-full bg-[#d4af4a]/10 blur-[120px]"
-        style={getGlowStyle(0.02)}
+        className="scroll-reveal-glow absolute left-[-6%] top-[8%] h-[280px] w-[280px] rounded-full bg-[#d4af4a]/10 blur-[120px]"
+        style={
+          {
+            "--reveal-start": "6%",
+            "--reveal-end": "34%",
+            "--glow-opacity": 0.72,
+          } as CSSProperties
+        }
       />
       <div
-        className="absolute bottom-[-8%] right-[-4%] h-[320px] w-[320px] rounded-full bg-[#d4af4a]/8 blur-[140px]"
-        style={getGlowStyle(0.1)}
+        className="scroll-reveal-glow absolute bottom-[-8%] right-[-4%] h-[320px] w-[320px] rounded-full bg-[#d4af4a]/8 blur-[140px]"
+        style={
+          {
+            "--reveal-start": "10%",
+            "--reveal-end": "42%",
+            "--glow-opacity": 0.6,
+          } as CSSProperties
+        }
       />
 
       <div className="relative z-10 mx-auto flex w-full max-w-[1280px] flex-col gap-10 px-4 sm:px-6 lg:gap-14 lg:px-0">
         <div
-          ref={introRef}
-          className="flex max-w-[760px] flex-col items-start will-change-transform will-change-opacity lg:max-w-[1040px]"
-          style={getRevealStyle(0.08, 42, 0.84)}
+          className="scroll-reveal-intro flex max-w-[760px] flex-col items-start lg:max-w-[1040px]"
+          style={
+            {
+              "--reveal-start": "12%",
+              "--reveal-end": "38%",
+              "--reveal-distance": "28px",
+            } as CSSProperties
+          }
         >
           <h2 className="max-w-[16ch] font-[var(--font-manrope)] text-[38px] font-semibold leading-[1.02] tracking-[-0.05em] text-white lg:max-w-none lg:text-[38px]">
             {t("title")}
@@ -226,8 +143,14 @@ export function AudienceSection() {
           {audienceKeys.map((item, index) => (
             <div
               key={item}
-              className="h-full will-change-transform will-change-opacity"
-              style={getRevealStyle(0.34 + Math.floor(index / 2) * 0.28 + (index % 2) * 0.1, 16, 1.24)}
+              className="scroll-reveal-card h-full"
+              style={
+                {
+                  "--reveal-start": `${20 + Math.floor(index / 2) * 18 + (index % 2) * 8}%`,
+                  "--reveal-end": `${48 + Math.floor(index / 2) * 18 + (index % 2) * 8}%`,
+                  "--reveal-distance": "16px",
+                } as CSSProperties
+              }
             >
               <article className="group relative flex h-full flex-col overflow-hidden rounded-[22px] border border-white/8 bg-[linear-gradient(180deg,rgba(255,255,255,0.04)_0%,rgba(255,255,255,0.02)_100%)] px-5 py-5 shadow-[0_18px_40px_rgba(0,0,0,0.16)] backdrop-blur-[10px] transition-all duration-300 ease-out hover:-translate-y-1 hover:border-[#8a7030]/80 hover:bg-[linear-gradient(180deg,rgba(255,255,255,0.06)_0%,rgba(61,50,27,0.18)_100%)] hover:shadow-[0_24px_54px_rgba(0,0,0,0.24)]">
                 <div className="pointer-events-none absolute inset-x-5 top-0 h-px bg-[linear-gradient(90deg,transparent,rgba(212,175,74,0.18),transparent)] transition-all duration-300 ease-out group-hover:bg-[linear-gradient(90deg,transparent,rgba(212,175,74,0.58),transparent)]" />

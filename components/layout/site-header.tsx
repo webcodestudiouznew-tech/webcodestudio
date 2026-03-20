@@ -33,7 +33,7 @@ function LocaleSwitcher({
     }
 
     startTransition(() => {
-      router.replace(pathname, { locale: nextLocale });
+      router.replace(pathname, { locale: nextLocale, scroll: false });
     });
   }
 
