@@ -21,7 +21,7 @@
 ### 2. Scaffold проекта
 - [x] Инициализировать Next.js 16 + TypeScript проект
 - [x] Подключить Tailwind CSS v4
-- [ ] Подключить shadcn/ui
+- [x] Подключить shadcn/ui
 - [x] Настроить next-intl для RU / UZ / EN
 - [x] Настроить ESLint и базовую структуру директорий
 
