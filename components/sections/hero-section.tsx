@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
+import ShinyText from "@/components/ui/shiny-text";
 
 const LOGO_SRC = "/logo_new_2.png?v=20260319";
 
@@ -121,15 +122,72 @@ export function HeroSection() {
 
             <h1 className={`${revealClass} hero-delay-2 mx-auto max-w-[360px] min-w-0 text-center font-[var(--font-manrope)] text-[31px] font-semibold leading-[1.03] tracking-[-0.065em] text-white max-[380px]:max-w-[318px] max-[380px]:text-[26px] max-[380px]:tracking-[-0.055em] sm:max-w-[540px] sm:text-[48px] sm:leading-[1.02] sm:tracking-[-0.055em] lg:mx-0 lg:text-left lg:text-[60px] xl:text-[64px]`}>
               <span className="sm:hidden">
-                <span className="block">{t("title.mobileLine1")}</span>
-                <span className="block">{t("title.mobileLine2")}</span>
+                <ShinyText
+                  className="block"
+                  text={t("title.mobileLine1")}
+                  speed={5}
+                  delay={0}
+                  color="#b5b5b5"
+                  shineColor="#ffffff"
+                  spread={130}
+                  direction="left"
+                  yoyo={false}
+                  pauseOnHover={false}
+                  disabled={false}
+                />
+                <ShinyText
+                  className="block"
+                  text={t("title.mobileLine2")}
+                  speed={5}
+                  delay={0}
+                  color="#b5b5b5"
+                  shineColor="#ffffff"
+                  spread={130}
+                  direction="left"
+                  yoyo={false}
+                  pauseOnHover={false}
+                  disabled={false}
+                />
               </span>
               <span className="hidden sm:inline">
-                {t("title.line1")}
+                <ShinyText
+                  text={t("title.line1")}
+                  speed={5}
+                  delay={0}
+                  color="#b5b5b5"
+                  shineColor="#ffffff"
+                  spread={130}
+                  direction="left"
+                  yoyo={false}
+                  pauseOnHover={false}
+                  disabled={false}
+                />
                 <br />
-                {t("title.line2")}
+                <ShinyText
+                  text={t("title.line2")}
+                  speed={5}
+                  delay={0}
+                  color="#b5b5b5"
+                  shineColor="#ffffff"
+                  spread={130}
+                  direction="left"
+                  yoyo={false}
+                  pauseOnHover={false}
+                  disabled={false}
+                />
                 <br />
-                {t("title.line3")}
+                <ShinyText
+                  text={t("title.line3")}
+                  speed={5}
+                  delay={0}
+                  color="#b5b5b5"
+                  shineColor="#ffffff"
+                  spread={130}
+                  direction="left"
+                  yoyo={false}
+                  pauseOnHover={false}
+                  disabled={false}
+                />
               </span>
             </h1>
 

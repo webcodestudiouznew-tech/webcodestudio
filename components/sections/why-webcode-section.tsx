@@ -1,4 +1,5 @@
 import { getTranslations } from "next-intl/server";
+import { WhyWebCodeBento } from "@/components/sections/why-webcode-bento";
 
 type WhyWebCodeKey =
   | "system"
@@ -106,127 +107,13 @@ const whyWebCodeCards: Array<{
   },
 ];
 
-function WhyWebCodeIcon({ type }: { type: WhyWebCodeKey }) {
-  if (type === "system") {
-    return (
-      <svg
-        viewBox="0 0 24 24"
-        className="h-[18px] w-[18px]"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.7"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        aria-hidden="true"
-      >
-        <rect x="3.5" y="4.5" width="7" height="6" rx="1.5" />
-        <rect x="13.5" y="4.5" width="7" height="6" rx="1.5" />
-        <rect x="8.5" y="13.5" width="7" height="6" rx="1.5" />
-        <path d="M7 10.5v2h10v-2" />
-      </svg>
-    );
-  }
-
-  if (type === "structure") {
-    return (
-      <svg
-        viewBox="0 0 24 24"
-        className="h-[18px] w-[18px]"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.7"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        aria-hidden="true"
-      >
-        <path d="M5 6.5h14" />
-        <path d="M5 12h9" />
-        <path d="M5 17.5h7" />
-        <path d="m16 14 3 3-3 3" />
-      </svg>
-    );
-  }
-
-  if (type === "languages") {
-    return (
-      <svg
-        viewBox="0 0 24 24"
-        className="h-[18px] w-[18px]"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.7"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        aria-hidden="true"
-      >
-        <path d="M4 7h10" />
-        <path d="M9 4v3c0 4-1.8 7.3-5 10" />
-        <path d="M6 11c1.1 1.9 2.8 3.8 5 5.5" />
-        <path d="M14 20l3.2-9 3.3 9" />
-        <path d="M15.1 17h4.3" />
-      </svg>
-    );
-  }
-
-  if (type === "market") {
-    return (
-      <svg
-        viewBox="0 0 24 24"
-        className="h-[18px] w-[18px]"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.7"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        aria-hidden="true"
-      >
-        <path d="M12 20s-6-2.7-6-8V7l6-3 6 3v5c0 5.3-6 8-6 8Z" />
-        <path d="M9.5 12.5h5" />
-        <path d="M12 10v5" />
-      </svg>
-    );
-  }
-
-  if (type === "contractor") {
-    return (
-      <svg
-        viewBox="0 0 24 24"
-        className="h-[18px] w-[18px]"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.7"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        aria-hidden="true"
-      >
-        <rect x="4" y="5" width="16" height="14" rx="3" />
-        <path d="M8 9h8" />
-        <path d="M8 13h8" />
-        <path d="M8 17h5" />
-      </svg>
-    );
-  }
-
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      className="h-[18px] w-[18px]"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.7"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden="true"
-    >
-      <path d="M12 21s-5.5-3.5-5.5-8.5A3.5 3.5 0 0 1 10 9a3.8 3.8 0 0 1 2 0 3.8 3.8 0 0 1 2 0 3.5 3.5 0 0 1 3.5 3.5C17.5 17.5 12 21 12 21Z" />
-      <path d="M9.5 13.2h5" />
-      <path d="M12 10.7v5" />
-    </svg>
-  );
-}
-
 export async function WhyWebCodeSection({ locale }: { locale: string }) {
   const t = await getTranslations({ locale, namespace: "WhyWebCode" });
+  const bentoItems = whyWebCodeCards.map((card) => ({
+    ...card,
+    title: t(`items.${card.key}.title`),
+    description: t(`items.${card.key}.description`),
+  }));
 
   return (
     <section
@@ -248,47 +135,7 @@ export async function WhyWebCodeSection({ locale }: { locale: string }) {
           </p>
         </div>
 
-        <div className="grid items-stretch gap-3 sm:gap-4 md:grid-cols-2 xl:grid-cols-4 xl:auto-rows-[148px]">
-          {whyWebCodeCards.map((card, index) => (
-            <div key={card.key} className={`h-full ${card.gridClassName}`}>
-              <article
-                className={`group relative flex h-full flex-col overflow-hidden rounded-[28px] border border-[#8a7030]/28 shadow-[0_24px_56px_rgba(0,0,0,0.2)] transition-all duration-300 ease-out hover:-translate-y-1 hover:border-[#a5873d]/54 hover:shadow-[0_30px_64px_rgba(0,0,0,0.26)] ${card.articleClassName} ${card.cardClassName}`}
-              >
-                <div className="pointer-events-none absolute inset-x-6 top-0 h-px bg-[linear-gradient(90deg,transparent,rgba(241,204,107,0.22),transparent)] transition-all duration-300 ease-out group-hover:bg-[linear-gradient(90deg,transparent,rgba(241,204,107,0.6),transparent)]" />
-                <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.02),transparent_26%,transparent)]" />
-                <div className="pointer-events-none absolute -right-10 top-[-8%] h-28 w-28 rounded-full bg-[#d4af4a]/0 blur-3xl transition-all duration-300 ease-out group-hover:bg-[#d4af4a]/12" />
-
-                <div className="relative flex items-start justify-between gap-4">
-                  <div
-                    className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-[14px] shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] transition-all duration-300 ease-out group-hover:scale-[1.04] ${card.iconWrapClassName}`}
-                  >
-                    <WhyWebCodeIcon type={card.key} />
-                  </div>
-
-                  <span className="pr-0.5 text-[13px] font-medium tracking-[-0.02em] text-white/28 transition-colors duration-300 ease-out group-hover:text-[#efcb65]/72">
-                    {String(index + 1).padStart(2, "0")}
-                  </span>
-                </div>
-
-                <div
-                  className={`relative flex flex-1 flex-col ${card.contentPositionClassName} ${card.contentWrapClassName} ${card.contentClassName}`}
-                >
-                  <h3
-                    className={`font-[var(--font-manrope)] text-[18px] font-semibold leading-[1.08] tracking-[-0.04em] text-white transition-colors duration-300 ease-out group-hover:text-[#f5df9a] sm:text-[20px] sm:leading-[1.04] sm:tracking-[-0.045em] ${card.titleClassName}`}
-                  >
-                    {t(`items.${card.key}.title`)}
-                  </h3>
-
-                  <p
-                    className={`text-[14px] leading-[1.64] text-white/62 transition-colors duration-300 ease-out group-hover:text-white/74 sm:text-[15px] sm:leading-[1.66] ${card.descriptionClassName}`}
-                  >
-                    {t(`items.${card.key}.description`)}
-                  </p>
-                </div>
-              </article>
-            </div>
-          ))}
-        </div>
+        <WhyWebCodeBento items={bentoItems} />
 
         <div className="relative overflow-hidden rounded-[28px] bg-[radial-gradient(circle_at_top,rgba(212,175,74,0.16),transparent_36%),linear-gradient(180deg,#312811_0%,#211d18_58%,#181613_100%)] px-4 py-9 text-center shadow-[0_34px_80px_rgba(0,0,0,0.28)] sm:rounded-[32px] sm:px-8 sm:py-12">
           <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-[linear-gradient(90deg,transparent,rgba(241,204,107,0.62),transparent)]" />
