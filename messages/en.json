@@ -22,11 +22,13 @@
       "closeMenu": "Close menu"
     },
     "title": {
-      "line1": "Turnkey website",
-      "line2": "and CRM so",
-      "line3": "you keep leads"
+      "mobileLine1": "Ready business website",
+      "mobileLine2": "with CRM system",
+      "line1": "Ready website",
+      "line2": "for business",
+      "line3": "with CRM system"
     },
-    "subtitle": "We launch a modern website in <locales></locales>, connect Telegram/WhatsApp, domain, hosting and a simple CRM for incoming leads.",
+    "subtitle": "We launch a modern website in 3 languages, connect Telegram/WhatsApp, domain, hosting and a simple CRM for incoming leads.",
     "description": "You get one complete solution instead of a set of disconnected services.",
     "supportText": "We help with structure, rewrite raw text, build the website and launch everything turnkey without unnecessary complexity on your side.",
     "cta": {
@@ -66,6 +68,41 @@
       "leads": {
         "title": "Businesses that need order in leads",
         "description": "When it matters to collect inquiries from forms and messengers in one system instead of losing them in chats."
+      }
+    }
+  },
+  "WhyWebCode": {
+    "title": "Why WebCode",
+    "description": "We build more than just a website. We deliver a launch-ready system: from structure and copy to CRM, messengers and publishing.",
+    "cta": "Launch your project without the extra complexity",
+    "ctaLine1": "Launch your project",
+    "ctaLine2": "without extra complexity",
+    "ctaDescription": "We will show which format fits your business and define the next step clearly without technical chaos.",
+    "ctaButton": "Discuss your project",
+    "items": {
+      "system": {
+        "title": "Not just a website, but a lead system",
+        "description": "Website, forms, CRM and messengers work as one connected solution."
+      },
+      "structure": {
+        "title": "We help with structure",
+        "description": "We do not expect a finished brief from you. We help shape the page logic, refine rough copy and turn everything into clear messaging."
+      },
+      "languages": {
+        "title": "3 languages built in from the start",
+        "description": "Russian, Uzbek and English are included in the base logic of the solution from the start. We can add any other language on request."
+      },
+      "market": {
+        "title": "For the local market",
+        "description": "We account for how businesses in Uzbekistan operate, what clients expect and which communication channels they actually use to reach out."
+      },
+      "contractor": {
+        "title": "One contractor",
+        "description": "No need to separately look for a designer, developer and specialists for domain setup, hosting and CRM just to make everything work together."
+      },
+      "support": {
+        "title": "Support after launch",
+        "description": "After publishing, we help with small edits and questions."
       }
     }
   }

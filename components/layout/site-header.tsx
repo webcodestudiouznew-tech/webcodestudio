@@ -122,22 +122,22 @@ export function SiteHeader() {
 
   return (
     <>
-      <header className="relative z-30 w-full px-4 pt-4 text-white sm:px-6 sm:pt-6 lg:px-[100px] lg:pt-7">
-        <div className="mx-auto flex w-full max-w-[1280px] items-center justify-between gap-6">
-          <div className="flex items-center self-center gap-2.5">
+      <header className="relative z-30 w-full overflow-x-clip px-4 pt-4 text-white sm:px-6 sm:pt-6 lg:px-[100px] lg:pt-7">
+        <div className="mx-auto flex w-full max-w-[1280px] min-w-0 items-center justify-between gap-3 sm:gap-6">
+          <div className="flex min-w-0 items-center self-center gap-2 sm:gap-2.5">
             <Image
               src={LOGO_SRC}
               alt="WebCode studio"
               width={42}
               height={42}
-              className="h-10 w-10 object-contain"
+              className="h-9 w-9 shrink-0 object-contain sm:h-10 sm:w-10"
               priority
             />
-            <div className="flex flex-col">
-              <span className="font-[var(--font-manrope)] text-[18px] font-semibold tracking-[-0.04em] text-white sm:text-[20px]">
+            <div className="flex min-w-0 flex-col">
+              <span className="truncate font-[var(--font-manrope)] text-[16px] font-semibold tracking-[-0.04em] text-white sm:text-[20px]">
                 WebCode studio
               </span>
-              <span className="text-[10px] leading-none text-white/56 sm:text-[11px] lg:text-[12px]">
+              <span className="truncate text-[9px] leading-none text-white/56 sm:text-[11px] lg:text-[12px]">
                 {t("brandTagline")}
               </span>
             </div>
@@ -161,12 +161,12 @@ export function SiteHeader() {
             </a>
           </div>
 
-          <div className="flex items-center gap-2 lg:hidden">
+          <div className="flex shrink-0 items-center gap-1.5 sm:gap-2 lg:hidden">
             <LocaleSwitcher buttonHoverClass={buttonHoverClass} />
             <button
               type="button"
               onClick={() => setIsMobileMenuOpen(true)}
-              className={`flex h-12 w-12 items-center justify-center rounded-[14px] bg-[#2b2924]/72 text-[#f2e7b4] ${buttonHoverClass}`}
+              className={`flex h-11 w-11 items-center justify-center rounded-[14px] bg-[#2b2924]/72 text-[#f2e7b4] sm:h-12 sm:w-12 ${buttonHoverClass}`}
               aria-label={tLocale("openMenu")}
             >
               <svg

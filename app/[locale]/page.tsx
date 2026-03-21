@@ -1,6 +1,7 @@
 import { SiteHeader } from "@/components/layout/site-header";
 import { AudienceSection } from "@/components/sections/audience-section";
 import { HeroSection } from "@/components/sections/hero-section";
+import { WhyWebCodeSection } from "@/components/sections/why-webcode-section";
 
 type LocaleHomePageProps = {
   params: Promise<{
@@ -18,6 +19,7 @@ export default async function LocaleHomePage({ params }: LocaleHomePageProps) {
         <HeroSection />
       </div>
       <AudienceSection locale={locale} />
+      <WhyWebCodeSection locale={locale} />
     </main>
   );
 }

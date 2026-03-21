@@ -64,29 +64,13 @@ function OrbitBadge({ label }: { label: string }) {
   );
 }
 
-function HeroChip({ label }: { label: string }) {
+function HeroChip({ label, className = "" }: { label: string; className?: string }) {
   return (
-    <li className="group relative overflow-hidden rounded-full border border-[#7f6930] bg-[#342f25]/52 px-4 py-2 text-[13px] font-medium tracking-[-0.01em] text-[#f1d67e] shadow-[inset_0_1px_0_rgba(255,255,255,0.05)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-[#a5873d] hover:bg-[#3a3327]/72 hover:text-[#f6dd8b] hover:shadow-[0_12px_24px_rgba(0,0,0,0.18),0_0_0_1px_rgba(212,175,74,0.08),inset_0_1px_0_rgba(255,255,255,0.06)]">
+    <li className={`group relative overflow-hidden rounded-full border border-[#7f6930] bg-[#342f25]/52 px-4 py-2 text-[15px] font-medium tracking-[-0.01em] text-[#f1d67e] shadow-[inset_0_1px_0_rgba(255,255,255,0.05)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-[#a5873d] hover:bg-[#3a3327]/72 hover:text-[#f6dd8b] hover:shadow-[0_12px_24px_rgba(0,0,0,0.18),0_0_0_1px_rgba(212,175,74,0.08),inset_0_1px_0_rgba(255,255,255,0.06)] ${className}`}>
       <span className="pointer-events-none absolute inset-x-3 top-0 h-px bg-[linear-gradient(90deg,transparent,rgba(212,175,74,0.14),transparent)] transition-all duration-300 ease-out group-hover:bg-[linear-gradient(90deg,transparent,rgba(212,175,74,0.48),transparent)]" />
       <span className="pointer-events-none absolute right-[-18%] top-1/2 h-8 w-8 -translate-y-1/2 rounded-full bg-[#d4af4a]/0 blur-xl transition-all duration-300 ease-out group-hover:bg-[#d4af4a]/16" />
       {label}
     </li>
-  );
-}
-
-function InlineLocaleBadges() {
-  return (
-    <span className="inline-flex translate-y-[-0.06em] items-center gap-1.5 align-middle">
-      <span className="rounded-full border border-[#8b7537] bg-[#342f25]/72 px-2 py-0.5 text-[0.72em] font-semibold leading-none text-[#f1d67e]">
-        RU
-      </span>
-      <span className="rounded-full border border-[#8b7537] bg-[#342f25]/72 px-2 py-0.5 text-[0.72em] font-semibold leading-none text-[#f1d67e]">
-        UZ
-      </span>
-      <span className="rounded-full border border-[#8b7537] bg-[#342f25]/72 px-2 py-0.5 text-[0.72em] font-semibold leading-none text-[#f1d67e]">
-        EN
-      </span>
-    </span>
   );
 }
 
@@ -109,6 +93,8 @@ export function HeroSection() {
     t("chips.messaging"),
     t("chips.launch"),
   ];
+  const mobileChips = chips.slice(1);
+  const mobileChipRows = [mobileChips.slice(0, 2), mobileChips.slice(2)];
   useEffect(() => {
     const frameId = requestAnimationFrame(() => setHasEntered(true));
 
@@ -116,38 +102,42 @@ export function HeroSection() {
   }, []);
 
   return (
-    <section className="relative w-full overflow-visible text-white lg:overflow-hidden">
+    <section className="relative w-full overflow-hidden text-white">
       <div className={`${revealGlowClass} absolute inset-0 bg-[radial-gradient(circle_at_72%_47%,rgba(212,175,74,0.32),transparent_0,transparent_22%,rgba(37,36,33,0.18)_46%,transparent_68%)]`} />
       <div className={`${revealGlowClass} hero-delay-2 absolute right-[10%] top-[9%] h-[420px] w-[420px] rounded-full bg-[#d4af4a]/10 blur-[140px]`} />
       <div className={`${revealGlowClass} hero-delay-4 absolute bottom-[8%] right-[16%] h-[340px] w-[340px] rounded-full bg-[#d4af4a]/11 blur-[140px]`} />
 
-      <div className="relative z-10 mx-auto flex min-h-[calc(100svh-84px)] w-full max-w-[1280px] flex-col px-4 pb-10 pt-5 sm:min-h-[calc(100svh-92px)] sm:px-6 sm:pb-12 lg:min-h-[calc(100svh-104px)] lg:px-0 lg:pb-8 lg:pt-6">
-        <div className="grid min-h-0 flex-1 items-start gap-7 lg:items-center lg:gap-14 lg:grid-cols-[540px_minmax(0,1fr)]">
-          <div className="flex min-h-0 flex-col justify-center self-stretch lg:pt-2">
+      <div className="relative z-10 mx-auto flex min-h-[calc(100svh-84px)] w-full max-w-[1280px] flex-col px-5 pb-8 pt-4 sm:min-h-[calc(100svh-92px)] sm:px-6 sm:pb-12 sm:pt-5 lg:min-h-[calc(100svh-104px)] lg:px-0 lg:pb-8 lg:pt-6">
+        <div className="grid min-h-0 flex-1 items-start gap-8 sm:gap-9 lg:items-center lg:gap-16 lg:grid-cols-[540px_minmax(0,1fr)]">
+          <div className="flex min-h-0 min-w-0 flex-col justify-center self-stretch lg:pt-2">
             <div className="mb-5 ml-[86%] hidden text-[46px] leading-none text-white lg:block">
               ✦
             </div>
 
-            <div className={`${revealClass} hero-delay-1 mb-4 inline-flex w-full max-w-full items-center justify-center rounded-[20px] border border-[#7f6930] bg-[#342f25]/58 px-4 py-2.5 text-center text-[13px] font-medium leading-[1.35] tracking-[-0.01em] text-[#f1d67e] shadow-[inset_0_1px_0_rgba(255,255,255,0.05)] sm:mb-5 sm:w-fit sm:px-5 sm:py-2 sm:text-[12px] sm:leading-none sm:tracking-[0.01em]`}>
+            <div className={`${revealClass} hero-delay-1 mb-5 inline-flex w-full max-w-full items-center justify-center rounded-[20px] border border-[#7f6930] bg-[#342f25]/58 px-4 py-2.5 text-center text-[13px] font-medium leading-[1.35] tracking-[-0.01em] text-[#f1d67e] shadow-[inset_0_1px_0_rgba(255,255,255,0.05)] sm:mb-6 sm:w-fit sm:px-5 sm:py-2 sm:text-[12px] sm:leading-none sm:tracking-[0.01em]`}>
               <span className="sm:hidden">{t("eyebrowMobile")}</span>
               <span className="hidden sm:inline">{t("eyebrow")}</span>
             </div>
 
-            <h1 className={`${revealClass} hero-delay-2 mx-auto max-w-[340px] text-center font-[var(--font-manrope)] text-[46px] font-semibold leading-[0.98] tracking-[-0.06em] text-white sm:max-w-[540px] sm:text-[48px] sm:leading-[1.02] sm:tracking-[-0.055em] lg:mx-0 lg:text-left lg:text-[60px] xl:text-[64px]`}>
-              {t("title.line1")}
-              <br />
-              {t("title.line2")}
-              <br />
-              {t("title.line3")}
+            <h1 className={`${revealClass} hero-delay-2 mx-auto max-w-[360px] min-w-0 text-center font-[var(--font-manrope)] text-[31px] font-semibold leading-[1.03] tracking-[-0.065em] text-white max-[380px]:max-w-[318px] max-[380px]:text-[26px] max-[380px]:tracking-[-0.055em] sm:max-w-[540px] sm:text-[48px] sm:leading-[1.02] sm:tracking-[-0.055em] lg:mx-0 lg:text-left lg:text-[60px] xl:text-[64px]`}>
+              <span className="sm:hidden">
+                <span className="block">{t("title.mobileLine1")}</span>
+                <span className="block">{t("title.mobileLine2")}</span>
+              </span>
+              <span className="hidden sm:inline">
+                {t("title.line1")}
+                <br />
+                {t("title.line2")}
+                <br />
+                {t("title.line3")}
+              </span>
             </h1>
 
-            <p className={`${revealClass} hero-delay-3 mx-auto mt-6 max-w-[640px] text-center text-[16px] leading-[1.5] text-white/84 sm:mt-7 sm:text-[17px] lg:mx-0 lg:text-left lg:text-[18px]`}>
-              {t.rich("subtitle", {
-                locales: () => <InlineLocaleBadges />,
-              })}
+            <p className={`${revealClass} hero-delay-3 mx-auto mt-6 hidden max-w-[640px] text-center text-[15px] leading-[1.55] text-white/84 sm:mt-8 sm:block sm:text-[17px] lg:mx-0 lg:text-left lg:text-[18px]`}>
+              {t("subtitle")}
             </p>
 
-            <div className={`${revealScaleClass} hero-delay-4 relative mt-10 min-h-[220px] sm:mt-8 sm:min-h-[320px] lg:hidden`}>
+            <div className={`${revealScaleClass} hero-delay-4 relative mt-12 min-h-[220px] px-4 sm:mt-10 sm:min-h-[320px] sm:px-0 lg:hidden`}>
               <div className="absolute inset-0 h-full w-full">
                 <div className="pointer-events-none absolute inset-0 z-10">
                   <div className="hero-star absolute right-[7%] top-[10%] text-[18px] text-[#f2d26a] [filter:drop-shadow(0_0_10px_rgba(242,210,106,0.9))_drop-shadow(0_0_20px_rgba(242,210,106,0.45))] sm:text-[22px]">✦</div>
@@ -160,26 +150,46 @@ export function HeroSection() {
                   alt={t("placeholder.title")}
                   fill
                   priority
-                  className="object-contain object-center scale-[1.16] drop-shadow-[0_28px_60px_rgba(0,0,0,0.5)] sm:scale-[1.05]"
+                  className="object-contain object-center scale-100 drop-shadow-[0_28px_60px_rgba(0,0,0,0.5)] sm:scale-[1.05]"
                   sizes="(max-width: 639px) calc(100vw - 32px), (max-width: 1023px) calc(100vw - 48px), 50vw"
                 />
               </div>
             </div>
 
-            <p className={`${revealClass} hero-delay-5 mx-auto mt-10 max-w-[345px] text-center text-[16px] leading-[1.58] text-white/72 sm:mt-8 sm:max-w-[560px] sm:text-[16px] sm:leading-[1.68] lg:mx-0 lg:mt-5 lg:text-left lg:text-[18px]`}>
+            <p className={`${revealClass} hero-delay-3 mx-auto mt-7 max-w-[640px] text-center text-[15px] leading-[1.55] text-white/84 sm:hidden`}>
+              {t("subtitle")}
+            </p>
+
+            <p className={`${revealClass} hero-delay-5 mx-auto mt-6 max-w-[345px] text-center text-[15px] leading-[1.62] text-white/72 sm:mt-9 sm:max-w-[560px] sm:text-[16px] sm:leading-[1.68] lg:mx-0 lg:mt-6 lg:text-left lg:text-[18px]`}>
               {t("description")}
             </p>
 
-            <div className={`${revealClass} hero-delay-6 mt-6 flex flex-col gap-3 sm:mt-7 sm:flex-row sm:gap-4`}>
+            <div className={`${revealClass} hero-delay-6 mt-5 w-full sm:hidden`}>
+              <div className="flex flex-col gap-2.5">
+                {mobileChipRows.map((row, rowIndex) => (
+                  <ul key={`mobile-row-${rowIndex}`} className="flex w-full gap-2">
+                    {row.map((chip) => (
+                      <HeroChip
+                        key={chip}
+                        label={chip}
+                        className="min-w-0 flex-1 whitespace-nowrap px-2 py-2 text-center text-[13px] leading-[1.15] tracking-[-0.02em] min-[390px]:px-2.5 min-[390px]:text-[15px]"
+                      />
+                    ))}
+                  </ul>
+                ))}
+              </div>
+            </div>
+
+            <div className={`${revealClass} hero-delay-6 mx-auto mt-6 flex w-full flex-col items-center gap-3 sm:mt-9 sm:max-w-none sm:flex-row sm:gap-4 lg:mx-0 lg:justify-start`}>
               <a
                 href="#lead"
-                className={`w-full rounded-[10px] bg-[linear-gradient(180deg,#efcb65_0%,#d7b24c_100%)] px-7 py-3.5 text-[15px] font-semibold text-[#30260d] shadow-[0_16px_28px_rgba(212,175,74,0.22)] sm:w-auto sm:rounded-[6px] sm:py-3 ${buttonHoverClass}`}
+                className={`w-full rounded-[10px] bg-[linear-gradient(180deg,#efcb65_0%,#d7b24c_100%)] px-7 py-3.5 text-center text-[15px] font-semibold text-[#30260d] shadow-[0_16px_28px_rgba(212,175,74,0.22)] sm:w-auto sm:rounded-[6px] sm:py-3 ${buttonHoverClass}`}
               >
                 {t("cta.primary")}
               </a>
               <button
                 type="button"
-                className={`w-full rounded-[10px] border border-[#746238] bg-[#2a2925]/72 px-7 py-3.5 text-[15px] font-semibold text-white/88 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] sm:w-auto sm:rounded-[6px] sm:py-3 ${buttonHoverClass}`}
+                className={`w-full rounded-[10px] border border-[#746238] bg-[#2a2925]/72 px-7 py-3.5 text-center text-[15px] font-semibold text-white/88 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] sm:w-auto sm:rounded-[6px] sm:py-3 ${buttonHoverClass}`}
               >
                 {t("cta.secondary")}
               </button>
@@ -208,13 +218,15 @@ export function HeroSection() {
           </div>
         </div>
 
-        <div className={`${revealClass} hero-delay-6 -mt-2 flex w-full pt-3 sm:-mt-3 sm:pt-5`}>
+        <div className={`${revealClass} hero-delay-6 flex w-full pt-6 sm:pt-7`}>
           <div className="flex w-full flex-col gap-8 lg:flex-row lg:items-center lg:justify-between lg:gap-8">
-            <ul className="flex flex-wrap gap-2.5 sm:gap-3">
-              {chips.map((chip) => (
-                <HeroChip key={chip} label={chip} />
-              ))}
-            </ul>
+            <div className="w-full lg:w-auto">
+              <ul className="hidden flex-wrap gap-3 sm:flex">
+                {chips.map((chip) => (
+                  <HeroChip key={chip} label={chip} />
+                ))}
+              </ul>
+            </div>
 
             <div className="flex w-full items-center justify-start sm:justify-center lg:w-auto lg:justify-end">
               <div className="hidden lg:block">

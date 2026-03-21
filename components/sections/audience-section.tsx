@@ -1,4 +1,3 @@
-import type { CSSProperties } from "react";
 import { getTranslations } from "next-intl/server";
 
 type AudienceKey =
@@ -95,42 +94,15 @@ export async function AudienceSection({ locale }: { locale: string }) {
   return (
     <section
       id="audience"
-      className="scroll-reveal-section relative w-full overflow-hidden bg-[linear-gradient(180deg,#23211e_0%,#1f1d1a_100%)] py-16 text-white sm:py-20 lg:py-24"
+      className="relative w-full overflow-hidden bg-[linear-gradient(180deg,#23211e_0%,#1f1d1a_100%)] py-16 text-white sm:py-20 lg:py-24"
     >
       <div className="absolute inset-x-0 top-0 h-px bg-[linear-gradient(90deg,transparent,rgba(212,175,74,0.5),transparent)]" />
-      <div
-        className="scroll-reveal-glow absolute left-[-6%] top-[8%] h-[280px] w-[280px] rounded-full bg-[#d4af4a]/10 blur-[120px]"
-        style={
-          {
-            "--reveal-start": "6%",
-            "--reveal-end": "34%",
-            "--glow-opacity": 0.72,
-          } as CSSProperties
-        }
-      />
-      <div
-        className="scroll-reveal-glow absolute bottom-[-8%] right-[-4%] h-[320px] w-[320px] rounded-full bg-[#d4af4a]/8 blur-[140px]"
-        style={
-          {
-            "--reveal-start": "10%",
-            "--reveal-end": "42%",
-            "--glow-opacity": 0.6,
-          } as CSSProperties
-        }
-      />
+      <div className="absolute left-[-6%] top-[8%] h-[280px] w-[280px] rounded-full bg-[#d4af4a]/10 blur-[120px]" />
+      <div className="absolute bottom-[-8%] right-[-4%] h-[320px] w-[320px] rounded-full bg-[#d4af4a]/8 blur-[140px]" />
 
       <div className="relative z-10 mx-auto flex w-full max-w-[1280px] flex-col gap-10 px-4 sm:px-6 lg:gap-14 lg:px-0">
-        <div
-          className="scroll-reveal-intro flex max-w-[760px] flex-col items-start lg:max-w-[1040px]"
-          style={
-            {
-              "--reveal-start": "12%",
-              "--reveal-end": "38%",
-              "--reveal-distance": "28px",
-            } as CSSProperties
-          }
-        >
-          <h2 className="max-w-[16ch] font-[var(--font-manrope)] text-[38px] font-semibold leading-[1.02] tracking-[-0.05em] text-white lg:max-w-none lg:text-[38px]">
+        <div className="flex max-w-[760px] flex-col items-center text-center lg:max-w-[1040px] lg:items-start lg:text-left">
+          <h2 className="w-full max-w-none whitespace-nowrap font-[var(--font-manrope)] text-[30px] font-semibold leading-[1.02] tracking-[-0.05em] text-white max-[380px]:text-[27px] sm:text-[38px] lg:text-[38px]">
             {t("title")}
           </h2>
 
@@ -141,17 +113,7 @@ export async function AudienceSection({ locale }: { locale: string }) {
 
         <div className="grid items-stretch gap-4 md:grid-cols-2">
           {audienceKeys.map((item, index) => (
-            <div
-              key={item}
-              className="scroll-reveal-card h-full"
-              style={
-                {
-                  "--reveal-start": `${20 + Math.floor(index / 2) * 18 + (index % 2) * 8}%`,
-                  "--reveal-end": `${48 + Math.floor(index / 2) * 18 + (index % 2) * 8}%`,
-                  "--reveal-distance": "16px",
-                } as CSSProperties
-              }
-            >
+            <div key={item} className="h-full">
               <article className="group relative flex h-full flex-col overflow-hidden rounded-[22px] border border-white/8 bg-[linear-gradient(180deg,rgba(255,255,255,0.04)_0%,rgba(255,255,255,0.02)_100%)] px-5 py-5 shadow-[0_18px_40px_rgba(0,0,0,0.16)] backdrop-blur-[10px] transition-all duration-300 ease-out hover:-translate-y-1 hover:border-[#8a7030]/80 hover:bg-[linear-gradient(180deg,rgba(255,255,255,0.06)_0%,rgba(61,50,27,0.18)_100%)] hover:shadow-[0_24px_54px_rgba(0,0,0,0.24)]">
                 <div className="pointer-events-none absolute inset-x-5 top-0 h-px bg-[linear-gradient(90deg,transparent,rgba(212,175,74,0.18),transparent)] transition-all duration-300 ease-out group-hover:bg-[linear-gradient(90deg,transparent,rgba(212,175,74,0.58),transparent)]" />
                 <div className="pointer-events-none absolute -right-10 top-[-12%] h-28 w-28 rounded-full bg-[#d4af4a]/0 blur-3xl transition-all duration-300 ease-out group-hover:bg-[#d4af4a]/12" />

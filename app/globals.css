@@ -215,60 +215,6 @@ main {
   will-change: transform, opacity, filter;
 }
 
-@keyframes section-reveal-up {
-  from {
-    opacity: 0;
-    transform: translateY(var(--reveal-distance, 24px));
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes section-reveal-glow {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: var(--glow-opacity, 0.72);
-  }
-}
-
-@supports (animation-timeline: view()) {
-  .scroll-reveal-section {
-    view-timeline-name: --section-reveal;
-    view-timeline-axis: block;
-  }
-
-  .scroll-reveal-intro,
-  .scroll-reveal-card {
-    opacity: 0;
-    animation-name: section-reveal-up;
-    animation-duration: 1ms;
-    animation-fill-mode: both;
-    animation-timing-function: linear;
-    animation-timeline: --section-reveal;
-    animation-range-start: entry var(--reveal-start, 0%);
-    animation-range-end: cover var(--reveal-end, 40%);
-    will-change: opacity, transform;
-  }
-
-  .scroll-reveal-glow {
-    opacity: 0;
-    animation-name: section-reveal-glow;
-    animation-duration: 1ms;
-    animation-fill-mode: both;
-    animation-timing-function: linear;
-    animation-timeline: --section-reveal;
-    animation-range-start: entry var(--reveal-start, 0%);
-    animation-range-end: cover var(--reveal-end, 40%);
-    will-change: opacity;
-  }
-}
-
 @keyframes hero-star-pulse {
   0%,
   100% {
@@ -293,13 +239,6 @@ main {
     transform: none !important;
   }
 
-  .scroll-reveal-intro,
-  .scroll-reveal-card,
-  .scroll-reveal-glow {
-    animation: none !important;
-    opacity: 1 !important;
-    transform: none !important;
-  }
 }
 
 .dark {

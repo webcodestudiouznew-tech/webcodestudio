@@ -22,11 +22,13 @@
       "closeMenu": "Menyuni yopish"
     },
     "title": {
-      "line1": "Sayt va CRM",
-      "line2": "tayyor, toki",
-      "line3": "murojaatlar yo'qolmasin"
+      "mobileLine1": "Biznes uchun tayyor sayt",
+      "mobileLine2": "CRM tizimi bilan",
+      "line1": "Tayyor sayt",
+      "line2": "biznes uchun",
+      "line3": "CRM tizimi bilan"
     },
-    "subtitle": "Zamonaviy saytni <locales></locales> formatida ishga tushiramiz, Telegram/WhatsApp, domen, hosting va murojaatlar uchun sodda CRM'ni ulaymiz.",
+    "subtitle": "Zamonaviy saytni 3 tilda ishga tushiramiz, Telegram/WhatsApp, domen, hosting va murojaatlar uchun sodda CRM'ni ulaymiz.",
     "description": "Siz tarqoq servislar to'plamini emas, balki tayyor yechimni olasiz.",
     "supportText": "Struktura bilan yordam beramiz, xom matnni qayta ishlaymiz, saytni yig'amiz va hammasini siz uchun ortiqcha murakkabliksiz ishga tushiramiz.",
     "cta": {
@@ -66,6 +68,41 @@
       "leads": {
         "title": "Murojaatlarda tartib kerak bo'lgan bizneslar uchun",
         "description": "Forma va messenjerlardan kelgan murojaatlarni bitta tizimda yig'ish muhim bo'lganda va ularni yozishmalarda yo'qotmaslik kerak bo'lganda."
+      }
+    }
+  },
+  "WhyWebCode": {
+    "title": "Nega WebCode",
+    "description": "Biz shunchaki sayt emas, balki ishga tushirish uchun tayyor tizim yaratamiz: struktura va matndan tortib CRM, messenjerlar va publikatsiyagacha.",
+    "cta": "Loyihani ortiqcha murakkabliksiz ishga tushiramiz",
+    "ctaLine1": "Loyihani ishga tushiramiz",
+    "ctaLine2": "ortiqcha murakkabliksiz",
+    "ctaDescription": "Biznesingizga qaysi format mos kelishini ko'rsatamiz va texnik chalkashliksiz aniq keyingi qadamni belgilaymiz.",
+    "ctaButton": "Loyihangizni muhokama qilish",
+    "items": {
+      "system": {
+        "title": "Shunchaki sayt emas, balki murojaatlar tizimi",
+        "description": "Sayt, formalar, CRM va messenjerlar bitta yagona yechim sifatida ishlaydi."
+      },
+      "structure": {
+        "title": "Struktura bilan yordam beramiz",
+        "description": "Sizdan tayyor TZ kutmaymiz. Sahifa mantiqini yig'ishga, xom matnni qayta ishlashga va hammasini tushunarli taqdimotga keltirishga yordam beramiz."
+      },
+      "languages": {
+        "title": "3 til darrov asosga kiritilgan",
+        "description": "Rus, o'zbek va ingliz tillari yechimning bazaviy mantiqiga boshidan qo'shilgan. Zarurat bo'lsa, so'rovingiz bo'yicha istalgan tilni qo'shamiz."
+      },
+      "market": {
+        "title": "Mahalliy bozor uchun",
+        "description": "O'zbekistondagi biznes xususiyatlari, mijozlar kutadigan yondashuv va ular murojaat qiladigan odatiy aloqa kanallarini hisobga olamiz."
+      },
+      "contractor": {
+        "title": "Bitta pudratchi",
+        "description": "Dizayner, dasturchi va domen, hosting hamda CRM bo'yicha mutaxassislarni alohida izlash shart emas, hammasi bir joyda yig'iladi."
+      },
+      "support": {
+        "title": "Ishga tushgandan keyin qo'llab-quvvatlash",
+        "description": "E'lon qilingandan keyin mayda tuzatishlar va savollar bo'yicha yordam beramiz."
       }
     }
   }
