@@ -1,5 +1,6 @@
 import { getTranslations } from "next-intl/server";
 import { WhyWebCodeBento } from "@/components/sections/why-webcode-bento";
+import { DottedGlowBackground } from "@/components/ui/dotted-glow-background";
 
 type WhyWebCodeKey =
   | "system"
@@ -138,6 +139,18 @@ export async function WhyWebCodeSection({ locale }: { locale: string }) {
         <WhyWebCodeBento items={bentoItems} />
 
         <div className="relative overflow-hidden rounded-[28px] bg-[radial-gradient(circle_at_top,rgba(212,175,74,0.16),transparent_36%),linear-gradient(180deg,#312811_0%,#211d18_58%,#181613_100%)] px-4 py-9 text-center shadow-[0_34px_80px_rgba(0,0,0,0.28)] sm:rounded-[32px] sm:px-8 sm:py-12">
+          <DottedGlowBackground
+            className="pointer-events-none absolute inset-0 opacity-85 [mask-image:radial-gradient(circle_at_center,black_0%,black_56%,transparent_90%)]"
+            opacity={1}
+            gap={11}
+            radius={1.4}
+            color="rgba(241,204,107,0.22)"
+            glowColor="rgba(255,225,138,0.96)"
+            backgroundOpacity={0}
+            speedMin={0.28}
+            speedMax={1.1}
+            speedScale={1}
+          />
           <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-[linear-gradient(90deg,transparent,rgba(241,204,107,0.62),transparent)]" />
           <div className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-[linear-gradient(90deg,transparent,rgba(241,204,107,0.2),transparent)]" />
           <div className="pointer-events-none absolute left-[-58px] top-[-40px] h-[156px] w-[156px] rounded-full border-[18px] border-[#d4af4a]/95 border-r-transparent border-b-transparent opacity-95 blur-[12px]" />

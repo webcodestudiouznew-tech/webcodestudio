@@ -7,6 +7,20 @@ import ShinyText from "@/components/ui/shiny-text";
 
 const LOGO_SRC = "/logo_new_2.png?v=20260319";
 
+type HeroChipKey = "languages" | "adaptive" | "crm" | "messaging" | "launch";
+
+function HeroChipIcon() {
+  const iconClassName = "h-[15px] w-[15px] shrink-0 text-[#f1d67e]";
+
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className={iconClassName} aria-hidden="true">
+      <path strokeLinecap="round" strokeLinejoin="round" d="m12 3 1.6 4.2L18 8.8l-4.4 1.6L12 14.6l-1.6-4.2L6 8.8l4.4-1.6L12 3Z" />
+      <path strokeLinecap="round" strokeLinejoin="round" d="m18.5 14 0.9 2.3 2.3 0.9-2.3 0.9-0.9 2.3-0.9-2.3-2.3-0.9 2.3-0.9 0.9-2.3Z" />
+      <path strokeLinecap="round" strokeLinejoin="round" d="m5.5 13.5 0.7 1.7 1.7 0.7-1.7 0.7-0.7 1.7-0.7-1.7-1.7-0.7 1.7-0.7 0.7-1.7Z" />
+    </svg>
+  );
+}
+
 function OrbitBadge({ label }: { label: string }) {
   const orbitText =
     label.length > 42
@@ -65,12 +79,21 @@ function OrbitBadge({ label }: { label: string }) {
   );
 }
 
-function HeroChip({ label, className = "" }: { label: string; className?: string }) {
+function HeroChip({
+  label,
+  className = "",
+}: {
+  label: string;
+  className?: string;
+}) {
   return (
-    <li className={`group relative overflow-hidden rounded-full border border-[#7f6930] bg-[#342f25]/52 px-4 py-2 text-[15px] font-medium tracking-[-0.01em] text-[#f1d67e] shadow-[inset_0_1px_0_rgba(255,255,255,0.05)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-[#a5873d] hover:bg-[#3a3327]/72 hover:text-[#f6dd8b] hover:shadow-[0_12px_24px_rgba(0,0,0,0.18),0_0_0_1px_rgba(212,175,74,0.08),inset_0_1px_0_rgba(255,255,255,0.06)] ${className}`}>
+    <li className={`group relative overflow-hidden rounded-[16px] border border-[#7f6930] bg-[#342f25]/52 px-4 py-2 text-[15px] font-medium tracking-[-0.01em] text-[#f1d67e] shadow-[inset_0_1px_0_rgba(255,255,255,0.05)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-[#a5873d] hover:bg-[#3a3327]/72 hover:text-[#f6dd8b] hover:shadow-[0_12px_24px_rgba(0,0,0,0.18),0_0_0_1px_rgba(212,175,74,0.08),inset_0_1px_0_rgba(255,255,255,0.06)] ${className}`}>
       <span className="pointer-events-none absolute inset-x-3 top-0 h-px bg-[linear-gradient(90deg,transparent,rgba(212,175,74,0.14),transparent)] transition-all duration-300 ease-out group-hover:bg-[linear-gradient(90deg,transparent,rgba(212,175,74,0.48),transparent)]" />
       <span className="pointer-events-none absolute right-[-18%] top-1/2 h-8 w-8 -translate-y-1/2 rounded-full bg-[#d4af4a]/0 blur-xl transition-all duration-300 ease-out group-hover:bg-[#d4af4a]/16" />
-      {label}
+      <span className="relative z-[1] flex items-center justify-center gap-2">
+        <HeroChipIcon />
+        <span>{label}</span>
+      </span>
     </li>
   );
 }
@@ -87,14 +110,18 @@ export function HeroSection() {
   const revealGlowClass = hasEntered
     ? "hero-enter-glow hero-enter-active"
     : "hero-enter-glow";
-  const chips = [
-    t("chips.languages"),
-    t("chips.adaptive"),
-    t("chips.crm"),
-    t("chips.messaging"),
-    t("chips.launch"),
+  const chips: Array<{ key: HeroChipKey; label: string }> = [
+    { key: "languages", label: t("chips.languages") },
+    { key: "adaptive", label: t("chips.adaptive") },
+    { key: "crm", label: t("chips.crm") },
+    { key: "messaging", label: t("chips.messaging") },
+    { key: "launch", label: t("chips.launch") },
   ];
-  const mobileChips = chips.slice(1);
+  const mobileChips = chips.slice(1).map((chip) =>
+    chip.key === "messaging"
+      ? { ...chip, label: t("chips.messagingMobile") }
+      : chip,
+  );
   const mobileChipRows = [mobileChips.slice(0, 2), mobileChips.slice(2)];
   useEffect(() => {
     const frameId = requestAnimationFrame(() => setHasEntered(true));
@@ -228,9 +255,9 @@ export function HeroSection() {
                   <ul key={`mobile-row-${rowIndex}`} className="flex w-full gap-2">
                     {row.map((chip) => (
                       <HeroChip
-                        key={chip}
-                        label={chip}
-                        className="min-w-0 flex-1 whitespace-nowrap px-2 py-2 text-center text-[13px] leading-[1.15] tracking-[-0.02em] min-[390px]:px-2.5 min-[390px]:text-[15px]"
+                        key={chip.key}
+                        label={chip.label}
+                        className="min-w-0 flex-1 px-2.5 py-2 text-center text-[13px] leading-[1.15] tracking-[-0.02em] min-[390px]:text-[15px]"
                       />
                     ))}
                   </ul>
@@ -281,7 +308,7 @@ export function HeroSection() {
             <div className="w-full lg:w-auto">
               <ul className="hidden flex-wrap gap-3 sm:flex">
                 {chips.map((chip) => (
-                  <HeroChip key={chip} label={chip} />
+                  <HeroChip key={chip.key} label={chip.label} />
                 ))}
               </ul>
             </div>
