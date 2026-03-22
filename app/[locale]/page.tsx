@@ -3,6 +3,7 @@ import { AudienceSection } from "@/components/sections/audience-section";
 import { BusinessBenefitsSection } from "@/components/sections/business-benefits-section";
 import { CasesSection } from "@/components/sections/cases-section";
 import { HeroSection } from "@/components/sections/hero-section";
+import { PricingSection } from "@/components/sections/pricing-section";
 import { SolutionIncludesSection } from "@/components/sections/solution-includes-section";
 import { WhyWebCodeSection } from "@/components/sections/why-webcode-section";
 
@@ -26,6 +27,7 @@ export default async function LocaleHomePage({ params }: LocaleHomePageProps) {
       <BusinessBenefitsSection locale={locale} />
       <SolutionIncludesSection locale={locale} />
       <CasesSection locale={locale} />
+      <PricingSection locale={locale} />
     </main>
   );
 }

@@ -268,5 +268,72 @@
         "mockInfo2": "Expanded landing page with a lead form and contact-driven communication."
       }
     }
+  },
+  "Pricing": {
+    "eyebrow": "Launch formats",
+    "title": "Pricing",
+    "description": "Three launch formats for different business needs.",
+    "includedLabel": "Included in every package",
+    "includedItems": [
+      "Website in RU / UZ / EN",
+      "CRM for incoming leads",
+      "Telegram / WhatsApp",
+      "Domain",
+      "Hosting",
+      "2 months of support"
+    ],
+    "priceLabel": "Price",
+    "timelineLabel": "Timeline",
+    "includesLabel": "What is included",
+    "footerNote": "If it is still unclear which format fits your case, leave a request and we will recommend the right option for your business.",
+    "footerCta": "Leave a request",
+    "plans": {
+      "startup": {
+        "title": "Launch",
+        "audience": "For getting online fast and collecting inquiries without overloading the structure.",
+        "timeline": "1-3 days",
+        "price": "from 2,900,000 UZS",
+        "button": "Choose “Launch”",
+        "items": [
+          "1 page",
+          "Up to 5 base blocks",
+          "Lead capture form",
+          "Basic CRM system",
+          "Telegram connected to the website",
+          "Basic SEO setup"
+        ]
+      },
+      "trust": {
+        "title": "Trust",
+        "audience": "For an expanded one-page website with cases, portfolio or a more expressive visual presentation.",
+        "timeline": "2-4 days",
+        "price": "from 3,900,000 UZS",
+        "button": "Choose “Trust”",
+        "items": [
+          "1 main page and up to 3 additional pages",
+          "Up to 8 base blocks",
+          "Lead capture form",
+          "Expanded CRM system",
+          "Telegram and WhatsApp connected to the website",
+          "SEO setup"
+        ]
+      },
+      "growth": {
+        "title": "Growth",
+        "audience": "For a fuller website structure and a stronger base for future business growth.",
+        "timeline": "7-10 days",
+        "price": "from 5,900,000 UZS",
+        "button": "Choose “Growth”",
+        "items": [
+          "Up to 5 pages",
+          "Up to 10 base blocks",
+          "Lead capture form",
+          "Expanded CRM system",
+          "Telegram and WhatsApp connected to the website",
+          "Deep SEO setup",
+          "Analytics integration"
+        ]
+      }
+    }
   }
 }

@@ -268,5 +268,72 @@
         "mockInfo2": "Ariza formasi va aloqa kanallari bilan kengaytirilgan landing."
       }
     }
+  },
+  "Pricing": {
+    "eyebrow": "Ishga tushirish formatlari",
+    "title": "Tariflar",
+    "description": "Biznesning turli vazifalari uchun uchta ishga tushirish formati.",
+    "includedLabel": "Har bir tarifda kiritilgan",
+    "includedItems": [
+      "RU / UZ / EN dagi sayt",
+      "Murojaatlar uchun CRM",
+      "Telegram / WhatsApp",
+      "Domen",
+      "Hosting",
+      "2 oy qo'llab-quvvatlash"
+    ],
+    "priceLabel": "Narx",
+    "timelineLabel": "Muddat",
+    "includesLabel": "Nimalar kiradi",
+    "footerNote": "Agar qaysi format mos kelishi hali aniq bo'lmasa, ariza qoldiring va biznesingiz uchun to'g'ri variantni tavsiya qilamiz.",
+    "footerCta": "Ariza qoldirish",
+    "plans": {
+      "startup": {
+        "title": "Ishga tushirish",
+        "audience": "Onlaynga tez chiqish va murojaatlarni ortiqcha murakkab strukturasiz yig'ish uchun.",
+        "timeline": "1-3 kun",
+        "price": "2 900 000 so'mdan",
+        "button": "«Ishga tushirish»ni tanlash",
+        "items": [
+          "1 sahifa",
+          "5 tagacha bazaviy blok",
+          "Murojaat qabul qilish formasi",
+          "Bazaviy CRM tizimi",
+          "Telegramni saytga ulash",
+          "Bazaviy SEO sozlamasi"
+        ]
+      },
+      "trust": {
+        "title": "Ishonch",
+        "audience": "Keyslar, ishlar yoki yanada ifodali vizual taqdimotga ega kengaytirilgan bir sahifali sayt uchun.",
+        "timeline": "2-4 kun",
+        "price": "3 900 000 so'mdan",
+        "button": "«Ishonch»ni tanlash",
+        "items": [
+          "1 ta asosiy sahifa va 3 tagacha qo'shimcha sahifa",
+          "8 tagacha bazaviy blok",
+          "Murojaat qabul qilish formasi",
+          "Kengaytirilgan CRM tizimi",
+          "Telegram va WhatsApp'ni saytga ulash",
+          "SEO sozlamasi"
+        ]
+      },
+      "growth": {
+        "title": "O'sish",
+        "audience": "Saytning to'liqroq strukturasi va biznesning keyingi o'sishiga tayana oladigan baza uchun.",
+        "timeline": "7-10 kun",
+        "price": "5 900 000 so'mdan",
+        "button": "«O'sish»ni tanlash",
+        "items": [
+          "5 tagacha sahifa",
+          "10 tagacha bazaviy blok",
+          "Murojaat qabul qilish formasi",
+          "Kengaytirilgan CRM tizimi",
+          "Telegram va WhatsApp'ni saytga ulash",
+          "Chuqur SEO sozlamasi",
+          "Analitikani ulash"
+        ]
+      }
+    }
   }
 }
