@@ -194,5 +194,79 @@
       "integrations": "Murakkab custom integratsiyalar",
       "content": "Kontentni to'liq noldan yozish"
     }
+  },
+  "Cases": {
+    "title": "Biz tayyorlagan saytlar misollari",
+    "description": "Bu yerda sayt biznes vazifasini qanday hal qilayotganini ko'rsatamiz: aniq taqdimot, ishonch, murojaatlar va qulay aloqa orqali.",
+    "taskLabel": "Biznes vazifasi",
+    "doneLabel": "Nima qildik",
+    "resultLabel": "Biznes nima oldi",
+    "viewProject": "Sayt havolasi",
+    "discussSimilar": "O'xshash yechimni tahlil qilish",
+    "previewLabel": "Jonli loyiha",
+    "mockupTitle": "Taqdimot fragmenti",
+    "mockupMetric1Label": "Fokus",
+    "mockupMetric2Label": "Format",
+    "ctaTitle": "Biznesingiz uchun o'xshash yechimni tahlil qilamiz",
+    "ctaDescription": "Nishangiz, xizmatlar strukturası va murojaat olish ssenariyingizga qaysi format mos kelishini ko'rsatamiz.",
+    "ctaButton": "Taklif olish",
+    "packages": {
+      "growth": "O'sish tarifi",
+      "trust": "Ishonch tarifi"
+    },
+    "imageAlt": {
+      "sellium": "Sellium sayti hero-bo'limining skrinshoti",
+      "peaks": "PEAKS sayti hero-bo'limining skrinshoti"
+    },
+    "items": {
+      "sellium": {
+        "title": "Sellium",
+        "industry": "O'zbekiston marketplace'larida savdolarni boshqarish uchun AI-platforma.",
+        "task": "Mahsulotni aniq tushuntiradigan, ishonchli ko'rinadigan va murojaatga tez olib boradigan zamonaviy texnologik landing yaratish.",
+        "ctaText": "Agar sizga raqamli mahsulot yoki SaaS-servis uchun sayt kerak bo'lsa, shu ssenariyga o'xshash strukturani birga tahlil qilishimiz mumkin.",
+        "done": [
+          "SaaS mahsulot uchun foyda va foydalanish ssenariylariga urg'u berilgan landing strukturasi yig'ildi.",
+          "Texnologik uslubdagi zamonaviy vizual taqdimot tayyorlandi.",
+          "Adaptiv sahifa va asosiy ekranlardan murojaatga olib boradigan qulay yo'l ishlab chiqildi.",
+          "Loyiha yanada to'liq `O'sish` formati ichida ishga tushirildi."
+        ],
+        "result": [
+          "Mijoz sayt ishga tushganidan keyin ikkinchi kunidayoq murojaatlar qabul qila boshladi.",
+          "Bepul CRM tizimi.",
+          "Bepul domen.",
+          "6 oyga bepul hosting.",
+          "Telegram orqali murojaatlar qabul qilish.",
+          "Tayyor sayt."
+        ],
+        "mockTitle": "Marketplace savdolari uchun AI-platforma",
+        "mockTags": ["SaaS", "B2B", "Texnologik uslub"],
+        "mockInfo1": "Taqdimot mahsulot qiymati, foydalanish ssenariylari va aniq CTA'lar orqali qurilgan.",
+        "mockInfo2": "Mahsulotni keyinchalik kengaytirish uchun ko'proq to'liq ko'p sahifali ishga tushirish."
+      },
+      "peaks": {
+        "title": "PEAKS",
+        "industry": "O'zbekistonda B2B uchun plastik mahsulotlar ishlab chiqarish.",
+        "task": "Murojaatlarni qabul qiladigan, zamonaviy ko'rinadigan va kompaniya ishlab chiqarishi hamda xizmatlarini aniq ko'rsatadigan korporativ landing yaratish.",
+        "ctaText": "Agar sizga ishlab chiqarish yoki B2B kompaniya uchun korporativ sayt kerak bo'lsa, shunga o'xshash yechimni moslashtirib berishimiz mumkin.",
+        "done": [
+          "B2B taqdimot va murojaatlar qabul qilish uchun kengaytirilgan bir sahifali sayt yig'ildi.",
+          "Kompaniya, ishlab chiqarish va ish formati bo'yicha asosiy bloklar tartibga solindi.",
+          "Ishonchga urg'u berilgan saranjom korporativ vizual taqdimot tayyorlandi.",
+          "Loyiha ariza formasi va qulay kontaktlar bilan `Ishonch` tarifi mantig'ida ishga tushirildi."
+        ],
+        "result": [
+          "Kompaniya ishlab chiqarishni taqdim etish va kiruvchi murojaatlarni qabul qilish uchun zamonaviy korporativ sayt oldi.",
+          "Bepul CRM tizimi.",
+          "Bepul domen.",
+          "6 oyga bepul hosting.",
+          "Telegram orqali murojaatlar qabul qilish.",
+          "Tayyor sayt."
+        ],
+        "mockTitle": "B2B ishlab chiqarish uchun korporativ landing",
+        "mockTags": ["B2B", "Korporativ sayt", "Lidogeneratsiya"],
+        "mockInfo1": "Fokus ishonch, xizmatlar taqdimoti va korporativ mijoz uchun aniq strukturaga qaratilgan.",
+        "mockInfo2": "Ariza formasi va aloqa kanallari bilan kengaytirilgan landing."
+      }
+    }
   }
 }

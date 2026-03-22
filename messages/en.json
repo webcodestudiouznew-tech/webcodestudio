@@ -194,5 +194,79 @@
       "integrations": "Complex custom integrations",
       "content": "Writing all content fully from scratch"
     }
+  },
+  "Cases": {
+    "title": "Examples of websites we built",
+    "description": "These projects show how a website solves a business task through clear presentation, trust, incoming leads and convenient communication.",
+    "taskLabel": "Business task",
+    "doneLabel": "What we did",
+    "resultLabel": "What the business got",
+    "viewProject": "Website link",
+    "discussSimilar": "Discuss a similar solution",
+    "previewLabel": "Live project",
+    "mockupTitle": "Presentation fragment",
+    "mockupMetric1Label": "Focus",
+    "mockupMetric2Label": "Format",
+    "ctaTitle": "We can break down a similar solution for your business",
+    "ctaDescription": "We will show which site and launch format fits your niche, service structure and inquiry flow.",
+    "ctaButton": "Get a proposal",
+    "packages": {
+      "growth": "Growth package",
+      "trust": "Trust package"
+    },
+    "imageAlt": {
+      "sellium": "Screenshot of the Sellium website hero section",
+      "peaks": "Screenshot of the PEAKS website hero section"
+    },
+    "items": {
+      "sellium": {
+        "title": "Sellium",
+        "industry": "An AI platform for managing sales on marketplaces in Uzbekistan.",
+        "task": "Build a modern tech-style landing page that explains the product clearly, looks convincing and gives visitors a fast path to inquiry.",
+        "ctaText": "If you need a website for a digital product or SaaS service, we can break down a similar structure for your scenario.",
+        "done": [
+          "Built a SaaS landing structure focused on product value and usage scenarios.",
+          "Prepared a modern visual presentation in a tech-oriented style.",
+          "Created a responsive page with a clear inquiry path from key screens.",
+          "Launched the project as part of the broader `Growth` package."
+        ],
+        "result": [
+          "The client started receiving inquiries from the website on the second day after launch.",
+          "Free CRM system.",
+          "Free domain.",
+          "Free hosting for 6 months.",
+          "Lead capture through Telegram.",
+          "Turnkey website."
+        ],
+        "mockTitle": "AI platform for marketplace sales",
+        "mockTags": ["SaaS", "B2B", "Tech style"],
+        "mockInfo1": "Presentation built around product value, usage scenarios and clear CTA points.",
+        "mockInfo2": "A broader multi-page launch format as a base for product growth."
+      },
+      "peaks": {
+        "title": "PEAKS",
+        "industry": "A manufacturer of plastic products for B2B clients in Uzbekistan.",
+        "task": "Create a corporate landing page for inquiries that looks modern, builds trust and clearly presents the company, production and services.",
+        "ctaText": "If you need a corporate website for manufacturing or a B2B company, we can adapt a similar solution to your work format.",
+        "done": [
+          "Built an expanded one-page website for B2B presentation and incoming inquiries.",
+          "Structured the key blocks about the company, production and work format.",
+          "Prepared a clean corporate visual style focused on trust.",
+          "Launched the project in the logic of the `Trust` package with a lead form and convenient contacts."
+        ],
+        "result": [
+          "The company got a modern corporate website for presenting its production and receiving incoming inquiries.",
+          "Free CRM system.",
+          "Free domain.",
+          "Free hosting for 6 months.",
+          "Lead capture through Telegram.",
+          "Turnkey website."
+        ],
+        "mockTitle": "Corporate landing page for B2B manufacturing",
+        "mockTags": ["B2B", "Corporate site", "Lead generation"],
+        "mockInfo1": "Focused on trust, service presentation and clear structure for a corporate client.",
+        "mockInfo2": "Expanded landing page with a lead form and contact-driven communication."
+      }
+    }
   }
 }
