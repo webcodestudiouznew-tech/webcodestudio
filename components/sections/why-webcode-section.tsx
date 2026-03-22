@@ -158,7 +158,7 @@ export async function WhyWebCodeSection({ locale }: { locale: string }) {
           <div className="pointer-events-none absolute left-1/2 top-1/2 h-[240px] w-[240px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#d4af4a]/10 blur-[120px]" />
 
           <div className="relative mx-auto flex max-w-[680px] flex-col items-center">
-            <h3 className="w-full max-w-none text-center font-[var(--font-manrope)] text-[28px] font-semibold leading-[1] tracking-[-0.06em] text-white max-[380px]:text-[25px] sm:max-w-[14ch] sm:text-[36px] lg:max-w-[15ch] lg:text-[34px]">
+            <h3 className="w-full max-w-none text-center font-[var(--font-manrope)] text-[28px] font-semibold leading-[1] tracking-[-0.06em] text-white max-[380px]:text-[25px] sm:max-w-[14ch] sm:text-[36px] lg:max-w-none lg:whitespace-nowrap lg:text-[30px]">
               <span className="flex flex-col items-center gap-1 sm:hidden">
                 <span className="block whitespace-nowrap">{t("ctaLine1")}</span>
                 <span className="block whitespace-nowrap">{t("ctaLine2")}</span>
