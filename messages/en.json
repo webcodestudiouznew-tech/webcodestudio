@@ -335,5 +335,101 @@
         ]
       }
     }
+  },
+  "Process": {
+    "title": "How the process works",
+    "description": "A simple path from request to launch without unnecessary complexity.",
+    "cta": "Let’s discuss your project and the next step",
+    "ctaLine1": "Let’s discuss your project",
+    "ctaLine2": "and the next step",
+    "ctaDescription": "We will show where to start, which format fits your business and how to move through the launch clearly and without technical chaos.",
+    "ctaButton": "Discuss the project",
+    "note": "You do not need a ready technical brief. We help shape the structure, clarify materials and move through the launch step by step.",
+    "steps": {
+      "discussion": {
+        "title": "Discussion",
+        "description": "We briefly review your business, website format, goals and the right inquiry flow for your case."
+      },
+      "structure": {
+        "title": "Structure and materials",
+        "description": "We help define the blocks, presentation and what texts, photos or business details are already enough to start."
+      },
+      "build": {
+        "title": "Build and setup",
+        "description": "We build the website and connect the form, CRM, Telegram or WhatsApp, domain and the core technical setup."
+      },
+      "launch": {
+        "title": "Review and launch",
+        "description": "We check the key screens, make final edits and publish the website in a working state."
+      }
+    }
+  },
+  "Faq": {
+    "title": "FAQ",
+    "description": "Short answers to common questions before launch.",
+    "ctaTitle": "If you still have questions, let’s discuss your project",
+    "ctaDescription": "We will suggest the right format for your business and show the next step without unnecessary complexity.",
+    "ctaPrimary": "Leave a request",
+    "ctaSecondary": "Message on Telegram",
+    "items": {
+      "start": {
+        "question": "What is needed to get started",
+        "answer": "To start, it is enough to briefly explain your business, services and desired result. Even if your materials are not fully prepared yet, we will help define the right starting point."
+      },
+      "structure": {
+        "question": "Do you help with structure and copy",
+        "answer": "Yes. We help shape the page logic, define the necessary blocks and turn raw copy into a clearer website presentation."
+      },
+      "support": {
+        "question": "What is included in 2 months of support",
+        "answer": "Support includes small edits, answers to questions and help with the basic day-to-day use of the website after launch. It is not a separate large development phase, but calm post-launch support."
+      },
+      "crm": {
+        "question": "Does a small business need CRM",
+        "answer": "Yes. Even a small business benefits from not losing inquiries. A basic CRM helps collect leads in one place instead of keeping everything only in chats."
+      },
+      "language": {
+        "question": "Can we start with one language",
+        "answer": "Yes, you can start with one language if it fits your scenario. At the same time, the project structure can be prepared so that adding other languages later is easier."
+      },
+      "ownership": {
+        "question": "Who owns the domain and website",
+        "answer": "The domain is formally owned by our company, but you can always buy it out from us. The domain usually costs around 100,000 to 300,000 UZS. You are always the owner of the website itself. We transfer the code and repository rights to you."
+      },
+      "excluded": {
+        "question": "What is not included in the packages",
+        "answer": "The base packages do not include logo and brand identity, professional photo shooting, paid third-party services, advertising campaigns, complex custom integrations or writing all content fully from scratch."
+      },
+      "payment": {
+        "question": "How does payment work",
+        "answer": "The payment format is discussed before the start and clarified in advance, so it is clear how the work is structured and in which order the launch moves forward."
+      },
+      "later": {
+        "question": "Can the website be improved later",
+        "answer": "Yes. After launch, the website can continue to grow: you can add pages, new blocks, expand the structure and strengthen the functionality as the business grows."
+      }
+    }
+  },
+  "Footer": {
+    "brand": "WebCode",
+    "tagline": "websites and CRM that do not lose leads",
+    "nav": {
+      "whyWebcode": "Why WebCode",
+      "audience": "Who it's for",
+      "benefits": "What business gets",
+      "includes": "What is included",
+      "cases": "Cases",
+      "pricing": "Pricing",
+      "process": "How the process works",
+      "faq": "FAQ",
+      "contacts": "Contacts"
+    },
+    "contacts": {
+      "telegram": "Telegram",
+      "whatsapp": "WhatsApp",
+      "email": "E-mail"
+    },
+    "privacy": "Privacy Policy",
+    "copyright": "© WebCode, {year}. All rights reserved."
   }
 }

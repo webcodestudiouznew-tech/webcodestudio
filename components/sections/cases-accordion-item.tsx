@@ -3,8 +3,11 @@
 import { useEffect, useId, useRef, useState } from "react";
 
 type CasesAccordionItemProps = {
+  buttonClassName?: string;
   children: React.ReactNode;
+  className?: string;
   defaultOpen?: boolean;
+  titleClassName?: string;
   title: string;
 };
 
@@ -26,8 +29,11 @@ function ChevronIcon({ open }: { open: boolean }) {
 }
 
 export function CasesAccordionItem({
+  buttonClassName = "",
   children,
+  className = "",
   defaultOpen = false,
+  titleClassName = "",
   title,
 }: CasesAccordionItemProps) {
   const [open, setOpen] = useState(defaultOpen);
@@ -55,15 +61,15 @@ export function CasesAccordionItem({
   }, []);
 
   return (
-    <div className="overflow-hidden rounded-[16px] border border-white/8 bg-white/[0.025]">
+    <div className={`overflow-hidden rounded-[16px] border border-white/8 bg-white/[0.025] ${className}`}>
       <button
         type="button"
         aria-expanded={open}
         aria-controls={contentId}
         onClick={() => setOpen((current) => !current)}
-        className="flex w-full items-center justify-between gap-3 px-4 py-3 text-left"
+        className={`flex w-full items-center justify-between gap-3 px-4 py-3 text-left ${buttonClassName}`}
       >
-        <span className="text-[14px] font-semibold tracking-[-0.02em] text-white/84">
+        <span className={`text-[14px] font-semibold tracking-[-0.02em] text-white/84 ${titleClassName}`}>
           {title}
         </span>
         <ChevronIcon open={open} />

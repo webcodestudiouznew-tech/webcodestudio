@@ -39,10 +39,10 @@
     "chips": {
       "languages": "RU / UZ / EN",
       "adaptive": "Adaptiv sayt",
-      "crm": "Murojaatlar uchun CRM",
+      "crm": "CRM",
       "messaging": "Telegram / WhatsApp",
       "messagingMobile": "Telegram",
-      "launch": "Tayyor ishga tushirish"
+      "launch": "Tez start"
     },
     "orbit": "O'zbekistondagi biznes uchun sayt, CRM, Telegram va tayyor ishga tushirish",
     "placeholder": {
@@ -335,5 +335,101 @@
         ]
       }
     }
+  },
+  "Process": {
+    "title": "Ish jarayoni qanday o'tadi",
+    "description": "Arizadan ishga tushirishgacha bo'lgan oddiy va ortiqcha murakkabliksiz yo'l.",
+    "cta": "Loyihangiz va keyingi qadamni muhokama qilamiz",
+    "ctaLine1": "Loyihangizni muhokama qilamiz",
+    "ctaLine2": "va keyingi qadamni belgilaymiz",
+    "ctaDescription": "Nimadan boshlash yaxshiroq ekanini, biznesingizga qaysi format mos kelishini va ishga tushirishni texnik chalkashliksiz qanday o'tkazishni ko'rsatamiz.",
+    "ctaButton": "Loyihani muhokama qilish",
+    "note": "Sizdan tayyor texnik topshiriq talab qilinmaydi. Strukturani yig'ish, materiallarni aniqlashtirish va ishga tushirishni bosqichma-bosqich o'tishda yordam beramiz.",
+    "steps": {
+      "discussion": {
+        "title": "Muhokama",
+        "description": "Biznesingiz, sayt formati, vazifalar va murojaat olish uchun qulay ssenariyni qisqacha aniqlab olamiz."
+      },
+      "structure": {
+        "title": "Struktura va materiallar",
+        "description": "Bloklarni aniqlash, taqdimotni yig'ish va start uchun qaysi matnlar, foto yoki ma'lumotlar yetarli ekanini tushunishga yordam beramiz."
+      },
+      "build": {
+        "title": "Yig'ish va ulash",
+        "description": "Saytni yig'amiz, forma, CRM, Telegram yoki WhatsApp, domen va bazaviy texnik sozlamalarni ulaymiz."
+      },
+      "launch": {
+        "title": "Tekshirish va ishga tushirish",
+        "description": "Asosiy ekranlarni tekshiramiz, yakuniy tuzatishlarni kiritamiz va saytni ishchi holatda nashr qilamiz."
+      }
+    }
+  },
+  "Faq": {
+    "title": "FAQ",
+    "description": "Saytni ishga tushirishdan oldingi ko'p beriladigan savollarga qisqa javoblar.",
+    "ctaTitle": "Savollar qolgan bo'lsa, loyihangizni muhokama qilamiz",
+    "ctaDescription": "Biznesingizga mos formatni tavsiya qilamiz va ortiqcha murakkabliksiz keyingi qadamni ko'rsatamiz.",
+    "ctaPrimary": "Ariza qoldirish",
+    "ctaSecondary": "Telegramga yozish",
+    "items": {
+      "start": {
+        "question": "Boshlash uchun nima kerak",
+        "answer": "Boshlash uchun biznesingiz, xizmatlaringiz va kutayotgan natijangiz haqida qisqacha aytishning o'zi yetarli. Materiallar hali to'liq tayyor bo'lmasa ham, nimadan boshlashni aniqlashga yordam beramiz."
+      },
+      "structure": {
+        "question": "Struktura va matn bilan yordam berasizlarmi",
+        "answer": "Ha. Sahifa mantiqini yig'ish, kerakli bloklarni aniqlash va xom matnni sayt uchun tushunarliroq taqdimotga keltirishga yordam beramiz."
+      },
+      "support": {
+        "question": "2 oy qo'llab-quvvatlashga nimalar kiradi",
+        "answer": "Qo'llab-quvvatlashga mayda tuzatishlar, savollarga javob berish va ishga tushgandan keyin saytning bazaviy ishlashi bo'yicha yordam kiradi. Bu alohida katta ishlab chiqish emas, balki sokin post-launch yordamdir."
+      },
+      "crm": {
+        "question": "Kichik biznesga CRM kerakmi",
+        "answer": "Ha. Hatto kichik biznes uchun ham murojaatlarni yo'qotmaslik muhim. Bazaviy CRM arizalarni bitta joyda yig'ishga yordam beradi va hammasini faqat chatlarda qoldirib qo'ymaydi."
+      },
+      "language": {
+        "question": "Ishni bitta tildan boshlasa bo'ladimi",
+        "answer": "Ha, agar bu sizning ssenariyingizga mos bo'lsa, ishni bitta tildan boshlash mumkin. Shu bilan birga, keyin boshqa tillarni qo'shish oson bo'lishi uchun loyiha strukturasi oldindan tayyorlanishi mumkin."
+      },
+      "ownership": {
+        "question": "Domen va sayt egasi kim bo'ladi",
+        "answer": "Domenning rasmiy egasi bizning kompaniya bo'lib qoladi, lekin siz uni har doim bizdan sotib olishingiz mumkin. Domen narxi odatda 100 000 so'mdan 300 000 so'mgacha bo'ladi. Saytning egasi esa har doim siz bo'lasiz. Kod va repository huquqlarini sizga topshiramiz."
+      },
+      "excluded": {
+        "question": "Tariflarga nimalar kirmaydi",
+        "answer": "Bazaviy tariflarga logotip va firma uslubi, professional fotosyomka, pullik tashqi servislar, reklama kampaniyalari, murakkab custom integratsiyalar va kontentni to'liq noldan yozish kirmaydi."
+      },
+      "payment": {
+        "question": "To'lov qanday amalga oshadi",
+        "answer": "To'lov formati ish boshlanishidan oldin muhokama qilinadi va oldindan aniqlashtiriladi, shunda ish nimadan iboratligi va ishga tushirish qanday ketishi tushunarli bo'ladi."
+      },
+      "later": {
+        "question": "Saytni keyinroq rivojlantirish mumkinmi",
+        "answer": "Ha. Ishga tushgandan keyin saytni keyin ham rivojlantirish mumkin: yangi sahifalar va bloklar qo'shish, strukturani kengaytirish va biznes o'sgani sari funksionallikni kuchaytirish mumkin."
+      }
+    }
+  },
+  "Footer": {
+    "brand": "WebCode",
+    "tagline": "murojaatlarni yo'qotmaydigan saytlar va CRM",
+    "nav": {
+      "whyWebcode": "Nega WebCode",
+      "audience": "Kimlar uchun",
+      "benefits": "Biznes nima oladi",
+      "includes": "Nimalar kiradi",
+      "cases": "Keyslar",
+      "pricing": "Tariflar",
+      "process": "Ish jarayoni",
+      "faq": "FAQ",
+      "contacts": "Kontaktlar"
+    },
+    "contacts": {
+      "telegram": "Telegram",
+      "whatsapp": "WhatsApp",
+      "email": "E-mail"
+    },
+    "privacy": "Maxfiylik siyosati",
+    "copyright": "© WebCode, {year}. Barcha huquqlar himoyalangan."
   }
 }

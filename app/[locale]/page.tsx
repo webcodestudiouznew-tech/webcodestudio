@@ -2,8 +2,11 @@ import { SiteHeaderResizable } from "@/components/layout/site-header-resizable";
 import { AudienceSection } from "@/components/sections/audience-section";
 import { BusinessBenefitsSection } from "@/components/sections/business-benefits-section";
 import { CasesSection } from "@/components/sections/cases-section";
+import { FaqSection } from "@/components/sections/faq-section";
+import { FooterSection } from "@/components/sections/footer-section";
 import { HeroSection } from "@/components/sections/hero-section";
 import { PricingSection } from "@/components/sections/pricing-section";
+import { ProcessSection } from "@/components/sections/process-section";
 import { SolutionIncludesSection } from "@/components/sections/solution-includes-section";
 import { WhyWebCodeSection } from "@/components/sections/why-webcode-section";
 
@@ -28,6 +31,9 @@ export default async function LocaleHomePage({ params }: LocaleHomePageProps) {
       <SolutionIncludesSection locale={locale} />
       <CasesSection locale={locale} />
       <PricingSection locale={locale} />
+      <ProcessSection locale={locale} />
+      <FaqSection locale={locale} />
+      <FooterSection locale={locale} />
     </main>
   );
 }

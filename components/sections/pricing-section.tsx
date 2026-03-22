@@ -72,7 +72,7 @@ export async function PricingSection({ locale }: { locale: string }) {
               {(t.raw("includedItems") as string[]).map((item: string) => (
                 <div
                   key={item}
-                  className="flex min-h-10 w-full items-center justify-center gap-1.5 rounded-full border border-white/8 bg-white/[0.03] px-3 py-2 text-center text-[11px] font-medium text-white/72 sm:gap-2 sm:px-4 sm:text-[13px]"
+                  className="flex min-h-8 w-full items-center justify-start gap-1.5 rounded-[14px] bg-white/[0.025] px-2 py-1 text-left text-[13px] font-medium text-white/72 shadow-[0_8px_18px_rgba(0,0,0,0.08)] sm:min-h-10 sm:gap-2 sm:px-4 sm:py-2"
                 >
                   <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[linear-gradient(180deg,rgba(239,203,101,0.18)_0%,rgba(215,178,76,0.08)_100%)] text-[#efcb65]">
                     <CheckIcon />
