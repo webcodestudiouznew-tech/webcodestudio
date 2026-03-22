@@ -106,5 +106,93 @@
         "description": "E'lon qilingandan keyin mayda tuzatishlar va savollar bo'yicha yordam beramiz."
       }
     }
+  },
+  "BusinessBenefits": {
+    "title": "Biznesingiz nima oladi",
+    "description": "Bu shunchaki internetga chiqish emas, balki ishonch, xizmatlarni taqdim etish va murojaatlarni qulay qabul qilish uchun aniq tizimdir.",
+    "cta": "Texnik chalkashliksiz tushunarli ishga tushirish",
+    "ctaDescription": "Biznesingizga qaysi sayt formati mos kelishini ko'rsatamiz va ishga tushirish ssenariyingiz uchun taklif tayyorlaymiz.",
+    "ctaButton": "Taklif olish",
+    "items": {
+      "presentation": {
+        "title": "Professional taqdimot",
+        "description": "Sayt yig'ilgan va zamonaviy ko'rinadi, shunda biznes birinchi qarashdanoq ko'proq ishonch uyg'otadi."
+      },
+      "path": {
+        "title": "Arizagacha qulay yo'l",
+        "description": "Mijozga nimani taklif qilayotganingizni tushunish va murojaatga o'tish osonroq bo'ladi."
+      },
+      "leads": {
+        "title": "Yo'qoladigan murojaatlar kamroq",
+        "description": "Forma, CRM va messenjerlar arizalarni chatlar va qo'lda yozishmalarda yo'qotmaslikka yordam beradi."
+      },
+      "services": {
+        "title": "Xizmatlarning tushunarli taqdimoti",
+        "description": "Xizmatlaringiz, ish formatingiz va asosiy afzalliklaringiz ortiqcha chalkashliksiz aniq ko'rsatiladi."
+      },
+      "growth": {
+        "title": "O'sish uchun baza",
+        "description": "Keyinchalik reklama, targ'ibot va saytni rivojlantirishda tayana oladigan asosga ega bo'lasiz."
+      },
+      "launch": {
+        "title": "Texnik chalkashliksiz ishga tushirish",
+        "description": "Domen, hosting, tillar va ishga tushirishning bazaviy mantiqi bitta tushunarli jarayonga yig'iladi."
+      }
+    }
+  },
+  "SolutionIncludes": {
+    "eyebrow": "Tayyor yechim",
+    "title": "Tayyor yechim tarkibiga nimalar kiradi",
+    "description": "Ishga tushirish uchun kerak bo'ladigan hamma narsa bitta formatga yig'ilgan, shunda alohida pudratchilar va servislarni boshqarishingizga to'g'ri kelmaydi.",
+    "excludedTitle": "Nimalar kirmaydi",
+    "excludedDescription": "Bu vazifalar alohida muhokama qilinishi mumkin, lekin bazaviy ishga tushirish formatiga kirmaydi.",
+    "ctaDescription": "Biznesingiz uchun aynan mos yechimni tanlaymiz.",
+    "ctaButton": "Ariza qoldirish",
+    "items": {
+      "website": {
+        "title": "Tayyor sayt",
+        "description": "Kerakli bo'limlar, mobil moslashuv va bazaviy konversiya mantiqi bilan tayyor sayt yig'amiz."
+      },
+      "structure": {
+        "title": "Struktura bo'yicha yordam",
+        "description": "Xizmatlar, bloklar va sahifa ssenariysini saytni qabul qilish oson bo'ladigan tarzda joylashtirishga yordam beramiz."
+      },
+      "copy": {
+        "title": "Xom matnni qayta ishlash",
+        "description": "Qoralamalar, qaydlar va materiallaringizni olib, sayt uchun tushunarli taqdimotga keltiramiz."
+      },
+      "languages": {
+        "title": "3 tilga moslash",
+        "description": "Loyiha strukturasiga boshidan rus, o'zbek va ingliz versiyalarini qo'shib quramiz."
+      },
+      "crm": {
+        "title": "Ariza formasi + CRM",
+        "description": "Arizalarni yig'ish va yuborilgandan keyin yo'qolib ketmaydigan bazaviy tizimni ulaymiz."
+      },
+      "messaging": {
+        "title": "Telegram / WhatsApp",
+        "description": "Mijoz saytning o'zidan qulay yozishi mumkin bo'lgan odatiy aloqa kanallarini qo'shamiz."
+      },
+      "seo": {
+        "title": "Bazaviy SEO va analitika",
+        "description": "Saytni indeksatsiyaga tayyorlaymiz va keyingi murojaatlarni kuzatish uchun bazani qo'yamiz."
+      },
+      "hosting": {
+        "title": "Domen va hosting",
+        "description": "Domen va sayt joylashtirishni sozlaymiz, bunda domen va hosting narxi tarif ichiga kiritilgan bo'ladi."
+      },
+      "support": {
+        "title": "2 oy qo'llab-quvvatlash",
+        "description": "Ishga tushgandan keyin mayda tuzatishlar va sayt ishlashi bo'yicha savollar uchun aloqada qolamiz."
+      }
+    },
+    "excludedItems": {
+      "branding": "Logotip va firma uslubi",
+      "photo": "Professional fotosyomka",
+      "services": "Pullik tashqi servislar",
+      "ads": "Reklama kampaniyalari",
+      "integrations": "Murakkab custom integratsiyalar",
+      "content": "Kontentni to'liq noldan yozish"
+    }
   }
 }

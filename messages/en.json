@@ -106,5 +106,93 @@
         "description": "After publishing, we help with small edits and questions."
       }
     }
+  },
+  "BusinessBenefits": {
+    "title": "What your business gets",
+    "description": "This is not just an online presence, but a clear system for trust, service presentation and convenient lead capture.",
+    "cta": "Clear launch without technical chaos",
+    "ctaDescription": "We will show which website format fits your business and prepare a proposal for your launch scenario.",
+    "ctaButton": "Get a proposal",
+    "items": {
+      "presentation": {
+        "title": "Professional presentation",
+        "description": "The website looks polished and modern so the business inspires more trust from the first impression."
+      },
+      "path": {
+        "title": "A clear path to inquiry",
+        "description": "It becomes easier for a client to understand your offer and move toward contacting you."
+      },
+      "leads": {
+        "title": "Fewer lost inquiries",
+        "description": "Forms, CRM and messengers help prevent leads from getting lost in chats and manual follow-up."
+      },
+      "services": {
+        "title": "Clear service presentation",
+        "description": "Your services, work format and key advantages are presented clearly without unnecessary confusion."
+      },
+      "growth": {
+        "title": "A base for growth",
+        "description": "You get a foundation you can later use for ads, promotion and further website development."
+      },
+      "launch": {
+        "title": "Launch without technical chaos",
+        "description": "Domain, hosting, languages and the base launch logic are assembled into one understandable process."
+      }
+    }
+  },
+  "SolutionIncludes": {
+    "eyebrow": "Turnkey",
+    "title": "What is included in the turnkey solution",
+    "description": "Everything needed for launch is already assembled into one format, so you do not have to coordinate separate contractors and services.",
+    "excludedTitle": "What is not included",
+    "excludedDescription": "These items can be discussed separately, but they are not part of the base launch format.",
+    "ctaDescription": "We will tailor the right solution for your business.",
+    "ctaButton": "Leave a request",
+    "items": {
+      "website": {
+        "title": "Turnkey website",
+        "description": "We build a ready website with the required sections, mobile adaptation and base conversion logic."
+      },
+      "structure": {
+        "title": "Help with structure",
+        "description": "We help organize services, blocks and page flow so the website is easier to understand."
+      },
+      "copy": {
+        "title": "Refining raw copy",
+        "description": "We take your drafts, notes and materials and turn them into a clear website presentation."
+      },
+      "languages": {
+        "title": "Adaptation into 3 languages",
+        "description": "We build the Russian, Uzbek and English versions into the project structure from the start."
+      },
+      "crm": {
+        "title": "Lead form + CRM",
+        "description": "We connect lead capture and a basic system where inquiries do not disappear after submission."
+      },
+      "messaging": {
+        "title": "Telegram / WhatsApp",
+        "description": "We add familiar messaging channels so clients can contact you directly from the website."
+      },
+      "seo": {
+        "title": "Basic SEO setup and analytics",
+        "description": "We prepare the website for indexing and lay the base for further lead tracking."
+      },
+      "hosting": {
+        "title": "Domain and hosting",
+        "description": "We configure the domain and hosting, and their cost is already included in the package."
+      },
+      "support": {
+        "title": "2 months of support",
+        "description": "After launch, we stay available for small edits and questions about the website."
+      }
+    },
+    "excludedItems": {
+      "branding": "Logo and brand identity",
+      "photo": "Professional photo shoot",
+      "services": "Paid third-party services",
+      "ads": "Advertising campaigns",
+      "integrations": "Complex custom integrations",
+      "content": "Writing all content fully from scratch"
+    }
   }
 }

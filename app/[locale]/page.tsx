@@ -1,6 +1,8 @@
 import { SiteHeaderResizable } from "@/components/layout/site-header-resizable";
 import { AudienceSection } from "@/components/sections/audience-section";
+import { BusinessBenefitsSection } from "@/components/sections/business-benefits-section";
 import { HeroSection } from "@/components/sections/hero-section";
+import { SolutionIncludesSection } from "@/components/sections/solution-includes-section";
 import { WhyWebCodeSection } from "@/components/sections/why-webcode-section";
 
 type LocaleHomePageProps = {
@@ -20,6 +22,8 @@ export default async function LocaleHomePage({ params }: LocaleHomePageProps) {
       </div>
       <AudienceSection locale={locale} />
       <WhyWebCodeSection locale={locale} />
+      <BusinessBenefitsSection locale={locale} />
+      <SolutionIncludesSection locale={locale} />
     </main>
   );
 }
