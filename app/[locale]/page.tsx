@@ -5,6 +5,7 @@ import { CasesSection } from "@/components/sections/cases-section";
 import { FaqSection } from "@/components/sections/faq-section";
 import { FooterSection } from "@/components/sections/footer-section";
 import { HeroSection } from "@/components/sections/hero-section";
+import { LeadSection } from "@/components/sections/lead-section";
 import { PricingSection } from "@/components/sections/pricing-section";
 import { ProcessSection } from "@/components/sections/process-section";
 import { SolutionIncludesSection } from "@/components/sections/solution-includes-section";
@@ -33,6 +34,7 @@ export default async function LocaleHomePage({ params }: LocaleHomePageProps) {
       <PricingSection locale={locale} />
       <ProcessSection locale={locale} />
       <FaqSection locale={locale} />
+      <LeadSection locale={locale} />
       <FooterSection locale={locale} />
     </main>
   );

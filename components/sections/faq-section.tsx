@@ -38,7 +38,7 @@ export async function FaqSection({ locale }: { locale: string }) {
 
       <div className="relative z-10 mx-auto flex w-full max-w-[1280px] flex-col gap-10 px-4 sm:px-6 lg:gap-12 lg:px-0">
         <div className="mx-auto flex max-w-[840px] flex-col items-center text-center">
-          <h2 className="w-full max-w-none font-[var(--font-manrope)] text-[30px] font-semibold leading-[1.02] tracking-[-0.05em] text-white max-[380px]:text-[27px] sm:text-[38px] lg:text-[38px]">
+          <h2 className="w-full max-w-none font-[var(--font-manrope)] text-[30px] font-medium leading-[1.06] tracking-[-0.04em] text-white max-[380px]:text-[27px] sm:text-[38px] lg:text-[40px]">
             {t("title")}
           </h2>
 
@@ -62,36 +62,6 @@ export async function FaqSection({ locale }: { locale: string }) {
               </p>
             </CasesAccordionItem>
           ))}
-        </div>
-
-        <div className="relative overflow-hidden rounded-[26px] border border-[#8a7030]/22 bg-[radial-gradient(circle_at_top,rgba(212,175,74,0.12),transparent_38%),linear-gradient(180deg,rgba(255,255,255,0.045)_0%,rgba(255,255,255,0.015)_100%)] px-5 py-7 text-center shadow-[0_24px_56px_rgba(0,0,0,0.18)] sm:px-6 sm:py-8">
-          <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-[linear-gradient(90deg,transparent,rgba(241,204,107,0.38),transparent)]" />
-
-          <div className="mx-auto max-w-[680px]">
-            <h3 className="font-[var(--font-manrope)] text-[24px] font-semibold leading-[1.04] tracking-[-0.045em] text-white sm:text-[28px]">
-              {t("ctaTitle")}
-            </h3>
-
-            <p className="mt-3 text-[14px] leading-[1.62] text-white/62 sm:text-[15px]">
-              {t("ctaDescription")}
-            </p>
-
-            <div className="mt-5 flex flex-col gap-2.5 sm:flex-row sm:justify-center">
-              <a
-                href="#lead"
-                className="inline-flex min-h-11 items-center justify-center rounded-[12px] bg-[linear-gradient(180deg,#efcb65_0%,#d7b24c_100%)] px-5 py-2.5 text-[14px] font-semibold text-[#30260d] shadow-[0_16px_28px_rgba(212,175,74,0.18)] transition-all duration-200 ease-out hover:-translate-y-0.5 hover:brightness-110"
-              >
-                {t("ctaPrimary")}
-              </a>
-
-              <button
-                type="button"
-                className="inline-flex min-h-11 items-center justify-center rounded-[12px] border border-white/10 bg-white/[0.03] px-5 py-2.5 text-[14px] font-semibold text-white/84 transition-all duration-200 ease-out hover:-translate-y-0.5 hover:border-[#8a7030]/60 hover:text-white"
-              >
-                {t("ctaSecondary")}
-              </button>
-            </div>
-          </div>
         </div>
       </div>
     </section>

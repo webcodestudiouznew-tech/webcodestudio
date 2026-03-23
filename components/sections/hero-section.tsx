@@ -2,8 +2,10 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
+import { TrackedContactLink } from "@/components/shared/tracked-contact-link";
 import ShinyText from "@/components/ui/shiny-text";
+import { contactLinks } from "@/lib/contact-links";
 
 const LOGO_SRC = "/logo_new_2.png?v=20260319";
 
@@ -99,6 +101,7 @@ function HeroChip({
 }
 
 export function HeroSection() {
+  const locale = useLocale();
   const t = useTranslations("Hero");
   const [hasEntered, setHasEntered] = useState(false);
   const buttonHoverClass =
@@ -110,6 +113,10 @@ export function HeroSection() {
   const revealGlowClass = hasEntered
     ? "hero-enter-glow hero-enter-active"
     : "hero-enter-glow";
+  const heroTitleClassName =
+    locale === "uz"
+      ? `${revealClass} hero-delay-2 mx-auto max-w-[360px] min-w-0 pb-[0.08em] text-center font-[var(--font-manrope)] text-[31px] font-semibold leading-[1.08] tracking-[-0.065em] text-white max-[380px]:max-w-[318px] max-[380px]:text-[26px] max-[380px]:tracking-[-0.055em] sm:max-w-[540px] sm:text-[48px] sm:leading-[1.06] sm:tracking-[-0.055em] lg:mx-0 lg:text-left lg:text-[60px] xl:text-[64px]`
+      : `${revealClass} hero-delay-2 mx-auto max-w-[360px] min-w-0 text-center font-[var(--font-manrope)] text-[31px] font-semibold leading-[1.03] tracking-[-0.065em] text-white max-[380px]:max-w-[318px] max-[380px]:text-[26px] max-[380px]:tracking-[-0.055em] sm:max-w-[540px] sm:text-[48px] sm:leading-[1.02] sm:tracking-[-0.055em] lg:mx-0 lg:text-left lg:text-[60px] xl:text-[64px]`;
   const chips: Array<{ key: HeroChipKey; label: string }> = [
     { key: "languages", label: t("chips.languages") },
     { key: "adaptive", label: t("chips.adaptive") },
@@ -147,7 +154,7 @@ export function HeroSection() {
               <span className="hidden sm:inline">{t("eyebrow")}</span>
             </div>
 
-            <h1 className={`${revealClass} hero-delay-2 mx-auto max-w-[360px] min-w-0 text-center font-[var(--font-manrope)] text-[31px] font-semibold leading-[1.03] tracking-[-0.065em] text-white max-[380px]:max-w-[318px] max-[380px]:text-[26px] max-[380px]:tracking-[-0.055em] sm:max-w-[540px] sm:text-[48px] sm:leading-[1.02] sm:tracking-[-0.055em] lg:mx-0 lg:text-left lg:text-[60px] xl:text-[64px]`}>
+            <h1 className={heroTitleClassName}>
               <span className="sm:hidden">
                 <ShinyText
                   className="block"
@@ -272,12 +279,16 @@ export function HeroSection() {
               >
                 {t("cta.primary")}
               </a>
-              <button
-                type="button"
+              <TrackedContactLink
+                href={contactLinks.telegramUrl}
+                eventName="telegram_click"
+                eventPayload={{ section: "hero" }}
+                target="_blank"
+                rel="noreferrer"
                 className={`w-full rounded-[10px] border border-[#746238] bg-[#2a2925]/72 px-7 py-3.5 text-center text-[15px] font-semibold text-white/88 shadow-[inset_0_1px_0_rgba(255,255,255,0.04)] sm:w-auto sm:rounded-[6px] sm:py-3 ${buttonHoverClass}`}
               >
                 {t("cta.secondary")}
-              </button>
+              </TrackedContactLink>
             </div>
 
           </div>

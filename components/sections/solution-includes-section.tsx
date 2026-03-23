@@ -91,7 +91,7 @@ export async function SolutionIncludesSection({ locale }: { locale: string }) {
             {t("eyebrow")}
           </span>
 
-          <h2 className="mt-4 w-full max-w-none font-[var(--font-manrope)] text-[30px] font-semibold leading-[1.02] tracking-[-0.05em] text-white max-[380px]:text-[27px] sm:text-[38px] lg:text-[38px]">
+          <h2 className="mt-4 w-full max-w-none font-[var(--font-manrope)] text-[30px] font-medium leading-[1.06] tracking-[-0.04em] text-white max-[380px]:text-[27px] sm:text-[38px] lg:text-[40px]">
             {t("title")}
           </h2>
 
@@ -116,7 +116,7 @@ export async function SolutionIncludesSection({ locale }: { locale: string }) {
 
                   <div className="flex min-w-0 flex-1 flex-col">
                     <div className="flex items-start justify-between gap-3">
-                      <h3 className="font-[var(--font-manrope)] text-[18px] font-semibold leading-[1.12] tracking-[-0.03em] text-white">
+                      <h3 className="font-[var(--font-manrope)] text-[18px] font-medium leading-[1.14] tracking-[-0.03em] text-white sm:text-[19px]">
                         {t(`items.${item}.title`)}
                       </h3>
 
@@ -136,7 +136,7 @@ export async function SolutionIncludesSection({ locale }: { locale: string }) {
 
           <div className="flex h-full flex-col gap-4 self-start">
             <aside className="flex-1 rounded-[28px] border border-[#8a7030]/22 bg-[radial-gradient(circle_at_top,rgba(212,175,74,0.12),transparent_36%),linear-gradient(180deg,#2a2318_0%,#1e1a15_100%)] px-5 py-5 shadow-[0_20px_50px_rgba(0,0,0,0.2)] sm:px-6">
-              <h3 className="text-center font-[var(--font-manrope)] text-[24px] font-semibold leading-[1.06] tracking-[-0.04em] text-white">
+              <h3 className="text-center font-[var(--font-manrope)] text-[24px] font-medium leading-[1.08] tracking-[-0.04em] text-white sm:text-[26px]">
                 {t("excludedTitle")}
               </h3>
 

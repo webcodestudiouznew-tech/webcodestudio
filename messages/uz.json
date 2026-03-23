@@ -1,11 +1,11 @@
 {
   "Metadata": {
     "title": "WebCode | Biznes uchun tayyor sayt",
-    "description": "WebCode O'zbekistondagi oflayn biznes uchun zamonaviy saytlar yaratadi: sayt, CRM, Telegram/WhatsApp, domen va hosting bitta yechimda."
+    "description": "WebCode O'zbekistondagi biznes uchun zamonaviy saytlar yaratadi: sayt, CRM, Telegram/WhatsApp, domen va hosting bitta yechimda."
   },
   "Hero": {
     "brandTagline": "murojaatlarni yo'qotmaydigan saytlar",
-    "eyebrow": "O'zbekistondagi servis va ekspert biznes uchun",
+    "eyebrow": "O'zbekistondagi servis va ekspert bizneslar uchun",
     "eyebrowMobile": "O'zbekistondagi biznes uchun",
     "nav": {
       "whyWebcode": "Nega WebCode",
@@ -28,31 +28,31 @@
       "line2": "biznes uchun",
       "line3": "CRM tizimi bilan"
     },
-    "subtitle": "Zamonaviy saytni 3 tilda ishga tushiramiz, Telegram/WhatsApp, domen, hosting va murojaatlar uchun sodda CRM'ni ulaymiz.",
-    "description": "Siz tarqoq servislar to'plamini emas, balki tayyor yechimni olasiz.",
-    "supportText": "Struktura bilan yordam beramiz, xom matnni qayta ishlaymiz, saytni yig'amiz va hammasini siz uchun ortiqcha murakkabliksiz ishga tushiramiz.",
+    "subtitle": "Saytni uch tilda ishga tushiramiz, Telegram/WhatsApp, domen, hosting va murojaatlar uchun sodda CRM tizimini ulaymiz.",
+    "description": "Siz alohida servislar to'plamini emas, balki tayyor yechimni olasiz.",
+    "supportText": "Strukturani ishlab chiqishda yordam beramiz, xom matnni qayta ishlaymiz, saytni yig'amiz va hammasini ortiqcha murakkabliksiz ishga tushiramiz.",
     "cta": {
       "primary": "Taklif olish",
       "secondary": "Telegramga yozish"
     },
-    "microcopy": "Ish kuni davomida javob beramiz. Biznesingizga mos sayt formatini tanlash va narxni hisoblashda yordam beramiz.",
+    "microcopy": "Ish kuni ichida javob beramiz. Biznesingizga mos sayt formatini tanlash va narxni hisoblashda yordam beramiz.",
     "chips": {
       "languages": "RU / UZ / EN",
       "adaptive": "Adaptiv sayt",
-      "crm": "CRM",
+      "crm": "Murojaatlar uchun CRM",
       "messaging": "Telegram / WhatsApp",
       "messagingMobile": "Telegram",
-      "launch": "Tez start"
+      "launch": "Kalit topshirish asosida"
     },
     "orbit": "O'zbekistondagi biznes uchun sayt, CRM, Telegram va tayyor ishga tushirish",
     "placeholder": {
-      "title": "HERO illustratsiyasi",
-      "description": "Bu yerga keyinroq qo'l va kartalar rasmi joylashtiriladi, hozircha kompozitsiya saqlanib turadi."
+      "title": "HERO illyustratsiyasi",
+      "description": "Bu yerga keyinroq qo'l va kartalar tasviri joylashtiriladi, hozircha kompozitsiya saqlab turiladi."
     }
   },
   "Audience": {
     "title": "WebCode kimlar uchun mos",
-    "description": "Biz shunchaki sayt emas, balki ishonch, xizmatlarni taqdim etish va murojaatlarni qulay qabul qilish uchun aniq vosita kerak bo'lgan bizneslarga mosmiz.",
+    "description": "Biz shunchaki sayt emas, balki ishonch uyg'otadigan, xizmatlarni aniq ko'rsatadigan va murojaatlarni qulay qabul qiladigan vosita kerak bo'lgan bizneslar uchun mosmiz.",
     "items": {
       "service": {
         "title": "Servis biznesi",
@@ -68,17 +68,17 @@
       },
       "leads": {
         "title": "Murojaatlarda tartib kerak bo'lgan bizneslar uchun",
-        "description": "Forma va messenjerlardan kelgan murojaatlarni bitta tizimda yig'ish muhim bo'lganda va ularni yozishmalarda yo'qotmaslik kerak bo'lganda."
+        "description": "Forma va messenjerlardan kelgan murojaatlarni bitta tizimda yig'ish va ularni yozishmalarda yo'qotmaslik muhim bo'lganda."
       }
     }
   },
   "WhyWebCode": {
     "title": "Nega WebCode",
-    "description": "Biz shunchaki sayt emas, balki ishga tushirish uchun tayyor tizim yaratamiz: struktura va matndan tortib CRM, messenjerlar va publikatsiyagacha.",
+    "description": "Biz shunchaki sayt emas, balki ishga tushirishga tayyor tizim yaratamiz: struktura va matndan tortib CRM, messenjerlar va nashrgacha.",
     "cta": "Loyihani ortiqcha murakkabliksiz ishga tushiramiz",
     "ctaLine1": "Loyihani ishga tushiramiz",
     "ctaLine2": "ortiqcha murakkabliksiz",
-    "ctaDescription": "Biznesingizga qaysi format mos kelishini ko'rsatamiz va texnik chalkashliksiz aniq keyingi qadamni belgilaymiz.",
+    "ctaDescription": "Biznesingizga qaysi format mos kelishini ko'rsatamiz va texnik chalkashliksiz keyingi qadamni aniq belgilaymiz.",
     "ctaButton": "Loyihangizni muhokama qilish",
     "items": {
       "system": {
@@ -90,40 +90,40 @@
         "description": "Biz qimmat ko'rinadigan, oson o'qiladigan va kuchli birinchi taassurot qoldiradigan zamonaviy veb-dizayn yaratamiz."
       },
       "languages": {
-        "title": "3 til darrov asosga kiritilgan",
-        "description": "Rus, o'zbek va ingliz tillari yechimning bazaviy mantiqiga boshidan qo'shilgan. Zarurat bo'lsa, so'rovingiz bo'yicha istalgan tilni qo'shamiz."
+        "title": "3 til darhol asosga kiritiladi",
+        "description": "Rus, o'zbek va ingliz tillari yechimning asosiy mantiqiga boshidan qo'shiladi. Zarurat bo'lsa, istalgan boshqa tilni ham qo'shamiz."
       },
       "market": {
         "title": "Mahalliy bozor uchun",
-        "description": "O'zbekistondagi biznes xususiyatlari, mijozlar kutadigan yondashuv va ular murojaat qiladigan odatiy aloqa kanallarini hisobga olamiz."
+        "description": "O'zbekistondagi biznes xususiyatlari, mijozlar kutadigan yondashuv va ular odatda murojaat qiladigan aloqa kanallarini hisobga olamiz."
       },
       "contractor": {
         "title": "Bitta pudratchi",
-        "description": "Dizayner, dasturchi va domen, hosting hamda CRM bo'yicha mutaxassislarni alohida izlash shart emas, hammasi bir joyda yig'iladi."
+        "description": "Dizayner, dasturchi va domen, hosting hamda CRM bo'yicha mutaxassislarni alohida izlash shart emas, hammasi bitta joyda hal bo'ladi."
       },
       "support": {
         "title": "Ishga tushgandan keyin qo'llab-quvvatlash",
-        "description": "E'lon qilingandan keyin mayda tuzatishlar va savollar bo'yicha yordam beramiz."
+        "description": "Sayt ishga tushgandan keyin mayda tuzatishlar va savollar bo'yicha yordam beramiz."
       }
     }
   },
   "BusinessBenefits": {
-    "title": "Biznesingiz nima oladi",
-    "description": "Bu shunchaki internetga chiqish emas, balki ishonch, xizmatlarni taqdim etish va murojaatlarni qulay qabul qilish uchun aniq tizimdir.",
+    "title": "Biznesingiz nima qo'lga kiritadi",
+    "description": "Bu shunchaki internetga chiqish emas, balki ishonch uyg'otish, xizmatlarni aniq ko'rsatish va murojaatlarni qulay qabul qilish uchun tushunarli tizimdir.",
     "cta": "Texnik chalkashliksiz tushunarli ishga tushirish",
     "ctaDescription": "Biznesingizga qaysi sayt formati mos kelishini ko'rsatamiz va ishga tushirish ssenariyingiz uchun taklif tayyorlaymiz.",
     "ctaButton": "Taklif olish",
     "items": {
       "presentation": {
         "title": "Professional taqdimot",
-        "description": "Sayt yig'ilgan va zamonaviy ko'rinadi, shunda biznes birinchi qarashdanoq ko'proq ishonch uyg'otadi."
+        "description": "Sayt yig'ilgan va zamonaviy ko'rinadi, shuning uchun biznes birinchi qarashdanoq ko'proq ishonch uyg'otadi."
       },
       "path": {
-        "title": "Arizagacha qulay yo'l",
+        "title": "Murojaatgacha qulay yo'l",
         "description": "Mijozga nimani taklif qilayotganingizni tushunish va murojaatga o'tish osonroq bo'ladi."
       },
       "leads": {
-        "title": "Yo'qoladigan murojaatlar kamroq",
+        "title": "Yo'qoladigan murojaatlar kamayadi",
         "description": "Forma, CRM va messenjerlar arizalarni chatlar va qo'lda yozishmalarda yo'qotmaslikka yordam beradi."
       },
       "services": {
@@ -132,7 +132,7 @@
       },
       "growth": {
         "title": "O'sish uchun baza",
-        "description": "Keyinchalik reklama, targ'ibot va saytni rivojlantirishda tayana oladigan asosga ega bo'lasiz."
+        "description": "Keyinchalik reklama, targ'ibot va saytni rivojlantirishda tayanish mumkin bo'lgan asosga ega bo'lasiz."
       },
       "launch": {
         "title": "Texnik chalkashliksiz ishga tushirish",
@@ -143,10 +143,10 @@
   "SolutionIncludes": {
     "eyebrow": "Tayyor yechim",
     "title": "Tayyor yechim tarkibiga nimalar kiradi",
-    "description": "Ishga tushirish uchun kerak bo'ladigan hamma narsa bitta formatga yig'ilgan, shunda alohida pudratchilar va servislarni boshqarishingizga to'g'ri kelmaydi.",
+    "description": "Ishga tushirish uchun kerak bo'ladigan barcha narsa bitta formatga jamlangan, shuning uchun alohida pudratchilar va servislarni boshqarishingizga to'g'ri kelmaydi.",
     "excludedTitle": "Nimalar kirmaydi",
     "excludedDescription": "Bu vazifalar alohida muhokama qilinishi mumkin, lekin bazaviy ishga tushirish formatiga kirmaydi.",
-    "ctaDescription": "Biznesingiz uchun aynan mos yechimni tanlaymiz.",
+    "ctaDescription": "Biznesingiz uchun eng mos yechimni tanlaymiz.",
     "ctaButton": "Ariza qoldirish",
     "items": {
       "website": {
@@ -159,15 +159,15 @@
       },
       "copy": {
         "title": "Xom matnni qayta ishlash",
-        "description": "Qoralamalar, qaydlar va materiallaringizni olib, sayt uchun tushunarli taqdimotga keltiramiz."
+        "description": "Qoralamalar, qaydlar va materiallaringizni olib, ularni sayt uchun tushunarli matnga aylantiramiz."
       },
       "languages": {
-        "title": "3 tilga moslash",
-        "description": "Loyiha strukturasiga boshidan rus, o'zbek va ingliz versiyalarini qo'shib quramiz."
+        "title": "3 tilni biryo'la qo'shamiz",
+        "description": "Loyiha strukturasini boshidan rus, o'zbek va ingliz tillari bilan quramiz."
       },
       "crm": {
         "title": "Ariza formasi + CRM",
-        "description": "Arizalarni yig'ish va yuborilgandan keyin yo'qolib ketmaydigan bazaviy tizimni ulaymiz."
+        "description": "Murojaatlarni yig'ish va yuborilgandan keyin yo'qolib ketmaydigan bazaviy tizimni ulaymiz."
       },
       "messaging": {
         "title": "Telegram / WhatsApp",
@@ -175,7 +175,7 @@
       },
       "seo": {
         "title": "Bazaviy SEO va analitika",
-        "description": "Saytni indeksatsiyaga tayyorlaymiz va keyingi murojaatlarni kuzatish uchun bazani qo'yamiz."
+        "description": "Saytni indeksatsiyaga tayyorlaymiz va keyingi murojaatlarni kuzatish uchun asos yaratamiz."
       },
       "hosting": {
         "title": "Domen va hosting",
@@ -188,10 +188,10 @@
     },
     "excludedItems": {
       "branding": "Logotip va firma uslubi",
-      "photo": "Professional fotosyomka",
+      "photo": "Professional fotosessiya",
       "services": "Pullik tashqi servislar",
       "ads": "Reklama kampaniyalari",
-      "integrations": "Murakkab custom integratsiyalar",
+      "integrations": "Murakkab maxsus integratsiyalar",
       "content": "Kontentni to'liq noldan yozish"
     }
   },
@@ -201,14 +201,14 @@
     "taskLabel": "Biznes vazifasi",
     "doneLabel": "Nima qildik",
     "resultLabel": "Biznes nima oldi",
-    "viewProject": "Sayt havolasi",
-    "discussSimilar": "O'xshash yechimni tahlil qilish",
+    "viewProject": "Saytga o'tish",
+    "discussSimilar": "Shunga o'xshash yechimni muhokama qilish",
     "previewLabel": "Jonli loyiha",
     "mockupTitle": "Taqdimot fragmenti",
     "mockupMetric1Label": "Fokus",
     "mockupMetric2Label": "Format",
     "ctaTitle": "Biznesingiz uchun o'xshash yechimni tahlil qilamiz",
-    "ctaDescription": "Nishangiz, xizmatlar strukturası va murojaat olish ssenariyingizga qaysi format mos kelishini ko'rsatamiz.",
+    "ctaDescription": "Nishangiz, xizmatlar tuzilmasi va murojaat olish ssenariyingizga qaysi format mos kelishini ko'rsatamiz.",
     "ctaButton": "Taklif olish",
     "packages": {
       "growth": "O'sish tarifi",
@@ -221,14 +221,14 @@
     "items": {
       "sellium": {
         "title": "Sellium",
-        "industry": "O'zbekiston marketplace'larida savdolarni boshqarish uchun AI-platforma.",
+        "industry": "O'zbekiston marketplace'larida savdolarni boshqarish uchun AI platforma.",
         "task": "Mahsulotni aniq tushuntiradigan, ishonchli ko'rinadigan va murojaatga tez olib boradigan zamonaviy texnologik landing yaratish.",
         "ctaText": "Agar sizga raqamli mahsulot yoki SaaS-servis uchun sayt kerak bo'lsa, shu ssenariyga o'xshash strukturani birga tahlil qilishimiz mumkin.",
         "done": [
           "SaaS mahsulot uchun foyda va foydalanish ssenariylariga urg'u berilgan landing strukturasi yig'ildi.",
           "Texnologik uslubdagi zamonaviy vizual taqdimot tayyorlandi.",
           "Adaptiv sahifa va asosiy ekranlardan murojaatga olib boradigan qulay yo'l ishlab chiqildi.",
-          "Loyiha yanada to'liq `O'sish` formati ichida ishga tushirildi."
+          "Loyiha yanada to'liq `O'sish` formati doirasida ishga tushirildi."
         ],
         "result": [
           "Mijoz sayt ishga tushganidan keyin ikkinchi kunidayoq murojaatlar qabul qila boshladi.",
@@ -240,8 +240,8 @@
         ],
         "mockTitle": "Marketplace savdolari uchun AI-platforma",
         "mockTags": ["SaaS", "B2B", "Texnologik uslub"],
-        "mockInfo1": "Taqdimot mahsulot qiymati, foydalanish ssenariylari va aniq CTA'lar orqali qurilgan.",
-        "mockInfo2": "Mahsulotni keyinchalik kengaytirish uchun ko'proq to'liq ko'p sahifali ishga tushirish."
+        "mockInfo1": "Taqdimot mahsulot qiymati, foydalanish ssenariylari va aniq CTA lar asosida qurilgan.",
+        "mockInfo2": "Mahsulotni keyinchalik kengaytirish uchun qulay bo'lgan to'liqroq ko'p sahifali ishga tushirish."
       },
       "peaks": {
         "title": "PEAKS",
@@ -252,7 +252,7 @@
           "B2B taqdimot va murojaatlar qabul qilish uchun kengaytirilgan bir sahifali sayt yig'ildi.",
           "Kompaniya, ishlab chiqarish va ish formati bo'yicha asosiy bloklar tartibga solindi.",
           "Ishonchga urg'u berilgan saranjom korporativ vizual taqdimot tayyorlandi.",
-          "Loyiha ariza formasi va qulay kontaktlar bilan `Ishonch` tarifi mantig'ida ishga tushirildi."
+          "Loyiha ariza formasi va qulay kontaktlar bilan `Ishonch` tarifi doirasida ishga tushirildi."
         ],
         "result": [
           "Kompaniya ishlab chiqarishni taqdim etish va kiruvchi murojaatlarni qabul qilish uchun zamonaviy korporativ sayt oldi.",
@@ -264,7 +264,7 @@
         ],
         "mockTitle": "B2B ishlab chiqarish uchun korporativ landing",
         "mockTags": ["B2B", "Korporativ sayt", "Lidogeneratsiya"],
-        "mockInfo1": "Fokus ishonch, xizmatlar taqdimoti va korporativ mijoz uchun aniq strukturaga qaratilgan.",
+        "mockInfo1": "Asosiy urg'u ishonch, xizmatlar taqdimoti va korporativ mijoz uchun aniq tuzilmaga qaratilgan.",
         "mockInfo2": "Ariza formasi va aloqa kanallari bilan kengaytirilgan landing."
       }
     }
@@ -273,7 +273,7 @@
     "eyebrow": "Ishga tushirish formatlari",
     "title": "Tariflar",
     "description": "Biznesning turli vazifalari uchun uchta ishga tushirish formati.",
-    "includedLabel": "Har bir tarifda kiritilgan",
+    "includedLabel": "Har bir tarifga quyidagilar kiradi",
     "includedItems": [
       "RU / UZ / EN dagi sayt",
       "Murojaatlar uchun CRM",
@@ -290,7 +290,7 @@
     "plans": {
       "startup": {
         "title": "Ishga tushirish",
-        "audience": "Onlaynga tez chiqish va murojaatlarni ortiqcha murakkab strukturasiz yig'ish uchun.",
+        "audience": "Onlaynga tez chiqish va murojaatlarni ortiqcha murakkab tuzilmasiz yig'ish uchun.",
         "timeline": "1-3 kun",
         "price": "2 900 000 so'mdan",
         "button": "«Ishga tushirish»ni tanlash",
@@ -320,7 +320,7 @@
       },
       "growth": {
         "title": "O'sish",
-        "audience": "Saytning to'liqroq strukturasi va biznesning keyingi o'sishiga tayana oladigan baza uchun.",
+        "audience": "Saytning to'liqroq tuzilmasi va biznesning keyingi o'sishiga tayana oladigan asos uchun.",
         "timeline": "7-10 kun",
         "price": "5 900 000 so'mdan",
         "button": "«O'sish»ni tanlash",
@@ -338,13 +338,13 @@
   },
   "Process": {
     "title": "Ish jarayoni qanday o'tadi",
-    "description": "Arizadan ishga tushirishgacha bo'lgan oddiy va ortiqcha murakkabliksiz yo'l.",
+    "description": "Arizadan ishga tushirishgacha bo'lgan oddiy va ortiqcha murakkabliksiz jarayon.",
     "cta": "Loyihangiz va keyingi qadamni muhokama qilamiz",
     "ctaLine1": "Loyihangizni muhokama qilamiz",
     "ctaLine2": "va keyingi qadamni belgilaymiz",
     "ctaDescription": "Nimadan boshlash yaxshiroq ekanini, biznesingizga qaysi format mos kelishini va ishga tushirishni texnik chalkashliksiz qanday o'tkazishni ko'rsatamiz.",
     "ctaButton": "Loyihani muhokama qilish",
-    "note": "Sizdan tayyor texnik topshiriq talab qilinmaydi. Strukturani yig'ish, materiallarni aniqlashtirish va ishga tushirishni bosqichma-bosqich o'tishda yordam beramiz.",
+    "note": "Sizdan tayyor texnik topshiriq talab qilinmaydi. Tuzilmani yig'ish, materiallarni aniqlashtirish va ishga tushirishni bosqichma-bosqich o'tishda yordam beramiz.",
     "steps": {
       "discussion": {
         "title": "Muhokama",
@@ -366,7 +366,7 @@
   },
   "Faq": {
     "title": "FAQ",
-    "description": "Saytni ishga tushirishdan oldingi ko'p beriladigan savollarga qisqa javoblar.",
+    "description": "Saytni ishga tushirishdan oldin eng ko'p beriladigan savollarga qisqa javoblar.",
     "ctaTitle": "Savollar qolgan bo'lsa, loyihangizni muhokama qilamiz",
     "ctaDescription": "Biznesingizga mos formatni tavsiya qilamiz va ortiqcha murakkabliksiz keyingi qadamni ko'rsatamiz.",
     "ctaPrimary": "Ariza qoldirish",
@@ -377,28 +377,28 @@
         "answer": "Boshlash uchun biznesingiz, xizmatlaringiz va kutayotgan natijangiz haqida qisqacha aytishning o'zi yetarli. Materiallar hali to'liq tayyor bo'lmasa ham, nimadan boshlashni aniqlashga yordam beramiz."
       },
       "structure": {
-        "question": "Struktura va matn bilan yordam berasizlarmi",
-        "answer": "Ha. Sahifa mantiqini yig'ish, kerakli bloklarni aniqlash va xom matnni sayt uchun tushunarliroq taqdimotga keltirishga yordam beramiz."
+        "question": "Tuzilma va matn bilan yordam berasizlarmi",
+        "answer": "Ha. Sahifa mantiqini yig'ish, kerakli bloklarni aniqlash va xom matnni sayt uchun yanada tushunarli taqdimotga keltirishga yordam beramiz."
       },
       "support": {
         "question": "2 oy qo'llab-quvvatlashga nimalar kiradi",
-        "answer": "Qo'llab-quvvatlashga mayda tuzatishlar, savollarga javob berish va ishga tushgandan keyin saytning bazaviy ishlashi bo'yicha yordam kiradi. Bu alohida katta ishlab chiqish emas, balki sokin post-launch yordamdir."
+        "answer": "Qo'llab-quvvatlashga mayda tuzatishlar, savollarga javob berish va sayt ishga tushgandan keyin uning asosiy ishlashi bo'yicha yordam kiradi. Bu alohida katta ishlab chiqish emas, balki xotirjam post-launch yordamdir."
       },
       "crm": {
         "question": "Kichik biznesga CRM kerakmi",
-        "answer": "Ha. Hatto kichik biznes uchun ham murojaatlarni yo'qotmaslik muhim. Bazaviy CRM arizalarni bitta joyda yig'ishga yordam beradi va hammasini faqat chatlarda qoldirib qo'ymaydi."
+        "answer": "Ha. Hatto kichik biznes uchun ham murojaatlarni yo'qotmaslik muhim. Bazaviy CRM murojaatlarni bitta joyga yig'ishga yordam beradi va hammasini faqat chatlarda qoldirib qo'ymaydi."
       },
       "language": {
         "question": "Ishni bitta tildan boshlasa bo'ladimi",
-        "answer": "Ha, agar bu sizning ssenariyingizga mos bo'lsa, ishni bitta tildan boshlash mumkin. Shu bilan birga, keyin boshqa tillarni qo'shish oson bo'lishi uchun loyiha strukturasi oldindan tayyorlanishi mumkin."
+        "answer": "Ha, agar bu sizning ssenariyingizga mos bo'lsa, ishni bitta tildan boshlash mumkin. Shu bilan birga, keyin boshqa tillarni qo'shish oson bo'lishi uchun loyiha tuzilmasi oldindan tayyorlanishi mumkin."
       },
       "ownership": {
         "question": "Domen va sayt egasi kim bo'ladi",
-        "answer": "Domenning rasmiy egasi bizning kompaniya bo'lib qoladi, lekin siz uni har doim bizdan sotib olishingiz mumkin. Domen narxi odatda 100 000 so'mdan 300 000 so'mgacha bo'ladi. Saytning egasi esa har doim siz bo'lasiz. Kod va repository huquqlarini sizga topshiramiz."
+        "answer": "Domenning rasmiy egasi bizning kompaniya bo'lib qoladi, lekin siz uni istalgan paytda bizdan sotib olishingiz mumkin. Domen narxi odatda 100 000 so'mdan 300 000 so'mgacha bo'ladi. Saytning egasi esa har doim siz bo'lasiz. Kod va repository huquqlarini sizga topshiramiz."
       },
       "excluded": {
         "question": "Tariflarga nimalar kirmaydi",
-        "answer": "Bazaviy tariflarga logotip va firma uslubi, professional fotosyomka, pullik tashqi servislar, reklama kampaniyalari, murakkab custom integratsiyalar va kontentni to'liq noldan yozish kirmaydi."
+        "answer": "Bazaviy tariflarga logotip va firma uslubi, professional fotosessiya, pullik tashqi servislar, reklama kampaniyalari, murakkab maxsus integratsiyalar va kontentni to'liq noldan yozish kirmaydi."
       },
       "payment": {
         "question": "To'lov qanday amalga oshadi",
@@ -410,13 +410,67 @@
       }
     }
   },
+  "LeadSection": {
+    "eyebrow": "Ariza va tez aloqa",
+    "title": "Ariza qoldiring va biznesingiz uchun mos ishga tushirish formatini tavsiya qilamiz",
+    "description": "Agar vazifa, sayt formati va biznesingiz uchun qulay ishga tushirish ssenariysini xotirjam muhokama qilmoqchi bo'lsangiz, qisqa ariza qoldiring. Nishingizni ko'rib chiqamiz, nimadan boshlash yaxshiroq ekanini tavsiya qilamiz va ish kuni ichida siz bilan bog'lanamiz. Agar qulayroq bo'lsa, bizga darhol Telegram yoki WhatsApp orqali ham yozishingiz mumkin.",
+    "contact": {
+      "telegramLabel": "Telegram",
+      "telegramDescription": "Vazifani shaxsiy chatda tez muhokama qilish uchun eng qulay variant.",
+      "whatsappLabel": "WhatsApp",
+      "whatsappDescription": "Telefondan yozish qulay bo'lsa va vazifani tez tasvirlab yubormoqchi bo'lsangiz mos keladi."
+    },
+    "cta": {
+      "telegram": "Telegramga yozish",
+      "whatsapp": "WhatsAppga yozish"
+    },
+    "footnote": "Forma allaqachon murojaatlarni qabul qilishga tayyor. Notion integratsiyasi access data qo'shilgach alohida ulanadi.",
+    "form": {
+      "title": "Qisqa ariza",
+      "description": "Faqat asosiy ma'lumotlarni to'ldiring. Ism va telefon majburiy, qolgan maydonlar ixtiyoriy.",
+      "fields": {
+        "name": "Ism",
+        "phone": "Telefon",
+        "telegram": "Telegram nickname",
+        "niche": "Biznes yo'nalishi"
+      },
+      "placeholders": {
+        "name": "Sizga qanday murojaat qilaylik",
+        "phone": "+998 90 123 45 67",
+        "telegram": "@username",
+        "niche": "Masalan: stomatologiya, klining, konsalting"
+      },
+      "helper": {
+        "required": "*",
+        "optional": "ixtiyoriy"
+      },
+      "button": {
+        "idle": "Ariza yuborish",
+        "pending": "Yuborilmoqda..."
+      },
+      "success": {
+        "title": "Ariza yuborildi",
+        "description": "Rahmat. Arizangizni oldik va ish kuni ichida siz bilan bog'lanamiz."
+      },
+      "modal": {
+        "close": "Yopish",
+        "errorTitle": "Arizani yuborib bo'lmadi"
+      },
+      "errors": {
+        "requiredName": "Ismingizni kiriting.",
+        "requiredPhone": "Telefon raqamingizni kiriting.",
+        "invalidPhone": "Telefon formatini tekshiring.",
+        "submitFailed": "Arizani yuborib bo'lmadi. Yana urinib ko'ring yoki Telegram orqali yozing."
+      }
+    }
+  },
   "Footer": {
     "brand": "WebCode",
-    "tagline": "murojaatlarni yo'qotmaydigan saytlar va CRM",
+    "tagline": "murojaatlarni yo'qotmaydigan saytlar va CRM tizimi",
     "nav": {
       "whyWebcode": "Nega WebCode",
       "audience": "Kimlar uchun",
-      "benefits": "Biznes nima oladi",
+      "benefits": "Biznes nima qo'lga kiritadi",
       "includes": "Nimalar kiradi",
       "cases": "Keyslar",
       "pricing": "Tariflar",

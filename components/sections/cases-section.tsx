@@ -81,7 +81,7 @@ export async function CasesSection({ locale }: { locale: string }) {
 
       <div className="relative z-10 mx-auto flex w-full max-w-[1280px] flex-col gap-10 px-4 sm:px-6 lg:gap-12 lg:px-0">
         <div className="flex max-w-[920px] flex-col items-center text-center lg:items-start lg:text-left">
-          <h2 className="w-full max-w-none font-[var(--font-manrope)] text-[30px] font-semibold leading-[1.02] tracking-[-0.05em] text-white max-[380px]:text-[27px] sm:whitespace-nowrap sm:text-[38px] lg:text-[38px]">
+          <h2 className="w-full max-w-none font-[var(--font-manrope)] text-[30px] font-medium leading-[1.06] tracking-[-0.04em] text-white max-[380px]:text-[27px] sm:text-[38px] lg:text-[40px]">
             {t("title")}
           </h2>
 
@@ -128,7 +128,7 @@ export async function CasesSection({ locale }: { locale: string }) {
                 <div>
                   <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between sm:gap-4">
                     <div className="flex-1">
-                      <h3 className="font-[var(--font-manrope)] text-[24px] font-semibold leading-[1.02] tracking-[-0.05em] text-white sm:text-[28px]">
+                      <h3 className="font-[var(--font-manrope)] text-[24px] font-medium leading-[1.08] tracking-[-0.04em] text-white sm:text-[28px]">
                         {t(`items.${item.key}.title`)}
                       </h3>
                       <p className="mt-2 w-full max-w-none text-[14px] leading-[1.58] text-white/66 sm:text-[15px] lg:max-w-[54ch]">

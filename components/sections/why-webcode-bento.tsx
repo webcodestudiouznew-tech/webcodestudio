@@ -591,7 +591,7 @@ export function WhyWebCodeBento({
 
       <div
         ref={gridRef}
-        className="why-webcode-bento-scope grid items-stretch gap-3 sm:gap-4 md:grid-cols-2 xl:grid-cols-4 xl:auto-rows-[148px]"
+        className="why-webcode-bento-scope grid items-stretch gap-3 sm:gap-4 md:grid-cols-2 xl:grid-cols-4 xl:grid-rows-[170px_104px_170px]"
       >
         {items.map((card, index) => (
           <div key={card.key} className={`h-full ${card.gridClassName}`}>
@@ -619,7 +619,7 @@ export function WhyWebCodeBento({
                 className={`relative z-[2] flex flex-1 flex-col ${card.contentPositionClassName} ${card.contentWrapClassName} ${card.contentClassName}`}
               >
                 <h3
-                  className={`font-[var(--font-manrope)] text-[18px] font-semibold leading-[1.08] tracking-[-0.04em] text-white transition-colors duration-300 ease-out group-hover:text-[#f5df9a] sm:text-[20px] sm:leading-[1.04] sm:tracking-[-0.045em] ${card.titleClassName}`}
+                  className={`font-[var(--font-manrope)] text-[18px] font-medium leading-[1.12] tracking-[-0.035em] text-white transition-colors duration-300 ease-out group-hover:text-[#f5df9a] sm:text-[20px] sm:tracking-[-0.04em] ${card.titleClassName}`}
                 >
                   {card.title}
                 </h3>

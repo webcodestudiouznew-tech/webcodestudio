@@ -53,7 +53,7 @@ export async function PricingSection({ locale }: { locale: string }) {
 
       <div className="relative z-10 mx-auto flex w-full max-w-[1280px] flex-col gap-10 px-4 sm:px-6 lg:gap-12 lg:px-0">
         <div className="mx-auto flex max-w-[860px] flex-col items-center text-center">
-          <h2 className="w-full max-w-none font-[var(--font-manrope)] text-[30px] font-semibold leading-[1.02] tracking-[-0.05em] text-white max-[380px]:text-[27px] sm:text-[38px] lg:text-[38px]">
+          <h2 className="w-full max-w-none font-[var(--font-manrope)] text-[30px] font-medium leading-[1.06] tracking-[-0.04em] text-white max-[380px]:text-[27px] sm:text-[38px] lg:text-[40px]">
             {t("title")}
           </h2>
 
@@ -112,7 +112,7 @@ export async function PricingSection({ locale }: { locale: string }) {
                 </div>
 
                 <div className="mt-4">
-                  <h3 className="font-[var(--font-manrope)] text-[24px] font-semibold leading-[1.02] tracking-[-0.045em] text-white sm:text-[26px]">
+                  <h3 className="font-[var(--font-manrope)] text-[24px] font-medium leading-[1.08] tracking-[-0.04em] text-white sm:text-[26px]">
                     {t(`plans.${plan}.title`)}
                   </h3>
 

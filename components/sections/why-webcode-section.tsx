@@ -30,11 +30,11 @@ const whyWebCodeCards: Array<{
     articleClassName: "p-4 sm:p-5 xl:px-7 xl:py-5",
     iconWrapClassName:
       "bg-[linear-gradient(180deg,rgba(239,203,101,0.24)_0%,rgba(215,178,76,0.1)_100%)] text-[#efcb65]",
-    contentClassName: "w-full xl:max-w-[56%]",
+    contentClassName: "w-full xl:max-w-[60%]",
     contentWrapClassName: "mt-4",
     contentPositionClassName: "justify-start",
-    titleClassName: "w-full xl:max-w-[24ch] xl:whitespace-nowrap",
-    descriptionClassName: "mt-2.5 w-full xl:max-w-[58ch] xl:whitespace-nowrap",
+    titleClassName: "w-full xl:max-w-[26ch]",
+    descriptionClassName: "mt-2.5 w-full",
   },
   {
     key: "structure",
@@ -100,11 +100,11 @@ const whyWebCodeCards: Array<{
     articleClassName: "p-4 sm:p-5 xl:px-7 xl:py-5",
     iconWrapClassName:
       "bg-[linear-gradient(180deg,rgba(239,203,101,0.22)_0%,rgba(215,178,76,0.08)_100%)] text-[#efcb65]",
-    contentClassName: "w-full xl:max-w-[56%]",
+    contentClassName: "w-full xl:max-w-[60%]",
     contentWrapClassName: "mt-4",
     contentPositionClassName: "justify-start",
-    titleClassName: "w-full xl:max-w-[24ch] xl:whitespace-nowrap",
-    descriptionClassName: "mt-2.5 w-full xl:max-w-[58ch] xl:whitespace-nowrap",
+    titleClassName: "w-full xl:max-w-[26ch]",
+    descriptionClassName: "mt-2.5 w-full",
   },
 ];
 
@@ -114,6 +114,12 @@ export async function WhyWebCodeSection({ locale }: { locale: string }) {
     ...card,
     title: t(`items.${card.key}.title`),
     description: t(`items.${card.key}.description`),
+    titleClassName:
+      locale === "uz" && (card.key === "system" || card.key === "support")
+        ? "w-full xl:whitespace-nowrap xl:text-[18px]"
+        : locale === "uz"
+          ? "w-full"
+          : card.titleClassName,
   }));
 
   return (
@@ -127,7 +133,7 @@ export async function WhyWebCodeSection({ locale }: { locale: string }) {
 
       <div className="relative z-10 mx-auto flex w-full max-w-[1280px] flex-col gap-8 px-4 sm:px-6 lg:gap-14 lg:px-0">
         <div className="flex max-w-[760px] flex-col items-center text-center lg:max-w-[1040px] lg:items-start lg:text-left">
-          <h2 className="w-full max-w-none whitespace-nowrap font-[var(--font-manrope)] text-[30px] font-semibold leading-[1.02] tracking-[-0.05em] text-white max-[380px]:text-[27px] sm:text-[38px] lg:text-[38px]">
+          <h2 className="w-full max-w-none font-[var(--font-manrope)] text-[30px] font-medium leading-[1.06] tracking-[-0.04em] text-white max-[380px]:text-[27px] sm:text-[38px] lg:text-[40px]">
             {t("title")}
           </h2>
 
@@ -158,7 +164,7 @@ export async function WhyWebCodeSection({ locale }: { locale: string }) {
           <div className="pointer-events-none absolute left-1/2 top-1/2 h-[240px] w-[240px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#d4af4a]/10 blur-[120px]" />
 
           <div className="relative mx-auto flex max-w-[680px] flex-col items-center">
-            <h3 className="w-full max-w-none text-center font-[var(--font-manrope)] text-[28px] font-semibold leading-[1] tracking-[-0.06em] text-white max-[380px]:text-[25px] sm:max-w-[14ch] sm:text-[36px] lg:max-w-none lg:whitespace-nowrap lg:text-[30px]">
+            <h3 className="w-full max-w-none text-center font-[var(--font-manrope)] text-[28px] font-medium leading-[1.06] tracking-[-0.045em] text-white max-[380px]:text-[25px] sm:max-w-[18ch] sm:text-[34px] lg:max-w-none lg:text-[30px]">
               <span className="flex flex-col items-center gap-1 sm:hidden">
                 <span className="block whitespace-nowrap">{t("ctaLine1")}</span>
                 <span className="block whitespace-nowrap">{t("ctaLine2")}</span>

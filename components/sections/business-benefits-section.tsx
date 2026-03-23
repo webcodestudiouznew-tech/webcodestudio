@@ -147,7 +147,7 @@ export async function BusinessBenefitsSection({ locale }: { locale: string }) {
 
       <div className="relative z-10 mx-auto flex w-full max-w-[1280px] flex-col gap-10 px-4 sm:px-6 lg:gap-14 lg:px-0">
         <div className="flex max-w-[720px] flex-col items-center text-center lg:items-start lg:text-left">
-          <h2 className="w-full max-w-none font-[var(--font-manrope)] text-[30px] font-semibold leading-[1.02] tracking-[-0.05em] text-white max-[380px]:text-[27px] sm:text-[38px] lg:text-[38px]">
+          <h2 className="w-full max-w-none font-[var(--font-manrope)] text-[30px] font-medium leading-[1.06] tracking-[-0.04em] text-white max-[380px]:text-[27px] sm:text-[38px] lg:text-[40px]">
             {t("title")}
           </h2>
 
@@ -176,7 +176,7 @@ export async function BusinessBenefitsSection({ locale }: { locale: string }) {
               </div>
 
               <div className="mt-5 flex flex-1 flex-col">
-                <h3 className="min-h-[48px] max-w-[18ch] font-[var(--font-manrope)] text-[21px] font-semibold leading-[1.1] tracking-[-0.04em] text-white transition-colors duration-300 ease-out group-hover:text-[#f5df9a]">
+                <h3 className="min-h-[48px] max-w-[18ch] font-[var(--font-manrope)] text-[20px] font-medium leading-[1.12] tracking-[-0.035em] text-white transition-colors duration-300 ease-out group-hover:text-[#f5df9a] sm:text-[21px]">
                   {t(`items.${item}.title`)}
                 </h3>
 
@@ -194,7 +194,7 @@ export async function BusinessBenefitsSection({ locale }: { locale: string }) {
           <div className="pointer-events-none absolute right-[-54px] top-[-20px] h-[152px] w-[152px] rounded-full border-[16px] border-[#d4af4a]/85 border-l-transparent border-b-transparent opacity-85 blur-[14px]" />
           <div className="relative flex flex-col items-center gap-6 text-center lg:flex-row lg:items-center lg:justify-between lg:gap-8 lg:text-left">
             <div className="max-w-[640px]">
-              <h3 className="font-[var(--font-manrope)] text-[24px] font-semibold leading-[1.02] tracking-[-0.055em] text-white sm:whitespace-nowrap sm:text-[28px] lg:text-[30px]">
+              <h3 className="font-[var(--font-manrope)] text-[24px] font-medium leading-[1.08] tracking-[-0.04em] text-white sm:text-[28px] lg:text-[30px]">
                 {t("cta")}
               </h3>
 

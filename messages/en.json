@@ -410,6 +410,60 @@
       }
     }
   },
+  "LeadSection": {
+    "eyebrow": "Request and quick contact",
+    "title": "Leave a request and we will suggest the right launch format for your business",
+    "description": "Leave a short request if you want to discuss your task, the right website format and a practical launch scenario for your business. We will look at your niche, suggest the best starting point and get back to you within one business day. If it is easier, you can also message us directly on Telegram or WhatsApp.",
+    "contact": {
+      "telegramLabel": "Telegram",
+      "telegramDescription": "The fastest option if you want to discuss the task directly in chat.",
+      "whatsappLabel": "WhatsApp",
+      "whatsappDescription": "A good option if it is more convenient to message from your phone."
+    },
+    "cta": {
+      "telegram": "Message on Telegram",
+      "whatsapp": "Message on WhatsApp"
+    },
+    "footnote": "The form is already ready to collect leads. The Notion integration will be connected separately once access data is provided.",
+    "form": {
+      "title": "Short request form",
+      "description": "Fill in only the essential details. Name and phone are required, the rest is optional.",
+      "fields": {
+        "name": "Name",
+        "phone": "Phone",
+        "telegram": "Telegram nickname",
+        "niche": "Business niche"
+      },
+      "placeholders": {
+        "name": "How should we address you",
+        "phone": "+998 90 123 45 67",
+        "telegram": "@username",
+        "niche": "For example: dentistry, cleaning, consulting"
+      },
+      "helper": {
+        "required": "*",
+        "optional": "optional"
+      },
+      "button": {
+        "idle": "Send request",
+        "pending": "Sending..."
+      },
+      "success": {
+        "title": "Request sent",
+        "description": "Thank you. We received your request and will contact you within one business day."
+      },
+      "modal": {
+        "close": "Close",
+        "errorTitle": "Could not send request"
+      },
+      "errors": {
+        "requiredName": "Please enter your name.",
+        "requiredPhone": "Please enter your phone number.",
+        "invalidPhone": "Please check the phone number format.",
+        "submitFailed": "We could not send your request. Please try again or message us on Telegram."
+      }
+    }
+  },
   "Footer": {
     "brand": "WebCode",
     "tagline": "websites and CRM that do not lose leads",

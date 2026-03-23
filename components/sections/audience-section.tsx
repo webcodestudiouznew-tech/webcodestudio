@@ -102,7 +102,7 @@ export async function AudienceSection({ locale }: { locale: string }) {
 
       <div className="relative z-10 mx-auto flex w-full max-w-[1280px] flex-col gap-10 px-4 sm:px-6 lg:gap-14 lg:px-0">
         <div className="flex max-w-[760px] flex-col items-center text-center lg:max-w-[1040px] lg:items-start lg:text-left">
-          <h2 className="w-full max-w-none whitespace-nowrap font-[var(--font-manrope)] text-[30px] font-semibold leading-[1.02] tracking-[-0.05em] text-white max-[380px]:text-[27px] sm:text-[38px] lg:text-[38px]">
+          <h2 className="w-full max-w-none font-[var(--font-manrope)] text-[30px] font-medium leading-[1.06] tracking-[-0.04em] text-white max-[380px]:text-[27px] sm:text-[38px] lg:text-[40px]">
             {t("title")}
           </h2>
 
@@ -129,7 +129,7 @@ export async function AudienceSection({ locale }: { locale: string }) {
                 </div>
 
                 <div className="mt-5 flex flex-1 flex-col">
-                  <h3 className="min-h-[44px] max-w-[18ch] font-[var(--font-manrope)] text-[20px] font-semibold leading-[1.1] tracking-[-0.04em] text-white transition-colors duration-300 ease-out group-hover:text-[#f5df9a]">
+                  <h3 className="min-h-[44px] w-1/2 font-[var(--font-manrope)] text-[20px] font-medium leading-[1.12] tracking-[-0.035em] text-white transition-colors duration-300 ease-out group-hover:text-[#f5df9a] sm:text-[21px]">
                     {t(`items.${item}.title`)}
                   </h3>
 
