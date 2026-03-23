@@ -15,12 +15,18 @@ const leadSchema = z.object({
 });
 
 type LeadInput = z.input<typeof leadSchema>;
+type LeadData = z.infer<typeof leadSchema>;
+type TelegramAlertStatus = "sent" | "skipped" | "failed";
 
 type LeadSubmitResult =
-  | { ok: true; destination: "notion" | "pending_notion" }
+  | {
+      ok: true;
+      destination: "notion" | "pending_notion";
+      telegramAlert: TelegramAlertStatus;
+    }
   | { ok: false; fieldErrors?: Partial<Record<"name" | "phone", string[]>> };
 
-function buildNotionPayload(lead: z.infer<typeof leadSchema>) {
+function buildNotionPayload(lead: LeadData) {
   return {
     parent: { database_id: process.env[contactLinks.notionEnv.databaseId] },
     properties: {
@@ -76,7 +82,26 @@ function buildNotionPayload(lead: z.infer<typeof leadSchema>) {
   };
 }
 
-async function saveLeadToNotion(lead: z.infer<typeof leadSchema>) {
+function formatTelegramLeadMessage(lead: LeadData) {
+  const submittedAt = new Intl.DateTimeFormat("ru-RU", {
+    dateStyle: "medium",
+    timeStyle: "short",
+    timeZone: "Asia/Tashkent",
+  }).format(new Date());
+
+  return [
+    "Новая заявка WebCode",
+    "",
+    `Имя: ${lead.name}`,
+    `Телефон: ${lead.phone}`,
+    `Telegram: ${lead.telegram || "не указан"}`,
+    `Ниша: ${lead.niche || "не указана"}`,
+    `Локаль: ${lead.locale}`,
+    `Отправлено: ${submittedAt} (Asia/Tashkent)`,
+  ].join("\n");
+}
+
+async function saveLeadToNotion(lead: LeadData) {
   const token = process.env[contactLinks.notionEnv.token];
   const databaseId = process.env[contactLinks.notionEnv.databaseId];
 
@@ -114,6 +139,50 @@ async function saveLeadToNotion(lead: z.infer<typeof leadSchema>) {
   return "notion" as const;
 }
 
+async function notifyLeadInTelegram(
+  lead: LeadData,
+): Promise<TelegramAlertStatus> {
+  const token = process.env[contactLinks.telegramAlertsEnv.token];
+  const chatId = process.env[contactLinks.telegramAlertsEnv.groupChatId];
+
+  if (!token || !chatId) {
+    console.info("[lead-form] Telegram alerts are not configured yet", {
+      requiredEnv: contactLinks.telegramAlertsEnv,
+    });
+
+    return "skipped";
+  }
+
+  const response = await fetch(
+    `https://api.telegram.org/bot${token}/sendMessage`,
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        chat_id: chatId,
+        text: formatTelegramLeadMessage(lead),
+        disable_web_page_preview: true,
+      }),
+      cache: "no-store",
+    },
+  );
+
+  if (!response.ok) {
+    const errorBody = await response.text();
+
+    console.error("[lead-form] Failed to send Telegram alert", {
+      status: response.status,
+      body: errorBody,
+    });
+
+    return "failed";
+  }
+
+  return "sent";
+}
+
 export async function submitLeadForm(
   input: LeadInput,
 ): Promise<LeadSubmitResult> {
@@ -132,6 +201,7 @@ export async function submitLeadForm(
   }
 
   const destination = await saveLeadToNotion(parsed.data);
+  const telegramAlert = await notifyLeadInTelegram(parsed.data);
 
-  return { ok: true, destination };
+  return { ok: true, destination, telegramAlert };
 }

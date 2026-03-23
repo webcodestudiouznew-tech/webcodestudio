@@ -1,4 +1,4 @@
-const TELEGRAM_USERNAME = "uz_sellium";
+const TELEGRAM_USERNAME = "webcodestudiouz";
 const TELEGRAM_HANDLE = `@${TELEGRAM_USERNAME}`;
 const WHATSAPP_NUMBER = "998901783138";
 
@@ -14,5 +14,9 @@ export const contactLinks = {
   notionEnv: {
     token: "NOTION_TOKEN",
     databaseId: "NOTION_DATABASE_ID",
+  },
+  telegramAlertsEnv: {
+    token: "TELEGRAM_BOT_TOKEN",
+    groupChatId: "TELEGRAM_GROUP_CHAT_ID",
   },
 } as const;

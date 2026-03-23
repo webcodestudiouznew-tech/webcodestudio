@@ -169,6 +169,10 @@
         "title": "Ariza formasi + CRM",
         "description": "Murojaatlarni yig'ish va yuborilgandan keyin yo'qolib ketmaydigan bazaviy tizimni ulaymiz."
       },
+      "alerts": {
+        "title": "Yangi arizalar haqida bildirishnomalar",
+        "description": "Yangi ariza tushishi bilan siz yoki jamoangiz murojaatni darhol ko'rishi uchun tezkor bildirishnomalarni sozlaymiz."
+      },
       "messaging": {
         "title": "Telegram / WhatsApp",
         "description": "Mijoz saytning o'zidan qulay yozishi mumkin bo'lgan odatiy aloqa kanallarini qo'shamiz."
@@ -277,6 +281,7 @@
     "includedItems": [
       "RU / UZ / EN dagi sayt",
       "Murojaatlar uchun CRM",
+      "Yangi arizalar haqida bildirishnomalar",
       "Telegram / WhatsApp",
       "Domen",
       "Hosting",
@@ -299,6 +304,7 @@
           "5 tagacha bazaviy blok",
           "Murojaat qabul qilish formasi",
           "Bazaviy CRM tizimi",
+          "Yangi arizalar haqida bildirishnomalar",
           "Telegramni saytga ulash",
           "Bazaviy SEO sozlamasi"
         ]
@@ -314,6 +320,7 @@
           "8 tagacha bazaviy blok",
           "Murojaat qabul qilish formasi",
           "Kengaytirilgan CRM tizimi",
+          "Yangi arizalar haqida bildirishnomalar",
           "Telegram va WhatsApp'ni saytga ulash",
           "SEO sozlamasi"
         ]
@@ -329,6 +336,7 @@
           "10 tagacha bazaviy blok",
           "Murojaat qabul qilish formasi",
           "Kengaytirilgan CRM tizimi",
+          "Yangi arizalar haqida bildirishnomalar",
           "Telegram va WhatsApp'ni saytga ulash",
           "Chuqur SEO sozlamasi",
           "Analitikani ulash"

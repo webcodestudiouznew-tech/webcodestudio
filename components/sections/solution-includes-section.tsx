@@ -6,6 +6,7 @@ type SolutionItemKey =
   | "copy"
   | "languages"
   | "crm"
+  | "alerts"
   | "messaging"
   | "seo"
   | "hosting"
@@ -25,9 +26,11 @@ const solutionItems: SolutionItemKey[] = [
   "copy",
   "languages",
   "crm",
+  "alerts",
   "messaging",
   "seo",
   "hosting",
+  "support",
 ];
 
 const exclusionKeys: ExclusionKey[] = [
@@ -125,7 +128,7 @@ export async function SolutionIncludesSection({ locale }: { locale: string }) {
                       </span>
                     </div>
 
-                    <p className="mt-2 flex-1 text-[14px] leading-[1.62] text-white/62">
+                    <p className="mt-2 flex-1 text-[14px] leading-[1.52] text-white/62">
                       {t(`items.${item}.description`)}
                     </p>
                   </div>
@@ -135,7 +138,7 @@ export async function SolutionIncludesSection({ locale }: { locale: string }) {
           </div>
 
           <div className="flex h-full flex-col gap-4 self-start">
-            <aside className="flex-1 rounded-[28px] border border-[#8a7030]/22 bg-[radial-gradient(circle_at_top,rgba(212,175,74,0.12),transparent_36%),linear-gradient(180deg,#2a2318_0%,#1e1a15_100%)] px-5 py-5 shadow-[0_20px_50px_rgba(0,0,0,0.2)] sm:px-6">
+            <aside className="flex flex-1 flex-col rounded-[28px] border border-[#8a7030]/22 bg-[radial-gradient(circle_at_top,rgba(212,175,74,0.12),transparent_36%),linear-gradient(180deg,#2a2318_0%,#1e1a15_100%)] px-5 py-5 shadow-[0_20px_50px_rgba(0,0,0,0.2)] sm:px-6">
               <h3 className="text-center font-[var(--font-manrope)] text-[24px] font-medium leading-[1.08] tracking-[-0.04em] text-white sm:text-[26px]">
                 {t("excludedTitle")}
               </h3>
@@ -144,11 +147,11 @@ export async function SolutionIncludesSection({ locale }: { locale: string }) {
                 {t("excludedDescription")}
               </p>
 
-              <div className="mt-4 flex flex-col gap-2">
+              <div className="mt-4 flex flex-1 flex-col gap-2">
                 {exclusionKeys.map((item) => (
                   <div
                     key={item}
-                    className="flex items-center gap-3 rounded-[16px] border border-white/7 bg-[linear-gradient(180deg,rgba(255,255,255,0.035)_0%,rgba(255,255,255,0.015)_100%)] px-3.5 py-2.5"
+                    className="flex min-h-0 flex-1 items-center gap-3 rounded-[16px] border border-white/7 bg-[linear-gradient(180deg,rgba(255,255,255,0.035)_0%,rgba(255,255,255,0.015)_100%)] px-3.5 py-2.5"
                   >
                     <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-white/10 bg-white/[0.03] text-white/44">
                       <MinusIcon />

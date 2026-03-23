@@ -35,6 +35,7 @@
 - [Guides/localization_standards.md](./Guides/localization_standards.md) — стандарты локализации `RU / UZ / EN`, включая отдельные требования к `UZ`.
 - [Guides/conversion_standards.md](./Guides/conversion_standards.md) — формы, messenger links, friction, analytics touchpoints и conversion implementation.
 - [Guides/notion_leads_integration.md](./Guides/notion_leads_integration.md) — процесс подключения формы заявок к `Notion`, схема базы, env и проверка записи лидов.
+- [Guides/telegram_bot_group_setup.md](./Guides/telegram_bot_group_setup.md) — стандартный повторяемый процесс настройки `Telegram bot + group` для уведомлений о новых заявках, который можно использовать и на новом сайте.
 - [Guides/accessibility_and_quality.md](./Guides/accessibility_and_quality.md) — accessibility baseline, visual QA и UI quality.
 
 ### Поддерживающие документы
@@ -128,6 +129,7 @@
 - Для текстов и локализаций сверяться с `Guides/localization_standards.md`.
 - Для CTA, формы заявки, messenger links и аналитических точек сверяться с `Guides/conversion_standards.md`.
 - Для задач по подключению формы к `Notion` и проверке записи лидов сверяться с `Guides/notion_leads_integration.md`.
+- Для задач по уведомлениям о новых заявках в `Telegram` через `bot + group` сверяться с `Guides/telegram_bot_group_setup.md` как со стандартным guide для повторного подключения на новом сайте.
 - Для финальной UI-проверки использовать `Guides/accessibility_and_quality.md` вместе с `Guides/done_criteria.md`.
 
 ### i18n

@@ -169,6 +169,10 @@
         "title": "Lead form + CRM",
         "description": "We connect lead capture and a basic system where inquiries do not disappear after submission."
       },
+      "alerts": {
+        "title": "New lead notifications",
+        "description": "We set up instant notifications about new leads so you or your team can see every new inquiry right away."
+      },
       "messaging": {
         "title": "Telegram / WhatsApp",
         "description": "We add familiar messaging channels so clients can contact you directly from the website."
@@ -277,6 +281,7 @@
     "includedItems": [
       "Website in RU / UZ / EN",
       "CRM for incoming leads",
+      "New lead notifications",
       "Telegram / WhatsApp",
       "Domain",
       "Hosting",
@@ -299,6 +304,7 @@
           "Up to 5 base blocks",
           "Lead capture form",
           "Basic CRM system",
+          "New lead notifications",
           "Telegram connected to the website",
           "Basic SEO setup"
         ]
@@ -314,6 +320,7 @@
           "Up to 8 base blocks",
           "Lead capture form",
           "Expanded CRM system",
+          "New lead notifications",
           "Telegram and WhatsApp connected to the website",
           "SEO setup"
         ]
@@ -329,6 +336,7 @@
           "Up to 10 base blocks",
           "Lead capture form",
           "Expanded CRM system",
+          "New lead notifications",
           "Telegram and WhatsApp connected to the website",
           "Deep SEO setup",
           "Analytics integration"
