@@ -4,6 +4,7 @@ import { getMessages, getTranslations, setRequestLocale } from "next-intl/server
 import { notFound } from "next/navigation";
 import type { ReactNode } from "react";
 import { routing } from "@/i18n/routing";
+import { createLocaleMetadata } from "@/lib/seo";
 
 type LocaleLayoutProps = {
   children: ReactNode;
@@ -18,12 +19,18 @@ export async function generateMetadata({
   params,
 }: Omit<LocaleLayoutProps, "children">): Promise<Metadata> {
   const { locale } = await params;
+
+  if (!hasLocale(routing.locales, locale)) {
+    notFound();
+  }
+
   const t = await getTranslations({ locale, namespace: "Metadata" });
 
-  return {
+  return createLocaleMetadata({
+    locale,
     title: t("title"),
     description: t("description"),
-  };
+  });
 }
 
 export default async function LocaleLayout({
