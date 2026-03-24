@@ -1,7 +1,39 @@
 {
   "Metadata": {
-    "title": "WebCode | Turnkey website for local business",
-    "description": "WebCode builds modern websites for offline businesses in Uzbekistan: website, CRM, Telegram/WhatsApp, domain and hosting in one launch-ready solution."
+    "title": "Website Development in Tashkent for Business | WebCode",
+    "description": "We build landing pages and business websites in Tashkent with CRM, Telegram/WhatsApp, domain, hosting and turnkey launch in one solution."
+  },
+  "PrivacyPage": {
+    "metadata": {
+      "title": "WebCode | Privacy Policy",
+      "description": "WebCode privacy policy for website visitors: what data we collect, how we use it and how to contact us about data processing."
+    },
+    "eyebrow": "Privacy Policy",
+    "title": "Privacy Policy",
+    "intro": "This page explains what data we may receive through the WebCode website, why we use it and how you can contact us if you have questions about data processing.",
+    "sections": {
+      "data": {
+        "title": "What data we collect",
+        "body": "Through the lead form and direct contact channels, we may receive your name, phone number, Telegram username, business description or any other details you voluntarily send to discuss a project."
+      },
+      "purpose": {
+        "title": "Why we use the data",
+        "body": "We use this information to contact you, discuss your request, prepare a proposal, organize follow-up communication and make sure incoming leads are not lost in our CRM or internal notifications."
+      },
+      "sharing": {
+        "title": "Sharing with third parties",
+        "body": "We do not sell personal data. Information may only be processed through services involved in receiving and storing leads, such as CRM tools, Notion, Telegram or WhatsApp, when needed to operate the website and respond to your request."
+      },
+      "storage": {
+        "title": "Storage and protection",
+        "body": "We aim to keep data only for as long as necessary to handle your request and ongoing business communication, and we use reasonable technical measures to limit unauthorized access."
+      },
+      "contacts": {
+        "title": "How to contact us",
+        "body": "If you want to clarify, correct or delete data you have submitted, message us via Telegram or WhatsApp listed on the website, and we will review the request within a reasonable timeframe."
+      }
+    },
+    "updated": "Last updated: March 24, 2026."
   },
   "Hero": {
     "brandTagline": "websites that never lose leads",
@@ -22,15 +54,15 @@
       "closeMenu": "Close menu"
     },
     "title": {
-      "mobileLine1": "Ready business website",
-      "mobileLine2": "with CRM system",
-      "line1": "Ready website",
-      "line2": "for business",
-      "line3": "with CRM system"
+      "mobileLine1": "Website Development",
+      "mobileLine2": "in Tashkent for Business",
+      "line1": "Website Development",
+      "line2": "in Tashkent",
+      "line3": "for Business"
     },
-    "subtitle": "We launch a modern website in 3 languages, connect Telegram/WhatsApp, domain, hosting and a simple CRM for incoming leads.",
-    "description": "You get one complete solution instead of a set of disconnected services.",
-    "supportText": "We help with structure, rewrite raw text, build the website and launch everything turnkey without unnecessary complexity on your side.",
+    "subtitle": "We make website development in Tashkent practical for business: we build a landing page or business website, connect CRM, Telegram/WhatsApp, domain and hosting, and launch it turnkey.",
+    "description": "You get a business website for Uzbekistan with clear structure, commercial copy and a practical launch flow instead of a set of disconnected services.",
+    "supportText": "We help choose the right format, refine raw copy, build a landing page or corporate website and launch everything turnkey without unnecessary complexity on your side.",
     "cta": {
       "primary": "Get a proposal",
       "secondary": "Message on Telegram"
@@ -372,7 +404,7 @@
   "Pricing": {
     "eyebrow": "Launch formats",
     "title": "Pricing",
-    "description": "Three launch formats for different business needs.",
+    "description": "Three formats for different goals: landing page development, one-page website, corporate website development and turnkey website launch for business.",
     "includedLabel": "Included in every package",
     "includedItems": [
       "Website in RU / UZ / EN",
@@ -391,7 +423,7 @@
     "plans": {
       "startup": {
         "title": "Launch",
-        "audience": "For getting online fast and collecting inquiries without overloading the structure.",
+        "audience": "For launching a landing page or compact one-page business website fast and starting lead capture without unnecessary complexity.",
         "timeline": "1-3 days",
         "price": "from 2,900,000 UZS",
         "button": "Choose “Launch”",
@@ -407,7 +439,7 @@
       },
       "trust": {
         "title": "Trust",
-        "audience": "For an expanded one-page website with cases, portfolio or a more expressive visual presentation.",
+        "audience": "For an expanded landing page or corporate website with cases, services and a stronger commercial presentation.",
         "timeline": "2-4 days",
         "price": "from 3,900,000 UZS",
         "button": "Choose “Trust”",
@@ -423,7 +455,7 @@
       },
       "growth": {
         "title": "Growth",
-        "audience": "For a fuller website structure and a stronger base for future business growth.",
+        "audience": "For a turnkey corporate website with a fuller structure, multilingual setup and a stronger base for future business growth.",
         "timeline": "7-10 days",
         "price": "from 5,900,000 UZS",
         "button": "Choose “Growth”",
@@ -470,7 +502,7 @@
   },
   "Faq": {
     "title": "FAQ",
-    "description": "Short answers to common questions before launch.",
+    "description": "Short answers to common questions about website development, landing pages and turnkey launch in Tashkent.",
     "ctaTitle": "If you still have questions, let’s discuss your project",
     "ctaDescription": "We will suggest the right format for your business and show the next step without unnecessary complexity.",
     "ctaPrimary": "Leave a request",
@@ -492,9 +524,25 @@
         "question": "Does a small business need CRM",
         "answer": "Yes. Even a small business benefits from not losing inquiries. A basic CRM helps collect leads in one place instead of keeping everything only in chats."
       },
+      "cost": {
+        "question": "How much does website development cost in Tashkent",
+        "answer": "The cost depends on the format. A landing page or compact one-page website starts from the lower package range, while a fuller corporate website with more structure and integrations costs more. We give the exact estimate after a short discussion."
+      },
+      "landing": {
+        "question": "How much does a landing page cost",
+        "answer": "A landing page usually fits the starter or middle package, depending on the number of sections, multilingual setup, CRM and the integrations you need."
+      },
       "language": {
-        "question": "Can we start with one language",
-        "answer": "Yes, you can start with one language if it fits your scenario. At the same time, the project structure can be prepared so that adding other languages later is easier."
+        "question": "Can you build a multilingual business website",
+        "answer": "Yes. We can build the website for RU / UZ / EN from the start. If needed, we can also launch one language first and prepare the structure for adding the rest later."
+      },
+      "timeline": {
+        "question": "How long does website development take",
+        "answer": "A simple landing page can be launched within a few days. A fuller business or corporate website with more pages, CRM and content work takes longer. The exact timeline depends on scope and approval speed."
+      },
+      "turnkey": {
+        "question": "What is included in a turnkey website launch",
+        "answer": "A turnkey launch usually includes structure, page build, lead form, CRM, Telegram / WhatsApp integration, domain, hosting, basic SEO setup and launch. The final scope depends on the selected package."
       },
       "ownership": {
         "question": "Who owns the domain and website",
@@ -511,13 +559,17 @@
       "later": {
         "question": "Can the website be improved later",
         "answer": "Yes. After launch, the website can continue to grow: you can add pages, new blocks, expand the structure and strengthen the functionality as the business grows."
+      },
+      "integration": {
+        "question": "Can you connect CRM and Telegram",
+        "answer": "Yes. We can connect CRM, notifications and Telegram / WhatsApp so incoming leads do not get lost and move into a clear working flow."
       }
     }
   },
   "LeadSection": {
     "eyebrow": "Request and quick contact",
-    "title": "Leave a request and we will suggest the right launch format for your business",
-    "description": "Leave a short request if you want to discuss your task, the right website format and a practical launch scenario for your business. We will look at your niche, suggest the best starting point and get back to you within one business day. If it is easier, you can also message us directly on Telegram or WhatsApp.",
+    "title": "Leave a request and we will suggest the right website format for your business",
+    "description": "Leave a short request if you want to discuss website development in Tashkent, compare a landing page, one-page or corporate website format, and get a practical turnkey launch plan for your business. We will review your niche, suggest the best starting point and get back to you within one business day.",
     "contact": {
       "telegramLabel": "Telegram",
       "telegramDescription": "The fastest option if you want to discuss the task directly in chat.",
@@ -558,7 +610,8 @@
       },
       "modal": {
         "close": "Close",
-        "errorTitle": "Could not send request"
+        "errorTitle": "Could not send request",
+        "openTitle": "Website launch request"
       },
       "errors": {
         "requiredName": "Please enter your name.",
@@ -570,7 +623,7 @@
   },
   "Footer": {
     "brand": "WebCode",
-    "tagline": "websites and CRM that do not lose leads",
+    "tagline": "website development in Tashkent: landing page, corporate website, CRM and turnkey launch",
     "nav": {
       "whyWebcode": "Why WebCode",
       "audience": "Who it's for",

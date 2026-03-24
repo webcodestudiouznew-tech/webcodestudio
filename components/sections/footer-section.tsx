@@ -1,7 +1,9 @@
 import Image from "next/image";
+import Link from "next/link";
 import { getTranslations } from "next-intl/server";
 import { TrackedContactLink } from "@/components/shared/tracked-contact-link";
-import { contactLinks } from "@/lib/contact-links";
+import { contactLinks, getWhatsAppUrl } from "@/lib/contact-links";
+import { getLocalizedPath, type SiteLocale } from "@/lib/seo";
 
 const LOGO_SRC = "/logo_new_2.png?v=20260319";
 
@@ -51,6 +53,8 @@ function WhatsAppIcon() {
 
 export async function FooterSection({ locale }: { locale: string }) {
   const t = await getTranslations({ locale, namespace: "Footer" });
+  const typedLocale = locale as SiteLocale;
+  const currentYear = new Date().getFullYear();
 
   return (
     <footer
@@ -94,7 +98,7 @@ export async function FooterSection({ locale }: { locale: string }) {
               </TrackedContactLink>
 
               <TrackedContactLink
-                href={contactLinks.whatsappUrl}
+                href={getWhatsAppUrl(typedLocale)}
                 eventName="whatsapp_click"
                 eventPayload={{ section: "footer" }}
                 target="_blank"
@@ -126,14 +130,14 @@ export async function FooterSection({ locale }: { locale: string }) {
         </div>
 
         <div className="flex flex-col items-center gap-3 border-t border-white/6 pt-4 text-center text-[13px] text-white/42 sm:flex-row sm:justify-between sm:text-left">
-          <button
-            type="button"
+          <Link
+            href={getLocalizedPath(typedLocale, "/privacy-policy")}
             className="w-fit transition-colors duration-200 hover:text-white/68"
           >
             {t("privacy")}
-          </button>
+          </Link>
 
-          <p>{t("copyright", { year: 2024 })}</p>
+          <p>{t("copyright", { year: currentYear })}</p>
         </div>
       </div>
     </footer>

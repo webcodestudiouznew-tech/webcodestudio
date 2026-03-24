@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useEffect, useState, useTransition } from "react";
 import { useLocale, useTranslations } from "next-intl";
+import { LeadModalTrigger } from "@/components/shared/lead-modal-trigger";
 import { usePathname, useRouter } from "@/i18n/navigation";
 
 const LOGO_SRC = "/logo_new_2.png?v=20260319";
@@ -153,12 +154,11 @@ export function SiteHeader() {
 
           <div className="hidden items-center gap-3 lg:flex">
             <LocaleSwitcher buttonHoverClass={buttonHoverClass} />
-            <a
-              href="#lead"
+            <LeadModalTrigger
               className={`rounded-[8px] border border-[#8c7636] bg-[#3b372d]/35 px-5 py-2.5 text-[14px] font-semibold text-[#f2e7b4] shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] ${buttonHoverClass}`}
             >
               {t("nav.lead")}
-            </a>
+            </LeadModalTrigger>
           </div>
 
           <div className="flex shrink-0 items-center gap-1.5 sm:gap-2 lg:hidden">
@@ -246,13 +246,12 @@ export function SiteHeader() {
           </nav>
 
           <div className="mx-auto mt-10 flex w-full max-w-[320px] flex-col gap-3">
-            <a
-              href="#lead"
+            <LeadModalTrigger
               onClick={() => setIsMobileMenuOpen(false)}
               className={`w-full rounded-[12px] bg-[linear-gradient(180deg,#efcb65_0%,#d7b24c_100%)] px-4 py-3 text-center text-[15px] font-semibold text-[#30260d] ${buttonHoverClass}`}
             >
               {t("nav.lead")}
-            </a>
+            </LeadModalTrigger>
           </div>
         </div>
       ) : null}

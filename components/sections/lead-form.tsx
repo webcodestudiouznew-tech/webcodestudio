@@ -16,7 +16,7 @@ const leadFormSchema = z.object({
 
 type LeadFormValues = z.infer<typeof leadFormSchema>;
 
-type LeadFormCopy = {
+export type LeadFormCopy = {
   formTitle: string;
   formDescription: string;
   fields: {
@@ -46,6 +46,7 @@ type LeadFormCopy = {
   modal: {
     close: string;
     errorTitle: string;
+    openTitle: string;
   };
   errors: {
     requiredName: string;
@@ -58,6 +59,10 @@ type LeadFormCopy = {
 type LeadFormProps = {
   locale: string;
   copy: LeadFormCopy;
+  trackingSection?: string;
+  trackOnMount?: boolean;
+  onStatusClose?: () => void;
+  selectedTariff?: string | null;
 };
 
 function FieldError({ message }: { message?: string }) {
@@ -68,7 +73,14 @@ function FieldError({ message }: { message?: string }) {
   return <p className="mt-2 text-[12px] leading-[1.45] text-[#f2a8a8]">{message}</p>;
 }
 
-export function LeadForm({ locale, copy }: LeadFormProps) {
+export function LeadForm({
+  locale,
+  copy,
+  trackingSection = "lead",
+  trackOnMount = false,
+  onStatusClose,
+  selectedTariff,
+}: LeadFormProps) {
   const [submitError, setSubmitError] = useState<string | null>(null);
   const [statusModal, setStatusModal] = useState<"success" | "error" | null>(
     null,
@@ -94,6 +106,12 @@ export function LeadForm({ locale, copy }: LeadFormProps) {
   });
 
   useEffect(() => {
+    if (trackOnMount && !hasTrackedViewRef.current) {
+      hasTrackedViewRef.current = true;
+      trackEvent("form_view", { section: trackingSection });
+      return;
+    }
+
     const sectionNode = sectionRef.current;
 
     if (!sectionNode || hasTrackedViewRef.current) {
@@ -109,7 +127,7 @@ export function LeadForm({ locale, copy }: LeadFormProps) {
         }
 
         hasTrackedViewRef.current = true;
-        trackEvent("form_view", { section: "lead" });
+        trackEvent("form_view", { section: trackingSection });
         observer.disconnect();
       },
       { threshold: 0.35 },
@@ -118,16 +136,20 @@ export function LeadForm({ locale, copy }: LeadFormProps) {
     observer.observe(sectionNode);
 
     return () => observer.disconnect();
-  }, []);
+  }, [trackOnMount, trackingSection]);
 
   const onSubmit = handleSubmit((values) => {
     setSubmitError(null);
 
     startTransition(async () => {
-      trackEvent("form_submit", { section: "lead" });
+      trackEvent("form_submit", { section: trackingSection });
 
       try {
-        const result = await submitLeadForm({ locale, ...values });
+        const result = await submitLeadForm({
+          locale,
+          tariff: selectedTariff ?? "",
+          ...values,
+        });
 
         if (!result.ok) {
           if (result.fieldErrors?.name?.length) {
@@ -153,7 +175,7 @@ export function LeadForm({ locale, copy }: LeadFormProps) {
         }
 
         trackEvent("form_success", {
-          section: "lead",
+          section: trackingSection,
           destination: result.destination,
         });
         setStatusModal("success");
@@ -297,6 +319,7 @@ export function LeadForm({ locale, copy }: LeadFormProps) {
               onClick={() => {
                 setStatusModal(null);
                 setSubmitError(null);
+                onStatusClose?.();
               }}
               className="mt-6 inline-flex min-h-11 items-center justify-center rounded-[14px] border border-white/10 bg-white/[0.03] px-5 py-3 text-[15px] font-semibold text-white/88 transition-all duration-200 ease-out hover:-translate-y-0.5 hover:border-[#8a7030]/60 hover:text-white"
             >

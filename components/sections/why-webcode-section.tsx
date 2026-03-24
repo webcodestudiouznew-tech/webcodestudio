@@ -1,4 +1,5 @@
 import { getTranslations } from "next-intl/server";
+import { LeadModalTrigger } from "@/components/shared/lead-modal-trigger";
 import { WhyWebCodeBento } from "@/components/sections/why-webcode-bento";
 import { DottedGlowBackground } from "@/components/ui/dotted-glow-background";
 
@@ -176,12 +177,11 @@ export async function WhyWebCodeSection({ locale }: { locale: string }) {
               {t("ctaDescription")}
             </p>
 
-            <a
-              href="#lead"
+            <LeadModalTrigger
               className="mt-6 inline-flex min-h-12 w-full items-center justify-center rounded-[12px] bg-[linear-gradient(180deg,#efcb65_0%,#d7b24c_100%)] px-6 py-3 text-center text-[15px] font-semibold text-[#30260d] shadow-[0_18px_30px_rgba(212,175,74,0.22)] transition-all duration-200 ease-out hover:-translate-y-0.5 hover:brightness-110 sm:mt-7 sm:w-auto sm:min-w-[220px]"
             >
               {t("ctaButton")}
-            </a>
+            </LeadModalTrigger>
           </div>
         </div>
       </div>

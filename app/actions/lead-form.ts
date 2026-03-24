@@ -12,6 +12,7 @@ const leadSchema = z.object({
     .regex(/^[+\d][\d\s()-]{7,20}$/, "invalid_phone"),
   telegram: z.string().trim().max(120).optional().or(z.literal("")),
   niche: z.string().trim().max(160).optional().or(z.literal("")),
+  tariff: z.string().trim().max(120).optional().or(z.literal("")),
 });
 
 type LeadInput = z.input<typeof leadSchema>;
@@ -64,6 +65,17 @@ function buildNotionPayload(lead: LeadData) {
             ]
           : [],
       },
+      Tarif: {
+        rich_text: lead.tariff
+          ? [
+              {
+                text: {
+                  content: lead.tariff,
+                },
+              },
+            ]
+          : [],
+      },
       Source: {
         rich_text: [
           {
@@ -96,6 +108,7 @@ function formatTelegramLeadMessage(lead: LeadData) {
     `Телефон: ${lead.phone}`,
     `Telegram: ${lead.telegram || "не указан"}`,
     `Ниша: ${lead.niche || "не указана"}`,
+    `Тариф: ${lead.tariff || "не указан"}`,
     `Локаль: ${lead.locale}`,
     `Отправлено: ${submittedAt} (Asia/Tashkent)`,
   ].join("\n");

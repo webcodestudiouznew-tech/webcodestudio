@@ -1,6 +1,17 @@
 # log.md
 
 ## 2026-03-24
+- Все CTA, которые раньше вели на секцию `#lead`, переведены на единый modal-flow: теперь вместо скролла открывается popup с текущей формой заявки, а основной фон страницы при открытии заметно блюрится и затемняется.
+- Добавлены client-side `LeadFormModalProvider` и `LeadModalTrigger`, чтобы modal открывался из `Hero`, `Pricing`, `Cases`, `Process`, `Why WebCode`, `Solution Includes`, `Business Benefits` и из header без дублирования логики формы.
+- Для popup добавлена явная кнопка `Закрыть / Yopish / Close`, а локализации формы расширены новым заголовком модального окна; `npm run lint` и `npm run build` после изменений прошли успешно.
+- Выполнен keyword pass по `Docs/Tasks/SEO_keywords.md`: обновлены `Metadata.title` и `Metadata.description` для `RU / UZ / EN` под приоритетные commercial queries `создание сайтов в Ташкенте / Toshkentda sayt yaratish / website development in Tashkent`.
+- Усилен SEO intent в hero, pricing, FAQ, lead section и footer microcopy: добавлены естественные вхождения `landing page`, `корпоративный сайт`, `сайт под ключ`, `multilingual site`, `CRM`, `Telegram / WhatsApp`, `domain` и `hosting` без изменения архитектуры страниц.
+- `FAQ` расширен новыми long-tail вопросами по стоимости сайта, срокам разработки, мультиязычности, составу `turnkey` запуска и подключениям `CRM + Telegram` во всех локалях.
+- Повторно прогнаны `npm run lint` и `npm run build`; обе проверки завершились успешно.
+- Закрыт pre-deploy SEO checklist из `Docs/Tasks/SEO.md`: `/` переведён на `permanentRedirect("/ru")`, добавлена indexable страница `Privacy Policy` для `RU / UZ / EN`, `footer` теперь ведёт на реальную локализованную страницу, а год в нижней строке стал динамическим.
+- `sitemap.xml` расширен и теперь включает локализованные homepage и privacy routes с корректными `alternate language URLs`; `canonical`/`alternates` для privacy page также добавлены через общую SEO-логику.
+- `Open Graph` image сделан locale-aware через маршрут `app/(site)/[locale]/opengraph-image.tsx`, а WhatsApp prefilled message переведён в locale-aware helper для `ru / uz / en`.
+- Повторно подтверждено, что на homepage сохраняется один SEO-safe `H1` в `hero-section`; проверки `npm run lint` и `npm run build` завершились успешно.
 - В guide-документах зафиксировано правило для будущих мультиязычных лендингов: корректный `html lang` обязателен для каждой локали на уровне server-rendered HTML, а локализованные App Router-страницы нужно изначально проектировать через отдельные root layouts или route groups, а не через request headers.
 - Закрыт основной SEO-слой лендинга: добавлены локализованные `canonical` и `alternate` links, а также `Open Graph` и `Twitter` metadata для `RU / UZ / EN`.
 - Добавлены `robots.ts` и `sitemap.ts` для индексации, а также `schema.org` JSON-LD на локализованную главную страницу.

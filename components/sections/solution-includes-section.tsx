@@ -1,4 +1,5 @@
 import { getTranslations } from "next-intl/server";
+import { LeadModalTrigger } from "@/components/shared/lead-modal-trigger";
 
 type SolutionItemKey =
   | "website"
@@ -170,12 +171,11 @@ export async function SolutionIncludesSection({ locale }: { locale: string }) {
                 {t("ctaDescription")}
               </p>
 
-              <a
-                href="#lead"
+              <LeadModalTrigger
                 className="mt-3 inline-flex min-h-10 w-full items-center justify-center rounded-[12px] border border-[#8a7030]/45 bg-[linear-gradient(180deg,rgba(255,255,255,0.04)_0%,rgba(255,255,255,0.02)_100%)] px-4 py-2.5 text-[14px] font-semibold text-[#f2d57d] transition-all duration-200 ease-out hover:-translate-y-0.5 hover:border-[#a5873d] hover:text-[#f7e39d] sm:w-auto sm:min-w-[200px]"
               >
                 {t("ctaButton")}
-              </a>
+              </LeadModalTrigger>
             </div>
           </div>
         </div>

@@ -1,7 +1,39 @@
 {
   "Metadata": {
-    "title": "WebCode | Biznes uchun tayyor sayt",
-    "description": "WebCode O'zbekistondagi biznes uchun zamonaviy saytlar yaratadi: sayt, CRM, Telegram/WhatsApp, domen va hosting bitta yechimda."
+    "title": "Toshkentda biznes uchun sayt yaratish | WebCode",
+    "description": "Toshkentdagi biznes uchun landing page va sayt yaratamiz: CRM, Telegram/WhatsApp, domain, hosting va tayyor ishga tushirish bitta yechimda."
+  },
+  "PrivacyPage": {
+    "metadata": {
+      "title": "WebCode | Maxfiylik siyosati",
+      "description": "WebCode saytidan foydalanayotgan foydalanuvchilar uchun maxfiylik siyosati: qaysi ma'lumotlar olinadi, ular nima uchun ishlatiladi va ma'lumotlar bo'yicha qanday murojaat qilish mumkin."
+    },
+    "eyebrow": "Privacy Policy",
+    "title": "Maxfiylik siyosati",
+    "intro": "Ushbu sahifada WebCode sayti orqali qanday ma'lumotlarni olishimiz, ular nima uchun kerakligi va ma'lumotlarni qayta ishlash bo'yicha savollar bo'lsa biz bilan qanday bog'lanish mumkinligi tushuntiriladi.",
+    "sections": {
+      "data": {
+        "title": "Qanday ma'lumotlarni olamiz",
+        "body": "Ariza formasi va to'g'ridan to'g'ri aloqa kanallari orqali biz sizning ismingiz, telefon raqamingiz, Telegram username'ingiz, biznes tavsifi yoki loyiha muhokamasi uchun o'zingiz yuborgan boshqa ma'lumotlarni olishimiz mumkin."
+      },
+      "purpose": {
+        "title": "Ma'lumotlar nima uchun ishlatiladi",
+        "body": "Bu ma'lumotlar siz bilan bog'lanish, vazifani muhokama qilish, taklif tayyorlash, keyingi muloqotni tashkil etish va CRM hamda ishchi bildirishnomalarda murojaatni yo'qotmaslik uchun ishlatiladi."
+      },
+      "sharing": {
+        "title": "Uchinchi tomonlarga uzatish",
+        "body": "Biz shaxsiy ma'lumotlarni sotmaymiz. Ma'lumotlar faqat arizalarni qabul qilish va saqlashda ishtirok etadigan servislar orqali qayta ishlanishi mumkin, masalan CRM, Notion, Telegram yoki WhatsApp, agar bu sayt ishlashi va sizning so'rovingizga javob berish uchun zarur bo'lsa."
+      },
+      "storage": {
+        "title": "Saqlash va himoya",
+        "body": "Ma'lumotlarni so'rovni ko'rib chiqish va ishchi muloqot uchun zarur bo'lgan muddatgacha saqlashga harakat qilamiz hamda ruxsatsiz kirishni cheklash uchun oqilona texnik choralarni qo'llaymiz."
+      },
+      "contacts": {
+        "title": "Biz bilan qanday bog'lanish mumkin",
+        "body": "Agar siz yuborgan ma'lumotlarni aniqlashtirish, tuzatish yoki o'chirishni istasangiz, saytda ko'rsatilgan Telegram yoki WhatsApp orqali yozing, biz murojaatingizni oqilona muddat ichida ko'rib chiqamiz."
+      }
+    },
+    "updated": "Oxirgi yangilanish: 2026-yil 24-mart."
   },
   "Hero": {
     "brandTagline": "murojaatlarni yo'qotmaydigan saytlar",
@@ -22,15 +54,15 @@
       "closeMenu": "Menyuni yopish"
     },
     "title": {
-      "mobileLine1": "Biznes uchun tayyor sayt",
-      "mobileLine2": "CRM tizimi bilan",
-      "line1": "Tayyor sayt",
+      "mobileLine1": "Toshkentda biznes",
+      "mobileLine2": "uchun sayt yaratish",
+      "line1": "Toshkentda",
       "line2": "biznes uchun",
-      "line3": "CRM tizimi bilan"
+      "line3": "sayt yaratish"
     },
-    "subtitle": "Saytni uch tilda ishga tushiramiz, Telegram/WhatsApp, domen, hosting va murojaatlar uchun sodda CRM tizimini ulaymiz.",
-    "description": "Siz alohida servislar to'plamini emas, balki tayyor yechimni olasiz.",
-    "supportText": "Strukturani ishlab chiqishda yordam beramiz, xom matnni qayta ishlaymiz, saytni yig'amiz va hammasini ortiqcha murakkabliksiz ishga tushiramiz.",
+    "subtitle": "Toshkentda veb sayt yaratishni biznes uchun sodda qilamiz: landing page yoki korporativ saytni tayyorlaymiz, CRM, Telegram/WhatsApp, domen va hostingni ulaymiz.",
+    "description": "Siz O'zbekistondagi biznes uchun tushunarli tuzilma, savdo copy va tayyor ishga tushirish mantiqiga ega saytni olasiz, alohida servislar to'plamini emas.",
+    "supportText": "Formatni tanlashda yordam beramiz, xom matnni qayta ishlaymiz, landing page yoki korporativ saytni yig'amiz va hammasini ortiqcha murakkabliksiz ishga tushiramiz.",
     "cta": {
       "primary": "Taklif olish",
       "secondary": "Telegramga yozish"
@@ -372,7 +404,7 @@
   "Pricing": {
     "eyebrow": "Ishga tushirish formatlari",
     "title": "Tariflar",
-    "description": "Biznesning turli vazifalari uchun uchta ishga tushirish formati.",
+    "description": "Turli vazifalar uchun uchta format: landing page, bir sahifali sayt, korporativ sayt va biznes uchun kalit topshirish ishga tushirish.",
     "includedLabel": "Har bir tarifga quyidagilar kiradi",
     "includedItems": [
       "RU / UZ / EN dagi sayt",
@@ -391,7 +423,7 @@
     "plans": {
       "startup": {
         "title": "Ishga tushirish",
-        "audience": "Onlaynga tez chiqish va murojaatlarni ortiqcha murakkab tuzilmasiz yig'ish uchun.",
+        "audience": "Biznes uchun landing page yoki bir sahifali saytni Toshkentda tez ishga tushirish va murojaatlarni yig'ish uchun.",
         "timeline": "1-3 kun",
         "price": "2 900 000 so'mdan",
         "button": "«Ishga tushirish»ni tanlash",
@@ -407,7 +439,7 @@
       },
       "trust": {
         "title": "Ishonch",
-        "audience": "Keyslar, ishlar yoki yanada ifodali vizual taqdimotga ega kengaytirilgan bir sahifali sayt uchun.",
+        "audience": "Keyslar, xizmatlar va kuchliroq savdo taqdimotiga ega kengaytirilgan landing page yoki korporativ sayt uchun.",
         "timeline": "2-4 kun",
         "price": "3 900 000 so'mdan",
         "button": "«Ishonch»ni tanlash",
@@ -423,7 +455,7 @@
       },
       "growth": {
         "title": "O'sish",
-        "audience": "Saytning to'liqroq tuzilmasi va biznesning keyingi o'sishiga tayana oladigan asos uchun.",
+        "audience": "Ko'p tillik, to'liqroq tuzilishga ega va biznesning keyingi o'sishiga tayana oladigan korporativ sayt uchun.",
         "timeline": "7-10 kun",
         "price": "5 900 000 so'mdan",
         "button": "«O'sish»ni tanlash",
@@ -470,7 +502,7 @@
   },
   "Faq": {
     "title": "FAQ",
-    "description": "Saytni ishga tushirishdan oldin eng ko'p beriladigan savollarga qisqa javoblar.",
+    "description": "Sayt yaratish, landing page va Toshkentda biznes uchun tayyor ishga tushirish bo'yicha qisqa javoblar.",
     "ctaTitle": "Savollar qolgan bo'lsa, loyihangizni muhokama qilamiz",
     "ctaDescription": "Biznesingizga mos formatni tavsiya qilamiz va ortiqcha murakkabliksiz keyingi qadamni ko'rsatamiz.",
     "ctaPrimary": "Ariza qoldirish",
@@ -492,9 +524,25 @@
         "question": "Kichik biznesga CRM kerakmi",
         "answer": "Ha. Hatto kichik biznes uchun ham murojaatlarni yo'qotmaslik muhim. Bazaviy CRM murojaatlarni bitta joyga yig'ishga yordam beradi va hammasini faqat chatlarda qoldirib qo'ymaydi."
       },
+      "cost": {
+        "question": "Sayt yaratish qancha turadi",
+        "answer": "Narx sayt formatiga bog'liq. Agar landing page yoki bir sahifali sayt kerak bo'lsa, boshlang'ich tarifdan chiqamiz. Agar to'liqroq korporativ sayt kerak bo'lsa, narx yuqoriroq bo'ladi. Aniq summani vazifadan keyin aytamiz."
+      },
+      "landing": {
+        "question": "Landing page necha pul turadi",
+        "answer": "Odatda landing page yoki ixcham bir sahifali sayt bazaviy yoki o'rta tarifga tushadi. Narx bloklar soni, CRM, ko'p tillik va kerakli integratsiyalarga qarab o'zgaradi."
+      },
       "language": {
-        "question": "Ishni bitta tildan boshlasa bo'ladimi",
-        "answer": "Ha, agar bu sizning ssenariyingizga mos bo'lsa, ishni bitta tildan boshlash mumkin. Shu bilan birga, keyin boshqa tillarni qo'shish oson bo'lishi uchun loyiha tuzilmasi oldindan tayyorlanishi mumkin."
+        "question": "Ko'p tillik sayt qilsa bo'ladimi",
+        "answer": "Ha. Biz saytni RU / UZ / EN uchun tayyorlashimiz mumkin. Zarur bo'lsa, avval bitta til bilan ishga tushirib, keyin qolgan tillarni qo'shish uchun tuzilmani oldindan tayyorlab qo'yamiz."
+      },
+      "timeline": {
+        "question": "Landing page necha kunda tayyor bo'ladi",
+        "answer": "Oddiy landing page bir necha kunda tayyor bo'lishi mumkin. Ko'proq sahifa, CRM, ko'p tillik yoki matn ustida ko'proq ishlash kerak bo'lsa, muddat uzayadi."
+      },
+      "turnkey": {
+        "question": "Kalit topshirish saytga nimalar kiradi",
+        "answer": "Odatda kalit topshirish saytga struktura, dizayn yig'ish, murojaat formasi, CRM, Telegram / WhatsApp integration, domen, hosting, bazaviy SEO sozlamasi va ishga tushirish kiradi. Yakuniy tarkib tarifga bog'liq."
       },
       "ownership": {
         "question": "Domen va sayt egasi kim bo'ladi",
@@ -511,13 +559,17 @@
       "later": {
         "question": "Saytni keyinroq rivojlantirish mumkinmi",
         "answer": "Ha. Ishga tushgandan keyin saytni keyin ham rivojlantirish mumkin: yangi sahifalar va bloklar qo'shish, strukturani kengaytirish va biznes o'sgani sari funksionallikni kuchaytirish mumkin."
+      },
+      "integration": {
+        "question": "CRM va Telegram ulash mumkinmi",
+        "answer": "Ha. Biz CRM, bildirishnomalar va Telegram / WhatsApp'ni ulab, murojaatlarni yo'qotmaslik va ularni ishchi jarayonga tez tushirishga yordam beramiz."
       }
     }
   },
   "LeadSection": {
     "eyebrow": "Ariza va tez aloqa",
-    "title": "Ariza qoldiring va biznesingiz uchun mos ishga tushirish formatini tavsiya qilamiz",
-    "description": "Agar vazifa, sayt formati va biznesingiz uchun qulay ishga tushirish ssenariysini xotirjam muhokama qilmoqchi bo'lsangiz, qisqa ariza qoldiring. Nishingizni ko'rib chiqamiz, nimadan boshlash yaxshiroq ekanini tavsiya qilamiz va ish kuni ichida siz bilan bog'lanamiz. Agar qulayroq bo'lsa, bizga darhol Telegram yoki WhatsApp orqali ham yozishingiz mumkin.",
+    "title": "Ariza qoldiring va biznesingiz uchun sayt formatini tavsiya qilamiz",
+    "description": "Agar Toshkentda sayt yaratish bo'yicha vazifani muhokama qilmoqchi bo'lsangiz, landing page, bir sahifali yoki korporativ sayt variantlari orasidan to'g'ri formatni tanlashni istasangiz, qisqa ariza qoldiring. Nishingizni ko'rib chiqamiz, nimadan boshlash yaxshiroq ekanini aytamiz va ish kuni ichida siz bilan bog'lanamiz.",
     "contact": {
       "telegramLabel": "Telegram",
       "telegramDescription": "Vazifani shaxsiy chatda tez muhokama qilish uchun eng qulay variant.",
@@ -558,7 +610,8 @@
       },
       "modal": {
         "close": "Yopish",
-        "errorTitle": "Arizani yuborib bo'lmadi"
+        "errorTitle": "Arizani yuborib bo'lmadi",
+        "openTitle": "Sayt ishga tushirish uchun ariza"
       },
       "errors": {
         "requiredName": "Ismingizni kiriting.",
@@ -570,7 +623,7 @@
   },
   "Footer": {
     "brand": "WebCode",
-    "tagline": "murojaatlarni yo'qotmaydigan saytlar va CRM tizimi",
+    "tagline": "Toshkentda landing page, korporativ sayt va CRM bilan biznes uchun sayt yaratish",
     "nav": {
       "whyWebcode": "Nega WebCode",
       "audience": "Kimlar uchun",

@@ -6,22 +6,32 @@ type FaqKey =
   | "structure"
   | "support"
   | "crm"
+  | "cost"
+  | "landing"
   | "language"
+  | "timeline"
+  | "turnkey"
   | "ownership"
   | "excluded"
   | "payment"
-  | "later";
+  | "later"
+  | "integration";
 
 const faqKeys: FaqKey[] = [
   "start",
   "structure",
   "support",
   "crm",
+  "cost",
+  "landing",
   "language",
+  "timeline",
+  "turnkey",
   "ownership",
   "excluded",
   "payment",
   "later",
+  "integration",
 ];
 
 export async function FaqSection({ locale }: { locale: string }) {

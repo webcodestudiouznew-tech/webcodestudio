@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useState, useTransition } from "react";
 import { useLocale, useTranslations } from "next-intl";
+import { LeadModalTrigger } from "@/components/shared/lead-modal-trigger";
 import { usePathname, useRouter } from "@/i18n/navigation";
 import {
   MobileNav,
@@ -150,12 +151,11 @@ function DesktopHeader({ visible }: { visible?: boolean }) {
 
         <div className="flex flex-[0.95] items-center justify-end gap-2">
           <LocaleSwitcher buttonClassName="flex min-w-[58px] items-center justify-center rounded-[10px] px-3 py-2 text-[13px] font-semibold text-[#f2e7b4] transition-all duration-200 ease-out hover:-translate-y-0.5 hover:brightness-110" />
-          <a
-            href="#lead"
+          <LeadModalTrigger
             className="whitespace-nowrap rounded-[10px] border border-[#8c7636] bg-[#3b372d]/38 px-4 py-2 text-[13px] font-semibold text-[#f2e7b4] shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] transition-all duration-200 ease-out hover:-translate-y-0.5 hover:brightness-110"
           >
             {t("nav.lead")}
-          </a>
+          </LeadModalTrigger>
         </div>
       </div>
     </NavBody>
@@ -212,13 +212,12 @@ function MobileHeader({ visible }: { visible?: boolean }) {
           </a>
         ))}
 
-        <a
-          href="#lead"
+        <LeadModalTrigger
           onClick={() => setIsOpen(false)}
           className="mt-2 inline-flex min-h-11 w-full items-center justify-center rounded-[12px] bg-[linear-gradient(180deg,#efcb65_0%,#d7b24c_100%)] px-4 py-3 text-center text-[15px] font-semibold text-[#30260d] transition-all duration-200 ease-out hover:-translate-y-0.5 hover:brightness-110"
         >
           {t("nav.lead")}
-        </a>
+        </LeadModalTrigger>
       </MobileNavMenu>
     </MobileNav>
   );

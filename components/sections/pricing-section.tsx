@@ -1,4 +1,5 @@
 import { getTranslations } from "next-intl/server";
+import { LeadModalTrigger } from "@/components/shared/lead-modal-trigger";
 
 type PricingPlanKey = "startup" | "trust" | "growth";
 
@@ -181,8 +182,8 @@ export async function PricingSection({ locale }: { locale: string }) {
                   </div>
                 </div>
 
-                <a
-                  href="#lead"
+                <LeadModalTrigger
+                  tariff={t(`plans.${plan}.title`)}
                   className={[
                     "mt-5 inline-flex min-h-11 w-full items-center justify-center rounded-[12px] px-4 py-2.5 text-center text-[14px] font-semibold transition-all duration-200 ease-out hover:-translate-y-0.5",
                     isFeatured
@@ -191,7 +192,7 @@ export async function PricingSection({ locale }: { locale: string }) {
                   ].join(" ")}
                 >
                   {t(`plans.${plan}.button`)}
-                </a>
+                </LeadModalTrigger>
               </article>
             );
           })}

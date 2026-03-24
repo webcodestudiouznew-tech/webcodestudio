@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useEffect, useRef, useState, type MutableRefObject } from "react";
 import { useLocale, useTranslations } from "next-intl";
+import { LeadModalTrigger } from "@/components/shared/lead-modal-trigger";
 import { TrackedContactLink } from "@/components/shared/tracked-contact-link";
 import ShinyText from "@/components/ui/shiny-text";
 import { contactLinks } from "@/lib/contact-links";
@@ -377,12 +378,11 @@ export function HeroSection() {
             </p>
 
             <div className={`${revealClass} hero-delay-6 mx-auto mt-6 flex w-full flex-col items-center gap-3 sm:mt-9 sm:max-w-none sm:flex-row sm:gap-4 lg:mx-0 lg:justify-start`}>
-              <a
-                href="#lead"
+              <LeadModalTrigger
                 className={`w-full rounded-[10px] bg-[linear-gradient(180deg,#efcb65_0%,#d7b24c_100%)] px-7 py-3.5 text-center text-[15px] font-semibold text-[#30260d] shadow-[0_16px_28px_rgba(212,175,74,0.22)] sm:w-auto sm:rounded-[6px] sm:py-3 ${buttonHoverClass}`}
               >
                 {t("cta.primary")}
-              </a>
+              </LeadModalTrigger>
               <TrackedContactLink
                 href={contactLinks.telegramUrl}
                 eventName="telegram_click"

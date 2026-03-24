@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { contactLinks } from "@/lib/contact-links";
+import { contactLinks, getWhatsAppUrl } from "@/lib/contact-links";
 import { siteConfig } from "@/lib/site-config";
 
 export type SiteLocale = (typeof siteConfig.locales)[number];
@@ -32,7 +32,9 @@ export function getLanguageAlternates(pathname = "/") {
     getLocalizedPath(locale, pathname),
   ]);
 
-  return Object.fromEntries(entries.concat([["x-default", `/${siteConfig.defaultLocale}`]]));
+  return Object.fromEntries(
+    entries.concat([["x-default", getLocalizedPath(siteConfig.defaultLocale, pathname)]]),
+  );
 }
 
 export function getLanguageAlternateUrls(pathname = "/") {
@@ -60,8 +62,8 @@ export function createLocaleMetadata({
   pathname = "/",
 }: LocaleMetadataInput): Metadata {
   const url = getLocalizedPath(locale, pathname);
-  const ogImageUrl = new URL(siteConfig.ogImagePath, siteConfig.url).toString();
-  const socialImageAlt = `${siteConfig.name} Open Graph image`;
+  const ogImageUrl = getLocalizedUrl(locale, siteConfig.ogImagePath);
+  const socialImageAlt = `${siteConfig.name} Open Graph image for ${locale.toUpperCase()}`;
 
   return {
     title,
@@ -131,7 +133,7 @@ export function createHomePageJsonLd({
       },
       availableLanguage: siteConfig.locales.map((item) => item.toUpperCase()),
       telephone: contactLinks.whatsappDisplay,
-      sameAs: [contactLinks.telegramUrl, contactLinks.whatsappUrl],
+      sameAs: [contactLinks.telegramUrl, getWhatsAppUrl(locale)],
       contactPoint: [
         {
           "@type": "ContactPoint",

@@ -29,9 +29,6 @@ type LocaleLayoutProps = {
 const baseMetadata: Metadata = {
   metadataBase: new URL("https://webcode.uz"),
   applicationName: "WebCode",
-  title: "WebCode",
-  description:
-    "Лендинг веб-студии WebCode для локального бизнеса: сайт под ключ, CRM, Telegram/WhatsApp и инфраструктура в одном решении.",
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",

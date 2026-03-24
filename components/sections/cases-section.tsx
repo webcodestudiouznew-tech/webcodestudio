@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { getTranslations } from "next-intl/server";
+import { LeadModalTrigger } from "@/components/shared/lead-modal-trigger";
 import { CasesAccordionItem } from "@/components/sections/cases-accordion-item";
 
 type CaseKey = "sellium" | "peaks";
@@ -197,12 +198,11 @@ export async function CasesSection({ locale }: { locale: string }) {
                       {t("viewProject")}
                     </a>
 
-                    <a
-                      href="#lead"
+                    <LeadModalTrigger
                       className="inline-flex min-h-10 flex-1 items-center justify-center rounded-[12px] border border-white/10 bg-white/[0.03] px-5 py-2.5 text-[14px] font-semibold whitespace-nowrap text-white/84 transition-all duration-200 ease-out hover:-translate-y-0.5 hover:border-[#8a7030]/60 hover:text-white"
                     >
                       {t("discussSimilar")}
-                    </a>
+                    </LeadModalTrigger>
                   </div>
                 </div>
               </div>
