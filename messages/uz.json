@@ -278,6 +278,97 @@
       }
     }
   },
+  "Testimonials": {
+    "eyebrow": "Mijozlar fikri",
+    "title": "Ishga tushirgandan keyin nima deyishadi",
+    "description": "Ishga tushgandan keyin sayt qanday ishlashi va biznes uchun nimalar o'zgarishi haqida qisqacha.",
+    "items": [
+      {
+        "name": "Aleksey Morozov",
+        "role": "Sellium hammuassisi",
+        "company": "Sellium",
+        "tag": "SaaS",
+        "text": "Bizga mahsulotni tez tushuntiradigan va foydalanuvchini ortiqcha charchatmaydigan sayt kerak edi. Natijada birinchi ekrandanoq murojaatga olib borish oson bo'lgan yig'ilgan taqdimot oldik."
+      },
+      {
+        "name": "Norkulov Dilmurod",
+        "role": "PEAKS loyiha menejeri",
+        "company": "PEAKS",
+        "tag": "B2B",
+        "text": "Ishlab chiqarish kompaniyasi uchun ishonchli va zamonaviy ko'rinish muhim edi. Ishga tushgandan keyin sayt biznesni ancha yaxshi taqdim eta boshladi va uni mijozlar hamda hamkorlarga yuborish ancha qulay bo'ldi."
+      },
+      {
+        "name": "Dilshod Karimov",
+        "role": "Stomatologiya egasi",
+        "company": "Stomatologiya klinikasi",
+        "tag": "Ishonch",
+        "text": "Biz uchun saranjom va ishonchli ko'rinish muhim edi. Ishga tushgandan keyin sayt ancha professional ko'rina boshladi va bemorlarga qayerga yozish hamda qanday ro'yxatdan o'tishni tushunish osonlashdi."
+      },
+      {
+        "name": "Malika Rakhimova",
+        "role": "Kosmetologiya administratori",
+        "company": "Kosmetologiya markazi",
+        "tag": "Murojaatlar",
+        "text": "Menga eng yoqqani, hamma narsa bitta joyga yig'ilgani bo'ldi. Domen, forma va messenjerlarni alohida hal qilishga to'g'ri kelmadi, murojaatlarni kuzatish esa ancha qulaylashdi."
+      },
+      {
+        "name": "Sardor Yusupov",
+        "role": "O'quv markazi rahbari",
+        "company": "Ta'lim loyihasi",
+        "tag": "Struktura",
+        "text": "Oldin bizda matnlar tarqoq, taqdimot esa tushunarsiz edi. Bu yerda strukturani qayta yig'ib berishdi va sayt nihoyat nimani taklif qilishimizni aniq tushuntira boshladi."
+      },
+      {
+        "name": "Irina Sokolova",
+        "role": "Klinika marketologi",
+        "company": "Xususiy klinika",
+        "tag": "3 til",
+        "text": "Biz uchun bir nechta tilni birdan ishga tushirish muhim edi va biror versiya ikkinchi darajali ko'rinmasligi kerak edi. Oxirida har bir lokalizatsiya yaxlit va qulay chiqdi."
+      },
+      {
+        "name": "Dmitriy Orlov",
+        "role": "Ta'mirlash servisi egasi",
+        "company": "Servis kompaniyasi",
+        "tag": "Telegram",
+        "text": "Avval odamlar turli joyga yozardi va ayrim murojaatlar yo'qolib ketardi. Hozir murojaatgacha yo'l aniq, forma va xabarlar esa bitta tizim kabi ishlayapti."
+      },
+      {
+        "name": "Shahnoza Alimuhamedova",
+        "role": "Studiya boshqaruvchisi",
+        "company": "Go'zallik studiyasi",
+        "tag": "Qo'llab-quvvatlash",
+        "text": "Eng qulay tomoni, bizni texnik tafsilotlar bilan charchatishmadi. Hammasini oddiy tilda tushuntirishdi va ishga tushgandan keyin ham mayda tuzatishlar bo'yicha aloqada qolishdi."
+      },
+      {
+        "name": "Olga Belova",
+        "role": "Tijorat direktori",
+        "company": "Ishlab chiqarish kompaniyasi",
+        "tag": "B2B",
+        "text": "Bizga shunchaki chiroyli ekran emas, balki normal korporativ taqdimot kerak edi. Endi sayt ancha jiddiy ko'rinadi va uni hamkorlar hamda mijozlarga ishonch bilan yubora olamiz."
+      },
+      {
+        "name": "Madina Ismoilova",
+        "role": "Mustaqil mutaxassis",
+        "company": "Konsalting xizmatlari",
+        "tag": "Xizmat taqdimoti",
+        "text": "Oldin xizmatlarimni qisqa va tushunarli ko'rsatish qiyin edi. Ishga tushgandan keyin qiymatni tushuntirish osonlashdi va sayt nihoyat haqiqiy taqdimotdek ishlay boshladi."
+      },
+      {
+        "name": "Akmal Ruziev",
+        "role": "Mebel ustaxonasi rahbari",
+        "company": "Buyurtma asosida mebel",
+        "tag": "Tayyor ishga tushirish",
+        "text": "Hamma narsa yig'ilgan formatda topshirildi: sayt, murojaatlar oqimi, messenjerlar va asosiy sozlamalar. Bu men uchun muhim edi, chunki bir nechta pudratchini boshqarishni xohlamagandim."
+      },
+      {
+        "name": "Zarina Sobirova",
+        "role": "Loyiha menejeri",
+        "company": "Ekspert xizmati",
+        "tag": "Adaptivlik",
+        "text": "Alohida yoqqani, sayt faqat noutbukda emas, telefonda ham saranjom ko'rinadi. Bu biz uchun juda muhim, chunki mijozlarning ko'pchiligi aynan smartfondan kiradi."
+      }
+    ]
+  },
   "Pricing": {
     "eyebrow": "Ishga tushirish formatlari",
     "title": "Tariflar",

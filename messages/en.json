@@ -278,6 +278,97 @@
       }
     }
   },
+  "Testimonials": {
+    "eyebrow": "Client feedback",
+    "title": "What clients say after launch",
+    "description": "A short look at how the website feels after launch and what changes for the business.",
+    "items": [
+      {
+        "name": "Alexey Morozov",
+        "role": "Sellium co-founder",
+        "company": "Sellium",
+        "tag": "SaaS",
+        "text": "We needed a website that explains the product quickly and does not overload the visitor. In the end we got a focused presentation that made it easier to lead users toward inquiry from the first screen."
+      },
+      {
+        "name": "Norkulov Dilmurod",
+        "role": "PEAKS project manager",
+        "company": "PEAKS",
+        "tag": "B2B",
+        "text": "For a manufacturing company it was important to look reliable and modern. After launch, the website started presenting the business much better, and now we can share it with clients and partners confidently."
+      },
+      {
+        "name": "Dilshod Karimov",
+        "role": "Dental clinic owner",
+        "company": "Dental clinic",
+        "tag": "Trust",
+        "text": "It was important for us to look clean and credible. After launch, the website started to feel more professional, and it became easier for patients to understand where to write and how to book."
+      },
+      {
+        "name": "Malika Rakhimova",
+        "role": "Cosmetology administrator",
+        "company": "Cosmetology center",
+        "tag": "Leads",
+        "text": "I liked that everything was assembled in one place. We did not have to deal with the domain, form and messengers separately, and it became much easier to keep track of incoming requests."
+      },
+      {
+        "name": "Sardor Yusupov",
+        "role": "Education center director",
+        "company": "Educational project",
+        "tag": "Structure",
+        "text": "Before that we had scattered texts and unclear presentation. Here the structure was rebuilt so the website finally explained clearly what we offer and who it is for."
+      },
+      {
+        "name": "Irina Sokolova",
+        "role": "Clinic marketer",
+        "company": "Private clinic",
+        "tag": "3 languages",
+        "text": "It was important for us to launch several languages at once without making one version feel secondary. In the end, every locale feels complete and comfortable to use."
+      },
+      {
+        "name": "Dmitry Orlov",
+        "role": "Repair service owner",
+        "company": "Service company",
+        "tag": "Telegram",
+        "text": "People used to message us in different places and some requests got lost. Now the path to inquiry is clear, and the messages and form work as one connected system."
+      },
+      {
+        "name": "Shahnoza Alimuhamedova",
+        "role": "Studio manager",
+        "company": "Beauty studio",
+        "tag": "Support",
+        "text": "The best part was that we were not overloaded with technical details. Everything was explained in simple language, and after launch they stayed available for small edits."
+      },
+      {
+        "name": "Olga Belova",
+        "role": "Commercial director",
+        "company": "Manufacturing company",
+        "tag": "B2B",
+        "text": "We did not need just a nice-looking screen, but a proper corporate presentation. The website now looks much more serious, and we can send it to partners and clients with confidence."
+      },
+      {
+        "name": "Madina Ismoilova",
+        "role": "Independent specialist",
+        "company": "Consulting services",
+        "tag": "Service presentation",
+        "text": "It used to be difficult for me to show my services clearly and briefly. After launch it became easier to explain the value, and the website finally started working like a real presentation."
+      },
+      {
+        "name": "Akmal Ruziev",
+        "role": "Head of furniture workshop",
+        "company": "Custom furniture",
+        "tag": "Turnkey launch",
+        "text": "Everything was delivered in one complete format: the website, lead flow, messengers and the core setup. That mattered because I did not want to coordinate several contractors at once."
+      },
+      {
+        "name": "Zarina Sobirova",
+        "role": "Project manager",
+        "company": "Expert service",
+        "tag": "Responsive",
+        "text": "I especially liked that the website looks clean on mobile, not only on a laptop. That is critical for our clients because most of them open it from a smartphone."
+      }
+    ]
+  },
   "Pricing": {
     "eyebrow": "Launch formats",
     "title": "Pricing",

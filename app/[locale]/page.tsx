@@ -9,6 +9,7 @@ import { LeadSection } from "@/components/sections/lead-section";
 import { PricingSection } from "@/components/sections/pricing-section";
 import { ProcessSection } from "@/components/sections/process-section";
 import { SolutionIncludesSection } from "@/components/sections/solution-includes-section";
+import { TestimonialsSection } from "@/components/sections/testimonials-section";
 import { WhyWebCodeSection } from "@/components/sections/why-webcode-section";
 
 type LocaleHomePageProps = {
@@ -31,6 +32,7 @@ export default async function LocaleHomePage({ params }: LocaleHomePageProps) {
       <BusinessBenefitsSection locale={locale} />
       <SolutionIncludesSection locale={locale} />
       <CasesSection locale={locale} />
+      <TestimonialsSection />
       <PricingSection locale={locale} />
       <ProcessSection locale={locale} />
       <FaqSection locale={locale} />
