@@ -373,7 +373,7 @@ export function HeroSection() {
               {t("subtitle")}
             </p>
 
-            <p className={`${revealClass} hero-delay-5 mx-auto mt-6 max-w-[345px] text-center text-[15px] leading-[1.62] text-white/72 sm:mt-9 sm:max-w-[560px] sm:text-[16px] sm:leading-[1.68] lg:mx-0 lg:mt-6 lg:text-left lg:text-[18px]`}>
+            <p className={`${revealClass} hero-delay-5 mx-auto mt-6 hidden max-w-[345px] text-center text-[15px] leading-[1.62] text-white/72 sm:mt-9 sm:block sm:max-w-[560px] sm:text-[16px] sm:leading-[1.68] lg:mx-0 lg:mt-6 lg:text-left lg:text-[18px]`}>
               {t("description")}
             </p>
 

@@ -1,6 +1,12 @@
 # log.md
 
 ## 2026-03-24
+- Завершён финальный pre-deploy QA: подтверждены `desktop / tablet / mobile`, локали `RU / UZ / EN`, ручная проверка `CTA` и формы, а также повторно пройдены `npm run lint` и `npm run build`.
+- В ходе QA исправлен SEO-критичный redirect на корне: `proxy.ts` теперь отдаёт `308 Permanent Redirect` для `/ -> /ru` вместо временного locale-redirect.
+- Убраны битые social image URLs из metadata-логики: homepage теперь использует корректный metadata route для social preview, а страницы больше не публикуют ссылки на несуществующий `/[locale]/opengraph-image`.
+- Добавлен новый guide [deployment_strategy.md](./Guides/deployment_strategy.md) с зафиксированным production path через `Vercel`, матрицей env, release sequence, rollback-порядком и обязательным post-deploy SEO baseline.
+- `Docs/AGENTS.md` обновлён ссылкой на deployment guide и правилом использовать его для задач по `production deploy`, `preview release`, env и rollback.
+- В `Docs/Roadmap.md` задача `Подготовить deployment strategy` отмечена как выполненная; следующий фокус смещён на финальный QA и production deploy с post-deploy SEO проверкой.
 - Все CTA, которые раньше вели на секцию `#lead`, переведены на единый modal-flow: теперь вместо скролла открывается popup с текущей формой заявки, а основной фон страницы при открытии заметно блюрится и затемняется.
 - Добавлены client-side `LeadFormModalProvider` и `LeadModalTrigger`, чтобы modal открывался из `Hero`, `Pricing`, `Cases`, `Process`, `Why WebCode`, `Solution Includes`, `Business Benefits` и из header без дублирования логики формы.
 - Для popup добавлена явная кнопка `Закрыть / Yopish / Close`, а локализации формы расширены новым заголовком модального окна; `npm run lint` и `npm run build` после изменений прошли успешно.

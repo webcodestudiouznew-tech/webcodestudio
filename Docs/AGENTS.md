@@ -37,6 +37,8 @@
 - [Guides/notion_leads_integration.md](./Guides/notion_leads_integration.md) — процесс подключения формы заявок к `Notion`, схема базы, env и проверка записи лидов.
 - [Guides/telegram_bot_group_setup.md](./Guides/telegram_bot_group_setup.md) — стандартный повторяемый процесс настройки `Telegram bot + group` для уведомлений о новых заявках, который можно использовать и на новом сайте.
 - [Guides/accessibility_and_quality.md](./Guides/accessibility_and_quality.md) — accessibility baseline, visual QA и UI quality.
+- [Guides/deployment_strategy.md](./Guides/deployment_strategy.md) — standard deployment path, production env, release sequence, rollback и post-deploy baseline.
+- [Guides/Post-deploy_SEO_checklist.md](./Guides/Post-deploy_SEO_checklist.md) — post-deploy SEO-проверка live-домена, индексации, `Search Console` и `Core Web Vitals`.
 
 ### Поддерживающие документы
 
@@ -130,6 +132,8 @@
 - Для CTA, формы заявки, messenger links и аналитических точек сверяться с `Guides/conversion_standards.md`.
 - Для задач по подключению формы к `Notion` и проверке записи лидов сверяться с `Guides/notion_leads_integration.md`.
 - Для задач по уведомлениям о новых заявках в `Telegram` через `bot + group` сверяться с `Guides/telegram_bot_group_setup.md` как со стандартным guide для повторного подключения на новом сайте.
+- Для задач по production deploy, preview release, env и rollback сверяться с `Guides/deployment_strategy.md`.
+- Для задач по `metadata`, `sitemap`, `robots.txt`, индексации и финальной SEO-проверке после публикации сверяться с `Guides/Post-deploy_SEO_checklist.md`.
 - Для финальной UI-проверки использовать `Guides/accessibility_and_quality.md` вместе с `Guides/done_criteria.md`.
 
 ### i18n
@@ -180,6 +184,7 @@
    - `i18n`
    - `SEO`
    - `QA`
+   - `Post-deploy SEO QA` при задачах, которые доходят до публикации или SEO-ready handoff
 7. После изменений обновить `Roadmap.md`, если это требуется.
 8. Зафиксировать важные изменения в `log.md`.
 
@@ -202,3 +207,10 @@
 - проверить `RU / UZ / EN`
 - проверить `logo`, `favicon` и `metadata`
 - проверить `html lang` для каждой локали в итоговом HTML-документе
+
+Если задача включает deploy, SEO-ready release или handoff после публикации, дополнительно обязательно:
+- пройти `Guides/Post-deploy_SEO_checklist.md` на live-домене
+- проверить доступность `robots.txt` и `sitemap.xml`
+- проверить redirect `/ -> /ru`
+- проверить индексацию ключевых URL в `Google Search Console`
+- проверить live `Core Web Vitals` / `PageSpeed Insights`

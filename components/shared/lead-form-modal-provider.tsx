@@ -6,6 +6,7 @@ import {
   useEffect,
   useId,
   useMemo,
+  useRef,
   useState,
   type MouseEvent,
   type ReactNode,
@@ -33,14 +34,19 @@ export function LeadFormModalProvider({
   const [isOpen, setIsOpen] = useState(false);
   const [selectedTariff, setSelectedTariff] = useState<string | null>(null);
   const titleId = useId();
+  const closeButtonRef = useRef<HTMLButtonElement | null>(null);
+  const previouslyFocusedElementRef = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
     if (!isOpen) {
+      previouslyFocusedElementRef.current?.focus();
+      previouslyFocusedElementRef.current = null;
       return;
     }
 
     const previousOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
+    closeButtonRef.current?.focus();
 
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
@@ -59,6 +65,13 @@ export function LeadFormModalProvider({
   const value = useMemo(
     () => ({
       openModal: (options?: { tariff?: string | null }) => {
+        const activeElement =
+          document.activeElement instanceof HTMLElement
+            ? document.activeElement
+            : null;
+
+        previouslyFocusedElementRef.current = activeElement;
+        activeElement?.blur();
         setSelectedTariff(options?.tariff ?? null);
         setIsOpen(true);
       },
@@ -76,7 +89,7 @@ export function LeadFormModalProvider({
         className={`transition-[filter,transform,opacity] duration-300 ease-out ${
           isOpen ? "pointer-events-none blur-[16px] saturate-50 opacity-70" : ""
         }`}
-        aria-hidden={isOpen}
+        inert={isOpen}
       >
         {children}
       </div>
@@ -105,6 +118,7 @@ export function LeadFormModalProvider({
               </p>
 
               <button
+                ref={closeButtonRef}
                 type="button"
                 onClick={() => {
                   setIsOpen(false);

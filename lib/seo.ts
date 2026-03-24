@@ -62,10 +62,9 @@ export function createLocaleMetadata({
   pathname = "/",
 }: LocaleMetadataInput): Metadata {
   const url = getLocalizedPath(locale, pathname);
-  const ogImageUrl = getLocalizedUrl(locale, siteConfig.ogImagePath);
-  const socialImageAlt = `${siteConfig.name} Open Graph image for ${locale.toUpperCase()}`;
 
   return {
+    metadataBase: new URL(siteConfig.url),
     title,
     description,
     alternates: {
@@ -79,25 +78,11 @@ export function createLocaleMetadata({
       siteName: siteConfig.name,
       title,
       description,
-      images: [
-        {
-          url: ogImageUrl,
-          width: 1200,
-          height: 630,
-          alt: socialImageAlt,
-        },
-      ],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
-      images: [
-        {
-          url: ogImageUrl,
-          alt: socialImageAlt,
-        },
-      ],
     },
     robots: {
       index: true,
