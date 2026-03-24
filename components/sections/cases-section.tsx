@@ -2,6 +2,7 @@ import Image from "next/image";
 import { getTranslations } from "next-intl/server";
 import { LeadModalTrigger } from "@/components/shared/lead-modal-trigger";
 import { CasesAccordionItem } from "@/components/sections/cases-accordion-item";
+import { Reveal, StaggerGroup, StaggerItem } from "@/components/ui/scroll-reveal";
 
 type CaseKey = "sellium" | "peaks";
 
@@ -81,7 +82,7 @@ export async function CasesSection({ locale }: { locale: string }) {
       <div className="absolute bottom-[-8%] right-[-6%] h-[280px] w-[280px] rounded-full bg-[#d4af4a]/7 blur-[150px]" />
 
       <div className="relative z-10 mx-auto flex w-full max-w-[1280px] flex-col gap-10 px-4 sm:px-6 lg:gap-12 lg:px-0">
-        <div className="flex max-w-[920px] flex-col items-center text-center lg:items-start lg:text-left">
+        <Reveal className="flex max-w-[920px] flex-col items-center text-center lg:items-start lg:text-left">
           <h2 className="w-full max-w-none font-[var(--font-manrope)] text-[30px] font-medium leading-[1.06] tracking-[-0.04em] text-white max-[380px]:text-[27px] sm:text-[38px] lg:text-[40px]">
             {t("title")}
           </h2>
@@ -89,14 +90,14 @@ export async function CasesSection({ locale }: { locale: string }) {
           <p className="mt-5 text-[15px] leading-[1.68] text-white/72 sm:text-[16px] lg:text-[18px]">
             {t("description")}
           </p>
-        </div>
+        </Reveal>
 
-        <div className="grid gap-4 lg:gap-5">
+        <StaggerGroup className="grid gap-4 lg:gap-5" delayChildren={0.08}>
           {caseItems.map((item) => (
-            <article
-              key={item.key}
-              className="grid gap-4 rounded-[28px] border border-white/8 bg-[linear-gradient(180deg,rgba(255,255,255,0.035)_0%,rgba(255,255,255,0.015)_100%)] p-3 shadow-[0_22px_54px_rgba(0,0,0,0.18)] backdrop-blur-[10px] sm:p-4 lg:grid-cols-[minmax(0,58%)_minmax(0,42%)] lg:gap-4"
-            >
+            <StaggerItem key={item.key}>
+              <article
+                className="grid gap-4 rounded-[28px] border border-white/8 bg-[linear-gradient(180deg,rgba(255,255,255,0.035)_0%,rgba(255,255,255,0.015)_100%)] p-3 shadow-[0_22px_54px_rgba(0,0,0,0.18)] backdrop-blur-[10px] sm:p-4 lg:grid-cols-[minmax(0,58%)_minmax(0,42%)] lg:gap-4"
+              >
               <a
                 href={item.href}
                 target="_blank"
@@ -206,9 +207,10 @@ export async function CasesSection({ locale }: { locale: string }) {
                   </div>
                 </div>
               </div>
-            </article>
+              </article>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerGroup>
       </div>
     </section>
   );

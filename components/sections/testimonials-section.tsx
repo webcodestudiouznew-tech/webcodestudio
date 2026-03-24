@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import { useTranslations } from "next-intl";
+import { Reveal } from "@/components/ui/scroll-reveal";
 
 const avatarImageSources = [
   "/avatars/testimonials/male.png",
@@ -70,7 +71,7 @@ export function TestimonialsSection() {
       <div className="absolute bottom-[-10%] right-[-6%] h-[280px] w-[280px] rounded-full bg-[#d4af4a]/8 blur-[160px]" />
 
       <div className="relative z-10 mx-auto flex w-full max-w-[1280px] flex-col gap-10 px-4 sm:px-6 lg:gap-12 lg:px-0">
-        <div className="mx-auto flex max-w-[860px] flex-col items-center text-center">
+        <Reveal className="mx-auto flex max-w-[860px] flex-col items-center text-center">
           <div className="inline-flex items-center gap-2 rounded-full border border-[#8a7030]/34 bg-[linear-gradient(180deg,rgba(255,255,255,0.045)_0%,rgba(255,255,255,0.02)_100%)] px-4 py-2 text-[12px] font-semibold tracking-[0.06em] text-[#efcb65] uppercase shadow-[0_12px_24px_rgba(0,0,0,0.14)] backdrop-blur-sm">
             <span className="text-[#efcb65]">
               <QuoteIcon />
@@ -85,20 +86,28 @@ export function TestimonialsSection() {
           <p className="mt-4 max-w-[720px] text-[15px] leading-[1.68] text-white/68 sm:text-[16px] lg:text-[18px]">
             {t("description")}
           </p>
-        </div>
+        </Reveal>
 
-        <div className="flex flex-col gap-4 sm:gap-5">
+        <Reveal className="flex flex-col gap-4 sm:gap-5" delay={0.12} y={32}>
           <div
             className="testimonials-marquee"
             onClick={() => {
-              if (window.matchMedia("(hover: none), (pointer: coarse)").matches) {
+              if (
+                window.matchMedia("(hover: none), (pointer: coarse)").matches
+              ) {
                 setIsPaused((value) => !value);
               }
             }}
           >
-            <div className={`testimonials-marquee__track${isPaused ? " testimonials-marquee__track--paused" : ""}`}>
+            <div
+              className={`testimonials-marquee__track${isPaused ? " testimonials-marquee__track--paused" : ""}`}
+            >
               {[0, 1].map((copyIndex) => (
-                <div key={`main-${copyIndex}`} className="testimonials-marquee__group" aria-hidden={copyIndex === 1}>
+                <div
+                  key={`main-${copyIndex}`}
+                  className="testimonials-marquee__group"
+                  aria-hidden={copyIndex === 1}
+                >
                   {items.map((item, index) => {
                     const avatarSrc =
                       item.company === "PEAKS"
@@ -154,7 +163,7 @@ export function TestimonialsSection() {
               ))}
             </div>
           </div>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

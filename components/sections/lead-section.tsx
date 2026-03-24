@@ -1,6 +1,7 @@
 import { getTranslations } from "next-intl/server";
 import { LeadForm, type LeadFormCopy } from "@/components/sections/lead-form";
 import { TrackedContactLink } from "@/components/shared/tracked-contact-link";
+import { Reveal } from "@/components/ui/scroll-reveal";
 import { contactLinks, getWhatsAppUrl } from "@/lib/contact-links";
 import { createLeadFormCopy } from "@/lib/lead-form-copy";
 import type { SiteLocale } from "@/lib/seo";
@@ -26,7 +27,7 @@ export async function LeadSection({
       <div className="absolute bottom-[-12%] right-[-4%] h-[320px] w-[320px] rounded-full bg-[#d4af4a]/7 blur-[160px]" />
 
       <div className="relative z-10 mx-auto grid w-full max-w-[1280px] items-stretch gap-8 px-4 sm:px-6 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:gap-10 lg:px-0">
-        <div className="hidden h-full flex-col rounded-[28px] border border-[#8a7030]/20 bg-[radial-gradient(circle_at_top,rgba(212,175,74,0.14),transparent_38%),linear-gradient(180deg,rgba(255,255,255,0.045)_0%,rgba(255,255,255,0.015)_100%)] p-6 shadow-[0_28px_70px_rgba(0,0,0,0.22)] sm:p-8 lg:flex">
+        <Reveal className="hidden h-full flex-col rounded-[28px] border border-[#8a7030]/20 bg-[radial-gradient(circle_at_top,rgba(212,175,74,0.14),transparent_38%),linear-gradient(180deg,rgba(255,255,255,0.045)_0%,rgba(255,255,255,0.015)_100%)] p-6 shadow-[0_28px_70px_rgba(0,0,0,0.22)] sm:p-8 lg:flex">
           <span className="inline-flex w-fit rounded-full border border-[#8a7030]/40 bg-[#efcb65]/10 px-3 py-1 text-[12px] font-semibold uppercase tracking-[0.14em] text-[#f3d986]">
             {t("eyebrow")}
           </span>
@@ -62,12 +63,11 @@ export async function LeadSection({
               {t("cta.whatsapp")}
             </TrackedContactLink>
           </div>
-        </div>
+        </Reveal>
 
-        <LeadForm
-          locale={locale}
-          copy={leadFormCopy}
-        />
+        <Reveal delay={0.12} y={32}>
+          <LeadForm locale={locale} copy={leadFormCopy} />
+        </Reveal>
       </div>
     </section>
   );

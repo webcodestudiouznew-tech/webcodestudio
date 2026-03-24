@@ -1,6 +1,11 @@
 import { getTranslations } from "next-intl/server";
 import { LeadModalTrigger } from "@/components/shared/lead-modal-trigger";
 import { DottedGlowBackground } from "@/components/ui/dotted-glow-background";
+import {
+  Reveal,
+  StaggerGroup,
+  StaggerItem,
+} from "@/components/ui/scroll-reveal";
 
 type ProcessStepKey = "discussion" | "structure" | "build" | "launch";
 
@@ -42,7 +47,7 @@ export async function ProcessSection({ locale }: { locale: string }) {
       <div className="absolute bottom-[-10%] right-[-5%] h-[300px] w-[300px] rounded-full bg-[#d4af4a]/6 blur-[160px]" />
 
       <div className="relative z-10 mx-auto flex w-full max-w-[1280px] flex-col gap-10 px-4 sm:px-6 lg:gap-12 lg:px-0">
-        <div className="mx-auto flex max-w-[820px] flex-col items-center text-center">
+        <Reveal className="mx-auto flex max-w-[820px] flex-col items-center text-center">
           <h2 className="w-full max-w-none font-[var(--font-manrope)] text-[30px] font-medium leading-[1.06] tracking-[-0.04em] text-white max-[380px]:text-[27px] sm:text-[38px] lg:text-[40px]">
             {t("title")}
           </h2>
@@ -50,41 +55,48 @@ export async function ProcessSection({ locale }: { locale: string }) {
           <p className="mt-4 text-[14px] leading-[1.6] text-white/72 sm:text-[15px] lg:text-[16px]">
             {t("description")}
           </p>
-        </div>
+        </Reveal>
 
-        <div className="grid gap-4 xl:grid-cols-4">
+        <StaggerGroup
+          className="grid gap-4 xl:grid-cols-4"
+          delayChildren={0.12}
+          staggerChildren={0.22}
+        >
           {processStepKeys.map((step, index) => (
-            <article
-              key={step}
-              className="group relative flex h-full flex-col overflow-hidden rounded-[24px] border border-white/8 bg-[linear-gradient(180deg,rgba(255,255,255,0.045)_0%,rgba(255,255,255,0.02)_100%)] p-5 shadow-[0_18px_42px_rgba(0,0,0,0.16)] backdrop-blur-[10px] transition-all duration-300 ease-out hover:-translate-y-1 hover:border-[#8a7030]/58 hover:bg-[linear-gradient(180deg,rgba(255,255,255,0.06)_0%,rgba(61,50,27,0.12)_100%)]"
-            >
-              <div className="pointer-events-none absolute inset-x-5 top-0 h-px bg-[linear-gradient(90deg,transparent,rgba(212,175,74,0.16),transparent)] transition-all duration-300 ease-out group-hover:bg-[linear-gradient(90deg,transparent,rgba(212,175,74,0.42),transparent)]" />
-              <div className="pointer-events-none absolute right-[-14%] top-[10%] h-24 w-24 rounded-full bg-[#d4af4a]/0 blur-3xl transition-all duration-300 ease-out group-hover:bg-[#d4af4a]/10" />
+            <StaggerItem key={step}>
+              <article className="group relative flex h-full flex-col overflow-hidden rounded-[24px] border border-white/8 bg-[linear-gradient(180deg,rgba(255,255,255,0.045)_0%,rgba(255,255,255,0.02)_100%)] p-5 shadow-[0_18px_42px_rgba(0,0,0,0.16)] backdrop-blur-[10px] transition-all duration-300 ease-out hover:-translate-y-1 hover:border-[#8a7030]/58 hover:bg-[linear-gradient(180deg,rgba(255,255,255,0.06)_0%,rgba(61,50,27,0.12)_100%)]">
+                <div className="pointer-events-none absolute inset-x-5 top-0 h-px bg-[linear-gradient(90deg,transparent,rgba(212,175,74,0.16),transparent)] transition-all duration-300 ease-out group-hover:bg-[linear-gradient(90deg,transparent,rgba(212,175,74,0.42),transparent)]" />
+                <div className="pointer-events-none absolute right-[-14%] top-[10%] h-24 w-24 rounded-full bg-[#d4af4a]/0 blur-3xl transition-all duration-300 ease-out group-hover:bg-[#d4af4a]/10" />
 
-              <div className="flex items-center justify-between gap-3">
-                <span className="inline-flex h-10 min-w-10 items-center justify-center rounded-full border border-[#8a7030]/40 bg-[linear-gradient(180deg,rgba(239,203,101,0.16)_0%,rgba(215,178,76,0.06)_100%)] px-3 text-[13px] font-semibold text-[#efcb65]">
-                  {String(index + 1).padStart(2, "0")}
-                </span>
+                <div className="flex items-center justify-between gap-3">
+                  <span className="inline-flex h-10 min-w-10 items-center justify-center rounded-full border border-[#8a7030]/40 bg-[linear-gradient(180deg,rgba(239,203,101,0.16)_0%,rgba(215,178,76,0.06)_100%)] px-3 text-[13px] font-semibold text-[#efcb65]">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
 
-                <span className="text-[#efcb65]/68">
-                  <ArrowLineIcon />
-                </span>
-              </div>
+                  <span className="text-[#efcb65]/68">
+                    <ArrowLineIcon />
+                  </span>
+                </div>
 
-              <div className="mt-5">
-                <h3 className="font-[var(--font-manrope)] text-[21px] font-medium leading-[1.12] tracking-[-0.035em] text-white sm:text-[22px]">
-                  {t(`steps.${step}.title`)}
-                </h3>
+                <div className="mt-5">
+                  <h3 className="font-[var(--font-manrope)] text-[21px] font-medium leading-[1.12] tracking-[-0.035em] text-white sm:text-[22px]">
+                    {t(`steps.${step}.title`)}
+                  </h3>
 
-                <p className="mt-3 text-[14px] leading-[1.6] text-white/64">
-                  {t(`steps.${step}.description`)}
-                </p>
-              </div>
-            </article>
+                  <p className="mt-3 text-[14px] leading-[1.6] text-white/64">
+                    {t(`steps.${step}.description`)}
+                  </p>
+                </div>
+              </article>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerGroup>
 
-        <div className="relative overflow-hidden rounded-[28px] bg-[radial-gradient(circle_at_top,rgba(212,175,74,0.16),transparent_36%),linear-gradient(180deg,#312811_0%,#211d18_58%,#181613_100%)] px-5 py-6 text-center shadow-[0_34px_80px_rgba(0,0,0,0.28)] sm:rounded-[32px] sm:px-8 sm:py-12">
+        <Reveal
+          className="relative overflow-hidden rounded-[28px] bg-[radial-gradient(circle_at_top,rgba(212,175,74,0.16),transparent_36%),linear-gradient(180deg,#312811_0%,#211d18_58%,#181613_100%)] px-5 py-6 text-center shadow-[0_34px_80px_rgba(0,0,0,0.28)] sm:rounded-[32px] sm:px-8 sm:py-12"
+          delay={0.18}
+          y={32}
+        >
           <DottedGlowBackground
             className="pointer-events-none absolute inset-0 opacity-85 [mask-image:radial-gradient(circle_at_center,black_0%,black_56%,transparent_90%)]"
             opacity={1}
@@ -116,13 +128,11 @@ export async function ProcessSection({ locale }: { locale: string }) {
               {t("ctaDescription")}
             </p>
 
-            <LeadModalTrigger
-              className="mt-5 inline-flex min-h-12 w-full items-center justify-center rounded-[12px] bg-[linear-gradient(180deg,#efcb65_0%,#d7b24c_100%)] px-5 py-3 text-center text-[15px] font-semibold text-[#30260d] shadow-[0_18px_30px_rgba(212,175,74,0.22)] transition-all duration-200 ease-out hover:-translate-y-0.5 hover:brightness-110 sm:mt-7 sm:w-auto sm:min-w-[220px] sm:px-6"
-            >
+            <LeadModalTrigger className="mt-5 inline-flex min-h-12 w-full items-center justify-center rounded-[12px] bg-[linear-gradient(180deg,#efcb65_0%,#d7b24c_100%)] px-5 py-3 text-center text-[15px] font-semibold text-[#30260d] shadow-[0_18px_30px_rgba(212,175,74,0.22)] transition-all duration-200 ease-out hover:-translate-y-0.5 hover:brightness-110 sm:mt-7 sm:w-auto sm:min-w-[220px] sm:px-6">
               {t("ctaButton")}
             </LeadModalTrigger>
           </div>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { getTranslations } from "next-intl/server";
 import { TrackedContactLink } from "@/components/shared/tracked-contact-link";
+import { Reveal, StaggerGroup, StaggerItem } from "@/components/ui/scroll-reveal";
 import { contactLinks, getWhatsAppUrl } from "@/lib/contact-links";
 import { getLocalizedPath, type SiteLocale } from "@/lib/seo";
 
@@ -66,8 +67,9 @@ export async function FooterSection({ locale }: { locale: string }) {
       <div className="absolute bottom-[-16%] right-[-6%] h-[240px] w-[240px] rounded-full bg-[#d4af4a]/5 blur-[140px]" />
 
       <div className="relative z-10 mx-auto flex w-full max-w-[1280px] flex-col gap-8 px-4 sm:px-6 lg:px-0">
-        <div className="grid gap-8 rounded-[28px] bg-[linear-gradient(180deg,rgba(255,255,255,0.035)_0%,rgba(255,255,255,0.015)_100%)] px-5 py-6 text-center shadow-[0_20px_48px_rgba(0,0,0,0.18)] sm:px-6 sm:py-7 lg:grid-cols-[minmax(0,420px)_minmax(0,1fr)] lg:gap-12 lg:text-left">
-          <div className="mx-auto flex max-w-[520px] flex-col items-center lg:mx-0 lg:items-start">
+        <StaggerGroup className="grid gap-8 rounded-[28px] bg-[linear-gradient(180deg,rgba(255,255,255,0.035)_0%,rgba(255,255,255,0.015)_100%)] px-5 py-6 text-center shadow-[0_20px_48px_rgba(0,0,0,0.18)] sm:px-6 sm:py-7 lg:grid-cols-[minmax(0,420px)_minmax(0,1fr)] lg:gap-12 lg:text-left" delayChildren={0.08}>
+          <StaggerItem>
+            <div className="mx-auto flex max-w-[520px] flex-col items-center lg:mx-0 lg:items-start">
             <div className="flex items-center justify-center gap-3 lg:justify-start">
               <Image
                 src={LOGO_SRC}
@@ -109,9 +111,11 @@ export async function FooterSection({ locale }: { locale: string }) {
                 {t("contacts.whatsapp")}
               </TrackedContactLink>
             </div>
-          </div>
+            </div>
+          </StaggerItem>
 
-          <div className="grid justify-center gap-y-2 sm:grid-cols-3 sm:gap-x-8 sm:gap-y-2 lg:justify-start">
+          <StaggerItem>
+            <div className="grid justify-center gap-y-2 sm:grid-cols-3 sm:gap-x-8 sm:gap-y-2 lg:justify-start">
             {footerNavColumns.map((column, index) => (
               <nav key={`footer-nav-${index}`} className="grid justify-items-center gap-1.5 sm:justify-items-start">
                 {column.map((item) => (
@@ -126,10 +130,11 @@ export async function FooterSection({ locale }: { locale: string }) {
                 ))}
               </nav>
             ))}
-          </div>
-        </div>
+            </div>
+          </StaggerItem>
+        </StaggerGroup>
 
-        <div className="flex flex-col items-center gap-3 border-t border-white/6 pt-4 text-center text-[13px] text-white/42 sm:flex-row sm:justify-between sm:text-left">
+        <Reveal className="flex flex-col items-center gap-3 border-t border-white/6 pt-4 text-center text-[13px] text-white/42 sm:flex-row sm:justify-between sm:text-left" y={20}>
           <Link
             href={getLocalizedPath(typedLocale, "/privacy-policy")}
             className="w-fit transition-colors duration-200 hover:text-white/68"
@@ -138,7 +143,7 @@ export async function FooterSection({ locale }: { locale: string }) {
           </Link>
 
           <p>{t("copyright", { year: currentYear })}</p>
-        </div>
+        </Reveal>
       </div>
     </footer>
   );

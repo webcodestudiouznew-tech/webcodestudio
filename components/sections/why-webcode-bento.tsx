@@ -3,6 +3,7 @@
 import type { CSSProperties, ReactNode, RefObject } from "react";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
+import { StaggerGroup, StaggerItem } from "@/components/ui/scroll-reveal";
 
 const GOLD_GLOW_COLOR = "212, 175, 74";
 const MOBILE_BREAKPOINT = 768;
@@ -163,7 +164,8 @@ function useMobileDetection() {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth <= MOBILE_BREAKPOINT);
+    const checkMobile = () =>
+      setIsMobile(window.innerWidth <= MOBILE_BREAKPOINT);
     checkMobile();
     window.addEventListener("resize", checkMobile);
     return () => window.removeEventListener("resize", checkMobile);
@@ -214,7 +216,8 @@ function ParticleCard({
     const { width, height } = cardRef.current.getBoundingClientRect();
     templateParticlesRef.current = Array.from(
       { length: DEFAULT_PARTICLE_COUNT },
-      () => createParticleElement(Math.random() * width, Math.random() * height),
+      () =>
+        createParticleElement(Math.random() * width, Math.random() * height),
     );
   }, []);
 
@@ -356,11 +359,7 @@ function ParticleCard({
   }, [clearAllParticles, disableAnimations, ensureParticleTemplates]);
 
   return (
-    <article
-      ref={cardRef}
-      className={className}
-      style={style}
-    >
+    <article ref={cardRef} className={className} style={style}>
       {children}
     </article>
   );
@@ -399,7 +398,8 @@ function GlobalSpotlight({
         event.clientY >= rect.top &&
         event.clientY <= rect.bottom;
 
-      const cards = gridRef.current.querySelectorAll<HTMLElement>(".why-webcode-card");
+      const cards =
+        gridRef.current.querySelectorAll<HTMLElement>(".why-webcode-card");
 
       if (!inside) {
         gsap.to(spotlightRef.current, {
@@ -407,7 +407,9 @@ function GlobalSpotlight({
           duration: 0.28,
           ease: "power2.out",
         });
-        cards.forEach((card) => card.style.setProperty("--glow-intensity", "0"));
+        cards.forEach((card) =>
+          card.style.setProperty("--glow-intensity", "0"),
+        );
         return;
       }
 
@@ -447,7 +449,10 @@ function GlobalSpotlight({
       });
 
       gsap.to(spotlightRef.current, {
-        opacity: Math.max(0, Math.min(0.72, 1 - minDistance / DEFAULT_SPOTLIGHT_RADIUS)),
+        opacity: Math.max(
+          0,
+          Math.min(0.72, 1 - minDistance / DEFAULT_SPOTLIGHT_RADIUS),
+        ),
         duration: 0.18,
         ease: "power2.out",
       });
@@ -482,11 +487,7 @@ function GlobalSpotlight({
   return null;
 }
 
-export function WhyWebCodeBento({
-  items,
-}: {
-  items: WhyWebCodeBentoItem[];
-}) {
+export function WhyWebCodeBento({ items }: { items: WhyWebCodeBentoItem[] }) {
   const gridRef = useRef<HTMLDivElement>(null);
   const isMobile = useMobileDetection();
   const disableAnimations = isMobile;
@@ -589,12 +590,14 @@ export function WhyWebCodeBento({
 
       <GlobalSpotlight gridRef={gridRef} disabled={disableAnimations} />
 
-      <div
+      <StaggerGroup
         ref={gridRef}
         className="why-webcode-bento-scope grid items-stretch gap-3 sm:gap-4 md:grid-cols-2 xl:grid-cols-4 xl:grid-rows-[170px_104px_170px]"
+        delayChildren={0.12}
+        staggerChildren={0.2}
       >
         {items.map((card, index) => (
-          <div key={card.key} className={`h-full ${card.gridClassName}`}>
+          <StaggerItem key={card.key} className={card.gridClassName}>
             <ParticleCard
               disableAnimations={disableAnimations}
               className={`why-webcode-card group relative flex h-full flex-col overflow-hidden rounded-[28px] border border-[#8a7030]/28 shadow-[0_24px_56px_rgba(0,0,0,0.2)] transition-[border-color,box-shadow,transform] duration-300 ease-out hover:-translate-y-1 ${card.articleClassName} ${card.cardClassName}`}
@@ -631,9 +634,9 @@ export function WhyWebCodeBento({
                 </p>
               </div>
             </ParticleCard>
-          </div>
+          </StaggerItem>
         ))}
-      </div>
+      </StaggerGroup>
     </>
   );
 }

@@ -1,17 +1,13 @@
 import { getTranslations } from "next-intl/server";
+import {
+  Reveal,
+  StaggerGroup,
+  StaggerItem,
+} from "@/components/ui/scroll-reveal";
 
-type AudienceKey =
-  | "service"
-  | "expert"
-  | "trust"
-  | "leads";
+type AudienceKey = "service" | "expert" | "trust" | "leads";
 
-const audienceKeys: AudienceKey[] = [
-  "service",
-  "expert",
-  "trust",
-  "leads",
-];
+const audienceKeys: AudienceKey[] = ["service", "expert", "trust", "leads"];
 
 function AudienceIcon({ type }: { type: AudienceKey }) {
   if (type === "service") {
@@ -101,7 +97,7 @@ export async function AudienceSection({ locale }: { locale: string }) {
       <div className="absolute bottom-[-8%] right-[-4%] h-[320px] w-[320px] rounded-full bg-[#d4af4a]/8 blur-[140px]" />
 
       <div className="relative z-10 mx-auto flex w-full max-w-[1280px] flex-col gap-10 px-4 sm:px-6 lg:gap-14 lg:px-0">
-        <div className="flex max-w-[760px] flex-col items-center text-center lg:max-w-[1040px] lg:items-start lg:text-left">
+        <Reveal className="flex max-w-[760px] flex-col items-center text-center lg:max-w-[1040px] lg:items-start lg:text-left">
           <h2 className="w-full max-w-none font-[var(--font-manrope)] text-[30px] font-medium leading-[1.06] tracking-[-0.04em] text-white max-[380px]:text-[27px] sm:text-[38px] lg:text-[40px]">
             {t("title")}
           </h2>
@@ -109,11 +105,15 @@ export async function AudienceSection({ locale }: { locale: string }) {
           <p className="mt-5 max-w-[620px] text-[16px] leading-[1.68] text-white/72 lg:max-w-[980px] lg:text-[18px]">
             {t("description")}
           </p>
-        </div>
+        </Reveal>
 
-        <div className="grid items-stretch gap-4 md:grid-cols-2">
+        <StaggerGroup
+          className="grid items-stretch gap-4 md:grid-cols-2"
+          delayChildren={0.12}
+          staggerChildren={0.22}
+        >
           {audienceKeys.map((item, index) => (
-            <div key={item} className="h-full">
+            <StaggerItem key={item}>
               <article className="group relative flex h-full flex-col overflow-hidden rounded-[22px] border border-white/8 bg-[linear-gradient(180deg,rgba(255,255,255,0.04)_0%,rgba(255,255,255,0.02)_100%)] px-5 py-5 shadow-[0_18px_40px_rgba(0,0,0,0.16)] backdrop-blur-[10px] transition-all duration-300 ease-out hover:-translate-y-1 hover:border-[#8a7030]/80 hover:bg-[linear-gradient(180deg,rgba(255,255,255,0.06)_0%,rgba(61,50,27,0.18)_100%)] hover:shadow-[0_24px_54px_rgba(0,0,0,0.24)]">
                 <div className="pointer-events-none absolute inset-x-5 top-0 h-px bg-[linear-gradient(90deg,transparent,rgba(212,175,74,0.18),transparent)] transition-all duration-300 ease-out group-hover:bg-[linear-gradient(90deg,transparent,rgba(212,175,74,0.58),transparent)]" />
                 <div className="pointer-events-none absolute -right-10 top-[-12%] h-28 w-28 rounded-full bg-[#d4af4a]/0 blur-3xl transition-all duration-300 ease-out group-hover:bg-[#d4af4a]/12" />
@@ -138,9 +138,9 @@ export async function AudienceSection({ locale }: { locale: string }) {
                   </p>
                 </div>
               </article>
-            </div>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerGroup>
       </div>
     </section>
   );
