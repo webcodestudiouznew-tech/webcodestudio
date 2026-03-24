@@ -1,6 +1,8 @@
 # log.md
 
 ## 2026-03-24
+- Добавлены beginner-friendly документы по публикации на `Vercel`: [vercel_deploy_guide.md](./Guides/vercel_deploy_guide.md) с пошаговым сценарием первого deploy и [vercel_deploy_checklist.md](./Guides/vercel_deploy_checklist.md) с коротким рабочим checklist.
+- `Docs/AGENTS.md` обновлён ссылками на `Vercel` guide и checklist как на обязательные документы для первого deploy и user-facing release-инструкций.
 - Завершён финальный pre-deploy QA: подтверждены `desktop / tablet / mobile`, локали `RU / UZ / EN`, ручная проверка `CTA` и формы, а также повторно пройдены `npm run lint` и `npm run build`.
 - В ходе QA исправлен SEO-критичный redirect на корне: `proxy.ts` теперь отдаёт `308 Permanent Redirect` для `/ -> /ru` вместо временного locale-redirect.
 - Убраны битые social image URLs из metadata-логики: homepage теперь использует корректный metadata route для social preview, а страницы больше не публикуют ссылки на несуществующий `/[locale]/opengraph-image`.

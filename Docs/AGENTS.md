@@ -38,6 +38,8 @@
 - [Guides/telegram_bot_group_setup.md](./Guides/telegram_bot_group_setup.md) — стандартный повторяемый процесс настройки `Telegram bot + group` для уведомлений о новых заявках, который можно использовать и на новом сайте.
 - [Guides/accessibility_and_quality.md](./Guides/accessibility_and_quality.md) — accessibility baseline, visual QA и UI quality.
 - [Guides/deployment_strategy.md](./Guides/deployment_strategy.md) — standard deployment path, production env, release sequence, rollback и post-deploy baseline.
+- [Guides/vercel_deploy_guide.md](./Guides/vercel_deploy_guide.md) — пошаговый guide для первого deploy на `Vercel` с нуля, включая import проекта, env, domain и DNS.
+- [Guides/vercel_deploy_checklist.md](./Guides/vercel_deploy_checklist.md) — короткий практический checklist перед deploy, во время настройки `Vercel` и сразу после публикации.
 - [Guides/Post-deploy_SEO_checklist.md](./Guides/Post-deploy_SEO_checklist.md) — post-deploy SEO-проверка live-домена, индексации, `Search Console` и `Core Web Vitals`.
 
 ### Поддерживающие документы
@@ -133,6 +135,7 @@
 - Для задач по подключению формы к `Notion` и проверке записи лидов сверяться с `Guides/notion_leads_integration.md`.
 - Для задач по уведомлениям о новых заявках в `Telegram` через `bot + group` сверяться с `Guides/telegram_bot_group_setup.md` как со стандартным guide для повторного подключения на новом сайте.
 - Для задач по production deploy, preview release, env и rollback сверяться с `Guides/deployment_strategy.md`.
+- Для первого deploy на `Vercel` и user-facing инструкции по публикации сверяться с `Guides/vercel_deploy_guide.md` и `Guides/vercel_deploy_checklist.md`.
 - Для задач по `metadata`, `sitemap`, `robots.txt`, индексации и финальной SEO-проверке после публикации сверяться с `Guides/Post-deploy_SEO_checklist.md`.
 - Для финальной UI-проверки использовать `Guides/accessibility_and_quality.md` вместе с `Guides/done_criteria.md`.
 
