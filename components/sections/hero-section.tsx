@@ -52,6 +52,7 @@ function HeroChip({
 export function HeroSection() {
   const locale = useLocale();
   const t = useTranslations("Hero");
+  const heroTitleText = [t("title.line1"), t("title.line2"), t("title.line3")].join(" ");
   const [hasEntered, setHasEntered] = useState(false);
   const [isMarqueePaused, setIsMarqueePaused] = useState(false);
   const desktopMarqueeTrackRef = useRef<HTMLDivElement | null>(null);
@@ -212,7 +213,8 @@ export function HeroSection() {
               <span className="hidden sm:inline">{t("eyebrow")}</span>
             </div>
 
-            <h1 className={heroTitleClassName}>
+            <h1 className="sr-only">{heroTitleText}</h1>
+            <div className={heroTitleClassName} aria-hidden="true">
               <span className="sm:hidden">
                 <ShinyText
                   className="block"
@@ -281,7 +283,7 @@ export function HeroSection() {
                   disabled={false}
                 />
               </span>
-            </h1>
+            </div>
 
             <p className={`${revealClass} hero-delay-3 mx-auto mt-6 hidden max-w-[640px] text-center text-[15px] leading-[1.55] text-white/84 sm:mt-8 sm:block sm:text-[17px] lg:mx-0 lg:text-left lg:text-[18px]`}>
               {t("subtitle")}

@@ -117,11 +117,10 @@ export function TestimonialsSection() {
                               <div className="relative h-10 w-10 overflow-hidden rounded-full">
                                 <Image
                                   src={avatarSrc}
-                                  alt=""
+                                  alt={`${item.name}, ${item.company}`}
                                   fill
                                   sizes="40px"
                                   className="object-cover"
-                                  aria-hidden="true"
                                 />
                               </div>
                             </div>
