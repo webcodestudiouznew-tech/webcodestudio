@@ -1,6 +1,7 @@
 # log.md
 
 ## 2026-03-24
+- В guide-документах зафиксировано правило для будущих мультиязычных лендингов: корректный `html lang` обязателен для каждой локали на уровне server-rendered HTML, а локализованные App Router-страницы нужно изначально проектировать через отдельные root layouts или route groups, а не через request headers.
 - Закрыт основной SEO-слой лендинга: добавлены локализованные `canonical` и `alternate` links, а также `Open Graph` и `Twitter` metadata для `RU / UZ / EN`.
 - Добавлены `robots.ts` и `sitemap.ts` для индексации, а также `schema.org` JSON-LD на локализованную главную страницу.
 - Добавлен route `opengraph-image` для share-preview и явное подключение `favicon` в metadata корневого layout.

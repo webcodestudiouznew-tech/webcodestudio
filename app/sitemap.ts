@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { getLanguageAlternates, getLocalizedUrl } from "@/lib/seo";
+import { getLanguageAlternateUrls, getLocalizedUrl } from "@/lib/seo";
 import { siteConfig } from "@/lib/site-config";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -9,7 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: getLocalizedUrl(locale),
     lastModified,
     alternates: {
-      languages: getLanguageAlternates(),
+      languages: getLanguageAlternateUrls(),
     },
   }));
 }

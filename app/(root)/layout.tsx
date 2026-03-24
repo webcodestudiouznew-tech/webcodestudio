@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Manrope, Geist } from "next/font/google";
-import "./globals.css";
+import "@/app/globals.css";
 import { cn } from "@/lib/utils";
 
 const geist = Geist({subsets:['latin'],variable:'--font-sans'});
@@ -18,9 +18,6 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://webcode.uz"),
   applicationName: "WebCode",
-  title: "WebCode",
-  description:
-    "Лендинг веб-студии WebCode для локального бизнеса: сайт под ключ, CRM, Telegram/WhatsApp и инфраструктура в одном решении.",
   icons: {
     icon: "/favicon.ico",
     shortcut: "/favicon.ico",
@@ -28,7 +25,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default function RootRedirectLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;

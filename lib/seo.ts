@@ -35,6 +35,17 @@ export function getLanguageAlternates(pathname = "/") {
   return Object.fromEntries(entries.concat([["x-default", `/${siteConfig.defaultLocale}`]]));
 }
 
+export function getLanguageAlternateUrls(pathname = "/") {
+  const entries = siteConfig.locales.map((locale) => [
+    locale,
+    getLocalizedUrl(locale, pathname),
+  ]);
+
+  return Object.fromEntries(
+    entries.concat([["x-default", getLocalizedUrl(siteConfig.defaultLocale, pathname)]]),
+  );
+}
+
 type LocaleMetadataInput = {
   locale: SiteLocale;
   title: string;
@@ -49,6 +60,7 @@ export function createLocaleMetadata({
   pathname = "/",
 }: LocaleMetadataInput): Metadata {
   const url = getLocalizedPath(locale, pathname);
+  const ogImageUrl = new URL(siteConfig.ogImagePath, siteConfig.url).toString();
 
   return {
     title,
@@ -66,7 +78,7 @@ export function createLocaleMetadata({
       description,
       images: [
         {
-          url: siteConfig.ogImagePath,
+          url: ogImageUrl,
           width: 1200,
           height: 630,
           alt: `${siteConfig.name} Open Graph image`,
@@ -77,7 +89,7 @@ export function createLocaleMetadata({
       card: "summary_large_image",
       title,
       description,
-      images: [siteConfig.ogImagePath],
+      images: [ogImageUrl],
     },
     robots: {
       index: true,
