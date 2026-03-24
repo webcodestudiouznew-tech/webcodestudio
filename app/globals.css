@@ -215,6 +215,47 @@ main {
   will-change: transform, opacity, filter;
 }
 
+.pricing-marquee {
+  position: relative;
+  overflow: hidden;
+  mask-image: linear-gradient(90deg, transparent, black 10%, black 90%, transparent);
+}
+
+.pricing-marquee__track {
+  display: flex;
+  width: max-content;
+  animation: pricing-marquee-scroll 20s linear infinite;
+  will-change: transform;
+}
+
+.pricing-marquee__group {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 1rem;
+  padding-right: 1rem;
+}
+
+.hero-chip-marquee {
+  position: relative;
+  overflow: hidden;
+  mask-image: linear-gradient(90deg, transparent, black 6%, black 94%, transparent);
+}
+
+.hero-chip-marquee__track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+}
+
+.hero-chip-marquee__group {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 0.75rem;
+  padding-right: 0.75rem;
+}
+
 @keyframes hero-star-pulse {
   0%,
   100% {
@@ -228,11 +269,22 @@ main {
   }
 }
 
+@keyframes pricing-marquee-scroll {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(calc(-50% - 0.5rem), 0, 0);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .hero-enter,
   .hero-enter-scale,
   .hero-enter-glow,
-  .hero-star {
+  .hero-star,
+  .pricing-marquee__track {
     animation: none !important;
     transition: none !important;
     opacity: 1 !important;

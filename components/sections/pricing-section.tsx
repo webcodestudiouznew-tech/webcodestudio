@@ -41,6 +41,7 @@ function CheckIcon() {
 
 export async function PricingSection({ locale }: { locale: string }) {
   const t = await getTranslations({ locale, namespace: "Pricing" });
+  const includedItems = t.raw("includedItems") as string[];
 
   return (
     <section
@@ -68,13 +69,33 @@ export async function PricingSection({ locale }: { locale: string }) {
               {t("includedLabel")}
             </p>
 
-            <div className="mt-4 grid grid-cols-2 gap-2.5 xl:grid-cols-6">
-              {(t.raw("includedItems") as string[]).map((item: string) => (
+            <div className="pricing-marquee mt-4 sm:hidden" aria-label={t("includedLabel")}>
+              <div className="pricing-marquee__track">
+                {[0, 1].map((copyIndex) => (
+                  <div key={copyIndex} className="pricing-marquee__group" aria-hidden={copyIndex === 1}>
+                    {includedItems.map((item: string) => (
+                      <div
+                        key={`${copyIndex}-${item}`}
+                        className="group flex shrink-0 items-center justify-start gap-2 text-left text-[13px] font-medium whitespace-nowrap text-white/72 transition-all duration-200 ease-out hover:-translate-y-0.5 hover:text-white"
+                      >
+                        <span className="flex h-5 w-5 shrink-0 items-center justify-center text-[#efcb65] transition-all duration-200 ease-out group-hover:scale-105 group-hover:text-[#f4d87e]">
+                          <CheckIcon />
+                        </span>
+                        {item}
+                      </div>
+                    ))}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="mt-4 hidden flex-nowrap items-center justify-start gap-4 overflow-x-auto pb-1 sm:flex xl:justify-center">
+              {includedItems.map((item: string) => (
                 <div
                   key={item}
-                  className="flex min-h-8 w-full items-center justify-start gap-1.5 rounded-[14px] bg-white/[0.025] px-2 py-1 text-left text-[13px] font-medium text-white/72 shadow-[0_8px_18px_rgba(0,0,0,0.08)] sm:min-h-10 sm:gap-2 sm:px-4 sm:py-2"
+                  className="group flex shrink-0 items-center justify-start gap-2 text-left text-[13px] font-medium whitespace-nowrap text-white/72 transition-all duration-200 ease-out hover:-translate-y-0.5 hover:text-white"
                 >
-                  <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[linear-gradient(180deg,rgba(239,203,101,0.18)_0%,rgba(215,178,76,0.08)_100%)] text-[#efcb65]">
+                  <span className="flex h-5 w-5 shrink-0 items-center justify-center text-[#efcb65] transition-all duration-200 ease-out group-hover:scale-105 group-hover:text-[#f4d87e]">
                     <CheckIcon />
                   </span>
                   {item}

@@ -175,12 +175,12 @@ export async function BusinessBenefitsSection({ locale }: { locale: string }) {
                 </span>
               </div>
 
-              <div className="mt-5 flex flex-1 flex-col">
-                <h3 className="min-h-[48px] max-w-[18ch] font-[var(--font-manrope)] text-[20px] font-medium leading-[1.12] tracking-[-0.035em] text-white transition-colors duration-300 ease-out group-hover:text-[#f5df9a] sm:text-[21px]">
+              <div className="mt-5 flex flex-col">
+                <h3 className="max-w-[18ch] font-[var(--font-manrope)] text-[20px] font-medium leading-[1.12] tracking-[-0.035em] text-white transition-colors duration-300 ease-out group-hover:text-[#f5df9a] sm:text-[21px]">
                   {t(`items.${item}.title`)}
                 </h3>
 
-                <p className="mt-3 flex-1 text-[14px] leading-[1.66] text-white/62 transition-colors duration-300 ease-out group-hover:text-white/72 sm:text-[15px]">
+                <p className="mt-3 text-[14px] leading-[1.66] text-white/62 transition-colors duration-300 ease-out group-hover:text-white/72 sm:text-[15px]">
                   {t(`items.${item}.description`)}
                 </p>
               </div>

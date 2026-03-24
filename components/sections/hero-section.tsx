@@ -1,15 +1,23 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState, type MutableRefObject } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { TrackedContactLink } from "@/components/shared/tracked-contact-link";
 import ShinyText from "@/components/ui/shiny-text";
 import { contactLinks } from "@/lib/contact-links";
 
-const LOGO_SRC = "/logo_new_2.png?v=20260319";
-
-type HeroChipKey = "languages" | "adaptive" | "crm" | "messaging" | "launch";
+type HeroChipKey =
+  | "languages"
+  | "adaptive"
+  | "crm"
+  | "messaging"
+  | "notifications"
+  | "domain"
+  | "hosting"
+  | "seo"
+  | "support"
+  | "launch";
 
 function HeroChipIcon() {
   const iconClassName = "h-[15px] w-[15px] shrink-0 text-[#f1d67e]";
@@ -23,64 +31,6 @@ function HeroChipIcon() {
   );
 }
 
-function OrbitBadge({ label }: { label: string }) {
-  const orbitText =
-    label.length > 42
-      ? { fontSize: 11.8, letterSpacing: 0.2, textLength: 418 }
-      : label.length > 36
-        ? { fontSize: 12.8, letterSpacing: 0.7, textLength: 424 }
-        : { fontSize: 13.8, letterSpacing: 1.2, textLength: 430 };
-
-  return (
-    <div className="relative flex h-[176px] w-[176px] items-center justify-center">
-      <svg
-        viewBox="0 0 200 200"
-        className="absolute inset-0 h-full w-full animate-[spin_18s_linear_infinite]"
-        aria-hidden="true"
-      >
-        <defs>
-          <path
-            id="orbit-circle"
-            d="M 100, 100
-               m -68, 0
-               a 68,68 0 1,1 136,0
-               a 68,68 0 1,1 -136,0"
-          />
-        </defs>
-        <text
-          fill="rgba(255,255,255,0.92)"
-          fontSize={orbitText.fontSize}
-          letterSpacing={orbitText.letterSpacing}
-          textAnchor="middle"
-        >
-          <textPath
-            href="#orbit-circle"
-            startOffset="50%"
-            textLength={orbitText.textLength}
-            lengthAdjust="spacingAndGlyphs"
-          >
-            {label}
-          </textPath>
-        </text>
-        <circle cx="32" cy="100" r="4" fill="#f1cc6b" />
-      </svg>
-
-      <div className="flex h-[80px] w-[80px] items-center justify-center rounded-full bg-[linear-gradient(135deg,#f1cc6b_0%,#d4af4a_100%)] shadow-[0_18px_38px_rgba(212,175,74,0.35)]">
-        <div className="flex h-[56px] w-[56px] items-center justify-center rounded-full border border-[#907334]/35 bg-[#2f2d29]">
-          <Image
-            src={LOGO_SRC}
-            alt=""
-            width={32}
-            height={32}
-            className="h-8 w-8 object-contain"
-            aria-hidden="true"
-          />
-        </div>
-      </div>
-    </div>
-  );
-}
-
 function HeroChip({
   label,
   className = "",
@@ -89,14 +39,13 @@ function HeroChip({
   className?: string;
 }) {
   return (
-    <li className={`group relative overflow-hidden rounded-[16px] border border-[#7f6930] bg-[#342f25]/52 px-4 py-2 text-[15px] font-medium tracking-[-0.01em] text-[#f1d67e] shadow-[inset_0_1px_0_rgba(255,255,255,0.05)] transition-all duration-300 ease-out hover:-translate-y-0.5 hover:border-[#a5873d] hover:bg-[#3a3327]/72 hover:text-[#f6dd8b] hover:shadow-[0_12px_24px_rgba(0,0,0,0.18),0_0_0_1px_rgba(212,175,74,0.08),inset_0_1px_0_rgba(255,255,255,0.06)] ${className}`}>
-      <span className="pointer-events-none absolute inset-x-3 top-0 h-px bg-[linear-gradient(90deg,transparent,rgba(212,175,74,0.14),transparent)] transition-all duration-300 ease-out group-hover:bg-[linear-gradient(90deg,transparent,rgba(212,175,74,0.48),transparent)]" />
-      <span className="pointer-events-none absolute right-[-18%] top-1/2 h-8 w-8 -translate-y-1/2 rounded-full bg-[#d4af4a]/0 blur-xl transition-all duration-300 ease-out group-hover:bg-[#d4af4a]/16" />
-      <span className="relative z-[1] flex items-center justify-center gap-2">
+    <div className={`relative overflow-hidden rounded-[16px] bg-[#342f25]/52 px-4 py-2 text-[15px] font-medium tracking-[-0.01em] text-[#f1d67e] shadow-[inset_0_1px_0_rgba(255,255,255,0.05)] ${className}`}>
+      <span className="pointer-events-none absolute inset-x-3 top-0 h-px bg-[linear-gradient(90deg,transparent,rgba(212,175,74,0.14),transparent)]" />
+      <span className="relative z-[1] flex items-center justify-center gap-2 whitespace-nowrap">
         <HeroChipIcon />
         <span>{label}</span>
       </span>
-    </li>
+    </div>
   );
 }
 
@@ -104,6 +53,22 @@ export function HeroSection() {
   const locale = useLocale();
   const t = useTranslations("Hero");
   const [hasEntered, setHasEntered] = useState(false);
+  const [isMarqueePaused, setIsMarqueePaused] = useState(false);
+  const desktopMarqueeTrackRef = useRef<HTMLDivElement | null>(null);
+  const desktopMarqueeGroupRef = useRef<HTMLUListElement | null>(null);
+  const desktopMarqueeOffsetRef = useRef(0);
+  const desktopMarqueeSpeedRef = useRef(42);
+  const desktopMarqueeTargetSpeedRef = useRef(42);
+  const mobileTopMarqueeTrackRef = useRef<HTMLDivElement | null>(null);
+  const mobileTopMarqueeGroupRef = useRef<HTMLUListElement | null>(null);
+  const mobileTopMarqueeOffsetRef = useRef(0);
+  const mobileTopMarqueeSpeedRef = useRef(42);
+  const mobileTopMarqueeTargetSpeedRef = useRef(42);
+  const mobileBottomMarqueeTrackRef = useRef<HTMLDivElement | null>(null);
+  const mobileBottomMarqueeGroupRef = useRef<HTMLUListElement | null>(null);
+  const mobileBottomMarqueeOffsetRef = useRef(0);
+  const mobileBottomMarqueeSpeedRef = useRef(48);
+  const mobileBottomMarqueeTargetSpeedRef = useRef(48);
   const buttonHoverClass =
     "transition-all duration-200 ease-out hover:-translate-y-0.5 hover:brightness-110";
   const revealClass = hasEntered ? "hero-enter hero-enter-active" : "hero-enter";
@@ -122,18 +87,111 @@ export function HeroSection() {
     { key: "adaptive", label: t("chips.adaptive") },
     { key: "crm", label: t("chips.crm") },
     { key: "messaging", label: t("chips.messaging") },
+    { key: "notifications", label: t("chips.notifications") },
+    { key: "domain", label: t("chips.domain") },
+    { key: "hosting", label: t("chips.hosting") },
+    { key: "seo", label: t("chips.seo") },
+    { key: "support", label: t("chips.support") },
     { key: "launch", label: t("chips.launch") },
   ];
-  const mobileChips = chips.slice(1).map((chip) =>
-    chip.key === "messaging"
-      ? { ...chip, label: t("chips.messagingMobile") }
-      : chip,
-  );
-  const mobileChipRows = [mobileChips.slice(0, 2), mobileChips.slice(2)];
+  const mobileTopChips = chips.filter((_, index) => index % 2 === 0);
+  const mobileBottomChips = chips.filter((_, index) => index % 2 === 1);
+
   useEffect(() => {
     const frameId = requestAnimationFrame(() => setHasEntered(true));
 
     return () => cancelAnimationFrame(frameId);
+  }, []);
+
+  useEffect(() => {
+    desktopMarqueeTargetSpeedRef.current = isMarqueePaused ? 0 : 42;
+    mobileTopMarqueeTargetSpeedRef.current = isMarqueePaused ? 0 : 42;
+    mobileBottomMarqueeTargetSpeedRef.current = isMarqueePaused ? 0 : 48;
+  }, [isMarqueePaused]);
+
+  useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      return;
+    }
+
+    const marquees = [
+      {
+        track: desktopMarqueeTrackRef.current,
+        group: desktopMarqueeGroupRef.current,
+        offsetRef: desktopMarqueeOffsetRef,
+        speedRef: desktopMarqueeSpeedRef,
+        targetSpeedRef: desktopMarqueeTargetSpeedRef,
+        direction: -1,
+      },
+      {
+        track: mobileTopMarqueeTrackRef.current,
+        group: mobileTopMarqueeGroupRef.current,
+        offsetRef: mobileTopMarqueeOffsetRef,
+        speedRef: mobileTopMarqueeSpeedRef,
+        targetSpeedRef: mobileTopMarqueeTargetSpeedRef,
+        direction: -1,
+      },
+      {
+        track: mobileBottomMarqueeTrackRef.current,
+        group: mobileBottomMarqueeGroupRef.current,
+        offsetRef: mobileBottomMarqueeOffsetRef,
+        speedRef: mobileBottomMarqueeSpeedRef,
+        targetSpeedRef: mobileBottomMarqueeTargetSpeedRef,
+        direction: -1,
+      },
+    ].filter(
+      (
+        item,
+      ): item is {
+        track: HTMLDivElement;
+        group: HTMLUListElement;
+        offsetRef: MutableRefObject<number>;
+        speedRef: MutableRefObject<number>;
+        targetSpeedRef: MutableRefObject<number>;
+        direction: 1 | -1;
+      } => Boolean(item.track && item.group),
+    );
+
+    marquees.forEach(({ track }) => {
+      track.style.transform = "translate3d(0, 0, 0)";
+    });
+
+    let animationFrameId = 0;
+    let lastTimestamp = 0;
+
+    const step = (timestamp: number) => {
+      if (!lastTimestamp) {
+        lastTimestamp = timestamp;
+      }
+
+      const deltaSeconds = (timestamp - lastTimestamp) / 1000;
+      lastTimestamp = timestamp;
+
+      marquees.forEach(({ track, group, offsetRef, speedRef, targetSpeedRef, direction }) => {
+        const groupWidth = group.offsetWidth;
+        if (groupWidth <= 0) {
+          return;
+        }
+
+        const speedDelta = targetSpeedRef.current - speedRef.current;
+        speedRef.current += speedDelta * Math.min(1, deltaSeconds * 6);
+        offsetRef.current =
+          (offsetRef.current + deltaSeconds * speedRef.current) % groupWidth;
+
+        const translateX =
+          direction === -1 ? -offsetRef.current : offsetRef.current - groupWidth;
+
+        track.style.transform = `translate3d(${translateX}px, 0, 0)`;
+      });
+
+      animationFrameId = window.requestAnimationFrame(step);
+    };
+
+    animationFrameId = window.requestAnimationFrame(step);
+
+    return () => {
+      window.cancelAnimationFrame(animationFrameId);
+    };
   }, []);
 
   return (
@@ -248,6 +306,66 @@ export function HeroSection() {
               </div>
             </div>
 
+            <div className={`${revealClass} hero-delay-6 mt-5 flex w-full flex-col gap-2 sm:hidden`}>
+              <div
+                className="flex w-full flex-col gap-2"
+                aria-label={t("orbit")}
+                onClick={() => {
+                  if (window.matchMedia("(hover: none), (pointer: coarse)").matches) {
+                    setIsMarqueePaused((value) => !value);
+                  }
+                }}
+              >
+                <div className="hero-chip-marquee w-full">
+                  <div ref={mobileTopMarqueeTrackRef} className="hero-chip-marquee__track">
+                    {[0, 1].map((copyIndex) => (
+                      <ul
+                        key={`mobile-top-${copyIndex}`}
+                        ref={copyIndex === 0 ? mobileTopMarqueeGroupRef : undefined}
+                        className="hero-chip-marquee__group"
+                        aria-hidden={copyIndex === 1}
+                      >
+                        {mobileTopChips.map((chip, index) => (
+                          <li key={`mobile-top-${copyIndex}-${chip.key}`} className="flex shrink-0 items-center gap-3">
+                            <HeroChip label={chip.label} className="shrink-0 px-3 py-2 text-[13px]" />
+                            {index < mobileTopChips.length - 1 ? (
+                              <span aria-hidden="true" className="text-[16px] leading-none text-[#efcb65]/72">
+                                •
+                              </span>
+                            ) : null}
+                          </li>
+                        ))}
+                      </ul>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="hero-chip-marquee w-full">
+                  <div ref={mobileBottomMarqueeTrackRef} className="hero-chip-marquee__track">
+                    {[0, 1].map((copyIndex) => (
+                      <ul
+                        key={`mobile-bottom-${copyIndex}`}
+                        ref={copyIndex === 0 ? mobileBottomMarqueeGroupRef : undefined}
+                        className="hero-chip-marquee__group"
+                        aria-hidden={copyIndex === 1}
+                      >
+                        {mobileBottomChips.map((chip, index) => (
+                          <li key={`mobile-bottom-${copyIndex}-${chip.key}`} className="flex shrink-0 items-center gap-3">
+                            <HeroChip label={chip.label} className="shrink-0 px-3 py-2 text-[13px]" />
+                            {index < mobileBottomChips.length - 1 ? (
+                              <span aria-hidden="true" className="text-[16px] leading-none text-[#efcb65]/72">
+                                •
+                              </span>
+                            ) : null}
+                          </li>
+                        ))}
+                      </ul>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+
             <p className={`${revealClass} hero-delay-3 mx-auto mt-7 max-w-[640px] text-center text-[15px] leading-[1.55] text-white/84 sm:hidden`}>
               {t("subtitle")}
             </p>
@@ -255,22 +373,6 @@ export function HeroSection() {
             <p className={`${revealClass} hero-delay-5 mx-auto mt-6 max-w-[345px] text-center text-[15px] leading-[1.62] text-white/72 sm:mt-9 sm:max-w-[560px] sm:text-[16px] sm:leading-[1.68] lg:mx-0 lg:mt-6 lg:text-left lg:text-[18px]`}>
               {t("description")}
             </p>
-
-            <div className={`${revealClass} hero-delay-6 mt-5 w-full sm:hidden`}>
-              <div className="flex flex-col gap-2.5">
-                {mobileChipRows.map((row, rowIndex) => (
-                  <ul key={`mobile-row-${rowIndex}`} className="flex w-full gap-2">
-                    {row.map((chip) => (
-                      <HeroChip
-                        key={chip.key}
-                        label={chip.label}
-                        className="min-w-0 flex-1 px-2.5 py-2 text-center text-[13px] leading-[1.15] tracking-[-0.02em] min-[390px]:text-[15px]"
-                      />
-                    ))}
-                  </ul>
-                ))}
-              </div>
-            </div>
 
             <div className={`${revealClass} hero-delay-6 mx-auto mt-6 flex w-full flex-col items-center gap-3 sm:mt-9 sm:max-w-none sm:flex-row sm:gap-4 lg:mx-0 lg:justify-start`}>
               <a
@@ -315,21 +417,49 @@ export function HeroSection() {
         </div>
 
         <div className={`${revealClass} hero-delay-6 flex w-full pt-6 sm:pt-7`}>
-          <div className="flex w-full flex-col gap-8 lg:flex-row lg:items-center lg:justify-between lg:gap-8">
-            <div className="w-full lg:w-auto">
-              <ul className="hidden flex-wrap gap-3 sm:flex">
-                {chips.map((chip) => (
-                  <HeroChip key={chip.key} label={chip.label} />
-                ))}
-              </ul>
-            </div>
-
-            <div className="flex w-full items-center justify-start sm:justify-center lg:w-auto lg:justify-end">
-              <div className="hidden lg:block">
-                <OrbitBadge label={t("orbit")} />
-              </div>
+          <div
+            className="hero-chip-marquee hidden w-full sm:block"
+            aria-label={t("orbit")}
+            onMouseEnter={() => {
+              if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+                desktopMarqueeTargetSpeedRef.current = 2;
+              }
+            }}
+            onMouseLeave={() => {
+              if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+                desktopMarqueeTargetSpeedRef.current = 42;
+              }
+            }}
+          >
+            <div ref={desktopMarqueeTrackRef} className="hero-chip-marquee__track">
+              {[0, 1].map((copyIndex) => (
+                <ul
+                  key={copyIndex}
+                  ref={copyIndex === 0 ? desktopMarqueeGroupRef : undefined}
+                  className="hero-chip-marquee__group"
+                  aria-hidden={copyIndex === 1}
+                >
+                  {chips.map((chip, index) => (
+                    <li key={`${copyIndex}-${chip.key}`} className="flex shrink-0 items-center gap-3">
+                      <HeroChip
+                        label={chip.label}
+                        className="shrink-0 px-3 py-2 text-[13px] sm:px-4 sm:text-[15px]"
+                      />
+                      {index < chips.length - 1 ? (
+                        <span
+                          aria-hidden="true"
+                          className="text-[16px] leading-none text-[#efcb65]/72"
+                        >
+                          •
+                        </span>
+                      ) : null}
+                    </li>
+                  ))}
+                </ul>
+              ))}
             </div>
           </div>
+
         </div>
       </div>
     </section>

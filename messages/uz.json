@@ -39,10 +39,15 @@
     "chips": {
       "languages": "RU / UZ / EN",
       "adaptive": "Adaptiv sayt",
-      "crm": "Murojaatlar uchun CRM",
+      "crm": "Lead CRM",
       "messaging": "Telegram / WhatsApp",
       "messagingMobile": "Telegram",
-      "launch": "Kalit topshirish asosida"
+      "notifications": "Bildirishnoma markazi",
+      "domain": "Domen",
+      "hosting": "Hosting",
+      "seo": "SEO sozlama",
+      "support": "Texnik yordam",
+      "launch": "Tayyor holat"
     },
     "orbit": "O'zbekistondagi biznes uchun sayt, CRM, Telegram va tayyor ishga tushirish",
     "placeholder": {
@@ -131,12 +136,12 @@
         "description": "Xizmatlaringiz, ish formatingiz va asosiy afzalliklaringiz ortiqcha chalkashliksiz aniq ko'rsatiladi."
       },
       "growth": {
-        "title": "O'sish uchun baza",
-        "description": "Keyinchalik reklama, targ'ibot va saytni rivojlantirishda tayanish mumkin bo'lgan asosga ega bo'lasiz."
+        "title": "Adaptiv sayt",
+        "description": "Sayt zamonaviy noutbuklar, planshetlar va smartfonlarga to'g'ri moslashadi, shuning uchun undan har qanday qurilmada qulay foydalanish mumkin."
       },
       "launch": {
-        "title": "Texnik chalkashliksiz ishga tushirish",
-        "description": "Domen, hosting, tillar va ishga tushirishning bazaviy mantiqi bitta tushunarli jarayonga yig'iladi."
+        "title": "Kerakli hamma narsa kiritilgan",
+        "description": "Domen, hosting, til versiyalari va ishga tushirishning asosiy sozlamalari bitta tushunarli yechimga jamlangan."
       }
     }
   },

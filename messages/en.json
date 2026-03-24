@@ -38,11 +38,16 @@
     "microcopy": "We reply within one business day. We will help you choose the right format and estimate the cost for your business.",
     "chips": {
       "languages": "RU / UZ / EN",
-      "adaptive": "Responsive website",
-      "crm": "CRM for leads",
+      "adaptive": "Responsive",
+      "crm": "Lead CRM",
       "messaging": "Telegram / WhatsApp",
       "messagingMobile": "Telegram",
-      "launch": "Turnkey launch"
+      "notifications": "Notification center",
+      "domain": "Domain",
+      "hosting": "Hosting",
+      "seo": "SEO setup",
+      "support": "Tech support",
+      "launch": "Turnkey"
     },
     "orbit": "Website, CRM, Telegram and turnkey launch for businesses in Uzbekistan",
     "placeholder": {
@@ -131,12 +136,12 @@
         "description": "Your services, work format and key advantages are presented clearly without unnecessary confusion."
       },
       "growth": {
-        "title": "A base for growth",
-        "description": "You get a foundation you can later use for ads, promotion and further website development."
+        "title": "Responsive website",
+        "description": "The website adapts correctly to modern laptops, tablets and smartphones, so it stays convenient to use on any device."
       },
       "launch": {
-        "title": "Launch without technical chaos",
-        "description": "Domain, hosting, languages and the base launch logic are assembled into one understandable process."
+        "title": "Everything you need is included",
+        "description": "Domain, hosting, language versions and the core launch setup are already assembled into one clear solution."
       }
     }
   },
