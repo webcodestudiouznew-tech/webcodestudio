@@ -1,17 +1,22 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useRef, useState, useTransition } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { submitLeadForm } from "@/app/actions/lead-form";
 import { trackEvent } from "@/lib/analytics";
+import { getLocalizedPath, type SiteLocale } from "@/lib/seo";
 
 const leadFormSchema = z.object({
   name: z.string().trim().min(2),
   phone: z.string().trim().regex(/^[+\d][\d\s()-]{7,20}$/),
   telegram: z.string().trim().max(120).optional().or(z.literal("")),
   niche: z.string().trim().max(160).optional().or(z.literal("")),
+  privacyAccepted: z.boolean().refine((value) => value, {
+    message: "privacy_required",
+  }),
 });
 
 type LeadFormValues = z.infer<typeof leadFormSchema>;
@@ -39,6 +44,11 @@ export type LeadFormCopy = {
     idle: string;
     pending: string;
   };
+  privacy: {
+    labelPrefix: string;
+    linkLabel: string;
+    labelSuffix: string;
+  };
   success: {
     title: string;
     description: string;
@@ -51,6 +61,7 @@ export type LeadFormCopy = {
   errors: {
     requiredName: string;
     requiredPhone: string;
+    requiredPrivacyAccepted: string;
     invalidPhone: string;
     submitFailed: string;
   };
@@ -102,6 +113,7 @@ export function LeadForm({
       phone: "",
       telegram: "",
       niche: "",
+      privacyAccepted: false,
     },
   });
 
@@ -143,12 +155,14 @@ export function LeadForm({
 
     startTransition(async () => {
       trackEvent("form_submit", { section: trackingSection });
+      const { privacyAccepted, ...submissionValues } = values;
+      void privacyAccepted;
 
       try {
         const result = await submitLeadForm({
           locale,
           tariff: selectedTariff ?? "",
-          ...values,
+          ...submissionValues,
         });
 
         if (!result.ok) {
@@ -269,6 +283,35 @@ export function LeadForm({
               placeholder={copy.placeholders.niche}
             />
           </label>
+
+          <div className="rounded-[16px] border border-white/8 bg-white/[0.03] p-4">
+            <label className="flex cursor-pointer items-start gap-3">
+              <input
+                {...register("privacyAccepted")}
+                type="checkbox"
+                className="mt-0.5 h-4 w-4 shrink-0 rounded border border-white/16 bg-[#12100e]/82 accent-[#efcb65]"
+              />
+              <span className="text-[13px] leading-[1.6] text-white/72">
+                {copy.privacy.labelPrefix}{" "}
+                <Link
+                  href={getLocalizedPath(locale as SiteLocale, "/privacy-policy")}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="font-medium text-[#f3d986] underline decoration-[#8a7030]/65 underline-offset-4 transition-colors hover:text-[#f7e39d]"
+                >
+                  {copy.privacy.linkLabel}
+                </Link>{" "}
+                {copy.privacy.labelSuffix}
+              </span>
+            </label>
+            <FieldError
+              message={
+                errors.privacyAccepted
+                  ? copy.errors.requiredPrivacyAccepted
+                  : undefined
+              }
+            />
+          </div>
 
           <button
             type="submit"

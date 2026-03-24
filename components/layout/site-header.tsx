@@ -92,10 +92,10 @@ export function SiteHeader() {
   const navItems = [
     { href: "#why-webcode", label: t("nav.whyWebcode") },
     { href: "#audience", label: t("nav.audience") },
+    { href: "#solution-includes", label: t("nav.includes") },
     { href: "#cases", label: t("nav.cases") },
     { href: "#pricing", label: t("nav.pricing") },
     { href: "#faq", label: t("nav.faq") },
-    { href: "#contacts", label: t("nav.contacts") },
   ];
 
   useEffect(() => {

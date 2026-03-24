@@ -26,6 +26,11 @@ export function createLeadFormCopy(t: TranslationGetter): LeadFormCopy {
       idle: t("form.button.idle"),
       pending: t("form.button.pending"),
     },
+    privacy: {
+      labelPrefix: t("form.privacy.labelPrefix"),
+      linkLabel: t("form.privacy.linkLabel"),
+      labelSuffix: t("form.privacy.labelSuffix"),
+    },
     success: {
       title: t("form.success.title"),
       description: t("form.success.description"),
@@ -38,6 +43,7 @@ export function createLeadFormCopy(t: TranslationGetter): LeadFormCopy {
     errors: {
       requiredName: t("form.errors.requiredName"),
       requiredPhone: t("form.errors.requiredPhone"),
+      requiredPrivacyAccepted: t("form.errors.requiredPrivacyAccepted"),
       invalidPhone: t("form.errors.invalidPhone"),
       submitFailed: t("form.errors.submitFailed"),
     },

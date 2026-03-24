@@ -42,6 +42,7 @@
     "nav": {
       "whyWebcode": "Nega WebCode",
       "audience": "Kimlar uchun",
+      "includes": "Nimalar kiradi",
       "cases": "Keyslar",
       "pricing": "Tariflar",
       "faq": "FAQ",
@@ -604,6 +605,11 @@
         "idle": "Ariza yuborish",
         "pending": "Yuborilmoqda..."
       },
+      "privacy": {
+        "labelPrefix": "Men",
+        "linkLabel": "Maxfiylik siyosati",
+        "labelSuffix": "bilan tanishdim va arizani yuborishim mumkinligini tasdiqlayman."
+      },
       "success": {
         "title": "Ariza yuborildi",
         "description": "Rahmat. Arizangizni oldik va ish kuni ichida siz bilan bog'lanamiz."
@@ -616,6 +622,7 @@
       "errors": {
         "requiredName": "Ismingizni kiriting.",
         "requiredPhone": "Telefon raqamingizni kiriting.",
+        "requiredPrivacyAccepted": "Maxfiylik siyosati bilan tanishganingizni tasdiqlang.",
         "invalidPhone": "Telefon formatini tekshiring.",
         "submitFailed": "Arizani yuborib bo'lmadi. Yana urinib ko'ring yoki Telegram orqali yozing."
       }

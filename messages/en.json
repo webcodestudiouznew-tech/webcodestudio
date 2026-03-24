@@ -42,6 +42,7 @@
     "nav": {
       "whyWebcode": "Why WebCode",
       "audience": "Who it's for",
+      "includes": "What is included",
       "cases": "Cases",
       "pricing": "Pricing",
       "faq": "FAQ",
@@ -604,6 +605,11 @@
         "idle": "Send request",
         "pending": "Sending..."
       },
+      "privacy": {
+        "labelPrefix": "I have read the",
+        "linkLabel": "Privacy Policy",
+        "labelSuffix": "and confirm that I can submit this request."
+      },
       "success": {
         "title": "Request sent",
         "description": "Thank you. We received your request and will contact you within one business day."
@@ -616,6 +622,7 @@
       "errors": {
         "requiredName": "Please enter your name.",
         "requiredPhone": "Please enter your phone number.",
+        "requiredPrivacyAccepted": "Please confirm that you have read the Privacy Policy.",
         "invalidPhone": "Please check the phone number format.",
         "submitFailed": "We could not send your request. Please try again or message us on Telegram."
       }
