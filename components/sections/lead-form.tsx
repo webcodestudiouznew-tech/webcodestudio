@@ -210,79 +210,79 @@ export function LeadForm({
           <h3 className="font-[var(--font-manrope)] text-[24px] font-medium leading-[1.08] tracking-[-0.04em] text-white sm:text-[27px]">
             {copy.formTitle}
           </h3>
-          <p className="mt-3 max-w-[48ch] text-[14px] leading-[1.68] text-white/62 sm:text-[15px]">
+          <p className="mt-3 w-full max-w-none text-[14px] leading-[1.68] text-white/62 sm:text-[15px]">
             {copy.formDescription}
           </p>
         </div>
 
         <form onSubmit={onSubmit} className="mt-6 grid gap-4">
-          <label className="block">
-            <span className="text-[13px] font-medium text-white/76">
-              {copy.fields.name}{" "}
-              <span className="text-[#efcb65]">{copy.helper.required}</span>
-            </span>
-            <input
-              {...register("name", {
-                required: copy.errors.requiredName,
-              })}
-              autoComplete="name"
-              className="mt-2 h-12 w-full rounded-[14px] border border-white/10 bg-[#12100e]/82 px-4 text-[15px] text-white outline-none transition-colors duration-200 placeholder:text-white/28 focus:border-[#8a7030]/70"
-              placeholder={copy.placeholders.name}
-            />
-            <FieldError
-              message={errors.name ? copy.errors.requiredName : undefined}
-            />
-          </label>
+          <div className="grid gap-4 lg:grid-cols-2">
+            <label className="block">
+              <span className="text-[13px] font-medium text-white/76">
+                {copy.fields.name}{" "}
+                <span className="text-[#efcb65]">{copy.helper.required}</span>
+              </span>
+              <input
+                {...register("name", {
+                  required: copy.errors.requiredName,
+                })}
+                autoComplete="name"
+                className="mt-2 h-12 w-full rounded-[14px] border border-white/10 bg-[#12100e]/82 px-4 text-[15px] text-white outline-none transition-colors duration-200 placeholder:text-white/28 focus:border-[#8a7030]/70"
+                placeholder={copy.placeholders.name}
+              />
+              <FieldError
+                message={errors.name ? copy.errors.requiredName : undefined}
+              />
+            </label>
 
-          <label className="block">
-            <span className="text-[13px] font-medium text-white/76">
-              {copy.fields.phone}{" "}
-              <span className="text-[#efcb65]">{copy.helper.required}</span>
-            </span>
-            <input
-              {...register("phone", {
-                required: copy.errors.requiredPhone,
-              })}
-              autoComplete="tel"
-              className="mt-2 h-12 w-full rounded-[14px] border border-white/10 bg-[#12100e]/82 px-4 text-[15px] text-white outline-none transition-colors duration-200 placeholder:text-white/28 focus:border-[#8a7030]/70"
-              placeholder={copy.placeholders.phone}
-            />
-            <FieldError
-              message={
-                errors.phone
-                  ? errors.phone.type === "required"
-                    ? copy.errors.requiredPhone
-                    : copy.errors.invalidPhone
-                  : undefined
-              }
-            />
-          </label>
+            <label className="block">
+              <span className="text-[13px] font-medium text-white/76">
+                {copy.fields.phone}{" "}
+                <span className="text-[#efcb65]">{copy.helper.required}</span>
+              </span>
+              <input
+                {...register("phone", {
+                  required: copy.errors.requiredPhone,
+                })}
+                autoComplete="tel"
+                className="mt-2 h-12 w-full rounded-[14px] border border-white/10 bg-[#12100e]/82 px-4 text-[15px] text-white outline-none transition-colors duration-200 placeholder:text-white/28 focus:border-[#8a7030]/70"
+                placeholder={copy.placeholders.phone}
+              />
+              <FieldError
+                message={
+                  errors.phone
+                    ? errors.phone.type === "required"
+                      ? copy.errors.requiredPhone
+                      : copy.errors.invalidPhone
+                    : undefined
+                }
+              />
+            </label>
 
-          <label className="block">
-            <span className="text-[13px] font-medium text-white/76">
-              {copy.fields.telegram}{" "}
-              <span className="text-white/34">{copy.helper.optional}</span>
-            </span>
-            <input
-              {...register("telegram")}
-              autoComplete="off"
-              className="mt-2 h-12 w-full rounded-[14px] border border-white/10 bg-[#12100e]/82 px-4 text-[15px] text-white outline-none transition-colors duration-200 placeholder:text-white/28 focus:border-[#8a7030]/70"
-              placeholder={copy.placeholders.telegram}
-            />
-          </label>
+            <label className="block">
+              <span className="text-[13px] font-medium text-white/76">
+                {copy.fields.telegram}
+              </span>
+              <input
+                {...register("telegram")}
+                autoComplete="off"
+                className="mt-2 h-12 w-full rounded-[14px] border border-white/10 bg-[#12100e]/82 px-4 text-[15px] text-white outline-none transition-colors duration-200 placeholder:text-white/28 focus:border-[#8a7030]/70"
+                placeholder={copy.placeholders.telegram}
+              />
+            </label>
 
-          <label className="block">
-            <span className="text-[13px] font-medium text-white/76">
-              {copy.fields.niche}{" "}
-              <span className="text-white/34">{copy.helper.optional}</span>
-            </span>
-            <input
-              {...register("niche")}
-              autoComplete="organization-title"
-              className="mt-2 h-12 w-full rounded-[14px] border border-white/10 bg-[#12100e]/82 px-4 text-[15px] text-white outline-none transition-colors duration-200 placeholder:text-white/28 focus:border-[#8a7030]/70"
-              placeholder={copy.placeholders.niche}
-            />
-          </label>
+            <label className="block">
+              <span className="text-[13px] font-medium text-white/76">
+                {copy.fields.niche}
+              </span>
+              <input
+                {...register("niche")}
+                autoComplete="organization-title"
+                className="mt-2 h-12 w-full rounded-[14px] border border-white/10 bg-[#12100e]/82 px-4 text-[15px] text-white outline-none transition-colors duration-200 placeholder:text-white/28 focus:border-[#8a7030]/70"
+                placeholder={copy.placeholders.niche}
+              />
+            </label>
+          </div>
 
           <div className="rounded-[16px] border border-white/8 bg-white/[0.03] p-4">
             <label className="flex cursor-pointer items-start gap-3">

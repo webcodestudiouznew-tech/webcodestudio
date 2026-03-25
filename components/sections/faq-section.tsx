@@ -1,6 +1,6 @@
 import { getTranslations } from "next-intl/server";
-import { CasesAccordionItem } from "@/components/sections/cases-accordion-item";
-import { Reveal, StaggerGroup, StaggerItem } from "@/components/ui/scroll-reveal";
+import { FaqAccordionGrid } from "@/components/sections/faq-accordion-grid";
+import { Reveal } from "@/components/ui/scroll-reveal";
 
 type FaqKey =
   | "start"
@@ -37,6 +37,10 @@ const faqKeys: FaqKey[] = [
 
 export async function FaqSection({ locale }: { locale: string }) {
   const t = await getTranslations({ locale, namespace: "Faq" });
+  const items = faqKeys.map((item) => ({
+    answer: t(`items.${item}.answer`),
+    question: t(`items.${item}.question`),
+  }));
 
   return (
     <section
@@ -58,23 +62,7 @@ export async function FaqSection({ locale }: { locale: string }) {
           </p>
         </Reveal>
 
-        <StaggerGroup className="grid gap-1.5 lg:gap-2" delayChildren={0.05} staggerChildren={0.05}>
-          {faqKeys.map((item, index) => (
-            <StaggerItem key={item}>
-              <CasesAccordionItem
-                buttonClassName="transition-all duration-200 ease-out hover:bg-white/[0.05]"
-                className="rounded-none transition-all duration-200 ease-out hover:border-[#8a7030]/38 hover:bg-white/[0.03]"
-                defaultOpen={index === 0}
-                titleClassName="transition-colors duration-200 ease-out hover:text-white"
-                title={t(`items.${item}.question`)}
-              >
-                <p className="text-[14px] leading-[1.62] text-white/66">
-                  {t(`items.${item}.answer`)}
-                </p>
-              </CasesAccordionItem>
-            </StaggerItem>
-          ))}
-        </StaggerGroup>
+        <FaqAccordionGrid items={items} />
       </div>
     </section>
   );

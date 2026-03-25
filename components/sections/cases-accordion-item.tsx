@@ -7,6 +7,8 @@ type CasesAccordionItemProps = {
   children: React.ReactNode;
   className?: string;
   defaultOpen?: boolean;
+  onToggle?: () => void;
+  open?: boolean;
   titleClassName?: string;
   title: string;
 };
@@ -33,13 +35,16 @@ export function CasesAccordionItem({
   children,
   className = "",
   defaultOpen = false,
+  onToggle,
+  open: controlledOpen,
   titleClassName = "",
   title,
 }: CasesAccordionItemProps) {
-  const [open, setOpen] = useState(defaultOpen);
+  const [uncontrolledOpen, setUncontrolledOpen] = useState(defaultOpen);
   const [contentHeight, setContentHeight] = useState(0);
   const contentRef = useRef<HTMLDivElement | null>(null);
   const contentId = useId();
+  const open = controlledOpen ?? uncontrolledOpen;
 
   useEffect(() => {
     const element = contentRef.current;
@@ -61,16 +66,24 @@ export function CasesAccordionItem({
   }, []);
 
   return (
-    <div className={`overflow-hidden rounded-[16px] border border-white/8 bg-white/[0.025] ${className}`}>
+    <div className={`h-full overflow-hidden rounded-[16px] border border-white/8 bg-white/[0.025] ${className}`}>
       <button
         type="button"
         aria-expanded={open}
         aria-controls={contentId}
-        onClick={() => setOpen((current) => !current)}
+        onClick={() => {
+          if (onToggle) {
+            onToggle();
+            return;
+          }
+
+          setUncontrolledOpen((current) => !current);
+        }}
         className={`flex w-full items-center justify-between gap-3 px-4 py-3 text-left ${buttonClassName}`}
       >
-        <span className={`text-[14px] font-semibold tracking-[-0.02em] text-white/84 ${titleClassName}`}>
-          {title}
+        <span className={`flex items-center gap-2 text-[14px] font-semibold tracking-[-0.02em] text-white/84 ${titleClassName}`}>
+          <span aria-hidden="true" className="h-1.5 w-1.5 shrink-0 rounded-full bg-current" />
+          <span>{title}</span>
         </span>
         <ChevronIcon open={open} />
       </button>
