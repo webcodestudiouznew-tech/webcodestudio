@@ -132,24 +132,24 @@ function DesktopHeader({ visible }: { visible?: boolean }) {
         visible ? "border border-white/8 bg-[#24231f]/74" : "border-transparent bg-transparent"
       }`}
     >
-      <div className="flex w-full min-w-0 items-center justify-between gap-4">
-        <div className="min-w-0 flex-[1.15]">
+      <div className="relative grid w-full min-w-0 grid-cols-[minmax(0,auto)_1fr_auto] items-center gap-4">
+        <div className="min-w-0">
           <HeaderLogo compact={visible} />
         </div>
 
-        <nav className="flex min-w-0 flex-1 items-center justify-center gap-4 text-[13px] font-medium text-white/78 xl:gap-6 xl:text-[14px]">
+        <nav className="relative z-30 flex min-w-0 items-center justify-center gap-3 text-[12px] font-medium text-white/78 xl:gap-6 xl:text-[14px]">
           {navItems.map((item) => (
             <a
               key={item.href}
               href={item.href}
-              className="whitespace-nowrap transition-all duration-200 ease-out hover:-translate-y-0.5 hover:text-white"
+              className="relative z-30 whitespace-nowrap px-1 py-2 pointer-events-auto transition-all duration-200 ease-out hover:-translate-y-0.5 hover:text-white"
             >
               {item.label}
             </a>
           ))}
         </nav>
 
-        <div className="flex flex-[0.95] items-center justify-end gap-2">
+        <div className="relative z-10 flex shrink-0 items-center justify-end gap-2">
           <LocaleSwitcher buttonClassName="flex min-w-[58px] items-center justify-center rounded-[10px] px-3 py-2 text-[13px] font-semibold text-[#f2e7b4] transition-all duration-200 ease-out hover:-translate-y-0.5 hover:brightness-110" />
           <LeadModalTrigger
             className="whitespace-nowrap rounded-[10px] border border-[#8c7636] bg-[#3b372d]/38 px-4 py-2 text-[13px] font-semibold text-[#f2e7b4] shadow-[inset_0_1px_0_rgba(255,255,255,0.06)] transition-all duration-200 ease-out hover:-translate-y-0.5 hover:brightness-110"
@@ -226,7 +226,7 @@ function MobileHeader({ visible }: { visible?: boolean }) {
 export function SiteHeaderResizable() {
   return (
     <header id="top" className="relative z-30 w-full pt-4 text-white sm:pt-6 lg:pt-[33px]">
-      <Navbar className="top-0 z-[90] px-5 sm:px-6 lg:px-[100px]">
+      <Navbar className="top-0 z-[90] px-5 sm:px-6 lg:px-6 xl:px-[100px]">
         <DesktopHeader />
         <MobileHeader />
       </Navbar>

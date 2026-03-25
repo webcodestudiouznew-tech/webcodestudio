@@ -297,7 +297,7 @@ export function LeadForm({
                   href={getLocalizedPath(locale as SiteLocale, "/privacy-policy")}
                   target="_blank"
                   rel="noreferrer"
-                  className="font-medium text-[#f3d986] underline decoration-[#8a7030]/65 underline-offset-4 transition-colors hover:text-[#f7e39d]"
+                  className="font-semibold !text-[#efcb65] underline decoration-[#efcb65]/75 underline-offset-4 transition-colors hover:!text-[#f7e39d]"
                 >
                   {copy.privacy.linkLabel}
                 </Link>{" "}

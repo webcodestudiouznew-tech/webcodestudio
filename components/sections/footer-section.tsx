@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { getTranslations } from "next-intl/server";
 import { TrackedContactLink } from "@/components/shared/tracked-contact-link";
-import { Reveal, StaggerGroup, StaggerItem } from "@/components/ui/scroll-reveal";
+import { StaggerGroup, StaggerItem } from "@/components/ui/scroll-reveal";
 import { contactLinks, getWhatsAppUrl } from "@/lib/contact-links";
 import { getLocalizedPath, type SiteLocale } from "@/lib/seo";
 
@@ -11,7 +11,7 @@ const LOGO_SRC = "/logo_new_2.png?v=20260319";
 const footerNavColumns = [
   ["whyWebcode", "audience", "benefits"],
   ["includes", "cases", "pricing"],
-  ["process", "faq", "contacts"],
+  ["process", "faq"],
 ] as const;
 
 const footerNavHrefMap = {
@@ -23,7 +23,6 @@ const footerNavHrefMap = {
   pricing: "#pricing",
   process: "#process",
   faq: "#faq",
-  contacts: "#contacts",
 } as const;
 
 function TelegramIcon() {
@@ -115,9 +114,9 @@ export async function FooterSection({ locale }: { locale: string }) {
           </StaggerItem>
 
           <StaggerItem>
-            <div className="grid justify-center gap-y-2 sm:grid-cols-3 sm:gap-x-8 sm:gap-y-2 lg:justify-start">
+            <div className="grid items-start justify-center gap-y-2 sm:grid-cols-3 sm:gap-x-8 sm:gap-y-2 lg:justify-start">
             {footerNavColumns.map((column, index) => (
-              <nav key={`footer-nav-${index}`} className="grid justify-items-center gap-1.5 sm:justify-items-start">
+              <nav key={`footer-nav-${index}`} className="grid self-start justify-items-center gap-1.5 sm:justify-items-start">
                 {column.map((item) => (
                   <a
                     key={item}
@@ -134,16 +133,16 @@ export async function FooterSection({ locale }: { locale: string }) {
           </StaggerItem>
         </StaggerGroup>
 
-        <Reveal className="flex flex-col items-center gap-3 border-t border-white/6 pt-4 text-center text-[13px] text-white/42 sm:flex-row sm:justify-between sm:text-left" y={20}>
+        <div className="flex flex-col items-center gap-3 rounded-[18px] border border-white/8 bg-white/[0.025] px-4 py-4 text-center text-[13px] text-white/58 shadow-[0_12px_30px_rgba(0,0,0,0.12)] sm:flex-row sm:justify-between sm:px-5 sm:text-left">
           <Link
             href={getLocalizedPath(typedLocale, "/privacy-policy")}
-            className="w-fit transition-colors duration-200 hover:text-white/68"
+            className="w-fit transition-colors duration-200 hover:text-white"
           >
             {t("privacy")}
           </Link>
 
-          <p>{t("copyright", { year: currentYear })}</p>
-        </Reveal>
+          <p className="text-white/52">{t("copyright", { year: currentYear })}</p>
+        </div>
       </div>
     </footer>
   );

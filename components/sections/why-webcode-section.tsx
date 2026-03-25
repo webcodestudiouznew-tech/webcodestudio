@@ -127,7 +127,7 @@ export async function WhyWebCodeSection({ locale }: { locale: string }) {
   return (
     <section
       id="why-webcode"
-      className="relative w-full overflow-hidden bg-[linear-gradient(180deg,#1f1d1a_0%,#1b1916_100%)] py-14 text-white sm:py-20 lg:py-24"
+      className="relative w-full scroll-mt-24 overflow-hidden bg-[linear-gradient(180deg,#1f1d1a_0%,#1b1916_100%)] py-14 text-white sm:scroll-mt-28 sm:py-20 lg:scroll-mt-32 lg:py-24"
     >
       <div className="absolute inset-x-0 top-0 h-px bg-[linear-gradient(90deg,transparent,rgba(212,175,74,0.42),transparent)]" />
       <div className="absolute right-[-4%] top-[10%] h-[320px] w-[320px] rounded-full bg-[#d4af4a]/10 blur-[140px]" />

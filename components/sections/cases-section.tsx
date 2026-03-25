@@ -75,7 +75,7 @@ export async function CasesSection({ locale }: { locale: string }) {
   return (
     <section
       id="cases"
-      className="relative w-full overflow-hidden bg-[linear-gradient(180deg,#171512_0%,#12100d_100%)] py-16 text-white sm:py-20 lg:py-24"
+      className="relative w-full scroll-mt-24 overflow-hidden bg-[linear-gradient(180deg,#171512_0%,#12100d_100%)] py-16 text-white sm:scroll-mt-28 sm:py-20 lg:scroll-mt-32 lg:py-24"
     >
       <div className="absolute inset-x-0 top-0 h-px bg-[linear-gradient(90deg,transparent,rgba(212,175,74,0.34),transparent)]" />
       <div className="absolute left-[-4%] top-[12%] h-[280px] w-[280px] rounded-full bg-[#d4af4a]/8 blur-[150px]" />
