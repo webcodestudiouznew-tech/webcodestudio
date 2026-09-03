@@ -1,6 +1,7 @@
 # log.md
 
 ## 2026-09-03
+- Подключение Project Brief к `Notion` проверено: база `Briefs` доступна через `NOTION_BRIEF_DATABASE_ID`, схема properties совпадает с mapping, тестовая запись `TEST WebCode Brief Demo` успешно создана со структурированным body страницы; Telegram summary доставлен.
 - Сохранение Project Brief в `Notion` улучшено: помимо database properties теперь создаётся тело страницы с разделами и человекочитаемыми ответами, чтобы бриф было удобно читать прямо внутри записи.
 - CTA на Project Brief вынесен из `LeadSection` в отдельный блок `BriefCtaSection`, подключенный на главной странице перед `Footer`.
 - Реализован первичный мультиязычный Project Brief WebCode как отдельный route `/[locale]/brief` для `RU / UZ / EN`: пошаговый wizard, progress indicator, локальный draft в `localStorage`, prefill из query parameters и success screen с возвратом на основной сайт.
