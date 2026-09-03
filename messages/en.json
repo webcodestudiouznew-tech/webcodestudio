@@ -628,6 +628,307 @@
       }
     }
   },
+  "BriefCta": {
+    "eyebrow": "Project Brief",
+    "title": "Ready to share more about the project?",
+    "description": "Fill in the initial brief in a few minutes. We will understand the task, materials and timeline faster and suggest the right website format.",
+    "cta": "Fill in the brief",
+    "points": {
+      "business": {
+        "title": "Understand the business",
+        "description": "What you sell, who you sell to and why clients choose you."
+      },
+      "scope": {
+        "title": "Estimate the scope",
+        "description": "Which pages, languages, materials and special functions may be needed."
+      },
+      "nextStep": {
+        "title": "Prepare the next step",
+        "description": "We will suggest the website format, work structure and basis for pricing."
+      }
+    }
+  },
+  "ProjectBrief": {
+    "metadata": {
+      "title": "Website Project Brief for Business | WebCode",
+      "description": "WebCode client brief: tell us about your business, goals, materials and timeline so we can suggest the right website format."
+    },
+    "wizard": {
+      "header": {
+        "tagline": "initial project brief",
+        "backToSite": "Back to website"
+      },
+      "locale": {
+        "label": "Language switcher"
+      },
+      "welcome": {
+        "eyebrow": "Project Brief",
+        "title": "Tell us about your project",
+        "description": "Answer a few questions about your business and goals. This will help us understand the project and suggest the right website format. It usually takes about 5 minutes.",
+        "duration": "4-6 minutes",
+        "start": "Start"
+      },
+      "progress": {
+        "step": "Step",
+        "of": "of"
+      },
+      "navigation": {
+        "back": "Back",
+        "next": "Continue",
+        "submit": "Submit brief",
+        "submitting": "Sending..."
+      },
+      "success": {
+        "eyebrow": "Brief received",
+        "title": "Thank you. We received your project details",
+        "description": "We will review your answers and suggest the right website format and next step.",
+        "telegram": "Message on Telegram",
+        "whatsapp": "Message on WhatsApp",
+        "backToSite": "Back to website"
+      },
+      "errors": {
+        "required": "Please fill in this field.",
+        "requiredChoice": "Please choose an option.",
+        "maxTwo": "Choose no more than two options.",
+        "invalidPhone": "Please check the phone number format.",
+        "invalidUrl": "Please check the link. You can add multiple links on separate lines.",
+        "invalidDate": "Please choose the launch date.",
+        "privacy": "Please confirm that you agree to the Privacy Policy.",
+        "submitFailed": "We could not submit the brief. Please try again or message us on Telegram."
+      },
+      "steps": {
+        "business": {
+          "eyebrow": "Business",
+          "title": "Business",
+          "description": "Briefly describe the company, project and current online touchpoints."
+        },
+        "goals": {
+          "eyebrow": "Website goal",
+          "title": "Website goal",
+          "description": "What the website should do first and which action it should lead visitors to."
+        },
+        "offer": {
+          "eyebrow": "Offer",
+          "title": "What you sell",
+          "description": "Which products or services should be shown and how broad the website structure may be."
+        },
+        "audience": {
+          "eyebrow": "Clients",
+          "title": "Clients and positioning",
+          "description": "Who you sell to, where your clients are and why they choose your business."
+        },
+        "proof": {
+          "eyebrow": "Trust",
+          "title": "Trust and materials",
+          "description": "What can already be used for the website: testimonials, cases, photos, copy and material links."
+        },
+        "scope": {
+          "eyebrow": "Scope",
+          "title": "Scope and functionality",
+          "description": "Choose an approximate website format and any special functions beyond a standard lead flow."
+        },
+        "timing": {
+          "eyebrow": "Direction",
+          "title": "References and timeline",
+          "description": "References, competitors, desired timeline and anything important before estimation."
+        },
+        "contacts": {
+          "eyebrow": "Contacts",
+          "title": "Contacts",
+          "description": "Leave your details so we can get back with questions and the next step."
+        }
+      },
+      "fields": {
+        "company_name": {
+          "label": "Company / project name",
+          "placeholder": "For example: WebCode"
+        },
+        "business_description": {
+          "label": "What does your business do?",
+          "placeholder": "Briefly explain what you sell or which services you provide.",
+          "helper": "2-4 sentences are enough."
+        },
+        "current_links": {
+          "label": "Do you already have a website or social pages?",
+          "placeholder": "Website, Instagram, Telegram or other links. You can put each link on a new line."
+        },
+        "site_goals": {
+          "label": "What should the website do first?",
+          "helper": "Choose up to two options."
+        },
+        "primary_action": {
+          "label": "What is the main action a visitor should take?"
+        },
+        "offer_description": {
+          "label": "Which products or services should be shown on the website?",
+          "placeholder": "You can simply list the main directions."
+        },
+        "service_count": {
+          "label": "How many main directions / services should be presented?"
+        },
+        "audience_description": {
+          "label": "Who is your main client?",
+          "placeholder": "For example: business owners, parents, construction companies, clinics, Tashkent residents."
+        },
+        "geography": {
+          "label": "Where are your clients located?"
+        },
+        "differentiators": {
+          "label": "Why should a client choose you?",
+          "placeholder": "Experience, price, speed, quality, warranty, technology, team, service or another advantage."
+        },
+        "needs_positioning_help": {
+          "label": "Positioning help",
+          "action": "I need help formulating this"
+        },
+        "proof_assets": {
+          "label": "What proof do you already have?"
+        },
+        "available_materials": {
+          "label": "Which materials are already ready?"
+        },
+        "materials_url": {
+          "label": "Link to materials",
+          "placeholder": "Google Drive, Dropbox, website, Telegram and so on."
+        },
+        "scope_preference": {
+          "label": "What website format do you roughly have in mind?"
+        },
+        "extra_features": {
+          "label": "Do you need any special functions?"
+        },
+        "launch_languages": {
+          "label": "Which languages are needed at launch?"
+        },
+        "reference_sites": {
+          "label": "Are there websites you like?",
+          "placeholder": "You can send 1-3 links and briefly explain what you like."
+        },
+        "competitor_sites": {
+          "label": "Main competitors",
+          "placeholder": "Links or company names."
+        },
+        "desired_timeline": {
+          "label": "When would you like to launch the website?"
+        },
+        "desired_launch_date": {
+          "label": "Specific date"
+        },
+        "additional_notes": {
+          "label": "What else should we know?",
+          "placeholder": "Any details, constraints or wishes."
+        },
+        "contact_name": {
+          "label": "Name",
+          "placeholder": "How should we address you"
+        },
+        "phone": {
+          "label": "Phone",
+          "placeholder": "+998 90 123 45 67"
+        },
+        "telegram": {
+          "label": "Telegram",
+          "placeholder": "@username"
+        },
+        "preferred_contact": {
+          "label": "How is it best to contact you?"
+        },
+        "privacy_consent": {
+          "label": "I have read the",
+          "action": "Privacy Policy"
+        }
+      },
+      "options": {
+        "site_goals": {
+          "get_leads": "Collect inquiries",
+          "present_company": "Present the company and services",
+          "increase_trust": "Increase trust in the business",
+          "sell_product": "Sell a product or service",
+          "ad_clients": "Bring clients from ads",
+          "book_clients": "Book clients",
+          "other": "Other"
+        },
+        "primary_action": {
+          "submit_request": "Submit a request",
+          "message_messenger": "Message on Telegram / WhatsApp",
+          "call": "Call",
+          "book_meeting": "Book a meeting / service",
+          "buy": "Buy",
+          "request_quote": "Request an estimate / proposal",
+          "other": "Other"
+        },
+        "service_count": {
+          "one": "1",
+          "two_three": "2-3",
+          "four_six": "4-6",
+          "seven_plus": "7 or more",
+          "unknown": "I do not know yet"
+        },
+        "geography": {
+          "tashkent": "Tashkent",
+          "uzbekistan": "All Uzbekistan",
+          "other_countries": "Other countries",
+          "other": "Other"
+        },
+        "proof_assets": {
+          "testimonials": "Client testimonials",
+          "cases": "Cases",
+          "known_clients": "Known clients",
+          "numbers": "Numbers / results",
+          "certificates": "Certificates / awards",
+          "portfolio": "Portfolio",
+          "photos_videos": "Photos / videos of work",
+          "none": "Nothing yet"
+        },
+        "available_materials": {
+          "logo": "Logo",
+          "brand_colors": "Brand colors / brandbook",
+          "texts": "Copy",
+          "photos": "Photos",
+          "videos": "Video",
+          "presentation": "Presentation / catalog",
+          "cases": "Cases",
+          "testimonials": "Testimonials",
+          "none": "Nothing yet"
+        },
+        "scope_preference": {
+          "compact_one_page": "Compact one-page website",
+          "detailed_landing": "Detailed landing page",
+          "multi_page": "Website with several pages",
+          "refresh_existing": "We need to update an existing website",
+          "need_recommendation": "Not sure - need a recommendation"
+        },
+        "extra_features": {
+          "online_booking": "Online booking",
+          "catalog": "Catalog",
+          "online_payment": "Online payment",
+          "calculator": "Calculator",
+          "external_integration": "External system integration",
+          "account": "Personal account",
+          "other_function": "Other function",
+          "none": "None of these",
+          "unknown": "I do not know"
+        },
+        "launch_languages": {
+          "ru": "Русский",
+          "uz": "O'zbekcha",
+          "en": "English"
+        },
+        "desired_timeline": {
+          "asap": "As soon as possible",
+          "week": "Within a week",
+          "two_four_weeks": "Within 2-4 weeks",
+          "specific_date": "There is a specific date",
+          "no_deadline": "No strict deadline"
+        },
+        "preferred_contact": {
+          "telegram": "Telegram",
+          "whatsapp": "WhatsApp",
+          "phone": "Phone"
+        }
+      }
+    }
+  },
   "Footer": {
     "brand": "WebCode",
     "tagline": "website development in Tashkent: landing page, corporate website, CRM and turnkey launch",
@@ -640,6 +941,7 @@
       "pricing": "Pricing",
       "process": "How the process works",
       "faq": "FAQ",
+      "brief": "Brief",
       "contacts": "Contacts"
     },
     "contacts": {

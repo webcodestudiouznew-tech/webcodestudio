@@ -1,5 +1,14 @@
 # log.md
 
+## 2026-09-03
+- Сохранение Project Brief в `Notion` улучшено: помимо database properties теперь создаётся тело страницы с разделами и человекочитаемыми ответами, чтобы бриф было удобно читать прямо внутри записи.
+- CTA на Project Brief вынесен из `LeadSection` в отдельный блок `BriefCtaSection`, подключенный на главной странице перед `Footer`.
+- Реализован первичный мультиязычный Project Brief WebCode как отдельный route `/[locale]/brief` для `RU / UZ / EN`: пошаговый wizard, progress indicator, локальный draft в `localStorage`, prefill из query parameters и success screen с возвратом на основной сайт.
+- Добавлен backend слой `submitProjectBrief`: server-side валидация через `zod`, сохранение полного брифа в отдельную `Notion` базу через `NOTION_BRIEF_DATABASE_ID`, deterministic qualification без LLM и Telegram summary через существующую связку `bot + group`.
+- Добавлены analytics events для brief flow: `brief_opened`, `brief_started`, `brief_language_changed`, `brief_step_viewed`, `brief_step_completed`, `brief_validation_error`, `brief_completed`, `brief_submit_failed`.
+- На основную страницу добавлен CTA на бриф в `LeadSection`, а в `Footer` добавлен локализованный пункт `Бриф / Brief`.
+- `sitemap.xml` расширен route `/brief` для всех локалей; `npm run lint` и `npm run build` после изменений прошли успешно.
+
 ## 2026-03-24
 - Добавлены beginner-friendly документы по публикации на `Vercel`: [vercel_deploy_guide.md](./Guides/vercel_deploy_guide.md) с пошаговым сценарием первого deploy и [vercel_deploy_checklist.md](./Guides/vercel_deploy_checklist.md) с коротким рабочим checklist.
 - `Docs/AGENTS.md` обновлён ссылками на `Vercel` guide и checklist как на обязательные документы для первого deploy и user-facing release-инструкций.

@@ -28,6 +28,7 @@ export const contactLinks = {
   notionEnv: {
     token: "NOTION_TOKEN",
     databaseId: "NOTION_DATABASE_ID",
+    briefDatabaseId: "NOTION_BRIEF_DATABASE_ID",
   },
   telegramAlertsEnv: {
     token: "TELEGRAM_BOT_TOKEN",

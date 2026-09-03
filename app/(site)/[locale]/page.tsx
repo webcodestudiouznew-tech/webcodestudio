@@ -5,6 +5,7 @@ import { SiteHeaderResizable } from "@/components/layout/site-header-resizable";
 import { LeadFormModalProvider } from "@/components/shared/lead-form-modal-provider";
 import { AudienceSection } from "@/components/sections/audience-section";
 import { BusinessBenefitsSection } from "@/components/sections/business-benefits-section";
+import { BriefCtaSection } from "@/components/sections/brief-cta-section";
 import { CasesSection } from "@/components/sections/cases-section";
 import { FaqSection } from "@/components/sections/faq-section";
 import { FooterSection } from "@/components/sections/footer-section";
@@ -63,6 +64,7 @@ export default async function LocaleHomePage({ params }: LocaleHomePageProps) {
           <ProcessSection locale={locale} />
           <FaqSection locale={locale} />
           <LeadSection locale={locale} copy={leadFormCopy} />
+          <BriefCtaSection locale={locale} />
           <FooterSection locale={locale} />
         </main>
       </LeadFormModalProvider>

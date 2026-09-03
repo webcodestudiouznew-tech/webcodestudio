@@ -96,6 +96,7 @@ Integration должна быть добавлена в саму базу, ин�
 ```env
 NOTION_TOKEN=your_notion_token
 NOTION_DATABASE_ID=your_database_id
+NOTION_BRIEF_DATABASE_ID=your_brief_database_id
 ```
 
 `.env.local` не должен коммититься в репозиторий.
@@ -134,9 +135,54 @@ NOTION_DATABASE_ID=your_database_id
 
 Если `Notion` возвращает ошибку по property schema, сначала нужно исправить database schema или mapping в `lead-form.ts`, а не отключать валидацию формы.
 
+## 9.1 Project Brief database
+
+Первичный клиентский бриф сохраняется отдельным server action:
+- `app/actions/project-brief.ts`
+
+Для него используется тот же `NOTION_TOKEN`, но отдельная база:
+- `NOTION_BRIEF_DATABASE_ID`
+
+Рекомендуемая схема базы Project Brief:
+- `Project` — `title`
+- `Brief ID` — `rich_text`
+- `Lead ID` — `rich_text`
+- `Locale` — `select`
+- `Package Candidate` — `select`
+- `Qualification Flags` — `multi_select`
+- `Phone` — `phone_number`
+- `Telegram` — `rich_text`
+- `Source` — `rich_text`
+- `Completed At` — `date`
+- `Team Summary` — `rich_text`
+- `Answers JSON` — `rich_text`
+- `Answers` — `rich_text`
+
+Помимо properties, `app/actions/project-brief.ts` также создаёт body страницы через `children` blocks:
+- `Итог для команды`
+- `Контакты`
+- `Бизнес`
+- `Задача сайта`
+- `Что продаём`
+- `Клиенты и позиционирование`
+- `Доверие и материалы`
+- `Масштаб и функциональность`
+- `Ориентиры и сроки`
+
+Properties нужны для фильтрации и быстрого просмотра базы, а body страницы — для удобного чтения полного брифа.
+
+Допустимые значения `Package Candidate`:
+- `launch`
+- `trust`
+- `growth`
+- `custom_review`
+
+Если схема базы меняется, нужно синхронно обновить mapping в `app/actions/project-brief.ts`.
+
 ## 10. Security Notes
 
 - Никогда не хранить `NOTION_TOKEN` в клиентском коде.
+- Никогда не хранить `NOTION_BRIEF_DATABASE_ID` в клиентском коде.
 - Не коммитить реальные credentials в git.
 - Если токен был передан в открытом виде, после настройки желательно сделать его ротацию.
 

@@ -3,7 +3,15 @@ export type AnalyticsEventName =
   | "form_submit"
   | "form_success"
   | "telegram_click"
-  | "whatsapp_click";
+  | "whatsapp_click"
+  | "brief_opened"
+  | "brief_started"
+  | "brief_language_changed"
+  | "brief_step_viewed"
+  | "brief_step_completed"
+  | "brief_validation_error"
+  | "brief_completed"
+  | "brief_submit_failed";
 
 declare global {
   interface Window {

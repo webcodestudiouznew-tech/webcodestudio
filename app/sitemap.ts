@@ -3,7 +3,7 @@ import { getLanguageAlternateUrls, getLocalizedUrl } from "@/lib/seo";
 import { siteConfig } from "@/lib/site-config";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const paths = ["/", "/privacy-policy"] as const;
+  const paths = ["/", "/brief", "/privacy-policy"] as const;
 
   return siteConfig.locales.flatMap((locale) =>
     paths.map((path) => ({

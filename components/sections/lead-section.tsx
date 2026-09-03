@@ -62,6 +62,7 @@ export async function LeadSection({
             >
               {t("cta.whatsapp")}
             </TrackedContactLink>
+
           </div>
         </Reveal>
 

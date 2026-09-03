@@ -11,7 +11,7 @@ const LOGO_SRC = "/logo_new_2.png?v=20260319";
 const footerNavColumns = [
   ["whyWebcode", "audience", "benefits"],
   ["includes", "cases", "pricing"],
-  ["process", "faq"],
+  ["process", "faq", "brief"],
 ] as const;
 
 const footerNavHrefMap = {
@@ -23,6 +23,7 @@ const footerNavHrefMap = {
   pricing: "#pricing",
   process: "#process",
   faq: "#faq",
+  brief: "/brief",
 } as const;
 
 function TelegramIcon() {
@@ -117,16 +118,27 @@ export async function FooterSection({ locale }: { locale: string }) {
             <div className="grid items-start justify-center gap-y-2 sm:grid-cols-3 sm:gap-x-8 sm:gap-y-2 lg:justify-start">
             {footerNavColumns.map((column, index) => (
               <nav key={`footer-nav-${index}`} className="grid self-start justify-items-center gap-1.5 sm:justify-items-start">
-                {column.map((item) => (
-                  <a
-                    key={item}
-                    href={footerNavHrefMap[item]}
-                    className="inline-flex w-fit items-center gap-2 text-[14px] text-white/58"
-                  >
-                    <span className="h-1 w-1 rounded-full bg-current" />
-                    {t(`nav.${item}`)}
-                  </a>
-                ))}
+                {column.map((item) =>
+                  item === "brief" ? (
+                    <Link
+                      key={item}
+                      href={getLocalizedPath(typedLocale, footerNavHrefMap[item])}
+                      className="inline-flex w-fit items-center gap-2 text-[14px] text-[#f3d986]"
+                    >
+                      <span className="h-1 w-1 rounded-full bg-current" />
+                      {t(`nav.${item}`)}
+                    </Link>
+                  ) : (
+                    <a
+                      key={item}
+                      href={footerNavHrefMap[item]}
+                      className="inline-flex w-fit items-center gap-2 text-[14px] text-white/58"
+                    >
+                      <span className="h-1 w-1 rounded-full bg-current" />
+                      {t(`nav.${item}`)}
+                    </a>
+                  ),
+                )}
               </nav>
             ))}
             </div>

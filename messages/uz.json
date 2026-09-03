@@ -628,6 +628,307 @@
       }
     }
   },
+  "BriefCta": {
+    "eyebrow": "Project Brief",
+    "title": "Loyiha haqida batafsilroq aytishga tayyormisiz?",
+    "description": "Bir necha daqiqada dastlabki briefni to'ldiring. Biz vazifa, materiallar va muddatlarni ko'ramiz hamda mos sayt formatini tezroq tavsiya qilamiz.",
+    "cta": "Briefni to'ldirish",
+    "points": {
+      "business": {
+        "title": "Biznesni tushunamiz",
+        "description": "Nima sotishingiz, kimga sotishingiz va mijoz nima sababdan sizni tanlashini aniqlaymiz."
+      },
+      "scope": {
+        "title": "Ko'lamni baholaymiz",
+        "description": "Qaysi sahifalar, tillar, materiallar va maxsus funksiyalar kerakligini ko'ramiz."
+      },
+      "nextStep": {
+        "title": "Keyingi qadamni tayyorlaymiz",
+        "description": "Sayt formati, ish tuzilmasi va narxni hisoblash uchun asos taklif qilamiz."
+      }
+    }
+  },
+  "ProjectBrief": {
+    "metadata": {
+      "title": "Biznes sayti uchun brief | WebCode",
+      "description": "WebCode mijoz briefi: biznes, maqsadlar, materiallar va muddatlar haqida ayting, biz mos sayt formatini tavsiya qilamiz."
+    },
+    "wizard": {
+      "header": {
+        "tagline": "loyiha bo'yicha dastlabki brief",
+        "backToSite": "Saytga qaytish"
+      },
+      "locale": {
+        "label": "Tilni tanlash"
+      },
+      "welcome": {
+        "eyebrow": "Project Brief",
+        "title": "Loyihangiz haqida aytib bering",
+        "description": "Biznesingiz va vazifangiz haqida bir nechta savolga javob bering. Bu loyihani tushunishimiz va mos sayt formatini taklif qilishimizga yordam beradi. Odatda to'ldirish taxminan 5 daqiqa vaqt oladi.",
+        "duration": "4-6 daqiqa",
+        "start": "Boshlash"
+      },
+      "progress": {
+        "step": "Qadam",
+        "of": "/"
+      },
+      "navigation": {
+        "back": "Orqaga",
+        "next": "Davom etish",
+        "submit": "Briefni yuborish",
+        "submitting": "Yuborilmoqda..."
+      },
+      "success": {
+        "eyebrow": "Brief qabul qilindi",
+        "title": "Rahmat. Loyihangiz bo'yicha ma'lumotni oldik",
+        "description": "Javoblarni ko'rib chiqamiz va mos sayt formati hamda keyingi qadamni taklif qilamiz.",
+        "telegram": "Telegramga yozish",
+        "whatsapp": "WhatsAppga yozish",
+        "backToSite": "Saytga qaytish"
+      },
+      "errors": {
+        "required": "Bu maydonni to'ldiring.",
+        "requiredChoice": "Variantni tanlang.",
+        "maxTwo": "Ikki variantdan ko'p tanlamang.",
+        "invalidPhone": "Telefon formatini tekshiring.",
+        "invalidUrl": "Havolani tekshiring. Bir nechta havolani yangi qatordan yozish mumkin.",
+        "invalidDate": "Ishga tushirish sanasini kiriting.",
+        "privacy": "Maxfiylik siyosatiga rozilikni tasdiqlang.",
+        "submitFailed": "Briefni yuborib bo'lmadi. Yana urinib ko'ring yoki Telegram orqali yozing."
+      },
+      "steps": {
+        "business": {
+          "eyebrow": "Biznes",
+          "title": "Biznes",
+          "description": "Kompaniya, loyiha va hozirgi online manbalarni qisqacha tasvirlang."
+        },
+        "goals": {
+          "eyebrow": "Sayt vazifasi",
+          "title": "Sayt vazifasi",
+          "description": "Sayt birinchi navbatda nima qilishi va tashrif buyuruvchini qaysi harakatga olib kelishi kerak."
+        },
+        "offer": {
+          "eyebrow": "Nima sotiladi",
+          "title": "Nima sotiladi",
+          "description": "Qaysi mahsulot yoki xizmatlarni ko'rsatish kerak va tuzilma qanchalik keng bo'ladi."
+        },
+        "audience": {
+          "eyebrow": "Mijozlar",
+          "title": "Mijozlar va pozitsiyalash",
+          "description": "Kimga sotasiz, mijozlar qayerda va nima sababdan aynan sizni tanlashadi."
+        },
+        "proof": {
+          "eyebrow": "Ishonch",
+          "title": "Ishonch va materiallar",
+          "description": "Saytda ishlatish mumkin bo'lgan narsalar: fikrlar, keyslar, foto, matnlar va material havolalari."
+        },
+        "scope": {
+          "eyebrow": "Ko'lam",
+          "title": "Ko'lam va funksiyalar",
+          "description": "Taxminiy sayt formatini va odatiy arizadan tashqaridagi maxsus funksiyalarni belgilang."
+        },
+        "timing": {
+          "eyebrow": "Mo'ljallar",
+          "title": "Mo'ljallar va muddatlar",
+          "description": "Referenslar, raqobatchilar, kerakli muddatlar va baholashdan oldin bilish muhim bo'lgan detallar."
+        },
+        "contacts": {
+          "eyebrow": "Kontaktlar",
+          "title": "Kontaktlar",
+          "description": "Savollar va keyingi qadam bo'yicha bog'lanishimiz uchun ma'lumot qoldiring."
+        }
+      },
+      "fields": {
+        "company_name": {
+          "label": "Kompaniya / loyiha nomi",
+          "placeholder": "Masalan: WebCode"
+        },
+        "business_description": {
+          "label": "Biznesingiz nima bilan shug'ullanadi?",
+          "placeholder": "Nima sotishingiz yoki qanday xizmat ko'rsatishingizni qisqacha yozing.",
+          "helper": "2-4 ta gap yetarli."
+        },
+        "current_links": {
+          "label": "Hozir sayt yoki ijtimoiy tarmoq sahifalari bormi?",
+          "placeholder": "Sayt, Instagram, Telegram yoki boshqa havolalar. Har birini yangi qatordan yozish mumkin."
+        },
+        "site_goals": {
+          "label": "Sayt birinchi navbatda nima qilishi kerak?",
+          "helper": "Ikki variantgacha tanlash mumkin."
+        },
+        "primary_action": {
+          "label": "Tashrif buyuruvchi asosiy qanday harakat qilishi kerak?"
+        },
+        "offer_description": {
+          "label": "Saytda qaysi mahsulot yoki xizmatlarni ko'rsatish kerak?",
+          "placeholder": "Asosiy yo'nalishlarni oddiy ro'yxat qilib yozish mumkin."
+        },
+        "service_count": {
+          "label": "Nechta asosiy yo'nalish / xizmatni ko'rsatish kerak?"
+        },
+        "audience_description": {
+          "label": "Asosiy mijozingiz kim?",
+          "placeholder": "Masalan: biznes egalari, ota-onalar, qurilish kompaniyalari, klinikalar, Toshkent aholisi."
+        },
+        "geography": {
+          "label": "Mijozlaringiz qayerda joylashgan?"
+        },
+        "differentiators": {
+          "label": "Nima uchun mijoz aynan sizni tanlashi kerak?",
+          "placeholder": "Tajriba, narx, tezlik, sifat, kafolat, texnologiya, jamoa, servis yoki boshqa ustunlik."
+        },
+        "needs_positioning_help": {
+          "label": "Pozitsiyalash bo'yicha yordam",
+          "action": "Formulirovka qilishda yordam kerak"
+        },
+        "proof_assets": {
+          "label": "Qanday ishonch dalillari bor?"
+        },
+        "available_materials": {
+          "label": "Qaysi materiallar tayyor?"
+        },
+        "materials_url": {
+          "label": "Materiallarga havola",
+          "placeholder": "Google Drive, Dropbox, sayt, Telegram va hokazo."
+        },
+        "scope_preference": {
+          "label": "Taxminan qanday sayt formatini tasavvur qilyapsiz?"
+        },
+        "extra_features": {
+          "label": "Maxsus funksiyalar kerakmi?"
+        },
+        "launch_languages": {
+          "label": "Ishga tushirishda qaysi tillar kerak?"
+        },
+        "reference_sites": {
+          "label": "Sizga yoqadigan saytlar bormi?",
+          "placeholder": "1-3 ta havola va aynan nimasi yoqishini qisqacha yozish mumkin."
+        },
+        "competitor_sites": {
+          "label": "Asosiy raqobatchilar",
+          "placeholder": "Havolalar yoki kompaniya nomlari."
+        },
+        "desired_timeline": {
+          "label": "Saytni qachon ishga tushirish ma'qul?"
+        },
+        "desired_launch_date": {
+          "label": "Aniq sana"
+        },
+        "additional_notes": {
+          "label": "Yana nimalarni bilishimiz muhim?",
+          "placeholder": "Har qanday detal, cheklov yoki istak."
+        },
+        "contact_name": {
+          "label": "Ism",
+          "placeholder": "Sizga qanday murojaat qilaylik"
+        },
+        "phone": {
+          "label": "Telefon",
+          "placeholder": "+998 90 123 45 67"
+        },
+        "telegram": {
+          "label": "Telegram",
+          "placeholder": "@username"
+        },
+        "preferred_contact": {
+          "label": "Qanday bog'lanish qulay?"
+        },
+        "privacy_consent": {
+          "label": "Men",
+          "action": "Maxfiylik siyosati"
+        }
+      },
+      "options": {
+        "site_goals": {
+          "get_leads": "Arizalar olish",
+          "present_company": "Kompaniya va xizmatlarni taqdim etish",
+          "increase_trust": "Biznesga ishonchni oshirish",
+          "sell_product": "Mahsulot yoki xizmat sotish",
+          "ad_clients": "Reklamadan mijoz olib kelish",
+          "book_clients": "Mijozlarni yozib qo'yish",
+          "other": "Boshqa"
+        },
+        "primary_action": {
+          "submit_request": "Ariza qoldirish",
+          "message_messenger": "Telegram / WhatsAppga yozish",
+          "call": "Qo'ng'iroq qilish",
+          "book_meeting": "Uchrashuv / xizmatga yozilish",
+          "buy": "Sotib olish",
+          "request_quote": "Hisob-kitob / taklif so'rash",
+          "other": "Boshqa"
+        },
+        "service_count": {
+          "one": "1",
+          "two_three": "2-3",
+          "four_six": "4-6",
+          "seven_plus": "7 va undan ko'p",
+          "unknown": "Hali bilmayman"
+        },
+        "geography": {
+          "tashkent": "Toshkent",
+          "uzbekistan": "Butun O'zbekiston",
+          "other_countries": "Boshqa davlatlar",
+          "other": "Boshqa"
+        },
+        "proof_assets": {
+          "testimonials": "Mijoz fikrlari",
+          "cases": "Keyslar",
+          "known_clients": "Taniqli mijozlar",
+          "numbers": "Raqamlar / natijalar",
+          "certificates": "Sertifikatlar / mukofotlar",
+          "portfolio": "Portfolio",
+          "photos_videos": "Ishlar foto / videolari",
+          "none": "Hozircha hech narsa yo'q"
+        },
+        "available_materials": {
+          "logo": "Logotip",
+          "brand_colors": "Firma ranglari / brandbook",
+          "texts": "Matnlar",
+          "photos": "Fotolar",
+          "videos": "Video",
+          "presentation": "Prezentatsiya / katalog",
+          "cases": "Keyslar",
+          "testimonials": "Fikrlar",
+          "none": "Hozircha hech narsa yo'q"
+        },
+        "scope_preference": {
+          "compact_one_page": "Ixcham bir sahifali sayt",
+          "detailed_landing": "Batafsil landing",
+          "multi_page": "Bir nechta sahifali sayt",
+          "refresh_existing": "Mavjud saytni yangilash kerak",
+          "need_recommendation": "Bilmayman - tavsiya kerak"
+        },
+        "extra_features": {
+          "online_booking": "Online yozilish",
+          "catalog": "Katalog",
+          "online_payment": "Online to'lov",
+          "calculator": "Kalkulyator",
+          "external_integration": "Tashqi tizim bilan integratsiya",
+          "account": "Shaxsiy kabinet",
+          "other_function": "Boshqa funksiya",
+          "none": "Ro'yxatdagilardan hech biri",
+          "unknown": "Bilmayman"
+        },
+        "launch_languages": {
+          "ru": "Русский",
+          "uz": "O'zbekcha",
+          "en": "English"
+        },
+        "desired_timeline": {
+          "asap": "Iloji boricha tezroq",
+          "week": "Bir hafta ichida",
+          "two_four_weeks": "2-4 hafta ichida",
+          "specific_date": "Aniq sana bor",
+          "no_deadline": "Qattiq muddat yo'q"
+        },
+        "preferred_contact": {
+          "telegram": "Telegram",
+          "whatsapp": "WhatsApp",
+          "phone": "Telefon"
+        }
+      }
+    }
+  },
   "Footer": {
     "brand": "WebCode",
     "tagline": "Toshkentda landing page, korporativ sayt va CRM bilan biznes uchun sayt yaratish",
@@ -640,6 +941,7 @@
       "pricing": "Tariflar",
       "process": "Ish jarayoni",
       "faq": "FAQ",
+      "brief": "Brief",
       "contacts": "Kontaktlar"
     },
     "contacts": {
